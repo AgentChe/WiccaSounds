@@ -42,10 +42,6 @@
 		DE6574EE29C838E30074CBE5 /* GetPaygateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6574CA29C838E20074CBE5 /* GetPaygateRequest.swift */; };
 		DE6574EF29C838E30074CBE5 /* PaygateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6574CB29C838E20074CBE5 /* PaygateManager.swift */; };
 		DE6574F029C838E30074CBE5 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6574CD29C838E20074CBE5 /* ProfileManager.swift */; };
-		DE6574F129C838E30074CBE5 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6574CF29C838E20074CBE5 /* Gender.swift */; };
-		DE6574F229C838E30074CBE5 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6574D029C838E20074CBE5 /* Role.swift */; };
-		DE6574F329C838E30074CBE5 /* WeekSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6574D129C838E20074CBE5 /* WeekSchedule.swift */; };
-		DE6574F429C838E30074CBE5 /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6574D229C838E20074CBE5 /* DayOfWeek.swift */; };
 		DE6574F529C838E30074CBE5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6574D329C838E20074CBE5 /* Profile.swift */; };
 		DE6574F629C838E30074CBE5 /* GetProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6574D629C838E20074CBE5 /* GetProfileRequest.swift */; };
 		DE6574F729C838E30074CBE5 /* GetProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6574D729C838E20074CBE5 /* GetProfileResponse.swift */; };
@@ -123,6 +119,10 @@
 		DE65758B29C838F70074CBE5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE65758A29C838F70074CBE5 /* GoogleService-Info.plist */; };
 		DE65758F29C838FB0074CBE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE65758D29C838FB0074CBE5 /* Localizable.strings */; };
 		DE65759129C83FB00074CBE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE65759029C83FB00074CBE5 /* LaunchScreen.storyboard */; };
+		DE65759429C842B50074CBE5 /* SpellsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65759329C842B50074CBE5 /* SpellsManager.swift */; };
+		DE65759829C842D30074CBE5 /* SpellsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65759729C842D30074CBE5 /* SpellsCategory.swift */; };
+		DE65759B29C843800074CBE5 /* GetSpellsCategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65759A29C843800074CBE5 /* GetSpellsCategoriesRequest.swift */; };
+		DE65759D29C843880074CBE5 /* GetSpellsCategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65759C29C843880074CBE5 /* GetSpellsCategoriesResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,10 +164,6 @@
 		DE6574CA29C838E20074CBE5 /* GetPaygateRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPaygateRequest.swift; sourceTree = "<group>"; };
 		DE6574CB29C838E20074CBE5 /* PaygateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaygateManager.swift; sourceTree = "<group>"; };
 		DE6574CD29C838E20074CBE5 /* ProfileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
-		DE6574CF29C838E20074CBE5 /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
-		DE6574D029C838E20074CBE5 /* Role.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
-		DE6574D129C838E20074CBE5 /* WeekSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekSchedule.swift; sourceTree = "<group>"; };
-		DE6574D229C838E20074CBE5 /* DayOfWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayOfWeek.swift; sourceTree = "<group>"; };
 		DE6574D329C838E20074CBE5 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		DE6574D629C838E20074CBE5 /* GetProfileRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetProfileRequest.swift; sourceTree = "<group>"; };
 		DE6574D729C838E20074CBE5 /* GetProfileResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetProfileResponse.swift; sourceTree = "<group>"; };
@@ -245,6 +241,10 @@
 		DE65758A29C838F70074CBE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE65758E29C838FB0074CBE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DE65759029C83FB00074CBE5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE65759329C842B50074CBE5 /* SpellsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsManager.swift; sourceTree = "<group>"; };
+		DE65759729C842D30074CBE5 /* SpellsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsCategory.swift; sourceTree = "<group>"; };
+		DE65759A29C843800074CBE5 /* GetSpellsCategoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSpellsCategoriesRequest.swift; sourceTree = "<group>"; };
+		DE65759C29C843880074CBE5 /* GetSpellsCategoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSpellsCategoriesResponse.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -451,6 +451,7 @@
 		DE6574C129C838E20074CBE5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DE65759229C842AA0074CBE5 /* Spells */,
 				DE6574C229C838E20074CBE5 /* Paygate */,
 				DE6574CC29C838E20074CBE5 /* Profile */,
 				DE6574DC29C838E20074CBE5 /* Purchase */,
@@ -510,10 +511,6 @@
 		DE6574CE29C838E20074CBE5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DE6574CF29C838E20074CBE5 /* Gender.swift */,
-				DE6574D029C838E20074CBE5 /* Role.swift */,
-				DE6574D129C838E20074CBE5 /* WeekSchedule.swift */,
-				DE6574D229C838E20074CBE5 /* DayOfWeek.swift */,
 				DE6574D329C838E20074CBE5 /* Profile.swift */,
 			);
 			path = Model;
@@ -769,6 +766,41 @@
 			path = Strings;
 			sourceTree = "<group>";
 		};
+		DE65759229C842AA0074CBE5 /* Spells */ = {
+			isa = PBXGroup;
+			children = (
+				DE65759629C842BD0074CBE5 /* Request */,
+				DE65759529C842B80074CBE5 /* Model */,
+				DE65759329C842B50074CBE5 /* SpellsManager.swift */,
+			);
+			path = Spells;
+			sourceTree = "<group>";
+		};
+		DE65759529C842B80074CBE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE65759729C842D30074CBE5 /* SpellsCategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE65759629C842BD0074CBE5 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DE65759929C8436E0074CBE5 /* GetCategories */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		DE65759929C8436E0074CBE5 /* GetCategories */ = {
+			isa = PBXGroup;
+			children = (
+				DE65759A29C843800074CBE5 /* GetSpellsCategoriesRequest.swift */,
+				DE65759C29C843880074CBE5 /* GetSpellsCategoriesResponse.swift */,
+			);
+			path = GetCategories;
+			sourceTree = "<group>";
+		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -926,6 +958,7 @@
 				DE65749A29C838DF0074CBE5 /* PaygateInfoCell.swift in Sources */,
 				DE65755229C838E60074CBE5 /* XOREncryption.swift in Sources */,
 				DE65754829C838E60074CBE5 /* UIViewRxExtension.swift in Sources */,
+				DE65759429C842B50074CBE5 /* SpellsManager.swift in Sources */,
 				DE65755B29C838E60074CBE5 /* Toast.swift in Sources */,
 				DE65756829C838E60074CBE5 /* PushNotificationsAuthorizationStatus.swift in Sources */,
 				DE65750129C838E30074CBE5 /* IAPError.swift in Sources */,
@@ -942,24 +975,25 @@
 				DE6574A129C838DF0074CBE5 /* TryAgainViewController.swift in Sources */,
 				DE65756529C838E60074CBE5 /* CircleProgressView.swift in Sources */,
 				DE65755329C838E60074CBE5 /* Fonts.swift in Sources */,
-				DE6574F229C838E30074CBE5 /* Role.swift in Sources */,
 				DE6574FB29C838E30074CBE5 /* ProfileMediator.swift in Sources */,
 				DE65749929C838DF0074CBE5 /* PaygateProductButton.swift in Sources */,
 				DE6574C029C838DF0074CBE5 /* OnboardingViewModel.swift in Sources */,
 				DE6574ED29C838E30074CBE5 /* GetPaygateResponse.swift in Sources */,
 				DE65750029C838E30074CBE5 /* IAPProduct.swift in Sources */,
-				DE6574F429C838E30074CBE5 /* DayOfWeek.swift in Sources */,
 				DE65750429C838E30074CBE5 /* SessionManager.swift in Sources */,
 				DE65755E29C838E60074CBE5 /* TapAreaButton.swift in Sources */,
 				DE65754E29C838E60074CBE5 /* NumberLaunches.swift in Sources */,
 				DE65754D29C838E60074CBE5 /* Scalable.swift in Sources */,
+				DE65759B29C843800074CBE5 /* GetSpellsCategoriesRequest.swift in Sources */,
 				DE65756429C838E60074CBE5 /* GradientView.swift in Sources */,
 				DE65748D29C838DF0074CBE5 /* SplashViewController.swift in Sources */,
 				DE65749429C838DF0074CBE5 /* PaygateOptionInfo.swift in Sources */,
 				DE65749229C838DF0074CBE5 /* PaygateViewModel.swift in Sources */,
 				DE65755A29C838E60074CBE5 /* RxActivityIndicator.swift in Sources */,
+				DE65759D29C843880074CBE5 /* GetSpellsCategoriesResponse.swift in Sources */,
 				DE6574A229C838DF0074CBE5 /* OCombineData.swift in Sources */,
 				DE6574FA29C838E30074CBE5 /* SetRequest.swift in Sources */,
+				DE65759829C842D30074CBE5 /* SpellsCategory.swift in Sources */,
 				DE65749829C838DF0074CBE5 /* PaygateViewController.swift in Sources */,
 				DE6574B429C838DF0074CBE5 /* OWelcomeView.swift in Sources */,
 				DE65754729C838E60074CBE5 /* String+Extension.swift in Sources */,
@@ -969,7 +1003,6 @@
 				DE6574B729C838DF0074CBE5 /* OSlideView.swift in Sources */,
 				DE65754229C838E60074CBE5 /* UIDevice+Extension.swift in Sources */,
 				DE65756129C838E60074CBE5 /* PaddingTextField.swift in Sources */,
-				DE6574F129C838E30074CBE5 /* Gender.swift in Sources */,
 				DE65749329C838DF0074CBE5 /* DefaultPaygate.swift in Sources */,
 				DE65754329C838E60074CBE5 /* UIColor+Extension.swift in Sources */,
 				DE65749C29C838DF0074CBE5 /* MainView.swift in Sources */,
@@ -995,7 +1028,6 @@
 				DE65754C29C838E60074CBE5 /* RestAPITransport.swift in Sources */,
 				DE65756C29C838E60074CBE5 /* AppsFlyerManager.swift in Sources */,
 				DE65756929C838E60074CBE5 /* PushNotificationsModel.swift in Sources */,
-				DE6574F329C838E30074CBE5 /* WeekSchedule.swift in Sources */,
 				DE65749029C838DF0074CBE5 /* SplashViewModel.swift in Sources */,
 				DE65750229C838E30074CBE5 /* IAPErrorHelper.swift in Sources */,
 				DE65755129C838E60074CBE5 /* ObservableRetrySingle.swift in Sources */,

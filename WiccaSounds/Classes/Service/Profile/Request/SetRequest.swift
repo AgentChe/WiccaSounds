@@ -9,11 +9,7 @@ import Alamofire
 
 struct SetRequest: APIRequestBody {
     let userToken: String
-    let skillLevel: Int?
-    let weekSchedule: [Int]?
-    let drills: [Int]?
-    let focusZones: [Int]?
-    let timezone: String?
+    let spellsCategoriesIds: [Int]?
     
     var url: String {
         GlobalDefinitions.domain + "/api/users/set"
@@ -29,24 +25,8 @@ struct SetRequest: APIRequestBody {
             "_user_token": userToken
         ]
         
-        if let skillLevel = skillLevel {
-            params["level_id"] = skillLevel
-        }
-        
-        if let weekSchedule = weekSchedule {
-            params["training_days"] = weekSchedule
-        }
-        
-        if let drills = drills {
-            params["drill_category_ids"] = drills
-        }
-        
-        if let focusZones = focusZones {
-            params["body_part_ids"] = focusZones
-        }
-        
-        if let timezone = timezone {
-            params["timezone"] = timezone
+        if let spellsCategoriesIds = spellsCategoriesIds {
+            params["spells_categories_ids"] = spellsCategoriesIds
         }
         
         return params

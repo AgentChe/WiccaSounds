@@ -14,28 +14,10 @@ final class GetProfileResponse {
             return nil
         }
         
-        let skillLevelId = data["level_id"] as? Int
-        
-        let weekScheduleArray = data["training_days"] as? [Int] ?? []
-        let weekSchedule = WeekSchedule(
-            su: weekScheduleArray.contains(0),
-            mo: weekScheduleArray.contains(1),
-            tu: weekScheduleArray.contains(2),
-            we: weekScheduleArray.contains(3),
-            th: weekScheduleArray.contains(4),
-            fr: weekScheduleArray.contains(5),
-            sa: weekScheduleArray.contains(6)
-        )
-        
-        let drillsIds = data["drill_category_ids"] as? [Int]
-        
-        let focusZonesIds = data["body_part_ids"] as? [Int]
+        let spellsCategoriesIds = data["spells_categories_ids"] as? [Int]
         
         return Profile(
-            skillLevelId: skillLevelId,
-            weekSchedule: weekSchedule,
-            drillsIds: drillsIds,
-            focusZonesIds: focusZonesIds
+            spellsCategoriesIds: spellsCategoriesIds
         )
     }
 }
