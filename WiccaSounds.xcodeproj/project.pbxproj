@@ -127,6 +127,7 @@
 		DE6575A229C85E410074CBE5 /* WelcomeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575A129C85E410074CBE5 /* WelcomeCellView.swift */; };
 		DE6575A429C8601D0074CBE5 /* WelcomeSlideCellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575A329C8601D0074CBE5 /* WelcomeSlideCellsView.swift */; };
 		DE6575A629C866250074CBE5 /* WelcomeSlideAtomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575A529C866250074CBE5 /* WelcomeSlideAtomView.swift */; };
+		DE6575A829C86C350074CBE5 /* OBirthdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575A729C86C350074CBE5 /* OBirthdateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -253,6 +254,7 @@
 		DE6575A129C85E410074CBE5 /* WelcomeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCellView.swift; sourceTree = "<group>"; };
 		DE6575A329C8601D0074CBE5 /* WelcomeSlideCellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSlideCellsView.swift; sourceTree = "<group>"; };
 		DE6575A529C866250074CBE5 /* WelcomeSlideAtomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSlideAtomView.swift; sourceTree = "<group>"; };
+		DE6575A729C86C350074CBE5 /* OBirthdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBirthdateView.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -445,6 +447,7 @@
 				DE65746F29C838DF0074CBE5 /* Atoms */,
 				DE65748329C838DF0074CBE5 /* OSlideView.swift */,
 				DE65748029C838DF0074CBE5 /* OWelcomeView.swift */,
+				DE6575A729C86C350074CBE5 /* OBirthdateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1054,6 +1057,7 @@
 				DE65749029C838DF0074CBE5 /* SplashViewModel.swift in Sources */,
 				DE65750229C838E30074CBE5 /* IAPErrorHelper.swift in Sources */,
 				DE65755129C838E60074CBE5 /* ObservableRetrySingle.swift in Sources */,
+				DE6575A829C86C350074CBE5 /* OBirthdateView.swift in Sources */,
 				DE6574F529C838E30074CBE5 /* Profile.swift in Sources */,
 				DE65754429C838E60074CBE5 /* Date+Extension.swift in Sources */,
 				DE65749E29C838DF0074CBE5 /* TabView.swift in Sources */,
