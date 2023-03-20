@@ -1,0 +1,48 @@
+/* 
+  Localizable.strings
+  Soccer
+
+  Created by Андрей Чернышев on 01.02.2023.
+  
+*/
+
+// MARK: General
+"Cancel" = "Cancel";
+"Continue" = "Continue";
+"Next" = "Next";
+
+// MARK: ImagePicker
+"ImagePicker.TakePhoto" = "Take a photo";
+"ImagePicker.CameraRoll" = "Camera roll";
+"ImagePicker.PhotoLibrary" = "Photo library";
+
+// MARK: TryAgain
+"TryAgain.Title" = "The app failed to perform a request";
+"TryAgain.SubTitle" = "If there’s a connection issue on your side try one more time. If the connection is fine and the error keeps on repeating please get in touch with the support";
+"TryAgain.Button" = "Try again";
+"TryAgain.Contact" = "Contact the support";
+
+// MARK: Splash
+"Splash.Preloader1" = "Checking your account...";
+"Splash.Preloader2" = "Syncing the soccer library";
+"Splash.Preloader3" = "Setting up your account...";
+
+// MARK: Paygate
+"Paygate.Title" = "Unlock Premium Status";
+"Paygate.Cell1" = "100+ workout plans and soccer drills";
+"Paygate.Cell2" = "Detailed instructions";
+"Paygate.Cell3" = "Easily schedule your training";
+"Paygate.Info" = "Secured by the App Store. Cancel anytime.";
+"Paygate.TermsOfUse" = "Terms of Use";
+"Paygate.PrivacyPolicy" = "Privacy Policy";
+"Paygate.RestorePurchases" = "Restore Purchase";
+"Paygate.Failed" = "Failed to make purchase";
+"Paygate.Monthly.Name1" = "7 days for free";
+"Paygate.Monthly.Name2" = "Quick prep";
+"Paygate.Monthly.Bottom1" = "After 7-day trial";
+"Paygate.Monthly.Bottom2" = "Trial is over";
+"Paygate.Lifetime.Name" = "Lifetime";
+"Paygate.Lifetime.PriceDescription" = "\nIn terms of  1  year";
+"Paygate.Lifetime.BottomDescription" = "once";
+"Paygate.Discount" = "SAVE %i%%";
+"Paygate.Price.Period" = "month";
