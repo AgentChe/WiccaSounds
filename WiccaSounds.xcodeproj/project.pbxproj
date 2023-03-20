@@ -123,6 +123,10 @@
 		DE65759829C842D30074CBE5 /* SpellsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65759729C842D30074CBE5 /* SpellsCategory.swift */; };
 		DE65759B29C843800074CBE5 /* GetSpellsCategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65759A29C843800074CBE5 /* GetSpellsCategoriesRequest.swift */; };
 		DE65759D29C843880074CBE5 /* GetSpellsCategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65759C29C843880074CBE5 /* GetSpellsCategoriesResponse.swift */; };
+		DE6575A029C85CEA0074CBE5 /* WelcomeSlideTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65759F29C85CEA0074CBE5 /* WelcomeSlideTextView.swift */; };
+		DE6575A229C85E410074CBE5 /* WelcomeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575A129C85E410074CBE5 /* WelcomeCellView.swift */; };
+		DE6575A429C8601D0074CBE5 /* WelcomeSlideCellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575A329C8601D0074CBE5 /* WelcomeSlideCellsView.swift */; };
+		DE6575A629C866250074CBE5 /* WelcomeSlideAtomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575A529C866250074CBE5 /* WelcomeSlideAtomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -245,6 +249,10 @@
 		DE65759729C842D30074CBE5 /* SpellsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsCategory.swift; sourceTree = "<group>"; };
 		DE65759A29C843800074CBE5 /* GetSpellsCategoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSpellsCategoriesRequest.swift; sourceTree = "<group>"; };
 		DE65759C29C843880074CBE5 /* GetSpellsCategoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSpellsCategoriesResponse.swift; sourceTree = "<group>"; };
+		DE65759F29C85CEA0074CBE5 /* WelcomeSlideTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSlideTextView.swift; sourceTree = "<group>"; };
+		DE6575A129C85E410074CBE5 /* WelcomeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCellView.swift; sourceTree = "<group>"; };
+		DE6575A329C8601D0074CBE5 /* WelcomeSlideCellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSlideCellsView.swift; sourceTree = "<group>"; };
+		DE6575A529C866250074CBE5 /* WelcomeSlideAtomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSlideAtomView.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -444,6 +452,7 @@
 		DE65746F29C838DF0074CBE5 /* Atoms */ = {
 			isa = PBXGroup;
 			children = (
+				DE65759E29C85CC20074CBE5 /* Welcome */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -801,6 +810,17 @@
 			path = GetCategories;
 			sourceTree = "<group>";
 		};
+		DE65759E29C85CC20074CBE5 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				DE65759F29C85CEA0074CBE5 /* WelcomeSlideTextView.swift */,
+				DE6575A129C85E410074CBE5 /* WelcomeCellView.swift */,
+				DE6575A329C8601D0074CBE5 /* WelcomeSlideCellsView.swift */,
+				DE6575A529C866250074CBE5 /* WelcomeSlideAtomView.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -945,6 +965,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE6574F029C838E30074CBE5 /* ProfileManager.swift in Sources */,
+				DE6575A429C8601D0074CBE5 /* WelcomeSlideCellsView.swift in Sources */,
 				DE65754529C838E60074CBE5 /* Collection+Extension.swift in Sources */,
 				DE65756D29C838E60074CBE5 /* BranchManager.swift in Sources */,
 				DE65748F29C838DF0074CBE5 /* SplashReceiptValidationObserver.swift in Sources */,
@@ -984,6 +1005,7 @@
 				DE65755E29C838E60074CBE5 /* TapAreaButton.swift in Sources */,
 				DE65754E29C838E60074CBE5 /* NumberLaunches.swift in Sources */,
 				DE65754D29C838E60074CBE5 /* Scalable.swift in Sources */,
+				DE6575A229C85E410074CBE5 /* WelcomeCellView.swift in Sources */,
 				DE65759B29C843800074CBE5 /* GetSpellsCategoriesRequest.swift in Sources */,
 				DE65756429C838E60074CBE5 /* GradientView.swift in Sources */,
 				DE65748D29C838DF0074CBE5 /* SplashViewController.swift in Sources */,
@@ -1019,6 +1041,7 @@
 				DE6574FF29C838E30074CBE5 /* IAPActionResult.swift in Sources */,
 				DE65756729C838E60074CBE5 /* PushNotificationsManager.swift in Sources */,
 				DE65749529C838DF0074CBE5 /* PaygateViewControllerDelegate.swift in Sources */,
+				DE6575A029C85CEA0074CBE5 /* WelcomeSlideTextView.swift in Sources */,
 				DE65756B29C838E60074CBE5 /* Appearance.swift in Sources */,
 				DE65755429C838E60074CBE5 /* SignError.swift in Sources */,
 				DE6574FD29C838E30074CBE5 /* PurchaseValidationObserver.swift in Sources */,
@@ -1035,6 +1058,7 @@
 				DE65754429C838E60074CBE5 /* Date+Extension.swift in Sources */,
 				DE65749E29C838DF0074CBE5 /* TabView.swift in Sources */,
 				DE65755F29C838E60074CBE5 /* Spinner.swift in Sources */,
+				DE6575A629C866250074CBE5 /* WelcomeSlideAtomView.swift in Sources */,
 				DE65756E29C838E60074CBE5 /* AmplitudeManager.swift in Sources */,
 				DE65754F29C838E60074CBE5 /* TextAttributes.swift in Sources */,
 				DE65755729C838E60074CBE5 /* Weak.swift in Sources */,

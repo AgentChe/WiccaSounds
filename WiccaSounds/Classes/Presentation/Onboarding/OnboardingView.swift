@@ -14,6 +14,7 @@ final class OnboardingView: UIView {
     
     var didFinish: (() -> Void)?
 
+    private lazy var backgroundView = makeBackgroundView()
     private lazy var contentViews: [OSlideView] = {
         [
             OWelcomeView(step: .welcome)
@@ -31,6 +32,7 @@ final class OnboardingView: UIView {
         
         super.init(frame: .zero)
         
+        makeConstraints()
         initialize()
     }
     
@@ -115,5 +117,29 @@ private extension OnboardingView {
             
             self.step = newStep
         })
+    }
+}
+
+// MARK: Make constraints
+private extension OnboardingView {
+    func makeConstraints() {
+        NSLayoutConstraint.activate([
+            backgroundView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            backgroundView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            backgroundView.topAnchor.constraint(equalTo: topAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+    }
+}
+
+// MARK: Lazy initialization
+private extension OnboardingView {
+    func makeBackgroundView() -> UIImageView {
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFill
+        view.image = UIImage(named: "Onboarding.Background")
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
     }
 }

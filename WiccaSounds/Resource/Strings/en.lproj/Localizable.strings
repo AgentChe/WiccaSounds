@@ -47,3 +47,16 @@
 "Paygate.Lifetime.BottomDescription" = "once";
 "Paygate.Discount" = "SAVE %i%%";
 "Paygate.Price.Period" = "month";
+
+// MARK: Onboarding
+"Onboarding.Welcome.Title" = "You’re in the right\nplace";
+"Onboarding.Welcome.Slide1.Title" = "Tap into the magic";
+"Onboarding.Welcome.Slide1.Text" = "Newfound wiccans or even more experienced ones - Wicca helps everyone to bring beliefs, rituals, and spells into your life";
+"Onboarding.Welcome.Slide2.Title" = "Realize your dreams";
+"Onboarding.Welcome.Slide2.Text" = "You’re on the way to taking the first step into a transfixing world and begin the journey to practicing Wicca craft";
+"Onboarding.Welcome.Slide3.Title" = "What’s include";
+"Onboarding.Welcome.Slide3.Cell1" = "Complete collection of spells";
+"Onboarding.Welcome.Slide3.Cell2" = "Lunar calendar";
+"Onboarding.Welcome.Slide3.Cell3" = "Magical herbs & Glossary";
+"Onboarding.Welcome.Slide3.Cell4" = "Runes & Tarot";
+"Onboarding.Welcome.Button" = "Got it";
