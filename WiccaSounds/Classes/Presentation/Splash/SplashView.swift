@@ -35,10 +35,10 @@ private extension SplashView {
 private extension SplashView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: 100.scale),
-            imageView.heightAnchor.constraint(equalToConstant: 100.scale),
-            imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: centerYAnchor)
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            imageView.topAnchor.constraint(equalTo: topAnchor),
+            imageView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
         
         NSLayoutConstraint.activate([
@@ -58,7 +58,7 @@ private extension SplashView {
 private extension SplashView {
     func makeImageView() -> UIImageView {
         let view = UIImageView()
-        view.contentMode = .scaleAspectFit
+        view.contentMode = .scaleAspectFill
         view.image = UIImage(named: "Splash.Image")
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

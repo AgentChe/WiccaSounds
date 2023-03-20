@@ -96,7 +96,7 @@ private extension SplashViewController {
         
         let attrs = TextAttributes()
             .textColor(Appearance.white)
-            .font(Fonts.PlusJakartaSans.regular(size: 14.scale))
+            .font(Fonts.Inter.regular(size: 14.scale))
             .lineHeight(19.6.scale)
             .letterSpacing(-0.17.scale)
             .textAlignment(.center)

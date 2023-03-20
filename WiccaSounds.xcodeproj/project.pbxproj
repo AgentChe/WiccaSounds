@@ -122,6 +122,7 @@
 		DE65758929C838F30074CBE5 /* PlusJakartaSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE65757F29C838F20074CBE5 /* PlusJakartaSans-ExtraBold.ttf */; };
 		DE65758B29C838F70074CBE5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE65758A29C838F70074CBE5 /* GoogleService-Info.plist */; };
 		DE65758F29C838FB0074CBE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE65758D29C838FB0074CBE5 /* Localizable.strings */; };
+		DE65759129C83FB00074CBE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE65759029C83FB00074CBE5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -243,6 +244,7 @@
 		DE65757F29C838F20074CBE5 /* PlusJakartaSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		DE65758A29C838F70074CBE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE65758E29C838FB0074CBE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DE65759029C83FB00074CBE5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -301,6 +303,7 @@
 				DE65758C29C838FB0074CBE5 /* Strings */,
 				DE65757329C838F20074CBE5 /* Fonts */,
 				DE65757129C838EE0074CBE5 /* Assets.xcassets */,
+				DE65759029C83FB00074CBE5 /* LaunchScreen.storyboard */,
 				DE65744229C836D00074CBE5 /* Info.plist */,
 				DE65758A29C838F70074CBE5 /* GoogleService-Info.plist */,
 			);
@@ -854,6 +857,7 @@
 				DE65758029C838F30074CBE5 /* Inter-Medium.ttf in Resources */,
 				DE65758F29C838FB0074CBE5 /* Localizable.strings in Resources */,
 				DE65758229C838F30074CBE5 /* Inter-Regular.ttf in Resources */,
+				DE65759129C83FB00074CBE5 /* LaunchScreen.storyboard in Resources */,
 				DE65758729C838F30074CBE5 /* PlusJakartaSans-Regular.ttf in Resources */,
 				DE65757229C838EF0074CBE5 /* Assets.xcassets in Resources */,
 			);
