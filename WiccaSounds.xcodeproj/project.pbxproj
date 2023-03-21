@@ -150,6 +150,13 @@
 		DE6575D829C9BAAE0074CBE5 /* SaveSpellRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575D729C9BAAE0074CBE5 /* SaveSpellRequest.swift */; };
 		DE6575DA29C9BB030074CBE5 /* UnsaveSpellRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575D929C9BB030074CBE5 /* UnsaveSpellRequest.swift */; };
 		DE6575DC29C9BB260074CBE5 /* SpellsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575DB29C9BB260074CBE5 /* SpellsMediator.swift */; };
+		DE6575DF29C9BD000074CBE5 /* CandlesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575DE29C9BD000074CBE5 /* CandlesManager.swift */; };
+		DE6575E129C9BD080074CBE5 /* CandlesMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575E029C9BD080074CBE5 /* CandlesMediator.swift */; };
+		DE6575E529C9BD1C0074CBE5 /* Candle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575E429C9BD1C0074CBE5 /* Candle.swift */; };
+		DE6575E829C9BD2C0074CBE5 /* GetCandlesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575E729C9BD2C0074CBE5 /* GetCandlesRequest.swift */; };
+		DE6575EA29C9BD320074CBE5 /* GetCandlesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575E929C9BD320074CBE5 /* GetCandlesResponse.swift */; };
+		DE6575ED29C9BD430074CBE5 /* SaveCandleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575EC29C9BD430074CBE5 /* SaveCandleRequest.swift */; };
+		DE6575EF29C9BD510074CBE5 /* UnsaveCandleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575EE29C9BD510074CBE5 /* UnsaveCandleRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -299,6 +306,13 @@
 		DE6575D729C9BAAE0074CBE5 /* SaveSpellRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSpellRequest.swift; sourceTree = "<group>"; };
 		DE6575D929C9BB030074CBE5 /* UnsaveSpellRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsaveSpellRequest.swift; sourceTree = "<group>"; };
 		DE6575DB29C9BB260074CBE5 /* SpellsMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsMediator.swift; sourceTree = "<group>"; };
+		DE6575DE29C9BD000074CBE5 /* CandlesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlesManager.swift; sourceTree = "<group>"; };
+		DE6575E029C9BD080074CBE5 /* CandlesMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlesMediator.swift; sourceTree = "<group>"; };
+		DE6575E429C9BD1C0074CBE5 /* Candle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candle.swift; sourceTree = "<group>"; };
+		DE6575E729C9BD2C0074CBE5 /* GetCandlesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCandlesRequest.swift; sourceTree = "<group>"; };
+		DE6575E929C9BD320074CBE5 /* GetCandlesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCandlesResponse.swift; sourceTree = "<group>"; };
+		DE6575EC29C9BD430074CBE5 /* SaveCandleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCandleRequest.swift; sourceTree = "<group>"; };
+		DE6575EE29C9BD510074CBE5 /* UnsaveCandleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsaveCandleRequest.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -519,6 +533,7 @@
 		DE6574C129C838E20074CBE5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DE6575DD29C9BCF30074CBE5 /* Candles */,
 				DE6575C829C9B4450074CBE5 /* Content */,
 				DE65759229C842AA0074CBE5 /* Spells */,
 				DE6574C229C838E20074CBE5 /* Paygate */,
@@ -938,6 +953,52 @@
 			path = SaveUnsave;
 			sourceTree = "<group>";
 		};
+		DE6575DD29C9BCF30074CBE5 /* Candles */ = {
+			isa = PBXGroup;
+			children = (
+				DE6575E329C9BD140074CBE5 /* Request */,
+				DE6575E229C9BD0F0074CBE5 /* Model */,
+				DE6575DE29C9BD000074CBE5 /* CandlesManager.swift */,
+				DE6575E029C9BD080074CBE5 /* CandlesMediator.swift */,
+			);
+			path = Candles;
+			sourceTree = "<group>";
+		};
+		DE6575E229C9BD0F0074CBE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE6575E429C9BD1C0074CBE5 /* Candle.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE6575E329C9BD140074CBE5 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DE6575EB29C9BD350074CBE5 /* SaveUnsave */,
+				DE6575E629C9BD1F0074CBE5 /* GetCandles */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		DE6575E629C9BD1F0074CBE5 /* GetCandles */ = {
+			isa = PBXGroup;
+			children = (
+				DE6575E729C9BD2C0074CBE5 /* GetCandlesRequest.swift */,
+				DE6575E929C9BD320074CBE5 /* GetCandlesResponse.swift */,
+			);
+			path = GetCandles;
+			sourceTree = "<group>";
+		};
+		DE6575EB29C9BD350074CBE5 /* SaveUnsave */ = {
+			isa = PBXGroup;
+			children = (
+				DE6575EC29C9BD430074CBE5 /* SaveCandleRequest.swift */,
+				DE6575EE29C9BD510074CBE5 /* UnsaveCandleRequest.swift */,
+			);
+			path = SaveUnsave;
+			sourceTree = "<group>";
+		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1104,6 +1165,7 @@
 				DE65755B29C838E60074CBE5 /* Toast.swift in Sources */,
 				DE65756829C838E60074CBE5 /* PushNotificationsAuthorizationStatus.swift in Sources */,
 				DE6575AE29C8BB180074CBE5 /* OInfoView.swift in Sources */,
+				DE6575E529C9BD1C0074CBE5 /* Candle.swift in Sources */,
 				DE6575DC29C9BB260074CBE5 /* SpellsMediator.swift in Sources */,
 				DE65750129C838E30074CBE5 /* IAPError.swift in Sources */,
 				DE65756629C838E60074CBE5 /* AppDelegate.swift in Sources */,
@@ -1122,6 +1184,7 @@
 				DE6574BF29C838DF0074CBE5 /* OnboardingView.swift in Sources */,
 				DE6574A129C838DF0074CBE5 /* TryAgainViewController.swift in Sources */,
 				DE65756529C838E60074CBE5 /* CircleProgressView.swift in Sources */,
+				DE6575ED29C9BD430074CBE5 /* SaveCandleRequest.swift in Sources */,
 				DE65755329C838E60074CBE5 /* Fonts.swift in Sources */,
 				DE6574FB29C838E30074CBE5 /* ProfileMediator.swift in Sources */,
 				DE6575D229C9B5AA0074CBE5 /* GetSpellsResponse.swift in Sources */,
@@ -1129,6 +1192,7 @@
 				DE6575CB29C9B47E0074CBE5 /* ContentBlock.swift in Sources */,
 				DE65749929C838DF0074CBE5 /* PaygateProductButton.swift in Sources */,
 				DE6575C129C8D7AD0074CBE5 /* OMoonSacredCell.swift in Sources */,
+				DE6575E129C9BD080074CBE5 /* CandlesMediator.swift in Sources */,
 				DE6574C029C838DF0074CBE5 /* OnboardingViewModel.swift in Sources */,
 				DE6574ED29C838E30074CBE5 /* GetPaygateResponse.swift in Sources */,
 				DE65750029C838E30074CBE5 /* IAPProduct.swift in Sources */,
@@ -1152,6 +1216,8 @@
 				DE65749829C838DF0074CBE5 /* PaygateViewController.swift in Sources */,
 				DE6574B429C838DF0074CBE5 /* OWelcomeView.swift in Sources */,
 				DE65754729C838E60074CBE5 /* String+Extension.swift in Sources */,
+				DE6575EA29C9BD320074CBE5 /* GetCandlesResponse.swift in Sources */,
+				DE6575E829C9BD2C0074CBE5 /* GetCandlesRequest.swift in Sources */,
 				DE6575BD29C8D1CF0074CBE5 /* OTarotSuitCell.swift in Sources */,
 				DE6574F929C838E30074CBE5 /* SyncTokensRequest.swift in Sources */,
 				DE6574F829C838E30074CBE5 /* LoginRequest.swift in Sources */,
@@ -1164,6 +1230,7 @@
 				DE65754329C838E60074CBE5 /* UIColor+Extension.swift in Sources */,
 				DE65749C29C838DF0074CBE5 /* MainView.swift in Sources */,
 				DE65749B29C838DF0074CBE5 /* MainViewController.swift in Sources */,
+				DE6575EF29C9BD510074CBE5 /* UnsaveCandleRequest.swift in Sources */,
 				DE6574EE29C838E30074CBE5 /* GetPaygateRequest.swift in Sources */,
 				DE6575BF29C8D7150074CBE5 /* OMoonSacredView.swift in Sources */,
 				DE6574F629C838E30074CBE5 /* GetProfileRequest.swift in Sources */,
@@ -1183,6 +1250,7 @@
 				DE65755429C838E60074CBE5 /* SignError.swift in Sources */,
 				DE6574FD29C838E30074CBE5 /* PurchaseValidationObserver.swift in Sources */,
 				DE65755029C838E60074CBE5 /* ScreenSize.swift in Sources */,
+				DE6575DF29C9BD000074CBE5 /* CandlesManager.swift in Sources */,
 				DE65756229C838E60074CBE5 /* PaddingLabel.swift in Sources */,
 				DE65748E29C838DF0074CBE5 /* SplashActivity.swift in Sources */,
 				DE65754C29C838E60074CBE5 /* RestAPITransport.swift in Sources */,

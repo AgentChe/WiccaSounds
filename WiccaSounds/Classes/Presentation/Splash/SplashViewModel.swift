@@ -25,6 +25,7 @@ final class SplashViewModel {
     private lazy var profileManager = ProfileManager()
     private lazy var paygateManager = PaygateManager()
     private lazy var spellsManager = SpellsManager()
+    private lazy var candlesManager = CandlesManager()
     
     private lazy var observableRetrySingle = ObservableRetrySingle()
 }
@@ -113,13 +114,17 @@ private extension SplashViewModel {
             let spells = spellsManager
                 .obtainSpells(forceUpdate: true)
                 .mapToVoid()
+            let candles = candlesManager
+                .obtainCandles(forceUpdate: true)
+                .mapToVoid()
             
             return Single
                 .zip([
                     paygate,
                     profile,
                     spellsCategories,
-                    spells
+                    spells,
+                    candles
                 ])
                 .mapToVoid()
         }

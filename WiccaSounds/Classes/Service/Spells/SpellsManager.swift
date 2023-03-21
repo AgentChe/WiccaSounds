@@ -48,6 +48,9 @@ extension SpellsManager: SpellsManagerProtocol {
         return defaultWrapper
             .callServerApi(requestBody: request)
             .mapToVoid()
+            .do(onSuccess: {
+                SpellsMediator.shared.didSave(spellId: spellId)
+            })
     }
     
     func unsave(spellId: Int) -> Single<Void> {
@@ -63,6 +66,9 @@ extension SpellsManager: SpellsManagerProtocol {
         return defaultWrapper
             .callServerApi(requestBody: request)
             .mapToVoid()
+            .do(onSuccess: {
+                SpellsMediator.shared.didUnsave(spellId: spellId)
+            })
     }
 }
 
