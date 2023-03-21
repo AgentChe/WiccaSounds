@@ -11,8 +11,9 @@ final class MainViewCoordinator {
     weak var parentVC: MainViewController?
     
     lazy var homeVC = NavigationController(rootViewController: UIViewController())
-    lazy var trainVC = NavigationController(rootViewController: UIViewController())
-    lazy var profileVC = NavigationController(rootViewController: UIViewController())
+    lazy var exploreVC = NavigationController(rootViewController: UIViewController())
+    lazy var practiceVC = NavigationController(rootViewController: UIViewController())
+    lazy var ambienceVC = NavigationController(rootViewController: UIViewController())
     
     private var previousVC: UIViewController?
     
@@ -26,10 +27,12 @@ final class MainViewCoordinator {
         switch tab {
         case .home:
             changeVC(on: homeVC)
-        case .train:
-            changeVC(on: trainVC)
-        case .profile:
-            changeVC(on: profileVC)
+        case .explore:
+            changeVC(on: exploreVC)
+        case .practice:
+            changeVC(on: practiceVC)
+        case .ambience:
+            changeVC(on: ambienceVC)
         }
     }
 }

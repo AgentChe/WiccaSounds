@@ -91,3 +91,9 @@
 "Onboarding.Preloader.Label3" = "Identifying spell preferences...";
 "Onboarding.Preloader.Label4" = "Identifying witchcraft needs...";
 "Onboarding.Preloader.Label5" = "Building your profile...";
+
+// MARK: Main
+"Main.Tab.Home" = "Home";
+"Main.Tab.Explore" = "Explore";
+"Main.Tab.Practice" = "Practice";
+"Main.Tab.Ambience" = "Ambience";

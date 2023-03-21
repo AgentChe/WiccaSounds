@@ -8,14 +8,10 @@
 import UIKit
 
 final class TabItemView: UIButton {
-    enum Mode {
-        case selected, deselected
-    }
-    
     lazy var iconView = makeImageView()
     lazy var label = makeLabel()
     
-    var mode = Mode.deselected {
+    var marked = false {
         didSet {
             update()
         }
@@ -39,28 +35,17 @@ final class TabItemView: UIButton {
 // MARK: Private
 private extension TabItemView {
     func update() {
-        let color: UIColor
-        let image: UIImage?
+        alpha = marked ? 1 : 0.6
         
-        switch mode {
-        case .selected:
-            color = UIColor(integralRed: 255, green: 62, blue: 53)
-            image = UIImage(named: code + ".Selected")
-            alpha = 1
-        case .deselected:
-            color = Appearance.white
-            image = UIImage(named: code + ".Deselected")
-            alpha = 0.5
-        }
+        let imageAdditionalCode = marked ? ".Selected" : ".Deselected"
+        iconView.image = UIImage(named: code + imageAdditionalCode)
         
         let attrs = TextAttributes()
             .font(Fonts.PlusJakartaSans.semiBold(size: 11.scale))
-            .textColor(color)
-            .lineHeight(12.scale)
+            .textColor(marked ? Appearance.primary : Appearance.white)
+            .lineHeight(13.scale)
             .textAlignment(.center)
         label.attributedText = code.localized.attributed(with: attrs)
-        
-        iconView.image = image
     }
 }
 

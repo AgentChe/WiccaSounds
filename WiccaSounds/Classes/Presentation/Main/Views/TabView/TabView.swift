@@ -9,12 +9,13 @@ import UIKit
 
 final class TabView: UIView {
     enum Tab {
-        case home, train, profile
+        case home, explore, practice, ambience
     }
     
-    lazy var homeItem = makeItem(code: "Main.Home")
-    lazy var trainItem = makeItem(code: "Main.Train")
-    lazy var profileItem = makeItem(code: "Main.Profile")
+    lazy var homeItem = makeItem(code: "Main.Tab.Home")
+    lazy var exploreItem = makeItem(code: "Main.Tab.Explore")
+    lazy var practiceItem = makeItem(code: "Main.Tab.Practice")
+    lazy var ambienceItem = makeItem(code: "Main.Tab.Ambience")
     
     var selectedTab = Tab.home {
         didSet {
@@ -36,23 +37,10 @@ final class TabView: UIView {
 // MARK: Private
 private extension TabView {
     func update() {
-        [
-            homeItem,
-            trainItem,
-            profileItem
-        ]
-        .forEach {
-            $0.mode = .deselected
-        }
-        
-        switch selectedTab {
-        case .home:
-            homeItem.mode = .selected
-        case .train:
-            trainItem.mode = .selected
-        case .profile:
-            profileItem.mode = .selected
-        }
+        homeItem.marked = selectedTab == .home
+        exploreItem.marked = selectedTab == .explore
+        practiceItem.marked = selectedTab == .practice
+        ambienceItem.marked = selectedTab == .ambience
     }
 }
 
@@ -63,21 +51,28 @@ private extension TabView {
             homeItem.leadingAnchor.constraint(equalTo: leadingAnchor),
             homeItem.bottomAnchor.constraint(equalTo: bottomAnchor),
             homeItem.topAnchor.constraint(equalTo: topAnchor),
-            homeItem.widthAnchor.constraint(equalTo: trainItem.widthAnchor)
+            homeItem.widthAnchor.constraint(equalTo: exploreItem.widthAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            trainItem.leadingAnchor.constraint(equalTo: homeItem.trailingAnchor),
-            trainItem.bottomAnchor.constraint(equalTo: bottomAnchor),
-            trainItem.topAnchor.constraint(equalTo: topAnchor),
-            trainItem.widthAnchor.constraint(equalTo: profileItem.widthAnchor)
+            exploreItem.leadingAnchor.constraint(equalTo: homeItem.trailingAnchor),
+            exploreItem.bottomAnchor.constraint(equalTo: bottomAnchor),
+            exploreItem.topAnchor.constraint(equalTo: topAnchor),
+            exploreItem.widthAnchor.constraint(equalTo: practiceItem.widthAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            profileItem.leadingAnchor.constraint(equalTo: trainItem.trailingAnchor),
-            profileItem.bottomAnchor.constraint(equalTo: bottomAnchor),
-            profileItem.topAnchor.constraint(equalTo: topAnchor),
-            profileItem.trailingAnchor.constraint(equalTo: trailingAnchor)
+            practiceItem.leadingAnchor.constraint(equalTo: exploreItem.trailingAnchor),
+            practiceItem.bottomAnchor.constraint(equalTo: bottomAnchor),
+            practiceItem.topAnchor.constraint(equalTo: topAnchor),
+            practiceItem.widthAnchor.constraint(equalTo: ambienceItem.widthAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            ambienceItem.leadingAnchor.constraint(equalTo: practiceItem.trailingAnchor),
+            ambienceItem.bottomAnchor.constraint(equalTo: bottomAnchor),
+            ambienceItem.topAnchor.constraint(equalTo: topAnchor),
+            ambienceItem.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
     }
 }

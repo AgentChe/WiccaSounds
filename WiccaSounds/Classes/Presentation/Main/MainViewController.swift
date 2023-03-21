@@ -74,12 +74,12 @@ private extension MainViewController {
             .merge([
                 mainView.tabView.homeItem
                     .rx.tap.map { TabView.Tab.home },
-                
-                mainView.tabView.trainItem
-                    .rx.tap.map { TabView.Tab.train },
-                
-                mainView.tabView.profileItem
-                    .rx.tap.map { TabView.Tab.profile }
+                mainView.tabView.exploreItem
+                    .rx.tap.map { TabView.Tab.explore },
+                mainView.tabView.practiceItem
+                    .rx.tap.map { TabView.Tab.practice },
+                mainView.tabView.ambienceItem
+                    .rx.tap.map { TabView.Tab.ambience }
             ])
             .subscribe(onNext: { [weak self] tab in
                 self?.update(selectedTab: tab)
