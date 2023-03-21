@@ -180,6 +180,13 @@
 		DE65762829C9C8E70074CBE5 /* GetTarotRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65762729C9C8E70074CBE5 /* GetTarotRequest.swift */; };
 		DE65762A29C9C8F50074CBE5 /* GetTarotResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65762929C9C8F50074CBE5 /* GetTarotResponse.swift */; };
 		DE65762C29C9CB620074CBE5 /* TarotMeaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65762B29C9CB620074CBE5 /* TarotMeaning.swift */; };
+		DE65762F29C9CFF60074CBE5 /* RunesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65762E29C9CFF60074CBE5 /* RunesManager.swift */; };
+		DE65763329C9D0080074CBE5 /* RuneCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65763229C9D0080074CBE5 /* RuneCover.swift */; };
+		DE65763529C9D00F0074CBE5 /* Rune.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65763429C9D00F0074CBE5 /* Rune.swift */; };
+		DE65763829C9D03D0074CBE5 /* GetRunesCoversRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65763729C9D03D0074CBE5 /* GetRunesCoversRequest.swift */; };
+		DE65763A29C9D0440074CBE5 /* GetRunesCoversResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65763929C9D0440074CBE5 /* GetRunesCoversResponse.swift */; };
+		DE65763D29C9D0520074CBE5 /* GetRuneRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65763C29C9D0520074CBE5 /* GetRuneRequest.swift */; };
+		DE65763F29C9D0590074CBE5 /* GetRuneResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65763E29C9D0590074CBE5 /* GetRuneResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -359,6 +366,13 @@
 		DE65762729C9C8E70074CBE5 /* GetTarotRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTarotRequest.swift; sourceTree = "<group>"; };
 		DE65762929C9C8F50074CBE5 /* GetTarotResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTarotResponse.swift; sourceTree = "<group>"; };
 		DE65762B29C9CB620074CBE5 /* TarotMeaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotMeaning.swift; sourceTree = "<group>"; };
+		DE65762E29C9CFF60074CBE5 /* RunesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunesManager.swift; sourceTree = "<group>"; };
+		DE65763229C9D0080074CBE5 /* RuneCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneCover.swift; sourceTree = "<group>"; };
+		DE65763429C9D00F0074CBE5 /* Rune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rune.swift; sourceTree = "<group>"; };
+		DE65763729C9D03D0074CBE5 /* GetRunesCoversRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRunesCoversRequest.swift; sourceTree = "<group>"; };
+		DE65763929C9D0440074CBE5 /* GetRunesCoversResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRunesCoversResponse.swift; sourceTree = "<group>"; };
+		DE65763C29C9D0520074CBE5 /* GetRuneRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRuneRequest.swift; sourceTree = "<group>"; };
+		DE65763E29C9D0590074CBE5 /* GetRuneResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRuneResponse.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -579,6 +593,7 @@
 		DE6574C129C838E20074CBE5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DE65762D29C9CFC10074CBE5 /* Runes */,
 				DE65761629C9C7460074CBE5 /* Tarot */,
 				DE65760329C9C3DA0074CBE5 /* Crystals */,
 				DE6575F029C9C1850074CBE5 /* Herbs */,
@@ -1188,6 +1203,52 @@
 			path = GetTarot;
 			sourceTree = "<group>";
 		};
+		DE65762D29C9CFC10074CBE5 /* Runes */ = {
+			isa = PBXGroup;
+			children = (
+				DE65763129C9CFFC0074CBE5 /* Request */,
+				DE65763029C9CFF80074CBE5 /* Model */,
+				DE65762E29C9CFF60074CBE5 /* RunesManager.swift */,
+			);
+			path = Runes;
+			sourceTree = "<group>";
+		};
+		DE65763029C9CFF80074CBE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE65763229C9D0080074CBE5 /* RuneCover.swift */,
+				DE65763429C9D00F0074CBE5 /* Rune.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE65763129C9CFFC0074CBE5 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DE65763B29C9D0470074CBE5 /* GetRune */,
+				DE65763629C9D0220074CBE5 /* GetCovers */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		DE65763629C9D0220074CBE5 /* GetCovers */ = {
+			isa = PBXGroup;
+			children = (
+				DE65763729C9D03D0074CBE5 /* GetRunesCoversRequest.swift */,
+				DE65763929C9D0440074CBE5 /* GetRunesCoversResponse.swift */,
+			);
+			path = GetCovers;
+			sourceTree = "<group>";
+		};
+		DE65763B29C9D0470074CBE5 /* GetRune */ = {
+			isa = PBXGroup;
+			children = (
+				DE65763C29C9D0520074CBE5 /* GetRuneRequest.swift */,
+				DE65763E29C9D0590074CBE5 /* GetRuneResponse.swift */,
+			);
+			path = GetRune;
+			sourceTree = "<group>";
+		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1356,6 +1417,7 @@
 				DE65756829C838E60074CBE5 /* PushNotificationsAuthorizationStatus.swift in Sources */,
 				DE65762829C9C8E70074CBE5 /* GetTarotRequest.swift in Sources */,
 				DE6575AE29C8BB180074CBE5 /* OInfoView.swift in Sources */,
+				DE65763529C9D00F0074CBE5 /* Rune.swift in Sources */,
 				DE65761E29C9C7980074CBE5 /* Tarot.swift in Sources */,
 				DE6575E529C9BD1C0074CBE5 /* Candle.swift in Sources */,
 				DE6575DC29C9BB260074CBE5 /* SpellsMediator.swift in Sources */,
@@ -1365,6 +1427,7 @@
 				DE6575B729C8C15D0074CBE5 /* OSpellsCategoriesTableCell.swift in Sources */,
 				DE6575B929C8C1660074CBE5 /* OSpellsCategoriesTableElement.swift in Sources */,
 				DE6574EA29C838E30074CBE5 /* PaygateOptionLineComponent.swift in Sources */,
+				DE65762F29C9CFF60074CBE5 /* RunesManager.swift in Sources */,
 				DE6574A329C838DF0074CBE5 /* OnboardingViewController.swift in Sources */,
 				DE65755629C838E60074CBE5 /* ContentError.swift in Sources */,
 				DE6575D529C9B8A20074CBE5 /* ContentBlockMapper.swift in Sources */,
@@ -1408,6 +1471,7 @@
 				DE65749229C838DF0074CBE5 /* PaygateViewModel.swift in Sources */,
 				DE65755A29C838E60074CBE5 /* RxActivityIndicator.swift in Sources */,
 				DE6575D029C9B5A50074CBE5 /* GetSpellsRequest.swift in Sources */,
+				DE65763F29C9D0590074CBE5 /* GetRuneResponse.swift in Sources */,
 				DE65759D29C843880074CBE5 /* GetSpellsCategoriesResponse.swift in Sources */,
 				DE6574A229C838DF0074CBE5 /* OCombineData.swift in Sources */,
 				DE6574FA29C838E30074CBE5 /* SetRequest.swift in Sources */,
@@ -1419,6 +1483,7 @@
 				DE6575E829C9BD2C0074CBE5 /* GetCandlesRequest.swift in Sources */,
 				DE6575BD29C8D1CF0074CBE5 /* OTarotSuitCell.swift in Sources */,
 				DE6574F929C838E30074CBE5 /* SyncTokensRequest.swift in Sources */,
+				DE65763D29C9D0520074CBE5 /* GetRuneRequest.swift in Sources */,
 				DE6574F829C838E30074CBE5 /* LoginRequest.swift in Sources */,
 				DE6575BB29C8D0250074CBE5 /* OTarotSuitView.swift in Sources */,
 				DE65760B29C9C3FD0074CBE5 /* Crystal.swift in Sources */,
@@ -1461,7 +1526,9 @@
 				DE65756C29C838E60074CBE5 /* AppsFlyerManager.swift in Sources */,
 				DE65756929C838E60074CBE5 /* PushNotificationsModel.swift in Sources */,
 				DE65760029C9C1CB0074CBE5 /* SaveHerbRequest.swift in Sources */,
+				DE65763329C9D0080074CBE5 /* RuneCover.swift in Sources */,
 				DE6575F829C9C1A90074CBE5 /* Herb.swift in Sources */,
+				DE65763829C9D03D0074CBE5 /* GetRunesCoversRequest.swift in Sources */,
 				DE65749029C838DF0074CBE5 /* SplashViewModel.swift in Sources */,
 				DE65750229C838E30074CBE5 /* IAPErrorHelper.swift in Sources */,
 				DE65755129C838E60074CBE5 /* ObservableRetrySingle.swift in Sources */,
@@ -1471,6 +1538,7 @@
 				DE65749E29C838DF0074CBE5 /* TabView.swift in Sources */,
 				DE65755F29C838E60074CBE5 /* Spinner.swift in Sources */,
 				DE6575AA29C86E6F0074CBE5 /* OWiccanElementView.swift in Sources */,
+				DE65763A29C9D0440074CBE5 /* GetRunesCoversResponse.swift in Sources */,
 				DE6575A629C866250074CBE5 /* WelcomeSlideAtomView.swift in Sources */,
 				DE65756E29C838E60074CBE5 /* AmplitudeManager.swift in Sources */,
 				DE65762A29C9C8F50074CBE5 /* GetTarotResponse.swift in Sources */,
