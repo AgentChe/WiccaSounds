@@ -157,6 +157,13 @@
 		DE6575EA29C9BD320074CBE5 /* GetCandlesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575E929C9BD320074CBE5 /* GetCandlesResponse.swift */; };
 		DE6575ED29C9BD430074CBE5 /* SaveCandleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575EC29C9BD430074CBE5 /* SaveCandleRequest.swift */; };
 		DE6575EF29C9BD510074CBE5 /* UnsaveCandleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575EE29C9BD510074CBE5 /* UnsaveCandleRequest.swift */; };
+		DE6575F229C9C1920074CBE5 /* HerbsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575F129C9C1920074CBE5 /* HerbsManager.swift */; };
+		DE6575F429C9C19B0074CBE5 /* HerbsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575F329C9C19B0074CBE5 /* HerbsMediator.swift */; };
+		DE6575F829C9C1A90074CBE5 /* Herb.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575F729C9C1A90074CBE5 /* Herb.swift */; };
+		DE6575FB29C9C1B70074CBE5 /* GetHerbsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575FA29C9C1B70074CBE5 /* GetHerbsRequest.swift */; };
+		DE6575FD29C9C1BC0074CBE5 /* GetHerbsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575FC29C9C1BC0074CBE5 /* GetHerbsResponse.swift */; };
+		DE65760029C9C1CB0074CBE5 /* SaveHerbRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575FF29C9C1CB0074CBE5 /* SaveHerbRequest.swift */; };
+		DE65760229C9C1D30074CBE5 /* UnsaveHerbRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65760129C9C1D30074CBE5 /* UnsaveHerbRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -313,6 +320,13 @@
 		DE6575E929C9BD320074CBE5 /* GetCandlesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCandlesResponse.swift; sourceTree = "<group>"; };
 		DE6575EC29C9BD430074CBE5 /* SaveCandleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCandleRequest.swift; sourceTree = "<group>"; };
 		DE6575EE29C9BD510074CBE5 /* UnsaveCandleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsaveCandleRequest.swift; sourceTree = "<group>"; };
+		DE6575F129C9C1920074CBE5 /* HerbsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerbsManager.swift; sourceTree = "<group>"; };
+		DE6575F329C9C19B0074CBE5 /* HerbsMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerbsMediator.swift; sourceTree = "<group>"; };
+		DE6575F729C9C1A90074CBE5 /* Herb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Herb.swift; sourceTree = "<group>"; };
+		DE6575FA29C9C1B70074CBE5 /* GetHerbsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHerbsRequest.swift; sourceTree = "<group>"; };
+		DE6575FC29C9C1BC0074CBE5 /* GetHerbsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHerbsResponse.swift; sourceTree = "<group>"; };
+		DE6575FF29C9C1CB0074CBE5 /* SaveHerbRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveHerbRequest.swift; sourceTree = "<group>"; };
+		DE65760129C9C1D30074CBE5 /* UnsaveHerbRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsaveHerbRequest.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -533,6 +547,7 @@
 		DE6574C129C838E20074CBE5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DE6575F029C9C1850074CBE5 /* Herbs */,
 				DE6575DD29C9BCF30074CBE5 /* Candles */,
 				DE6575C829C9B4450074CBE5 /* Content */,
 				DE65759229C842AA0074CBE5 /* Spells */,
@@ -999,6 +1014,52 @@
 			path = SaveUnsave;
 			sourceTree = "<group>";
 		};
+		DE6575F029C9C1850074CBE5 /* Herbs */ = {
+			isa = PBXGroup;
+			children = (
+				DE6575F629C9C1A20074CBE5 /* Model */,
+				DE6575F529C9C19D0074CBE5 /* Request */,
+				DE6575F129C9C1920074CBE5 /* HerbsManager.swift */,
+				DE6575F329C9C19B0074CBE5 /* HerbsMediator.swift */,
+			);
+			path = Herbs;
+			sourceTree = "<group>";
+		};
+		DE6575F529C9C19D0074CBE5 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DE6575FE29C9C1BF0074CBE5 /* SaveUnsave */,
+				DE6575F929C9C1AC0074CBE5 /* GetHerbs */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		DE6575F629C9C1A20074CBE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE6575F729C9C1A90074CBE5 /* Herb.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE6575F929C9C1AC0074CBE5 /* GetHerbs */ = {
+			isa = PBXGroup;
+			children = (
+				DE6575FA29C9C1B70074CBE5 /* GetHerbsRequest.swift */,
+				DE6575FC29C9C1BC0074CBE5 /* GetHerbsResponse.swift */,
+			);
+			path = GetHerbs;
+			sourceTree = "<group>";
+		};
+		DE6575FE29C9C1BF0074CBE5 /* SaveUnsave */ = {
+			isa = PBXGroup;
+			children = (
+				DE6575FF29C9C1CB0074CBE5 /* SaveHerbRequest.swift */,
+				DE65760129C9C1D30074CBE5 /* UnsaveHerbRequest.swift */,
+			);
+			path = SaveUnsave;
+			sourceTree = "<group>";
+		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1178,6 +1239,7 @@
 				DE6575D529C9B8A20074CBE5 /* ContentBlockMapper.swift in Sources */,
 				DE65754129C838E60074CBE5 /* UIApplication+Extension.swift in Sources */,
 				DE65756F29C838E60074CBE5 /* FirebaseManager.swift in Sources */,
+				DE6575FB29C9C1B70074CBE5 /* GetHerbsRequest.swift in Sources */,
 				DE65756A29C838E60074CBE5 /* SceneDelegate.swift in Sources */,
 				DE65754A29C838E60074CBE5 /* DefaultRequestWrapper.swift in Sources */,
 				DE65750329C838E30074CBE5 /* Session.swift in Sources */,
@@ -1185,7 +1247,9 @@
 				DE6574A129C838DF0074CBE5 /* TryAgainViewController.swift in Sources */,
 				DE65756529C838E60074CBE5 /* CircleProgressView.swift in Sources */,
 				DE6575ED29C9BD430074CBE5 /* SaveCandleRequest.swift in Sources */,
+				DE6575FD29C9C1BC0074CBE5 /* GetHerbsResponse.swift in Sources */,
 				DE65755329C838E60074CBE5 /* Fonts.swift in Sources */,
+				DE6575F229C9C1920074CBE5 /* HerbsManager.swift in Sources */,
 				DE6574FB29C838E30074CBE5 /* ProfileMediator.swift in Sources */,
 				DE6575D229C9B5AA0074CBE5 /* GetSpellsResponse.swift in Sources */,
 				DE6575B529C8C1570074CBE5 /* OSpellsCategoriesTableView.swift in Sources */,
@@ -1225,6 +1289,7 @@
 				DE65749629C838DF0074CBE5 /* PaygateInteractor.swift in Sources */,
 				DE6574B729C838DF0074CBE5 /* OSlideView.swift in Sources */,
 				DE65754229C838E60074CBE5 /* UIDevice+Extension.swift in Sources */,
+				DE65760229C9C1D30074CBE5 /* UnsaveHerbRequest.swift in Sources */,
 				DE65756129C838E60074CBE5 /* PaddingTextField.swift in Sources */,
 				DE65749329C838DF0074CBE5 /* DefaultPaygate.swift in Sources */,
 				DE65754329C838E60074CBE5 /* UIColor+Extension.swift in Sources */,
@@ -1245,6 +1310,7 @@
 				DE6574FF29C838E30074CBE5 /* IAPActionResult.swift in Sources */,
 				DE65756729C838E60074CBE5 /* PushNotificationsManager.swift in Sources */,
 				DE65749529C838DF0074CBE5 /* PaygateViewControllerDelegate.swift in Sources */,
+				DE6575F429C9C19B0074CBE5 /* HerbsMediator.swift in Sources */,
 				DE6575A029C85CEA0074CBE5 /* WelcomeSlideTextView.swift in Sources */,
 				DE65756B29C838E60074CBE5 /* Appearance.swift in Sources */,
 				DE65755429C838E60074CBE5 /* SignError.swift in Sources */,
@@ -1256,6 +1322,8 @@
 				DE65754C29C838E60074CBE5 /* RestAPITransport.swift in Sources */,
 				DE65756C29C838E60074CBE5 /* AppsFlyerManager.swift in Sources */,
 				DE65756929C838E60074CBE5 /* PushNotificationsModel.swift in Sources */,
+				DE65760029C9C1CB0074CBE5 /* SaveHerbRequest.swift in Sources */,
+				DE6575F829C9C1A90074CBE5 /* Herb.swift in Sources */,
 				DE65749029C838DF0074CBE5 /* SplashViewModel.swift in Sources */,
 				DE65750229C838E30074CBE5 /* IAPErrorHelper.swift in Sources */,
 				DE65755129C838E60074CBE5 /* ObservableRetrySingle.swift in Sources */,
