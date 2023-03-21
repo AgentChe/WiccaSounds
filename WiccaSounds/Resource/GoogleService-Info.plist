@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>522029731906-161uufveffetscgsj4lmgn4auo0g64h6.apps.googleusercontent.com</string>
+	<string>963224891107-1j4cvla3i8s1qk0c3kdc86m50lr8vk3k.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.522029731906-161uufveffetscgsj4lmgn4auo0g64h6</string>
+	<string>com.googleusercontent.apps.963224891107-1j4cvla3i8s1qk0c3kdc86m50lr8vk3k</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBGYTEhPeHc33Nj7bYxT6fDbDG_AueSXb0</string>
+	<string>AIzaSyCKo4u0YvmFzgG7qROeeOx_C-Q7J2fDt9k</string>
 	<key>GCM_SENDER_ID</key>
-	<string>522029731906</string>
+	<string>963224891107</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>mobile.manga</string>
+	<string>com.bigideaapps.Wikka</string>
 	<key>PROJECT_ID</key>
-	<string>manga-comics-610ad</string>
+	<string>wicca-2</string>
 	<key>STORAGE_BUCKET</key>
-	<string>manga-comics-610ad.appspot.com</string>
+	<string>wicca-2.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:522029731906:ios:e31c3d57f27b0ec92c9ddb</string>
+	<string>1:963224891107:ios:f642b78a8be0b5e4581fd6</string>
 </dict>
 </plist>

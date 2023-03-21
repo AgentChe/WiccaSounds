@@ -116,7 +116,6 @@
 		DE65758729C838F30074CBE5 /* PlusJakartaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE65757D29C838F20074CBE5 /* PlusJakartaSans-Regular.ttf */; };
 		DE65758829C838F30074CBE5 /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE65757E29C838F20074CBE5 /* PlusJakartaSans-Bold.ttf */; };
 		DE65758929C838F30074CBE5 /* PlusJakartaSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE65757F29C838F20074CBE5 /* PlusJakartaSans-ExtraBold.ttf */; };
-		DE65758B29C838F70074CBE5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE65758A29C838F70074CBE5 /* GoogleService-Info.plist */; };
 		DE65758F29C838FB0074CBE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE65758D29C838FB0074CBE5 /* Localizable.strings */; };
 		DE65759129C83FB00074CBE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE65759029C83FB00074CBE5 /* LaunchScreen.storyboard */; };
 		DE65759429C842B50074CBE5 /* SpellsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65759329C842B50074CBE5 /* SpellsManager.swift */; };
@@ -128,6 +127,21 @@
 		DE6575A429C8601D0074CBE5 /* WelcomeSlideCellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575A329C8601D0074CBE5 /* WelcomeSlideCellsView.swift */; };
 		DE6575A629C866250074CBE5 /* WelcomeSlideAtomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575A529C866250074CBE5 /* WelcomeSlideAtomView.swift */; };
 		DE6575A829C86C350074CBE5 /* OBirthdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575A729C86C350074CBE5 /* OBirthdateView.swift */; };
+		DE6575AA29C86E6F0074CBE5 /* OWiccanElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575A929C86E6F0074CBE5 /* OWiccanElementView.swift */; };
+		DE6575AC29C86FCF0074CBE5 /* WiccanElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575AB29C86FCF0074CBE5 /* WiccanElementCell.swift */; };
+		DE6575AE29C8BB180074CBE5 /* OInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575AD29C8BB180074CBE5 /* OInfoView.swift */; };
+		DE6575B029C8C02C0074CBE5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE6575AF29C8C02C0074CBE5 /* GoogleService-Info.plist */; };
+		DE6575B229C8C0DA0074CBE5 /* OSpellsCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575B129C8C0DA0074CBE5 /* OSpellsCategoriesView.swift */; };
+		DE6575B529C8C1570074CBE5 /* OSpellsCategoriesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575B429C8C1570074CBE5 /* OSpellsCategoriesTableView.swift */; };
+		DE6575B729C8C15D0074CBE5 /* OSpellsCategoriesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575B629C8C15D0074CBE5 /* OSpellsCategoriesTableCell.swift */; };
+		DE6575B929C8C1660074CBE5 /* OSpellsCategoriesTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575B829C8C1660074CBE5 /* OSpellsCategoriesTableElement.swift */; };
+		DE6575BB29C8D0250074CBE5 /* OTarotSuitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575BA29C8D0250074CBE5 /* OTarotSuitView.swift */; };
+		DE6575BD29C8D1CF0074CBE5 /* OTarotSuitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575BC29C8D1CF0074CBE5 /* OTarotSuitCell.swift */; };
+		DE6575BF29C8D7150074CBE5 /* OMoonSacredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575BE29C8D7150074CBE5 /* OMoonSacredView.swift */; };
+		DE6575C129C8D7AD0074CBE5 /* OMoonSacredCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575C029C8D7AD0074CBE5 /* OMoonSacredCell.swift */; };
+		DE6575C329C9090D0074CBE5 /* OObjectsChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575C229C9090D0074CBE5 /* OObjectsChannelView.swift */; };
+		DE6575C529C90C040074CBE5 /* OObjectChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575C429C90C040074CBE5 /* OObjectChannelCell.swift */; };
+		DE6575C729C912790074CBE5 /* OPreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575C629C912790074CBE5 /* OPreloaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -243,7 +257,6 @@
 		DE65757D29C838F20074CBE5 /* PlusJakartaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Regular.ttf"; sourceTree = "<group>"; };
 		DE65757E29C838F20074CBE5 /* PlusJakartaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Bold.ttf"; sourceTree = "<group>"; };
 		DE65757F29C838F20074CBE5 /* PlusJakartaSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraBold.ttf"; sourceTree = "<group>"; };
-		DE65758A29C838F70074CBE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE65758E29C838FB0074CBE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DE65759029C83FB00074CBE5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE65759329C842B50074CBE5 /* SpellsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsManager.swift; sourceTree = "<group>"; };
@@ -255,6 +268,21 @@
 		DE6575A329C8601D0074CBE5 /* WelcomeSlideCellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSlideCellsView.swift; sourceTree = "<group>"; };
 		DE6575A529C866250074CBE5 /* WelcomeSlideAtomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSlideAtomView.swift; sourceTree = "<group>"; };
 		DE6575A729C86C350074CBE5 /* OBirthdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBirthdateView.swift; sourceTree = "<group>"; };
+		DE6575A929C86E6F0074CBE5 /* OWiccanElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWiccanElementView.swift; sourceTree = "<group>"; };
+		DE6575AB29C86FCF0074CBE5 /* WiccanElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiccanElementCell.swift; sourceTree = "<group>"; };
+		DE6575AD29C8BB180074CBE5 /* OInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OInfoView.swift; sourceTree = "<group>"; };
+		DE6575AF29C8C02C0074CBE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DE6575B129C8C0DA0074CBE5 /* OSpellsCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSpellsCategoriesView.swift; sourceTree = "<group>"; };
+		DE6575B429C8C1570074CBE5 /* OSpellsCategoriesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSpellsCategoriesTableView.swift; sourceTree = "<group>"; };
+		DE6575B629C8C15D0074CBE5 /* OSpellsCategoriesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSpellsCategoriesTableCell.swift; sourceTree = "<group>"; };
+		DE6575B829C8C1660074CBE5 /* OSpellsCategoriesTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSpellsCategoriesTableElement.swift; sourceTree = "<group>"; };
+		DE6575BA29C8D0250074CBE5 /* OTarotSuitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTarotSuitView.swift; sourceTree = "<group>"; };
+		DE6575BC29C8D1CF0074CBE5 /* OTarotSuitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTarotSuitCell.swift; sourceTree = "<group>"; };
+		DE6575BE29C8D7150074CBE5 /* OMoonSacredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMoonSacredView.swift; sourceTree = "<group>"; };
+		DE6575C029C8D7AD0074CBE5 /* OMoonSacredCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMoonSacredCell.swift; sourceTree = "<group>"; };
+		DE6575C229C9090D0074CBE5 /* OObjectsChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OObjectsChannelView.swift; sourceTree = "<group>"; };
+		DE6575C429C90C040074CBE5 /* OObjectChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OObjectChannelCell.swift; sourceTree = "<group>"; };
+		DE6575C629C912790074CBE5 /* OPreloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPreloaderView.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -314,8 +342,8 @@
 				DE65757329C838F20074CBE5 /* Fonts */,
 				DE65757129C838EE0074CBE5 /* Assets.xcassets */,
 				DE65759029C83FB00074CBE5 /* LaunchScreen.storyboard */,
+				DE6575AF29C8C02C0074CBE5 /* GoogleService-Info.plist */,
 				DE65744229C836D00074CBE5 /* Info.plist */,
-				DE65758A29C838F70074CBE5 /* GoogleService-Info.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -448,6 +476,13 @@
 				DE65748329C838DF0074CBE5 /* OSlideView.swift */,
 				DE65748029C838DF0074CBE5 /* OWelcomeView.swift */,
 				DE6575A729C86C350074CBE5 /* OBirthdateView.swift */,
+				DE6575A929C86E6F0074CBE5 /* OWiccanElementView.swift */,
+				DE6575AD29C8BB180074CBE5 /* OInfoView.swift */,
+				DE6575B129C8C0DA0074CBE5 /* OSpellsCategoriesView.swift */,
+				DE6575BA29C8D0250074CBE5 /* OTarotSuitView.swift */,
+				DE6575BE29C8D7150074CBE5 /* OMoonSacredView.swift */,
+				DE6575C229C9090D0074CBE5 /* OObjectsChannelView.swift */,
+				DE6575C629C912790074CBE5 /* OPreloaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -455,7 +490,12 @@
 		DE65746F29C838DF0074CBE5 /* Atoms */ = {
 			isa = PBXGroup;
 			children = (
+				DE6575B329C8C14A0074CBE5 /* SpellsCategories */,
 				DE65759E29C85CC20074CBE5 /* Welcome */,
+				DE6575AB29C86FCF0074CBE5 /* WiccanElementCell.swift */,
+				DE6575BC29C8D1CF0074CBE5 /* OTarotSuitCell.swift */,
+				DE6575C029C8D7AD0074CBE5 /* OMoonSacredCell.swift */,
+				DE6575C429C90C040074CBE5 /* OObjectChannelCell.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -824,6 +864,16 @@
 			path = Welcome;
 			sourceTree = "<group>";
 		};
+		DE6575B329C8C14A0074CBE5 /* SpellsCategories */ = {
+			isa = PBXGroup;
+			children = (
+				DE6575B429C8C1570074CBE5 /* OSpellsCategoriesTableView.swift */,
+				DE6575B629C8C15D0074CBE5 /* OSpellsCategoriesTableCell.swift */,
+				DE6575B829C8C1660074CBE5 /* OSpellsCategoriesTableElement.swift */,
+			);
+			path = SpellsCategories;
+			sourceTree = "<group>";
+		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -906,7 +956,6 @@
 				DE65758929C838F30074CBE5 /* PlusJakartaSans-ExtraBold.ttf in Resources */,
 				DE65758329C838F30074CBE5 /* Inter-Italic.otf in Resources */,
 				DE65758129C838F30074CBE5 /* Inter-Bold.ttf in Resources */,
-				DE65758B29C838F70074CBE5 /* GoogleService-Info.plist in Resources */,
 				DE65758629C838F30074CBE5 /* PlusJakartaSans-SemiBold.ttf in Resources */,
 				DE65758529C838F30074CBE5 /* PlusJakartaSans-Medium.ttf in Resources */,
 				DE65758029C838F30074CBE5 /* Inter-Medium.ttf in Resources */,
@@ -915,6 +964,7 @@
 				DE65759129C83FB00074CBE5 /* LaunchScreen.storyboard in Resources */,
 				DE65758729C838F30074CBE5 /* PlusJakartaSans-Regular.ttf in Resources */,
 				DE65757229C838EF0074CBE5 /* Assets.xcassets in Resources */,
+				DE6575B029C8C02C0074CBE5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -968,6 +1018,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE6574F029C838E30074CBE5 /* ProfileManager.swift in Sources */,
+				DE6575AC29C86FCF0074CBE5 /* WiccanElementCell.swift in Sources */,
 				DE6575A429C8601D0074CBE5 /* WelcomeSlideCellsView.swift in Sources */,
 				DE65754529C838E60074CBE5 /* Collection+Extension.swift in Sources */,
 				DE65756D29C838E60074CBE5 /* BranchManager.swift in Sources */,
@@ -983,10 +1034,15 @@
 				DE65755229C838E60074CBE5 /* XOREncryption.swift in Sources */,
 				DE65754829C838E60074CBE5 /* UIViewRxExtension.swift in Sources */,
 				DE65759429C842B50074CBE5 /* SpellsManager.swift in Sources */,
+				DE6575C329C9090D0074CBE5 /* OObjectsChannelView.swift in Sources */,
 				DE65755B29C838E60074CBE5 /* Toast.swift in Sources */,
 				DE65756829C838E60074CBE5 /* PushNotificationsAuthorizationStatus.swift in Sources */,
+				DE6575AE29C8BB180074CBE5 /* OInfoView.swift in Sources */,
 				DE65750129C838E30074CBE5 /* IAPError.swift in Sources */,
 				DE65756629C838E60074CBE5 /* AppDelegate.swift in Sources */,
+				DE6575C729C912790074CBE5 /* OPreloaderView.swift in Sources */,
+				DE6575B729C8C15D0074CBE5 /* OSpellsCategoriesTableCell.swift in Sources */,
+				DE6575B929C8C1660074CBE5 /* OSpellsCategoriesTableElement.swift in Sources */,
 				DE6574EA29C838E30074CBE5 /* PaygateOptionLineComponent.swift in Sources */,
 				DE6574A329C838DF0074CBE5 /* OnboardingViewController.swift in Sources */,
 				DE65755629C838E60074CBE5 /* ContentError.swift in Sources */,
@@ -1000,7 +1056,9 @@
 				DE65756529C838E60074CBE5 /* CircleProgressView.swift in Sources */,
 				DE65755329C838E60074CBE5 /* Fonts.swift in Sources */,
 				DE6574FB29C838E30074CBE5 /* ProfileMediator.swift in Sources */,
+				DE6575B529C8C1570074CBE5 /* OSpellsCategoriesTableView.swift in Sources */,
 				DE65749929C838DF0074CBE5 /* PaygateProductButton.swift in Sources */,
+				DE6575C129C8D7AD0074CBE5 /* OMoonSacredCell.swift in Sources */,
 				DE6574C029C838DF0074CBE5 /* OnboardingViewModel.swift in Sources */,
 				DE6574ED29C838E30074CBE5 /* GetPaygateResponse.swift in Sources */,
 				DE65750029C838E30074CBE5 /* IAPProduct.swift in Sources */,
@@ -1022,8 +1080,10 @@
 				DE65749829C838DF0074CBE5 /* PaygateViewController.swift in Sources */,
 				DE6574B429C838DF0074CBE5 /* OWelcomeView.swift in Sources */,
 				DE65754729C838E60074CBE5 /* String+Extension.swift in Sources */,
+				DE6575BD29C8D1CF0074CBE5 /* OTarotSuitCell.swift in Sources */,
 				DE6574F929C838E30074CBE5 /* SyncTokensRequest.swift in Sources */,
 				DE6574F829C838E30074CBE5 /* LoginRequest.swift in Sources */,
+				DE6575BB29C8D0250074CBE5 /* OTarotSuitView.swift in Sources */,
 				DE65749629C838DF0074CBE5 /* PaygateInteractor.swift in Sources */,
 				DE6574B729C838DF0074CBE5 /* OSlideView.swift in Sources */,
 				DE65754229C838E60074CBE5 /* UIDevice+Extension.swift in Sources */,
@@ -1033,8 +1093,10 @@
 				DE65749C29C838DF0074CBE5 /* MainView.swift in Sources */,
 				DE65749B29C838DF0074CBE5 /* MainViewController.swift in Sources */,
 				DE6574EE29C838E30074CBE5 /* GetPaygateRequest.swift in Sources */,
+				DE6575BF29C8D7150074CBE5 /* OMoonSacredView.swift in Sources */,
 				DE6574F629C838E30074CBE5 /* GetProfileRequest.swift in Sources */,
 				DE65755C29C838E60074CBE5 /* NavigationControllerSettings.swift in Sources */,
+				DE6575C529C90C040074CBE5 /* OObjectChannelCell.swift in Sources */,
 				DE6574EF29C838E30074CBE5 /* PaygateManager.swift in Sources */,
 				DE65754B29C838E60074CBE5 /* APIRequestBody.swift in Sources */,
 				DE65756329C838E60074CBE5 /* CircleView.swift in Sources */,
@@ -1062,9 +1124,11 @@
 				DE65754429C838E60074CBE5 /* Date+Extension.swift in Sources */,
 				DE65749E29C838DF0074CBE5 /* TabView.swift in Sources */,
 				DE65755F29C838E60074CBE5 /* Spinner.swift in Sources */,
+				DE6575AA29C86E6F0074CBE5 /* OWiccanElementView.swift in Sources */,
 				DE6575A629C866250074CBE5 /* WelcomeSlideAtomView.swift in Sources */,
 				DE65756E29C838E60074CBE5 /* AmplitudeManager.swift in Sources */,
 				DE65754F29C838E60074CBE5 /* TextAttributes.swift in Sources */,
+				DE6575B229C8C0DA0074CBE5 /* OSpellsCategoriesView.swift in Sources */,
 				DE65755729C838E60074CBE5 /* Weak.swift in Sources */,
 				DE65749729C838DF0074CBE5 /* PaygateView.swift in Sources */,
 				DE6574EB29C838E30074CBE5 /* PaygateOptionConfig.swift in Sources */,
@@ -1215,6 +1279,7 @@
 				DEVELOPMENT_TEAM = M73NH26C3Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WiccaSounds/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Wicca;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -1247,6 +1312,7 @@
 				DEVELOPMENT_TEAM = M73NH26C3Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WiccaSounds/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Wicca;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

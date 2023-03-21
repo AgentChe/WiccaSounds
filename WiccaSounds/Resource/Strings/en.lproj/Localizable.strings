@@ -49,6 +49,7 @@
 "Paygate.Price.Period" = "month";
 
 // MARK: Onboarding
+"Onboarding.GotIt" = "Got it";
 "Onboarding.Welcome.Title" = "You’re in the right\nplace";
 "Onboarding.Welcome.Slide1.Title" = "Tap into the magic";
 "Onboarding.Welcome.Slide1.Text" = "Newfound wiccans or even more experienced ones - Wicca helps everyone to bring beliefs, rituals, and spells into your life";
@@ -59,5 +60,34 @@
 "Onboarding.Welcome.Slide3.Cell2" = "Lunar calendar";
 "Onboarding.Welcome.Slide3.Cell3" = "Magical herbs & Glossary";
 "Onboarding.Welcome.Slide3.Cell4" = "Runes & Tarot";
-"Onboarding.Welcome.Button" = "Got it";
 "Onboarding.Birthdate.Title" = "Date of birth";
+"Onboarding.WiccanElement.Title" = "What is your Wiccan\nelement?";
+"Onboarding.WiccanElement.Water" = "Water";
+"Onboarding.WiccanElement.Earth" = "Earth";
+"Onboarding.WiccanElement.Air" = "Air";
+"Onboarding.WiccanElement.Fire" = "Fire";
+"Onboarding.WiccanElement.Spirit" = "Spirit";
+"Onboarding.Info.Title" = "Welcome to Wicca";
+"Onboarding.Info.Text" = "Congratulations on taking the first step towards to practicing Wicca craft!\n\nLet’s get started ! Just a few questions  to tap into your magic";
+"Onboarding.SpellsCategories.Title" = "What kind of spells are\nyou interested in?";
+"Onboarding.TarotSuit.Title" = "Choose one tarot suit\nthat speaks to you";
+"Onboarding.TarotSuit.Pentacles" = "Pentacles";
+"Onboarding.TarotSuit.Wands" = "Wands";
+"Onboarding.TarotSuit.Cups" = "Cups";
+"Onboarding.TarotSuit.Swords" = "Swords";
+"Onboarding.MoonSacred.Title" = "Do you find the moon\nsacred?";
+"Onboarding.MoonSacred.Cell1" = "Yes, it’s mystical and divine";
+"Onboarding.MoonSacred.Cell2" = "I’m not sure, but it sure is beautiful";
+"Onboarding.MoonSacred.Cell3" = "No,it’s just a piece of rock in the sky";
+"Onboarding.ObjectsChannel.Title" = "What objects do you use\nto channel your powers?";
+"Onboarding.ObjectsChannel.Herbs" = "Herbs";
+"Onboarding.ObjectsChannel.Crystals" = "Crystals";
+"Onboarding.ObjectsChannel.Oils" = "Oils";
+"Onboarding.ObjectsChannel.Candles" = "Candles";
+"Onboarding.Preloader.Title" = "80,000 users successfully begin practicing Wicca with our spellbook in the United States and we can’t wait to help you too!";
+"Onboarding.Preloader.SubTitle" = "as for May 2022";
+"Onboarding.Preloader.Label1" = "Connecting to database...";
+"Onboarding.Preloader.Label2" = "Cross-checking with user database...";
+"Onboarding.Preloader.Label3" = "Identifying spell preferences...";
+"Onboarding.Preloader.Label4" = "Identifying witchcraft needs...";
+"Onboarding.Preloader.Label5" = "Building your profile...";

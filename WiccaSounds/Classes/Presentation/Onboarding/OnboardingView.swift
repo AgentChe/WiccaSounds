@@ -9,16 +9,25 @@ import UIKit
 
 final class OnboardingView: UIView {
     enum Step: Int {
-        case welcome, birthdate
+        case welcome, birthdate, wiccanElement, info, spellsCategories, tarotSuit, moonSacred, objectsChannel, preloader
     }
     
     var didFinish: (() -> Void)?
 
     private lazy var backgroundView = makeBackgroundView()
+    private lazy var spellsCategoriesView = OSpellsCategoriesView(step: .spellsCategories)
+    private lazy var preloaderView = OPreloaderView(step: .preloader, combineData: combineData)
     private lazy var contentViews: [OSlideView] = {
         [
             OWelcomeView(step: .welcome),
-            OBirthdateView(step: .birthdate)
+            OBirthdateView(step: .birthdate),
+            OWiccanElementView(step: .wiccanElement),
+            OInfoView(step: .info),
+            spellsCategoriesView,
+            OTarotSuitView(step: .tarotSuit),
+            OMoonSacredView(step: .moonSacred),
+            OObjectsChannelView(step: .objectsChannel),
+            preloaderView
         ]
     }()
     
@@ -84,6 +93,9 @@ private extension OnboardingView {
                     addSubview(view)
                 }
             }
+        
+        spellsCategoriesView.mainDelegate = combineData
+        preloaderView.vc = vc
     }
     
     func scroll(to newStep: Step) {

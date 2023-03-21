@@ -284,7 +284,7 @@ private extension OWelcomeView {
         let view = UIButton()
         view.backgroundColor = Appearance.primary
         view.layer.cornerRadius = 28.scale
-        view.setAttributedTitle("Onboarding.Welcome.Button".localized.attributed(with: attrs), for: .normal)
+        view.setAttributedTitle("Onboarding.GotIt".localized.attributed(with: attrs), for: .normal)
         view.addTarget(self, action: #selector(onNext), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
