@@ -28,6 +28,7 @@ final class SplashViewModel {
     private lazy var candlesManager = CandlesManager()
     private lazy var herbsManager = HerbsManager()
     private lazy var crystalsManager = CrystalsManager()
+    private lazy var tarotManager = TarotManager()
     
     private lazy var observableRetrySingle = ObservableRetrySingle()
 }
@@ -125,6 +126,9 @@ private extension SplashViewModel {
             let crystals = crystalsManager
                 .obtainCrystals(forceUpdate: true)
                 .mapToVoid()
+            let tarotCovers = tarotManager
+                .obtainCovers(forceUpdate: true)
+                .mapToVoid()
             
             return Single
                 .zip([
@@ -134,7 +138,8 @@ private extension SplashViewModel {
                     spells,
                     candles,
                     herbs,
-                    crystals
+                    crystals,
+                    tarotCovers
                 ])
                 .mapToVoid()
         }

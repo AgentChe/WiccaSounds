@@ -171,6 +171,15 @@
 		DE65761029C9C4130074CBE5 /* GetCrystalsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65760F29C9C4130074CBE5 /* GetCrystalsResponse.swift */; };
 		DE65761329C9C41F0074CBE5 /* SaveCrystalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65761229C9C41F0074CBE5 /* SaveCrystalRequest.swift */; };
 		DE65761529C9C4270074CBE5 /* UnsaveCrystalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65761429C9C4270074CBE5 /* UnsaveCrystalRequest.swift */; };
+		DE65761829C9C75B0074CBE5 /* TarotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65761729C9C75B0074CBE5 /* TarotManager.swift */; };
+		DE65761C29C9C7710074CBE5 /* TarotCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65761B29C9C7710074CBE5 /* TarotCover.swift */; };
+		DE65761E29C9C7980074CBE5 /* Tarot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65761D29C9C7980074CBE5 /* Tarot.swift */; };
+		DE65762029C9C7D90074CBE5 /* TarotContentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65761F29C9C7D90074CBE5 /* TarotContentSection.swift */; };
+		DE65762329C9C8130074CBE5 /* GetTarotCoversRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65762229C9C8130074CBE5 /* GetTarotCoversRequest.swift */; };
+		DE65762529C9C8190074CBE5 /* GetTarotCoversResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65762429C9C8190074CBE5 /* GetTarotCoversResponse.swift */; };
+		DE65762829C9C8E70074CBE5 /* GetTarotRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65762729C9C8E70074CBE5 /* GetTarotRequest.swift */; };
+		DE65762A29C9C8F50074CBE5 /* GetTarotResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65762929C9C8F50074CBE5 /* GetTarotResponse.swift */; };
+		DE65762C29C9CB620074CBE5 /* TarotMeaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65762B29C9CB620074CBE5 /* TarotMeaning.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -341,6 +350,15 @@
 		DE65760F29C9C4130074CBE5 /* GetCrystalsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCrystalsResponse.swift; sourceTree = "<group>"; };
 		DE65761229C9C41F0074CBE5 /* SaveCrystalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCrystalRequest.swift; sourceTree = "<group>"; };
 		DE65761429C9C4270074CBE5 /* UnsaveCrystalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsaveCrystalRequest.swift; sourceTree = "<group>"; };
+		DE65761729C9C75B0074CBE5 /* TarotManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotManager.swift; sourceTree = "<group>"; };
+		DE65761B29C9C7710074CBE5 /* TarotCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotCover.swift; sourceTree = "<group>"; };
+		DE65761D29C9C7980074CBE5 /* Tarot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarot.swift; sourceTree = "<group>"; };
+		DE65761F29C9C7D90074CBE5 /* TarotContentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotContentSection.swift; sourceTree = "<group>"; };
+		DE65762229C9C8130074CBE5 /* GetTarotCoversRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTarotCoversRequest.swift; sourceTree = "<group>"; };
+		DE65762429C9C8190074CBE5 /* GetTarotCoversResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTarotCoversResponse.swift; sourceTree = "<group>"; };
+		DE65762729C9C8E70074CBE5 /* GetTarotRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTarotRequest.swift; sourceTree = "<group>"; };
+		DE65762929C9C8F50074CBE5 /* GetTarotResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTarotResponse.swift; sourceTree = "<group>"; };
+		DE65762B29C9CB620074CBE5 /* TarotMeaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotMeaning.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -561,6 +579,7 @@
 		DE6574C129C838E20074CBE5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DE65761629C9C7460074CBE5 /* Tarot */,
 				DE65760329C9C3DA0074CBE5 /* Crystals */,
 				DE6575F029C9C1850074CBE5 /* Herbs */,
 				DE6575DD29C9BCF30074CBE5 /* Candles */,
@@ -1121,6 +1140,54 @@
 			path = SaveUnsave;
 			sourceTree = "<group>";
 		};
+		DE65761629C9C7460074CBE5 /* Tarot */ = {
+			isa = PBXGroup;
+			children = (
+				DE65761A29C9C7680074CBE5 /* Request */,
+				DE65761929C9C7630074CBE5 /* Model */,
+				DE65761729C9C75B0074CBE5 /* TarotManager.swift */,
+			);
+			path = Tarot;
+			sourceTree = "<group>";
+		};
+		DE65761929C9C7630074CBE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE65761B29C9C7710074CBE5 /* TarotCover.swift */,
+				DE65761D29C9C7980074CBE5 /* Tarot.swift */,
+				DE65761F29C9C7D90074CBE5 /* TarotContentSection.swift */,
+				DE65762B29C9CB620074CBE5 /* TarotMeaning.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE65761A29C9C7680074CBE5 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DE65762629C9C8DF0074CBE5 /* GetTarot */,
+				DE65762129C9C8080074CBE5 /* GetTarotCovers */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		DE65762129C9C8080074CBE5 /* GetTarotCovers */ = {
+			isa = PBXGroup;
+			children = (
+				DE65762229C9C8130074CBE5 /* GetTarotCoversRequest.swift */,
+				DE65762429C9C8190074CBE5 /* GetTarotCoversResponse.swift */,
+			);
+			path = GetTarotCovers;
+			sourceTree = "<group>";
+		};
+		DE65762629C9C8DF0074CBE5 /* GetTarot */ = {
+			isa = PBXGroup;
+			children = (
+				DE65762729C9C8E70074CBE5 /* GetTarotRequest.swift */,
+				DE65762929C9C8F50074CBE5 /* GetTarotResponse.swift */,
+			);
+			path = GetTarot;
+			sourceTree = "<group>";
+		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1287,7 +1354,9 @@
 				DE6575C329C9090D0074CBE5 /* OObjectsChannelView.swift in Sources */,
 				DE65755B29C838E60074CBE5 /* Toast.swift in Sources */,
 				DE65756829C838E60074CBE5 /* PushNotificationsAuthorizationStatus.swift in Sources */,
+				DE65762829C9C8E70074CBE5 /* GetTarotRequest.swift in Sources */,
 				DE6575AE29C8BB180074CBE5 /* OInfoView.swift in Sources */,
+				DE65761E29C9C7980074CBE5 /* Tarot.swift in Sources */,
 				DE6575E529C9BD1C0074CBE5 /* Candle.swift in Sources */,
 				DE6575DC29C9BB260074CBE5 /* SpellsMediator.swift in Sources */,
 				DE65750129C838E30074CBE5 /* IAPError.swift in Sources */,
@@ -1320,6 +1389,8 @@
 				DE65749929C838DF0074CBE5 /* PaygateProductButton.swift in Sources */,
 				DE6575C129C8D7AD0074CBE5 /* OMoonSacredCell.swift in Sources */,
 				DE65760E29C9C40B0074CBE5 /* GetCrystalsRequest.swift in Sources */,
+				DE65762329C9C8130074CBE5 /* GetTarotCoversRequest.swift in Sources */,
+				DE65761C29C9C7710074CBE5 /* TarotCover.swift in Sources */,
 				DE6575E129C9BD080074CBE5 /* CandlesMediator.swift in Sources */,
 				DE6574C029C838DF0074CBE5 /* OnboardingViewModel.swift in Sources */,
 				DE6574ED29C838E30074CBE5 /* GetPaygateResponse.swift in Sources */,
@@ -1363,12 +1434,14 @@
 				DE6575EF29C9BD510074CBE5 /* UnsaveCandleRequest.swift in Sources */,
 				DE6574EE29C838E30074CBE5 /* GetPaygateRequest.swift in Sources */,
 				DE6575BF29C8D7150074CBE5 /* OMoonSacredView.swift in Sources */,
+				DE65762529C9C8190074CBE5 /* GetTarotCoversResponse.swift in Sources */,
 				DE6574F629C838E30074CBE5 /* GetProfileRequest.swift in Sources */,
 				DE65755C29C838E60074CBE5 /* NavigationControllerSettings.swift in Sources */,
 				DE6575C529C90C040074CBE5 /* OObjectChannelCell.swift in Sources */,
 				DE6574EF29C838E30074CBE5 /* PaygateManager.swift in Sources */,
 				DE65754B29C838E60074CBE5 /* APIRequestBody.swift in Sources */,
 				DE65756329C838E60074CBE5 /* CircleView.swift in Sources */,
+				DE65762C29C9CB620074CBE5 /* TarotMeaning.swift in Sources */,
 				DE65755529C838E60074CBE5 /* NetworkError.swift in Sources */,
 				DE65749129C838DF0074CBE5 /* SplashView.swift in Sources */,
 				DE6574EC29C838E30074CBE5 /* Paygate.swift in Sources */,
@@ -1400,12 +1473,15 @@
 				DE6575AA29C86E6F0074CBE5 /* OWiccanElementView.swift in Sources */,
 				DE6575A629C866250074CBE5 /* WelcomeSlideAtomView.swift in Sources */,
 				DE65756E29C838E60074CBE5 /* AmplitudeManager.swift in Sources */,
+				DE65762A29C9C8F50074CBE5 /* GetTarotResponse.swift in Sources */,
+				DE65761829C9C75B0074CBE5 /* TarotManager.swift in Sources */,
 				DE65754F29C838E60074CBE5 /* TextAttributes.swift in Sources */,
 				DE6575B229C8C0DA0074CBE5 /* OSpellsCategoriesView.swift in Sources */,
 				DE65755729C838E60074CBE5 /* Weak.swift in Sources */,
 				DE65749729C838DF0074CBE5 /* PaygateView.swift in Sources */,
 				DE6574EB29C838E30074CBE5 /* PaygateOptionConfig.swift in Sources */,
 				DE65760529C9C3E70074CBE5 /* CrystalsManager.swift in Sources */,
+				DE65762029C9C7D90074CBE5 /* TarotContentSection.swift in Sources */,
 				DE65754629C838E60074CBE5 /* ObservableAndSingle+Extension.swift in Sources */,
 				DE65760729C9C3ED0074CBE5 /* CrystalsMediator.swift in Sources */,
 				DE6574A029C838DF0074CBE5 /* TryAgainView.swift in Sources */,
