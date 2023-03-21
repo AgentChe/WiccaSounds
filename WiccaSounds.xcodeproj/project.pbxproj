@@ -164,6 +164,13 @@
 		DE6575FD29C9C1BC0074CBE5 /* GetHerbsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575FC29C9C1BC0074CBE5 /* GetHerbsResponse.swift */; };
 		DE65760029C9C1CB0074CBE5 /* SaveHerbRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575FF29C9C1CB0074CBE5 /* SaveHerbRequest.swift */; };
 		DE65760229C9C1D30074CBE5 /* UnsaveHerbRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65760129C9C1D30074CBE5 /* UnsaveHerbRequest.swift */; };
+		DE65760529C9C3E70074CBE5 /* CrystalsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65760429C9C3E70074CBE5 /* CrystalsManager.swift */; };
+		DE65760729C9C3ED0074CBE5 /* CrystalsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65760629C9C3ED0074CBE5 /* CrystalsMediator.swift */; };
+		DE65760B29C9C3FD0074CBE5 /* Crystal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65760A29C9C3FD0074CBE5 /* Crystal.swift */; };
+		DE65760E29C9C40B0074CBE5 /* GetCrystalsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65760D29C9C40B0074CBE5 /* GetCrystalsRequest.swift */; };
+		DE65761029C9C4130074CBE5 /* GetCrystalsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65760F29C9C4130074CBE5 /* GetCrystalsResponse.swift */; };
+		DE65761329C9C41F0074CBE5 /* SaveCrystalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65761229C9C41F0074CBE5 /* SaveCrystalRequest.swift */; };
+		DE65761529C9C4270074CBE5 /* UnsaveCrystalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65761429C9C4270074CBE5 /* UnsaveCrystalRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -327,6 +334,13 @@
 		DE6575FC29C9C1BC0074CBE5 /* GetHerbsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHerbsResponse.swift; sourceTree = "<group>"; };
 		DE6575FF29C9C1CB0074CBE5 /* SaveHerbRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveHerbRequest.swift; sourceTree = "<group>"; };
 		DE65760129C9C1D30074CBE5 /* UnsaveHerbRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsaveHerbRequest.swift; sourceTree = "<group>"; };
+		DE65760429C9C3E70074CBE5 /* CrystalsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrystalsManager.swift; sourceTree = "<group>"; };
+		DE65760629C9C3ED0074CBE5 /* CrystalsMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrystalsMediator.swift; sourceTree = "<group>"; };
+		DE65760A29C9C3FD0074CBE5 /* Crystal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crystal.swift; sourceTree = "<group>"; };
+		DE65760D29C9C40B0074CBE5 /* GetCrystalsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCrystalsRequest.swift; sourceTree = "<group>"; };
+		DE65760F29C9C4130074CBE5 /* GetCrystalsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCrystalsResponse.swift; sourceTree = "<group>"; };
+		DE65761229C9C41F0074CBE5 /* SaveCrystalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCrystalRequest.swift; sourceTree = "<group>"; };
+		DE65761429C9C4270074CBE5 /* UnsaveCrystalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsaveCrystalRequest.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -547,6 +561,7 @@
 		DE6574C129C838E20074CBE5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DE65760329C9C3DA0074CBE5 /* Crystals */,
 				DE6575F029C9C1850074CBE5 /* Herbs */,
 				DE6575DD29C9BCF30074CBE5 /* Candles */,
 				DE6575C829C9B4450074CBE5 /* Content */,
@@ -1060,6 +1075,52 @@
 			path = SaveUnsave;
 			sourceTree = "<group>";
 		};
+		DE65760329C9C3DA0074CBE5 /* Crystals */ = {
+			isa = PBXGroup;
+			children = (
+				DE65760929C9C3F40074CBE5 /* Request */,
+				DE65760829C9C3EF0074CBE5 /* Model */,
+				DE65760429C9C3E70074CBE5 /* CrystalsManager.swift */,
+				DE65760629C9C3ED0074CBE5 /* CrystalsMediator.swift */,
+			);
+			path = Crystals;
+			sourceTree = "<group>";
+		};
+		DE65760829C9C3EF0074CBE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE65760A29C9C3FD0074CBE5 /* Crystal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE65760929C9C3F40074CBE5 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DE65761129C9C4160074CBE5 /* SaveUnsave */,
+				DE65760C29C9C3FF0074CBE5 /* GetCrystals */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		DE65760C29C9C3FF0074CBE5 /* GetCrystals */ = {
+			isa = PBXGroup;
+			children = (
+				DE65760D29C9C40B0074CBE5 /* GetCrystalsRequest.swift */,
+				DE65760F29C9C4130074CBE5 /* GetCrystalsResponse.swift */,
+			);
+			path = GetCrystals;
+			sourceTree = "<group>";
+		};
+		DE65761129C9C4160074CBE5 /* SaveUnsave */ = {
+			isa = PBXGroup;
+			children = (
+				DE65761229C9C41F0074CBE5 /* SaveCrystalRequest.swift */,
+				DE65761429C9C4270074CBE5 /* UnsaveCrystalRequest.swift */,
+			);
+			path = SaveUnsave;
+			sourceTree = "<group>";
+		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1212,6 +1273,7 @@
 				DE6574FC29C838E30074CBE5 /* IAPManager.swift in Sources */,
 				DE65749D29C838DF0074CBE5 /* TabItemView.swift in Sources */,
 				DE6574FE29C838E30074CBE5 /* ProductPrice.swift in Sources */,
+				DE65761329C9C41F0074CBE5 /* SaveCrystalRequest.swift in Sources */,
 				DE65749F29C838DF0074CBE5 /* MainViewCoordinator.swift in Sources */,
 				DE65757029C838E60074CBE5 /* FacebookManager.swift in Sources */,
 				DE6575D829C9BAAE0074CBE5 /* SaveSpellRequest.swift in Sources */,
@@ -1243,6 +1305,7 @@
 				DE65756A29C838E60074CBE5 /* SceneDelegate.swift in Sources */,
 				DE65754A29C838E60074CBE5 /* DefaultRequestWrapper.swift in Sources */,
 				DE65750329C838E30074CBE5 /* Session.swift in Sources */,
+				DE65761029C9C4130074CBE5 /* GetCrystalsResponse.swift in Sources */,
 				DE6574BF29C838DF0074CBE5 /* OnboardingView.swift in Sources */,
 				DE6574A129C838DF0074CBE5 /* TryAgainViewController.swift in Sources */,
 				DE65756529C838E60074CBE5 /* CircleProgressView.swift in Sources */,
@@ -1256,6 +1319,7 @@
 				DE6575CB29C9B47E0074CBE5 /* ContentBlock.swift in Sources */,
 				DE65749929C838DF0074CBE5 /* PaygateProductButton.swift in Sources */,
 				DE6575C129C8D7AD0074CBE5 /* OMoonSacredCell.swift in Sources */,
+				DE65760E29C9C40B0074CBE5 /* GetCrystalsRequest.swift in Sources */,
 				DE6575E129C9BD080074CBE5 /* CandlesMediator.swift in Sources */,
 				DE6574C029C838DF0074CBE5 /* OnboardingViewModel.swift in Sources */,
 				DE6574ED29C838E30074CBE5 /* GetPaygateResponse.swift in Sources */,
@@ -1286,6 +1350,7 @@
 				DE6574F929C838E30074CBE5 /* SyncTokensRequest.swift in Sources */,
 				DE6574F829C838E30074CBE5 /* LoginRequest.swift in Sources */,
 				DE6575BB29C8D0250074CBE5 /* OTarotSuitView.swift in Sources */,
+				DE65760B29C9C3FD0074CBE5 /* Crystal.swift in Sources */,
 				DE65749629C838DF0074CBE5 /* PaygateInteractor.swift in Sources */,
 				DE6574B729C838DF0074CBE5 /* OSlideView.swift in Sources */,
 				DE65754229C838E60074CBE5 /* UIDevice+Extension.swift in Sources */,
@@ -1340,10 +1405,13 @@
 				DE65755729C838E60074CBE5 /* Weak.swift in Sources */,
 				DE65749729C838DF0074CBE5 /* PaygateView.swift in Sources */,
 				DE6574EB29C838E30074CBE5 /* PaygateOptionConfig.swift in Sources */,
+				DE65760529C9C3E70074CBE5 /* CrystalsManager.swift in Sources */,
 				DE65754629C838E60074CBE5 /* ObservableAndSingle+Extension.swift in Sources */,
+				DE65760729C9C3ED0074CBE5 /* CrystalsMediator.swift in Sources */,
 				DE6574A029C838DF0074CBE5 /* TryAgainView.swift in Sources */,
 				DE65755829C838E60074CBE5 /* RequestReview.swift in Sources */,
 				DE6574F729C838E30074CBE5 /* GetProfileResponse.swift in Sources */,
+				DE65761529C9C4270074CBE5 /* UnsaveCrystalRequest.swift in Sources */,
 				DE65754929C838E60074CBE5 /* GlobalDefinitions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
