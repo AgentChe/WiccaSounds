@@ -110,12 +110,16 @@ private extension SplashViewModel {
             let spellsCategories = spellsManager
                 .obtainCategories(forceUpdate: true)
                 .mapToVoid()
+            let spells = spellsManager
+                .obtainSpells(forceUpdate: true)
+                .mapToVoid()
             
             return Single
                 .zip([
                     paygate,
                     profile,
-                    spellsCategories
+                    spellsCategories,
+                    spells
                 ])
                 .mapToVoid()
         }

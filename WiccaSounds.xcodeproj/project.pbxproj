@@ -142,6 +142,14 @@
 		DE6575C329C9090D0074CBE5 /* OObjectsChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575C229C9090D0074CBE5 /* OObjectsChannelView.swift */; };
 		DE6575C529C90C040074CBE5 /* OObjectChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575C429C90C040074CBE5 /* OObjectChannelCell.swift */; };
 		DE6575C729C912790074CBE5 /* OPreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575C629C912790074CBE5 /* OPreloaderView.swift */; };
+		DE6575CB29C9B47E0074CBE5 /* ContentBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575CA29C9B47E0074CBE5 /* ContentBlock.swift */; };
+		DE6575CD29C9B52D0074CBE5 /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575CC29C9B52D0074CBE5 /* Spell.swift */; };
+		DE6575D029C9B5A50074CBE5 /* GetSpellsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575CF29C9B5A50074CBE5 /* GetSpellsRequest.swift */; };
+		DE6575D229C9B5AA0074CBE5 /* GetSpellsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575D129C9B5AA0074CBE5 /* GetSpellsResponse.swift */; };
+		DE6575D529C9B8A20074CBE5 /* ContentBlockMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575D429C9B8A20074CBE5 /* ContentBlockMapper.swift */; };
+		DE6575D829C9BAAE0074CBE5 /* SaveSpellRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575D729C9BAAE0074CBE5 /* SaveSpellRequest.swift */; };
+		DE6575DA29C9BB030074CBE5 /* UnsaveSpellRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575D929C9BB030074CBE5 /* UnsaveSpellRequest.swift */; };
+		DE6575DC29C9BB260074CBE5 /* SpellsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6575DB29C9BB260074CBE5 /* SpellsMediator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -283,6 +291,14 @@
 		DE6575C229C9090D0074CBE5 /* OObjectsChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OObjectsChannelView.swift; sourceTree = "<group>"; };
 		DE6575C429C90C040074CBE5 /* OObjectChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OObjectChannelCell.swift; sourceTree = "<group>"; };
 		DE6575C629C912790074CBE5 /* OPreloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPreloaderView.swift; sourceTree = "<group>"; };
+		DE6575CA29C9B47E0074CBE5 /* ContentBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlock.swift; sourceTree = "<group>"; };
+		DE6575CC29C9B52D0074CBE5 /* Spell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
+		DE6575CF29C9B5A50074CBE5 /* GetSpellsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSpellsRequest.swift; sourceTree = "<group>"; };
+		DE6575D129C9B5AA0074CBE5 /* GetSpellsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSpellsResponse.swift; sourceTree = "<group>"; };
+		DE6575D429C9B8A20074CBE5 /* ContentBlockMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockMapper.swift; sourceTree = "<group>"; };
+		DE6575D729C9BAAE0074CBE5 /* SaveSpellRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSpellRequest.swift; sourceTree = "<group>"; };
+		DE6575D929C9BB030074CBE5 /* UnsaveSpellRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsaveSpellRequest.swift; sourceTree = "<group>"; };
+		DE6575DB29C9BB260074CBE5 /* SpellsMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsMediator.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -503,6 +519,7 @@
 		DE6574C129C838E20074CBE5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DE6575C829C9B4450074CBE5 /* Content */,
 				DE65759229C842AA0074CBE5 /* Spells */,
 				DE6574C229C838E20074CBE5 /* Paygate */,
 				DE6574CC29C838E20074CBE5 /* Profile */,
@@ -824,6 +841,7 @@
 				DE65759629C842BD0074CBE5 /* Request */,
 				DE65759529C842B80074CBE5 /* Model */,
 				DE65759329C842B50074CBE5 /* SpellsManager.swift */,
+				DE6575DB29C9BB260074CBE5 /* SpellsMediator.swift */,
 			);
 			path = Spells;
 			sourceTree = "<group>";
@@ -832,6 +850,7 @@
 			isa = PBXGroup;
 			children = (
 				DE65759729C842D30074CBE5 /* SpellsCategory.swift */,
+				DE6575CC29C9B52D0074CBE5 /* Spell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -839,6 +858,8 @@
 		DE65759629C842BD0074CBE5 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				DE6575D629C9BAA00074CBE5 /* SaveUnsave */,
+				DE6575CE29C9B59A0074CBE5 /* GetSpells */,
 				DE65759929C8436E0074CBE5 /* GetCategories */,
 			);
 			path = Request;
@@ -872,6 +893,49 @@
 				DE6575B829C8C1660074CBE5 /* OSpellsCategoriesTableElement.swift */,
 			);
 			path = SpellsCategories;
+			sourceTree = "<group>";
+		};
+		DE6575C829C9B4450074CBE5 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				DE6575D329C9B8930074CBE5 /* Request */,
+				DE6575C929C9B44C0074CBE5 /* Model */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		DE6575C929C9B44C0074CBE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE6575CA29C9B47E0074CBE5 /* ContentBlock.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE6575CE29C9B59A0074CBE5 /* GetSpells */ = {
+			isa = PBXGroup;
+			children = (
+				DE6575CF29C9B5A50074CBE5 /* GetSpellsRequest.swift */,
+				DE6575D129C9B5AA0074CBE5 /* GetSpellsResponse.swift */,
+			);
+			path = GetSpells;
+			sourceTree = "<group>";
+		};
+		DE6575D329C9B8930074CBE5 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DE6575D429C9B8A20074CBE5 /* ContentBlockMapper.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		DE6575D629C9BAA00074CBE5 /* SaveUnsave */ = {
+			isa = PBXGroup;
+			children = (
+				DE6575D729C9BAAE0074CBE5 /* SaveSpellRequest.swift */,
+				DE6575D929C9BB030074CBE5 /* UnsaveSpellRequest.swift */,
+			);
+			path = SaveUnsave;
 			sourceTree = "<group>";
 		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
@@ -1028,16 +1092,19 @@
 				DE6574FE29C838E30074CBE5 /* ProductPrice.swift in Sources */,
 				DE65749F29C838DF0074CBE5 /* MainViewCoordinator.swift in Sources */,
 				DE65757029C838E60074CBE5 /* FacebookManager.swift in Sources */,
+				DE6575D829C9BAAE0074CBE5 /* SaveSpellRequest.swift in Sources */,
 				DE65755D29C838E60074CBE5 /* NavigationController.swift in Sources */,
 				DE65755929C838E60074CBE5 /* ImagePicker.swift in Sources */,
 				DE65749A29C838DF0074CBE5 /* PaygateInfoCell.swift in Sources */,
 				DE65755229C838E60074CBE5 /* XOREncryption.swift in Sources */,
 				DE65754829C838E60074CBE5 /* UIViewRxExtension.swift in Sources */,
+				DE6575CD29C9B52D0074CBE5 /* Spell.swift in Sources */,
 				DE65759429C842B50074CBE5 /* SpellsManager.swift in Sources */,
 				DE6575C329C9090D0074CBE5 /* OObjectsChannelView.swift in Sources */,
 				DE65755B29C838E60074CBE5 /* Toast.swift in Sources */,
 				DE65756829C838E60074CBE5 /* PushNotificationsAuthorizationStatus.swift in Sources */,
 				DE6575AE29C8BB180074CBE5 /* OInfoView.swift in Sources */,
+				DE6575DC29C9BB260074CBE5 /* SpellsMediator.swift in Sources */,
 				DE65750129C838E30074CBE5 /* IAPError.swift in Sources */,
 				DE65756629C838E60074CBE5 /* AppDelegate.swift in Sources */,
 				DE6575C729C912790074CBE5 /* OPreloaderView.swift in Sources */,
@@ -1046,6 +1113,7 @@
 				DE6574EA29C838E30074CBE5 /* PaygateOptionLineComponent.swift in Sources */,
 				DE6574A329C838DF0074CBE5 /* OnboardingViewController.swift in Sources */,
 				DE65755629C838E60074CBE5 /* ContentError.swift in Sources */,
+				DE6575D529C9B8A20074CBE5 /* ContentBlockMapper.swift in Sources */,
 				DE65754129C838E60074CBE5 /* UIApplication+Extension.swift in Sources */,
 				DE65756F29C838E60074CBE5 /* FirebaseManager.swift in Sources */,
 				DE65756A29C838E60074CBE5 /* SceneDelegate.swift in Sources */,
@@ -1056,7 +1124,9 @@
 				DE65756529C838E60074CBE5 /* CircleProgressView.swift in Sources */,
 				DE65755329C838E60074CBE5 /* Fonts.swift in Sources */,
 				DE6574FB29C838E30074CBE5 /* ProfileMediator.swift in Sources */,
+				DE6575D229C9B5AA0074CBE5 /* GetSpellsResponse.swift in Sources */,
 				DE6575B529C8C1570074CBE5 /* OSpellsCategoriesTableView.swift in Sources */,
+				DE6575CB29C9B47E0074CBE5 /* ContentBlock.swift in Sources */,
 				DE65749929C838DF0074CBE5 /* PaygateProductButton.swift in Sources */,
 				DE6575C129C8D7AD0074CBE5 /* OMoonSacredCell.swift in Sources */,
 				DE6574C029C838DF0074CBE5 /* OnboardingViewModel.swift in Sources */,
@@ -1064,6 +1134,7 @@
 				DE65750029C838E30074CBE5 /* IAPProduct.swift in Sources */,
 				DE65750429C838E30074CBE5 /* SessionManager.swift in Sources */,
 				DE65755E29C838E60074CBE5 /* TapAreaButton.swift in Sources */,
+				DE6575DA29C9BB030074CBE5 /* UnsaveSpellRequest.swift in Sources */,
 				DE65754E29C838E60074CBE5 /* NumberLaunches.swift in Sources */,
 				DE65754D29C838E60074CBE5 /* Scalable.swift in Sources */,
 				DE6575A229C85E410074CBE5 /* WelcomeCellView.swift in Sources */,
@@ -1073,6 +1144,7 @@
 				DE65749429C838DF0074CBE5 /* PaygateOptionInfo.swift in Sources */,
 				DE65749229C838DF0074CBE5 /* PaygateViewModel.swift in Sources */,
 				DE65755A29C838E60074CBE5 /* RxActivityIndicator.swift in Sources */,
+				DE6575D029C9B5A50074CBE5 /* GetSpellsRequest.swift in Sources */,
 				DE65759D29C843880074CBE5 /* GetSpellsCategoriesResponse.swift in Sources */,
 				DE6574A229C838DF0074CBE5 /* OCombineData.swift in Sources */,
 				DE6574FA29C838E30074CBE5 /* SetRequest.swift in Sources */,
