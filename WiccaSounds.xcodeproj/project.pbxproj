@@ -187,6 +187,19 @@
 		DE65763A29C9D0440074CBE5 /* GetRunesCoversResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65763929C9D0440074CBE5 /* GetRunesCoversResponse.swift */; };
 		DE65763D29C9D0520074CBE5 /* GetRuneRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65763C29C9D0520074CBE5 /* GetRuneRequest.swift */; };
 		DE65763F29C9D0590074CBE5 /* GetRuneResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65763E29C9D0590074CBE5 /* GetRuneResponse.swift */; };
+		DE65764129C9D42D0074CBE5 /* StoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65764029C9D42D0074CBE5 /* StoryCard.swift */; };
+		DE65764329C9D43B0074CBE5 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65764229C9D43B0074CBE5 /* Story.swift */; };
+		DE65764629C9D4FF0074CBE5 /* GetStoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65764529C9D4FF0074CBE5 /* GetStoryRequest.swift */; };
+		DE65764829C9D5040074CBE5 /* GetStoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65764729C9D5040074CBE5 /* GetStoryResponse.swift */; };
+		DE65764A29C9D6380074CBE5 /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65764929C9D6380074CBE5 /* ContentManager.swift */; };
+		DE65764C29C9D7460074CBE5 /* HomeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65764B29C9D7460074CBE5 /* HomeKit.swift */; };
+		DE65764F29C9D7640074CBE5 /* GetHomeKitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65764E29C9D7640074CBE5 /* GetHomeKitRequest.swift */; };
+		DE65765129C9D76A0074CBE5 /* GetHomeKitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65765029C9D76A0074CBE5 /* GetHomeKitResponse.swift */; };
+		DE65765329C9D9360074CBE5 /* StoryCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65765229C9D9360074CBE5 /* StoryCover.swift */; };
+		DE65765529C9DA490074CBE5 /* LunarDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65765429C9DA490074CBE5 /* LunarDay.swift */; };
+		DE65765729C9DA750074CBE5 /* Lunar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65765629C9DA750074CBE5 /* Lunar.swift */; };
+		DE65765929C9DB270074CBE5 /* LunarTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65765829C9DB270074CBE5 /* LunarTip.swift */; };
+		DE65765B29C9DBA20074CBE5 /* WheelOnYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65765A29C9DBA20074CBE5 /* WheelOnYear.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -373,6 +386,19 @@
 		DE65763929C9D0440074CBE5 /* GetRunesCoversResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRunesCoversResponse.swift; sourceTree = "<group>"; };
 		DE65763C29C9D0520074CBE5 /* GetRuneRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRuneRequest.swift; sourceTree = "<group>"; };
 		DE65763E29C9D0590074CBE5 /* GetRuneResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRuneResponse.swift; sourceTree = "<group>"; };
+		DE65764029C9D42D0074CBE5 /* StoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCard.swift; sourceTree = "<group>"; };
+		DE65764229C9D43B0074CBE5 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		DE65764529C9D4FF0074CBE5 /* GetStoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStoryRequest.swift; sourceTree = "<group>"; };
+		DE65764729C9D5040074CBE5 /* GetStoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStoryResponse.swift; sourceTree = "<group>"; };
+		DE65764929C9D6380074CBE5 /* ContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
+		DE65764B29C9D7460074CBE5 /* HomeKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeKit.swift; sourceTree = "<group>"; };
+		DE65764E29C9D7640074CBE5 /* GetHomeKitRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHomeKitRequest.swift; sourceTree = "<group>"; };
+		DE65765029C9D76A0074CBE5 /* GetHomeKitResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHomeKitResponse.swift; sourceTree = "<group>"; };
+		DE65765229C9D9360074CBE5 /* StoryCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCover.swift; sourceTree = "<group>"; };
+		DE65765429C9DA490074CBE5 /* LunarDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarDay.swift; sourceTree = "<group>"; };
+		DE65765629C9DA750074CBE5 /* Lunar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lunar.swift; sourceTree = "<group>"; };
+		DE65765829C9DB270074CBE5 /* LunarTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarTip.swift; sourceTree = "<group>"; };
+		DE65765A29C9DBA20074CBE5 /* WheelOnYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelOnYear.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -979,6 +1005,7 @@
 			children = (
 				DE6575D329C9B8930074CBE5 /* Request */,
 				DE6575C929C9B44C0074CBE5 /* Model */,
+				DE65764929C9D6380074CBE5 /* ContentManager.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -987,6 +1014,14 @@
 			isa = PBXGroup;
 			children = (
 				DE6575CA29C9B47E0074CBE5 /* ContentBlock.swift */,
+				DE65765229C9D9360074CBE5 /* StoryCover.swift */,
+				DE65764029C9D42D0074CBE5 /* StoryCard.swift */,
+				DE65764229C9D43B0074CBE5 /* Story.swift */,
+				DE65764B29C9D7460074CBE5 /* HomeKit.swift */,
+				DE65765429C9DA490074CBE5 /* LunarDay.swift */,
+				DE65765629C9DA750074CBE5 /* Lunar.swift */,
+				DE65765829C9DB270074CBE5 /* LunarTip.swift */,
+				DE65765A29C9DBA20074CBE5 /* WheelOnYear.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1003,6 +1038,8 @@
 		DE6575D329C9B8930074CBE5 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				DE65764D29C9D7580074CBE5 /* GetHomeKit */,
+				DE65764429C9D4D30074CBE5 /* GetStory */,
 				DE6575D429C9B8A20074CBE5 /* ContentBlockMapper.swift */,
 			);
 			path = Request;
@@ -1249,6 +1286,24 @@
 			path = GetRune;
 			sourceTree = "<group>";
 		};
+		DE65764429C9D4D30074CBE5 /* GetStory */ = {
+			isa = PBXGroup;
+			children = (
+				DE65764529C9D4FF0074CBE5 /* GetStoryRequest.swift */,
+				DE65764729C9D5040074CBE5 /* GetStoryResponse.swift */,
+			);
+			path = GetStory;
+			sourceTree = "<group>";
+		};
+		DE65764D29C9D7580074CBE5 /* GetHomeKit */ = {
+			isa = PBXGroup;
+			children = (
+				DE65764E29C9D7640074CBE5 /* GetHomeKitRequest.swift */,
+				DE65765029C9D76A0074CBE5 /* GetHomeKitResponse.swift */,
+			);
+			path = GetHomeKit;
+			sourceTree = "<group>";
+		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1392,6 +1447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE65764C29C9D7460074CBE5 /* HomeKit.swift in Sources */,
 				DE6574F029C838E30074CBE5 /* ProfileManager.swift in Sources */,
 				DE6575AC29C86FCF0074CBE5 /* WiccanElementCell.swift in Sources */,
 				DE6575A429C8601D0074CBE5 /* WelcomeSlideCellsView.swift in Sources */,
@@ -1448,6 +1504,7 @@
 				DE6574FB29C838E30074CBE5 /* ProfileMediator.swift in Sources */,
 				DE6575D229C9B5AA0074CBE5 /* GetSpellsResponse.swift in Sources */,
 				DE6575B529C8C1570074CBE5 /* OSpellsCategoriesTableView.swift in Sources */,
+				DE65765329C9D9360074CBE5 /* StoryCover.swift in Sources */,
 				DE6575CB29C9B47E0074CBE5 /* ContentBlock.swift in Sources */,
 				DE65749929C838DF0074CBE5 /* PaygateProductButton.swift in Sources */,
 				DE6575C129C8D7AD0074CBE5 /* OMoonSacredCell.swift in Sources */,
@@ -1461,6 +1518,7 @@
 				DE65750429C838E30074CBE5 /* SessionManager.swift in Sources */,
 				DE65755E29C838E60074CBE5 /* TapAreaButton.swift in Sources */,
 				DE6575DA29C9BB030074CBE5 /* UnsaveSpellRequest.swift in Sources */,
+				DE65765529C9DA490074CBE5 /* LunarDay.swift in Sources */,
 				DE65754E29C838E60074CBE5 /* NumberLaunches.swift in Sources */,
 				DE65754D29C838E60074CBE5 /* Scalable.swift in Sources */,
 				DE6575A229C85E410074CBE5 /* WelcomeCellView.swift in Sources */,
@@ -1472,7 +1530,10 @@
 				DE65755A29C838E60074CBE5 /* RxActivityIndicator.swift in Sources */,
 				DE6575D029C9B5A50074CBE5 /* GetSpellsRequest.swift in Sources */,
 				DE65763F29C9D0590074CBE5 /* GetRuneResponse.swift in Sources */,
+				DE65765129C9D76A0074CBE5 /* GetHomeKitResponse.swift in Sources */,
 				DE65759D29C843880074CBE5 /* GetSpellsCategoriesResponse.swift in Sources */,
+				DE65764129C9D42D0074CBE5 /* StoryCard.swift in Sources */,
+				DE65764629C9D4FF0074CBE5 /* GetStoryRequest.swift in Sources */,
 				DE6574A229C838DF0074CBE5 /* OCombineData.swift in Sources */,
 				DE6574FA29C838E30074CBE5 /* SetRequest.swift in Sources */,
 				DE65759829C842D30074CBE5 /* SpellsCategory.swift in Sources */,
@@ -1480,6 +1541,8 @@
 				DE6574B429C838DF0074CBE5 /* OWelcomeView.swift in Sources */,
 				DE65754729C838E60074CBE5 /* String+Extension.swift in Sources */,
 				DE6575EA29C9BD320074CBE5 /* GetCandlesResponse.swift in Sources */,
+				DE65764829C9D5040074CBE5 /* GetStoryResponse.swift in Sources */,
+				DE65764F29C9D7640074CBE5 /* GetHomeKitRequest.swift in Sources */,
 				DE6575E829C9BD2C0074CBE5 /* GetCandlesRequest.swift in Sources */,
 				DE6575BD29C8D1CF0074CBE5 /* OTarotSuitCell.swift in Sources */,
 				DE6574F929C838E30074CBE5 /* SyncTokensRequest.swift in Sources */,
@@ -1487,7 +1550,9 @@
 				DE6574F829C838E30074CBE5 /* LoginRequest.swift in Sources */,
 				DE6575BB29C8D0250074CBE5 /* OTarotSuitView.swift in Sources */,
 				DE65760B29C9C3FD0074CBE5 /* Crystal.swift in Sources */,
+				DE65765B29C9DBA20074CBE5 /* WheelOnYear.swift in Sources */,
 				DE65749629C838DF0074CBE5 /* PaygateInteractor.swift in Sources */,
+				DE65765729C9DA750074CBE5 /* Lunar.swift in Sources */,
 				DE6574B729C838DF0074CBE5 /* OSlideView.swift in Sources */,
 				DE65754229C838E60074CBE5 /* UIDevice+Extension.swift in Sources */,
 				DE65760229C9C1D30074CBE5 /* UnsaveHerbRequest.swift in Sources */,
@@ -1533,6 +1598,7 @@
 				DE65750229C838E30074CBE5 /* IAPErrorHelper.swift in Sources */,
 				DE65755129C838E60074CBE5 /* ObservableRetrySingle.swift in Sources */,
 				DE6575A829C86C350074CBE5 /* OBirthdateView.swift in Sources */,
+				DE65765929C9DB270074CBE5 /* LunarTip.swift in Sources */,
 				DE6574F529C838E30074CBE5 /* Profile.swift in Sources */,
 				DE65754429C838E60074CBE5 /* Date+Extension.swift in Sources */,
 				DE65749E29C838DF0074CBE5 /* TabView.swift in Sources */,
@@ -1540,6 +1606,7 @@
 				DE6575AA29C86E6F0074CBE5 /* OWiccanElementView.swift in Sources */,
 				DE65763A29C9D0440074CBE5 /* GetRunesCoversResponse.swift in Sources */,
 				DE6575A629C866250074CBE5 /* WelcomeSlideAtomView.swift in Sources */,
+				DE65764A29C9D6380074CBE5 /* ContentManager.swift in Sources */,
 				DE65756E29C838E60074CBE5 /* AmplitudeManager.swift in Sources */,
 				DE65762A29C9C8F50074CBE5 /* GetTarotResponse.swift in Sources */,
 				DE65761829C9C75B0074CBE5 /* TarotManager.swift in Sources */,
@@ -1550,6 +1617,7 @@
 				DE6574EB29C838E30074CBE5 /* PaygateOptionConfig.swift in Sources */,
 				DE65760529C9C3E70074CBE5 /* CrystalsManager.swift in Sources */,
 				DE65762029C9C7D90074CBE5 /* TarotContentSection.swift in Sources */,
+				DE65764329C9D43B0074CBE5 /* Story.swift in Sources */,
 				DE65754629C838E60074CBE5 /* ObservableAndSingle+Extension.swift in Sources */,
 				DE65760729C9C3ED0074CBE5 /* CrystalsMediator.swift in Sources */,
 				DE6574A029C838DF0074CBE5 /* TryAgainView.swift in Sources */,
