@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Crystal: Codable, Hashable {
+struct Crystal: Codable, Hashable, Identifiable {
     let id: Int
     let name: String
     let image: URL

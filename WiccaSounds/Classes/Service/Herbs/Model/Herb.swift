@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Herb: Codable, Hashable {
+struct Herb: Codable, Hashable, Identifiable {
     let id: Int
     let name: String
     let image: URL

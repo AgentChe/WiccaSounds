@@ -8,7 +8,6 @@
 import RxSwift
 import RxCocoa
 
-// TODO: отслеживать сохранение
 final class ExploreViewModel {
     lazy var didTapFilter = PublishRelay<ExploreFilterView.Filter>()
     
@@ -34,6 +33,12 @@ final class ExploreViewModel {
 
 // MARK: Private
 private extension ExploreViewModel {
+    enum Action {
+        case initial
+        case save(Int)
+        case unsave(Int)
+    }
+    
     func makeSections() -> Driver<[ExploreTableSection]> {
         Driver
             .combineLatest(
@@ -67,6 +72,8 @@ private extension ExploreViewModel {
             .map { categories, spells, activeSubscription -> [ExploreTableSection] in
                 let grouping = Dictionary(grouping: spells, by: { spell -> SpellsCategory? in
                     categories.first(where: { $0.id == spell.categoryId })
+                }).sorted(by: { lhs, rhs -> Bool in
+                    (lhs.key?.name ?? "") < (rhs.key?.name ?? "")
                 })
                 
                 return grouping.compactMap { category, spells -> ExploreTableSection? in
@@ -89,9 +96,25 @@ private extension ExploreViewModel {
     }
     
     func makeSpells() -> Driver<[Spell]> {
-        spellsManager
+        let spells = spellsManager
             .obtainSpells(forceUpdate: false)
             .asDriver(onErrorJustReturn: [])
+        
+        return makeUnits(
+            units: spells,
+            saveTrigger: SpellsMediator.shared.didSaveSpell,
+            unsaveTrigger: SpellsMediator.shared.didUnsaveSpell,
+            recreate: { spell, saved -> Spell in
+                Spell(
+                    id: spell.id,
+                    name: spell.name,
+                    categoryId: spell.categoryId,
+                    blocks: spell.blocks,
+                    saved: saved,
+                    paid: spell.paid
+                )
+            }
+        )
     }
     
     func makeSpellsCategories() -> Driver<[SpellsCategory]> {
@@ -118,9 +141,25 @@ private extension ExploreViewModel {
     }
     
     func makeCandles() -> Driver<[Candle]> {
-        candlesManager
+        let candles = candlesManager
             .obtainCandles(forceUpdate: false)
             .asDriver(onErrorJustReturn: [])
+        
+        return makeUnits(
+            units: candles,
+            saveTrigger: CandlesMediator.shared.didSaveCandle,
+            unsaveTrigger: CandlesMediator.shared.didUnsaveCandle,
+            recreate: { candle, saved -> Candle in
+                Candle(
+                    id: candle.id,
+                    name: candle.name,
+                    image: candle.image,
+                    blocks: candle.blocks,
+                    saved: saved,
+                    paid: candle.paid
+                )
+            }
+        )
     }
     
     func makeHerbsSections() -> Driver<[ExploreTableSection]> {
@@ -141,9 +180,25 @@ private extension ExploreViewModel {
     }
     
     func makeHerbs() -> Driver<[Herb]> {
-        herbsManager
+        let herbs = herbsManager
             .obtainHerbs(forceUpdate: false)
             .asDriver(onErrorJustReturn: [])
+        
+        return makeUnits(
+            units: herbs,
+            saveTrigger: HerbsMediator.shared.didSaveHerb,
+            unsaveTrigger: HerbsMediator.shared.didUnsaveHerb,
+            recreate: { herb, saved -> Herb in
+                Herb(
+                    id: herb.id,
+                    name: herb.name,
+                    image: herb.image,
+                    blocks: herb.blocks,
+                    saved: saved,
+                    paid: herb.paid
+                )
+            }
+        )
     }
     
     func makeCrystalsSections() -> Driver<[ExploreTableSection]> {
@@ -164,9 +219,25 @@ private extension ExploreViewModel {
     }
     
     func makeCrystals() -> Driver<[Crystal]> {
-        crystalsManager
+        let crystals = crystalsManager
             .obtainCrystals(forceUpdate: false)
             .asDriver(onErrorJustReturn: [])
+        
+        return makeUnits(
+            units: crystals,
+            saveTrigger: CrystalsMediator.shared.didSaveCrystal,
+            unsaveTrigger: CrystalsMediator.shared.didUnsaveCrystal,
+            recreate: { crystal, saved -> Crystal in
+                Crystal(
+                    id: crystal.id,
+                    name: crystal.name,
+                    image: crystal.image,
+                    blocks: crystal.blocks,
+                    saved: saved,
+                    paid: crystal.paid
+                )
+            }
+        )
     }
     
     func makeActiveSubscription() -> Driver<Bool> {
@@ -218,5 +289,52 @@ private extension ExploreViewModel {
         return [
             ExploreTableSection(elements: elements)
         ]
+    }
+    
+    func makeUnits<T: Identifiable<Int>>(
+        units: Driver<[T]>,
+        saveTrigger: Signal<Int>,
+        unsaveTrigger: Signal<Int>,
+        recreate: @escaping (T, Bool) -> T
+    ) -> Driver<[T]> {
+        units
+            .flatMapLatest { units -> Driver<[T]> in
+                let save = saveTrigger
+                    .map { Action.save($0) }
+                    .asDriver(onErrorDriveWith: .never())
+                let unsave = unsaveTrigger
+                    .map { Action.unsave($0) }
+                    .asDriver(onErrorDriveWith: .never())
+                
+                return Driver
+                    .merge(save, unsave)
+                    .startWith(.initial)
+                    .scan(units) { units, action -> [T] in
+                        switch action {
+                        case .initial:
+                            return units
+                        case .save(let id):
+                            var copy = units
+                            
+                            if let index = copy.firstIndex(where: { $0.id == id }) {
+                                let unit = copy[index]
+                                let new = recreate(unit, true)
+                                copy[index] = new
+                            }
+                            
+                            return copy
+                        case .unsave(let id):
+                            var copy = units
+                            
+                            if let index = copy.firstIndex(where: { $0.id == id }) {
+                                let unit = copy[index]
+                                let new = recreate(unit, false)
+                                copy[index] = new
+                            }
+                            
+                            return copy
+                        }
+                    }
+            }
     }
 }

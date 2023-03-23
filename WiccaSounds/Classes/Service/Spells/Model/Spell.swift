@@ -5,7 +5,7 @@
 //  Created by Андрей Чернышев on 21.03.2023.
 //
 
-struct Spell: Codable, Hashable {
+struct Spell: Codable, Hashable, Identifiable {
     let id: Int
     let name: String
     let categoryId: Int

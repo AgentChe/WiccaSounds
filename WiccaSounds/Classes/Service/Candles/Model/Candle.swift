@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Candle: Codable, Hashable {
+struct Candle: Codable, Hashable, Identifiable {
     let id: Int
     let name: String
     let image: URL
