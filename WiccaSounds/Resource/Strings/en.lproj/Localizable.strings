@@ -97,3 +97,9 @@
 "Main.Tab.Explore" = "Explore";
 "Main.Tab.Practice" = "Practice";
 "Main.Tab.Ambience" = "Ambience";
+
+// MARK: Explore
+"Explore.Filter.Spells" = "Spells";
+"Explore.Filter.Candles" = "Candles";
+"Explore.Filter.Herbs" = "Herbs";
+"Explore.Filter.Crystals" = "Crystals";

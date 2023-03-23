@@ -200,6 +200,17 @@
 		DE65765729C9DA750074CBE5 /* Lunar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65765629C9DA750074CBE5 /* Lunar.swift */; };
 		DE65765929C9DB270074CBE5 /* LunarTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65765829C9DB270074CBE5 /* LunarTip.swift */; };
 		DE65765B29C9DBA20074CBE5 /* WheelOnYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65765A29C9DBA20074CBE5 /* WheelOnYear.swift */; };
+		DE65765F29C9E8040074CBE5 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65765E29C9E8040074CBE5 /* ExploreViewController.swift */; };
+		DE65766129C9E80A0074CBE5 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65766029C9E80A0074CBE5 /* ExploreViewModel.swift */; };
+		DE65766329C9E80F0074CBE5 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65766229C9E80F0074CBE5 /* ExploreView.swift */; };
+		DE65766629C9EA260074CBE5 /* ExploreFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65766529C9EA260074CBE5 /* ExploreFilterView.swift */; };
+		DE65766829C9EA670074CBE5 /* ExploreFilterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65766729C9EA670074CBE5 /* ExploreFilterItem.swift */; };
+		DE65767129C9F2F00074CBE5 /* ExploreSpellCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65767029C9F2F00074CBE5 /* ExploreSpellCategoryCell.swift */; };
+		DE65767829C9FEDC0074CBE5 /* ExploreSpellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65767729C9FEDC0074CBE5 /* ExploreSpellCell.swift */; };
+		DE65767D29CB66B40074CBE5 /* ExploreTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65767C29CB66B40074CBE5 /* ExploreTableView.swift */; };
+		DE65767F29CB66BD0074CBE5 /* ExploreTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65767E29CB66BD0074CBE5 /* ExploreTableElement.swift */; };
+		DE65768229CC364D0074CBE5 /* ExploreRowUnitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65768129CC364D0074CBE5 /* ExploreRowUnitsCell.swift */; };
+		DE65768529CC37140074CBE5 /* ExploreUnitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65768429CC37140074CBE5 /* ExploreUnitButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -399,6 +410,17 @@
 		DE65765629C9DA750074CBE5 /* Lunar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lunar.swift; sourceTree = "<group>"; };
 		DE65765829C9DB270074CBE5 /* LunarTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarTip.swift; sourceTree = "<group>"; };
 		DE65765A29C9DBA20074CBE5 /* WheelOnYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelOnYear.swift; sourceTree = "<group>"; };
+		DE65765E29C9E8040074CBE5 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		DE65766029C9E80A0074CBE5 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
+		DE65766229C9E80F0074CBE5 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		DE65766529C9EA260074CBE5 /* ExploreFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreFilterView.swift; sourceTree = "<group>"; };
+		DE65766729C9EA670074CBE5 /* ExploreFilterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreFilterItem.swift; sourceTree = "<group>"; };
+		DE65767029C9F2F00074CBE5 /* ExploreSpellCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreSpellCategoryCell.swift; sourceTree = "<group>"; };
+		DE65767729C9FEDC0074CBE5 /* ExploreSpellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreSpellCell.swift; sourceTree = "<group>"; };
+		DE65767C29CB66B40074CBE5 /* ExploreTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableView.swift; sourceTree = "<group>"; };
+		DE65767E29CB66BD0074CBE5 /* ExploreTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableElement.swift; sourceTree = "<group>"; };
+		DE65768129CC364D0074CBE5 /* ExploreRowUnitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRowUnitsCell.swift; sourceTree = "<group>"; };
+		DE65768429CC37140074CBE5 /* ExploreUnitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUnitButton.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -467,6 +489,7 @@
 		DE65744A29C838DE0074CBE5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE65765C29C9E7F30074CBE5 /* Explore */,
 				DE65744B29C838DE0074CBE5 /* Splash */,
 				DE65745229C838DE0074CBE5 /* Paygate */,
 				DE65745E29C838DF0074CBE5 /* Main */,
@@ -1304,6 +1327,72 @@
 			path = GetHomeKit;
 			sourceTree = "<group>";
 		};
+		DE65765C29C9E7F30074CBE5 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				DE65765D29C9E7F80074CBE5 /* Explore */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		DE65765D29C9E7F80074CBE5 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				DE65766429C9EA150074CBE5 /* Views */,
+				DE65765E29C9E8040074CBE5 /* ExploreViewController.swift */,
+				DE65766029C9E80A0074CBE5 /* ExploreViewModel.swift */,
+				DE65766229C9E80F0074CBE5 /* ExploreView.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		DE65766429C9EA150074CBE5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE65767B29CB64A00074CBE5 /* TableView */,
+				DE65766929C9F0B50074CBE5 /* FIlter */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE65766929C9F0B50074CBE5 /* FIlter */ = {
+			isa = PBXGroup;
+			children = (
+				DE65766529C9EA260074CBE5 /* ExploreFilterView.swift */,
+				DE65766729C9EA670074CBE5 /* ExploreFilterItem.swift */,
+			);
+			path = FIlter;
+			sourceTree = "<group>";
+		};
+		DE65767B29CB64A00074CBE5 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DE65768029CB66C20074CBE5 /* Cells */,
+				DE65767C29CB66B40074CBE5 /* ExploreTableView.swift */,
+				DE65767E29CB66BD0074CBE5 /* ExploreTableElement.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DE65768029CB66C20074CBE5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DE65768329CC37060074CBE5 /* Atoms */,
+				DE65767029C9F2F00074CBE5 /* ExploreSpellCategoryCell.swift */,
+				DE65767729C9FEDC0074CBE5 /* ExploreSpellCell.swift */,
+				DE65768129CC364D0074CBE5 /* ExploreRowUnitsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DE65768329CC37060074CBE5 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				DE65768429CC37140074CBE5 /* ExploreUnitButton.swift */,
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1468,6 +1557,7 @@
 				DE65754829C838E60074CBE5 /* UIViewRxExtension.swift in Sources */,
 				DE6575CD29C9B52D0074CBE5 /* Spell.swift in Sources */,
 				DE65759429C842B50074CBE5 /* SpellsManager.swift in Sources */,
+				DE65767F29CB66BD0074CBE5 /* ExploreTableElement.swift in Sources */,
 				DE6575C329C9090D0074CBE5 /* OObjectsChannelView.swift in Sources */,
 				DE65755B29C838E60074CBE5 /* Toast.swift in Sources */,
 				DE65756829C838E60074CBE5 /* PushNotificationsAuthorizationStatus.swift in Sources */,
@@ -1484,6 +1574,7 @@
 				DE6575B929C8C1660074CBE5 /* OSpellsCategoriesTableElement.swift in Sources */,
 				DE6574EA29C838E30074CBE5 /* PaygateOptionLineComponent.swift in Sources */,
 				DE65762F29C9CFF60074CBE5 /* RunesManager.swift in Sources */,
+				DE65766829C9EA670074CBE5 /* ExploreFilterItem.swift in Sources */,
 				DE6574A329C838DF0074CBE5 /* OnboardingViewController.swift in Sources */,
 				DE65755629C838E60074CBE5 /* ContentError.swift in Sources */,
 				DE6575D529C9B8A20074CBE5 /* ContentBlockMapper.swift in Sources */,
@@ -1505,6 +1596,7 @@
 				DE6575D229C9B5AA0074CBE5 /* GetSpellsResponse.swift in Sources */,
 				DE6575B529C8C1570074CBE5 /* OSpellsCategoriesTableView.swift in Sources */,
 				DE65765329C9D9360074CBE5 /* StoryCover.swift in Sources */,
+				DE65767D29CB66B40074CBE5 /* ExploreTableView.swift in Sources */,
 				DE6575CB29C9B47E0074CBE5 /* ContentBlock.swift in Sources */,
 				DE65749929C838DF0074CBE5 /* PaygateProductButton.swift in Sources */,
 				DE6575C129C8D7AD0074CBE5 /* OMoonSacredCell.swift in Sources */,
@@ -1516,12 +1608,14 @@
 				DE6574ED29C838E30074CBE5 /* GetPaygateResponse.swift in Sources */,
 				DE65750029C838E30074CBE5 /* IAPProduct.swift in Sources */,
 				DE65750429C838E30074CBE5 /* SessionManager.swift in Sources */,
+				DE65767129C9F2F00074CBE5 /* ExploreSpellCategoryCell.swift in Sources */,
 				DE65755E29C838E60074CBE5 /* TapAreaButton.swift in Sources */,
 				DE6575DA29C9BB030074CBE5 /* UnsaveSpellRequest.swift in Sources */,
 				DE65765529C9DA490074CBE5 /* LunarDay.swift in Sources */,
 				DE65754E29C838E60074CBE5 /* NumberLaunches.swift in Sources */,
 				DE65754D29C838E60074CBE5 /* Scalable.swift in Sources */,
 				DE6575A229C85E410074CBE5 /* WelcomeCellView.swift in Sources */,
+				DE65766329C9E80F0074CBE5 /* ExploreView.swift in Sources */,
 				DE65759B29C843800074CBE5 /* GetSpellsCategoriesRequest.swift in Sources */,
 				DE65756429C838E60074CBE5 /* GradientView.swift in Sources */,
 				DE65748D29C838DF0074CBE5 /* SplashViewController.swift in Sources */,
@@ -1534,6 +1628,7 @@
 				DE65759D29C843880074CBE5 /* GetSpellsCategoriesResponse.swift in Sources */,
 				DE65764129C9D42D0074CBE5 /* StoryCard.swift in Sources */,
 				DE65764629C9D4FF0074CBE5 /* GetStoryRequest.swift in Sources */,
+				DE65766629C9EA260074CBE5 /* ExploreFilterView.swift in Sources */,
 				DE6574A229C838DF0074CBE5 /* OCombineData.swift in Sources */,
 				DE6574FA29C838E30074CBE5 /* SetRequest.swift in Sources */,
 				DE65759829C842D30074CBE5 /* SpellsCategory.swift in Sources */,
@@ -1543,6 +1638,7 @@
 				DE6575EA29C9BD320074CBE5 /* GetCandlesResponse.swift in Sources */,
 				DE65764829C9D5040074CBE5 /* GetStoryResponse.swift in Sources */,
 				DE65764F29C9D7640074CBE5 /* GetHomeKitRequest.swift in Sources */,
+				DE65766129C9E80A0074CBE5 /* ExploreViewModel.swift in Sources */,
 				DE6575E829C9BD2C0074CBE5 /* GetCandlesRequest.swift in Sources */,
 				DE6575BD29C8D1CF0074CBE5 /* OTarotSuitCell.swift in Sources */,
 				DE6574F929C838E30074CBE5 /* SyncTokensRequest.swift in Sources */,
@@ -1567,6 +1663,7 @@
 				DE65762529C9C8190074CBE5 /* GetTarotCoversResponse.swift in Sources */,
 				DE6574F629C838E30074CBE5 /* GetProfileRequest.swift in Sources */,
 				DE65755C29C838E60074CBE5 /* NavigationControllerSettings.swift in Sources */,
+				DE65768529CC37140074CBE5 /* ExploreUnitButton.swift in Sources */,
 				DE6575C529C90C040074CBE5 /* OObjectChannelCell.swift in Sources */,
 				DE6574EF29C838E30074CBE5 /* PaygateManager.swift in Sources */,
 				DE65754B29C838E60074CBE5 /* APIRequestBody.swift in Sources */,
@@ -1598,6 +1695,7 @@
 				DE65750229C838E30074CBE5 /* IAPErrorHelper.swift in Sources */,
 				DE65755129C838E60074CBE5 /* ObservableRetrySingle.swift in Sources */,
 				DE6575A829C86C350074CBE5 /* OBirthdateView.swift in Sources */,
+				DE65768229CC364D0074CBE5 /* ExploreRowUnitsCell.swift in Sources */,
 				DE65765929C9DB270074CBE5 /* LunarTip.swift in Sources */,
 				DE6574F529C838E30074CBE5 /* Profile.swift in Sources */,
 				DE65754429C838E60074CBE5 /* Date+Extension.swift in Sources */,
@@ -1606,6 +1704,8 @@
 				DE6575AA29C86E6F0074CBE5 /* OWiccanElementView.swift in Sources */,
 				DE65763A29C9D0440074CBE5 /* GetRunesCoversResponse.swift in Sources */,
 				DE6575A629C866250074CBE5 /* WelcomeSlideAtomView.swift in Sources */,
+				DE65765F29C9E8040074CBE5 /* ExploreViewController.swift in Sources */,
+				DE65767829C9FEDC0074CBE5 /* ExploreSpellCell.swift in Sources */,
 				DE65764A29C9D6380074CBE5 /* ContentManager.swift in Sources */,
 				DE65756E29C838E60074CBE5 /* AmplitudeManager.swift in Sources */,
 				DE65762A29C9C8F50074CBE5 /* GetTarotResponse.swift in Sources */,
