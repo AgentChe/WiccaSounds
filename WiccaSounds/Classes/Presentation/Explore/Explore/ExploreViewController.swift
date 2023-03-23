@@ -53,21 +53,24 @@ extension ExploreViewController {
 
 // MARK: ExploreTableDelegate
 extension ExploreViewController: ExploreTableDelegate {
-    func exploreDidTap(spell: Spell) {
-        // TODO
-        print(spell.name)
+    func exploreDidTap(spell: ExploreSpellElement) {
+        let vc = spell.locked ? PaygateViewController.make() : ContentViewController.make(unit: .spell(spell.spell))
+        present(vc, animated: true)
     }
     
     func exploreDidTap(unit: ExploreUnitElement.Unit) {
-        // TODO
+        let vc: UIViewController
+        
         switch unit {
         case .candle(let candle, let locked):
-            print(candle.name)
+            vc = locked ? PaygateViewController.make() : ContentViewController.make(unit: .candle(candle))
         case .herb(let herb, let locked):
-            print(herb.name)
+            vc = locked ? PaygateViewController.make() : ContentViewController.make(unit: .herb(herb))
         case .crystal(let crystal, let locked):
-            print(crystal.name)
+            vc = locked ? PaygateViewController.make() : ContentViewController.make(unit: .crystal(crystal))
         }
+        
+        present(vc, animated: true)
     }
 }
 

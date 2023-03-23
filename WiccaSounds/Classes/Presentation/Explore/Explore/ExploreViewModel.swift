@@ -8,6 +8,7 @@
 import RxSwift
 import RxCocoa
 
+// TODO: отслеживать сохранение
 final class ExploreViewModel {
     lazy var didTapFilter = PublishRelay<ExploreFilterView.Filter>()
     

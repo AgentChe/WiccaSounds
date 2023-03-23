@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ExploreTableDelegate: AnyObject {
-    func exploreDidTap(spell: Spell)
+    func exploreDidTap(spell: ExploreSpellElement)
     func exploreDidTap(unit: ExploreUnitElement.Unit)
 }
 
@@ -73,7 +73,7 @@ extension ExploreTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch sections[indexPath.section].elements[indexPath.row] {
         case .spell(let element):
-            mainDelegate?.exploreDidTap(spell: element.spell)
+            mainDelegate?.exploreDidTap(spell: element)
         default:
             return
         }

@@ -211,6 +211,14 @@
 		DE65767F29CB66BD0074CBE5 /* ExploreTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65767E29CB66BD0074CBE5 /* ExploreTableElement.swift */; };
 		DE65768229CC364D0074CBE5 /* ExploreRowUnitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65768129CC364D0074CBE5 /* ExploreRowUnitsCell.swift */; };
 		DE65768529CC37140074CBE5 /* ExploreUnitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65768429CC37140074CBE5 /* ExploreUnitButton.swift */; };
+		DE65768829CC9EF50074CBE5 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65768729CC9EF50074CBE5 /* ContentViewController.swift */; };
+		DE65768A29CC9EFB0074CBE5 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65768929CC9EFB0074CBE5 /* ContentViewModel.swift */; };
+		DE65768C29CC9F000074CBE5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65768B29CC9F000074CBE5 /* ContentView.swift */; };
+		DE65769029CCA5E50074CBE5 /* ContentTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65768F29CCA5E50074CBE5 /* ContentTableView.swift */; };
+		DE65769229CCA5EC0074CBE5 /* ContentTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65769129CCA5EC0074CBE5 /* ContentTableElement.swift */; };
+		DE65769529CCA5FB0074CBE5 /* ContentTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65769429CCA5FB0074CBE5 /* ContentTitleCell.swift */; };
+		DE65769729CCA6040074CBE5 /* ContentTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65769629CCA6040074CBE5 /* ContentTextCell.swift */; };
+		DE65769929CCA60D0074CBE5 /* ContentImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65769829CCA60D0074CBE5 /* ContentImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -421,6 +429,14 @@
 		DE65767E29CB66BD0074CBE5 /* ExploreTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableElement.swift; sourceTree = "<group>"; };
 		DE65768129CC364D0074CBE5 /* ExploreRowUnitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRowUnitsCell.swift; sourceTree = "<group>"; };
 		DE65768429CC37140074CBE5 /* ExploreUnitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUnitButton.swift; sourceTree = "<group>"; };
+		DE65768729CC9EF50074CBE5 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		DE65768929CC9EFB0074CBE5 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		DE65768B29CC9F000074CBE5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DE65768F29CCA5E50074CBE5 /* ContentTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableView.swift; sourceTree = "<group>"; };
+		DE65769129CCA5EC0074CBE5 /* ContentTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableElement.swift; sourceTree = "<group>"; };
+		DE65769429CCA5FB0074CBE5 /* ContentTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTitleCell.swift; sourceTree = "<group>"; };
+		DE65769629CCA6040074CBE5 /* ContentTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTextCell.swift; sourceTree = "<group>"; };
+		DE65769829CCA60D0074CBE5 /* ContentImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentImageCell.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1330,6 +1346,7 @@
 		DE65765C29C9E7F30074CBE5 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				DE65768629CC9EE90074CBE5 /* Content */,
 				DE65765D29C9E7F80074CBE5 /* Explore */,
 			);
 			path = Explore;
@@ -1391,6 +1408,45 @@
 				DE65768429CC37140074CBE5 /* ExploreUnitButton.swift */,
 			);
 			path = Atoms;
+			sourceTree = "<group>";
+		};
+		DE65768629CC9EE90074CBE5 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				DE65768D29CCA42E0074CBE5 /* Views */,
+				DE65768729CC9EF50074CBE5 /* ContentViewController.swift */,
+				DE65768929CC9EFB0074CBE5 /* ContentViewModel.swift */,
+				DE65768B29CC9F000074CBE5 /* ContentView.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		DE65768D29CCA42E0074CBE5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE65768E29CCA4340074CBE5 /* TableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE65768E29CCA4340074CBE5 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DE65769329CCA5EF0074CBE5 /* Cells */,
+				DE65768F29CCA5E50074CBE5 /* ContentTableView.swift */,
+				DE65769129CCA5EC0074CBE5 /* ContentTableElement.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DE65769329CCA5EF0074CBE5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DE65769429CCA5FB0074CBE5 /* ContentTitleCell.swift */,
+				DE65769629CCA6040074CBE5 /* ContentTextCell.swift */,
+				DE65769829CCA60D0074CBE5 /* ContentImageCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
@@ -1634,6 +1690,9 @@
 				DE65759829C842D30074CBE5 /* SpellsCategory.swift in Sources */,
 				DE65749829C838DF0074CBE5 /* PaygateViewController.swift in Sources */,
 				DE6574B429C838DF0074CBE5 /* OWelcomeView.swift in Sources */,
+				DE65769529CCA5FB0074CBE5 /* ContentTitleCell.swift in Sources */,
+				DE65768C29CC9F000074CBE5 /* ContentView.swift in Sources */,
+				DE65769729CCA6040074CBE5 /* ContentTextCell.swift in Sources */,
 				DE65754729C838E60074CBE5 /* String+Extension.swift in Sources */,
 				DE6575EA29C9BD320074CBE5 /* GetCandlesResponse.swift in Sources */,
 				DE65764829C9D5040074CBE5 /* GetStoryResponse.swift in Sources */,
@@ -1654,6 +1713,7 @@
 				DE65760229C9C1D30074CBE5 /* UnsaveHerbRequest.swift in Sources */,
 				DE65756129C838E60074CBE5 /* PaddingTextField.swift in Sources */,
 				DE65749329C838DF0074CBE5 /* DefaultPaygate.swift in Sources */,
+				DE65769229CCA5EC0074CBE5 /* ContentTableElement.swift in Sources */,
 				DE65754329C838E60074CBE5 /* UIColor+Extension.swift in Sources */,
 				DE65749C29C838DF0074CBE5 /* MainView.swift in Sources */,
 				DE65749B29C838DF0074CBE5 /* MainViewController.swift in Sources */,
@@ -1685,11 +1745,13 @@
 				DE65756229C838E60074CBE5 /* PaddingLabel.swift in Sources */,
 				DE65748E29C838DF0074CBE5 /* SplashActivity.swift in Sources */,
 				DE65754C29C838E60074CBE5 /* RestAPITransport.swift in Sources */,
+				DE65768A29CC9EFB0074CBE5 /* ContentViewModel.swift in Sources */,
 				DE65756C29C838E60074CBE5 /* AppsFlyerManager.swift in Sources */,
 				DE65756929C838E60074CBE5 /* PushNotificationsModel.swift in Sources */,
 				DE65760029C9C1CB0074CBE5 /* SaveHerbRequest.swift in Sources */,
 				DE65763329C9D0080074CBE5 /* RuneCover.swift in Sources */,
 				DE6575F829C9C1A90074CBE5 /* Herb.swift in Sources */,
+				DE65769929CCA60D0074CBE5 /* ContentImageCell.swift in Sources */,
 				DE65763829C9D03D0074CBE5 /* GetRunesCoversRequest.swift in Sources */,
 				DE65749029C838DF0074CBE5 /* SplashViewModel.swift in Sources */,
 				DE65750229C838E30074CBE5 /* IAPErrorHelper.swift in Sources */,
@@ -1716,12 +1778,14 @@
 				DE65749729C838DF0074CBE5 /* PaygateView.swift in Sources */,
 				DE6574EB29C838E30074CBE5 /* PaygateOptionConfig.swift in Sources */,
 				DE65760529C9C3E70074CBE5 /* CrystalsManager.swift in Sources */,
+				DE65768829CC9EF50074CBE5 /* ContentViewController.swift in Sources */,
 				DE65762029C9C7D90074CBE5 /* TarotContentSection.swift in Sources */,
 				DE65764329C9D43B0074CBE5 /* Story.swift in Sources */,
 				DE65754629C838E60074CBE5 /* ObservableAndSingle+Extension.swift in Sources */,
 				DE65760729C9C3ED0074CBE5 /* CrystalsMediator.swift in Sources */,
 				DE6574A029C838DF0074CBE5 /* TryAgainView.swift in Sources */,
 				DE65755829C838E60074CBE5 /* RequestReview.swift in Sources */,
+				DE65769029CCA5E50074CBE5 /* ContentTableView.swift in Sources */,
 				DE6574F729C838E30074CBE5 /* GetProfileResponse.swift in Sources */,
 				DE65761529C9C4270074CBE5 /* UnsaveCrystalRequest.swift in Sources */,
 				DE65754929C838E60074CBE5 /* GlobalDefinitions.swift in Sources */,
