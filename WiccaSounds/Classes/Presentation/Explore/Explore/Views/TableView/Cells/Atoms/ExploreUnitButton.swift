@@ -124,7 +124,7 @@ private extension ExploreUnitButton {
         view.layer.cornerRadius = 10.scale
         view.layer.masksToBounds = true
         view.layer.borderWidth = 1.scale
-        view.layer.borderColor = Appearance.white.withAlphaComponent(0.1).cgColor
+        view.layer.borderColor = Appearance.white.withAlphaComponent(0.15).cgColor
         view.backgroundColor = Appearance.white.withAlphaComponent(0.1)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

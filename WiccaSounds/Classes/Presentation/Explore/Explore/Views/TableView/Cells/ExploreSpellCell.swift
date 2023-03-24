@@ -44,7 +44,7 @@ extension ExploreSpellCell {
 private extension ExploreSpellCell {
     func initialize() {
         backgroundColor = UIColor.clear
-        contentView.backgroundColor = Appearance.white.withAlphaComponent(0.1)
+        contentView.backgroundColor = UIColor.clear
         
         selectionStyle = .none
     }

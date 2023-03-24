@@ -90,7 +90,10 @@ private extension ExploreViewModel {
                     }
                     
                     let elements: [ExploreTableElement] = [.spellsCategory(category)] + spellsElements
-                    return ExploreTableSection(elements: elements)
+                    return ExploreTableSection(
+                        elements: elements,
+                        corner: true
+                    )
                 }
             }
     }
@@ -287,7 +290,10 @@ private extension ExploreViewModel {
         }
         
         return [
-            ExploreTableSection(elements: elements)
+            ExploreTableSection(
+                elements: elements,
+                corner: false
+            )
         ]
     }
     

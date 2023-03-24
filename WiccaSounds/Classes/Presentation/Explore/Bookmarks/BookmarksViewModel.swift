@@ -73,7 +73,10 @@ private extension BookmarksViewModel {
                         spell: spell,
                         locked: spell.paid ? !activeSubscription : false
                     )
-                    return ExploreTableSection(elements: [.spell(element)])
+                    return ExploreTableSection(
+                        elements: [.spell(element)],
+                        corner: true
+                    )
                 }
             }
     }
@@ -282,7 +285,10 @@ private extension BookmarksViewModel {
         }
         
         return [
-            ExploreTableSection(elements: elements)
+            ExploreTableSection(
+                elements: elements,
+                corner: false
+            )
         ]
     }
     

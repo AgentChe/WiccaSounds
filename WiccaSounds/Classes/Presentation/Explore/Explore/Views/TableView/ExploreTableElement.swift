@@ -7,6 +7,7 @@
 
 struct ExploreTableSection {
     let elements: [ExploreTableElement]
+    let corner: Bool
 }
 
 enum ExploreTableElement {

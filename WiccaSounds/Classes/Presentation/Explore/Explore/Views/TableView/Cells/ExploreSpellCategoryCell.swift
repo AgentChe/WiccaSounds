@@ -50,7 +50,7 @@ extension ExploreSpellCategoryCell {
 private extension ExploreSpellCategoryCell {
     func initialize() {
         backgroundColor = UIColor.clear
-        contentView.backgroundColor = Appearance.white.withAlphaComponent(0.1)
+        contentView.backgroundColor = UIColor.clear
         
         selectionStyle = .none
     }
