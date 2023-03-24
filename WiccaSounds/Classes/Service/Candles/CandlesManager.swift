@@ -42,7 +42,8 @@ extension CandlesManager: CandlesManagerProtocol {
         return defaultWrapper
             .callServerApi(requestBody: request)
             .mapToVoid()
-            .do(onSuccess: {
+            .do(onSuccess: { [weak self] in
+                self?.replace(id: candleId, saved: true)
                 CandlesMediator.shared.didSave(candleId: candleId)
             })
     }
@@ -60,7 +61,8 @@ extension CandlesManager: CandlesManagerProtocol {
         return defaultWrapper
             .callServerApi(requestBody: request)
             .mapToVoid()
-            .do(onSuccess: {
+            .do(onSuccess: { [weak self] in
+                self?.replace(id: candleId, saved: false)
                 CandlesMediator.shared.didUnsave(candleId: candleId)
             })
     }
@@ -100,6 +102,34 @@ private extension CandlesManager {
             event(.success(candles))
             
             return Disposables.create()
+        }
+    }
+    
+    func replace(id: Int, saved: Bool) {
+        guard
+            let data = UserDefaults.standard.data(forKey: Constants.candlesKey),
+            var candles = try? JSONDecoder().decode([Candle].self, from: data)
+        else {
+            return
+        }
+        
+        if let index = candles.firstIndex(where: { $0.id == id }) {
+            let candle = candles[index]
+            
+            let new = Candle(
+                id: candle.id,
+                name: candle.name,
+                image: candle.image,
+                blocks: candle.blocks,
+                saved: saved,
+                paid: candle.paid
+            )
+            
+            candles[index] = new
+            
+            if let data = try? JSONEncoder().encode(candles) {
+                UserDefaults.standard.set(data, forKey: Constants.candlesKey)
+            }
         }
     }
 }

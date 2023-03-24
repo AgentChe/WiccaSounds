@@ -26,7 +26,8 @@ final class ExploreViewController: UIViewController {
         
         bookmarksButton.rx.tap
             .subscribe(Binder(self) { base, void in
-                // TODO: open Bookmarks
+                let vc = BookmarksViewController.make()
+                base.navigationController?.pushViewController(vc, animated: true)
             })
             .disposed(by: disposeBag)
         

@@ -42,7 +42,8 @@ extension CrystalsManager: CrystalsManagerProtocol {
         return defaultWrapper
             .callServerApi(requestBody: request)
             .mapToVoid()
-            .do(onSuccess: {
+            .do(onSuccess: { [weak self] in
+                self?.replace(id: crystalId, saved: true)
                 CrystalsMediator.shared.didSave(crystalId: crystalId)
             })
     }
@@ -60,7 +61,8 @@ extension CrystalsManager: CrystalsManagerProtocol {
         return defaultWrapper
             .callServerApi(requestBody: request)
             .mapToVoid()
-            .do(onSuccess: {
+            .do(onSuccess: { [weak self] in
+                self?.replace(id: crystalId, saved: false)
                 CrystalsMediator.shared.didUnsave(crystalId: crystalId)
             })
     }
@@ -100,6 +102,34 @@ private extension CrystalsManager {
             event(.success(crystals))
             
             return Disposables.create()
+        }
+    }
+    
+    func replace(id: Int, saved: Bool) {
+        guard
+            let data = UserDefaults.standard.data(forKey: Constants.crystalsKey),
+            var crystals = try? JSONDecoder().decode([Crystal].self, from: data)
+        else {
+            return
+        }
+        
+        if let index = crystals.firstIndex(where: { $0.id == id }) {
+            let crystal = crystals[index]
+            
+            let new = Crystal(
+                id: crystal.id,
+                name: crystal.name,
+                image: crystal.image,
+                blocks: crystal.blocks,
+                saved: saved,
+                paid: crystal.paid
+            )
+            
+            crystals[index] = new
+            
+            if let data = try? JSONEncoder().encode(crystals) {
+                UserDefaults.standard.set(data, forKey: Constants.crystalsKey)
+            }
         }
     }
 }

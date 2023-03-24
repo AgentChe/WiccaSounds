@@ -68,7 +68,7 @@ private extension ExploreFilterItem {
     func makeLabel() -> UILabel {
         let attrs = TextAttributes()
             .textColor(Appearance.white)
-            .font(Fonts.Inter.regular(size: 18.scale))
+            .font(Fonts.Inter.semiBold(size: 18.scale))
             .lineHeight(21.6.scale)
             .textAlignment(.center)
         

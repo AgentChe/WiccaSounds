@@ -42,7 +42,8 @@ extension HerbsManager: HerbsManagerProtocol {
         return defaultWrapper
             .callServerApi(requestBody: request)
             .mapToVoid()
-            .do(onSuccess: {
+            .do(onSuccess: { [weak self] in
+                self?.replace(id: herbId, saved: true)
                 HerbsMediator.shared.didSave(herbId: herbId)
             })
     }
@@ -60,7 +61,8 @@ extension HerbsManager: HerbsManagerProtocol {
         return defaultWrapper
             .callServerApi(requestBody: request)
             .mapToVoid()
-            .do(onSuccess: {
+            .do(onSuccess: { [weak self] in
+                self?.replace(id: herbId, saved: false)
                 HerbsMediator.shared.didUnsave(herbId: herbId)
             })
     }
@@ -100,6 +102,34 @@ private extension HerbsManager {
             event(.success(herbs))
             
             return Disposables.create()
+        }
+    }
+    
+    func replace(id: Int, saved: Bool) {
+        guard
+            let data = UserDefaults.standard.data(forKey: Constants.herbsKey),
+            var herbs = try? JSONDecoder().decode([Herb].self, from: data)
+        else {
+            return
+        }
+        
+        if let index = herbs.firstIndex(where: { $0.id == id }) {
+            let herb = herbs[index]
+            
+            let new = Herb(
+                id: herb.id,
+                name: herb.name,
+                image: herb.image,
+                blocks: herb.blocks,
+                saved: saved,
+                paid: herb.paid
+            )
+            
+            herbs[index] = new
+            
+            if let data = try? JSONEncoder().encode(herbs) {
+                UserDefaults.standard.set(data, forKey: Constants.herbsKey)
+            }
         }
     }
 }

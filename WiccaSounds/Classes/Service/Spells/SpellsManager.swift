@@ -48,7 +48,8 @@ extension SpellsManager: SpellsManagerProtocol {
         return defaultWrapper
             .callServerApi(requestBody: request)
             .mapToVoid()
-            .do(onSuccess: {
+            .do(onSuccess: { [weak self] in
+                self?.replace(id: spellId, saved: true)
                 SpellsMediator.shared.didSave(spellId: spellId)
             })
     }
@@ -66,7 +67,8 @@ extension SpellsManager: SpellsManagerProtocol {
         return defaultWrapper
             .callServerApi(requestBody: request)
             .mapToVoid()
-            .do(onSuccess: {
+            .do(onSuccess: { [weak self] in
+                self?.replace(id: spellId, saved: false)
                 SpellsMediator.shared.didUnsave(spellId: spellId)
             })
     }
@@ -141,6 +143,34 @@ private extension SpellsManager {
             event(.success(spells))
             
             return Disposables.create()
+        }
+    }
+    
+    func replace(id: Int, saved: Bool) {
+        guard
+            let data = UserDefaults.standard.data(forKey: Constants.spellsKey),
+            var spells = try? JSONDecoder().decode([Spell].self, from: data)
+        else {
+            return
+        }
+
+        if let index = spells.firstIndex(where: { $0.id == id }) {
+            let spell = spells[index]
+
+            let new = Spell(
+                id: spell.id,
+                name: spell.name,
+                categoryId: spell.categoryId,
+                blocks: spell.blocks,
+                saved: saved,
+                paid: spell.paid
+            )
+
+            spells[index] = new
+
+            if let data = try? JSONEncoder().encode(spells) {
+                UserDefaults.standard.set(data, forKey: Constants.spellsKey)
+            }
         }
     }
 }

@@ -17,6 +17,12 @@ final class ExploreTableView: UITableView {
     
     lazy var sections = [ExploreTableSection]()
     
+    private lazy var headerFooterView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.clear
+        return view
+    }()
+    
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         
@@ -86,6 +92,14 @@ extension ExploreTableView: UITableViewDelegate {
         default:
             return UITableView.automaticDimension
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        headerFooterView
     }
 }
 

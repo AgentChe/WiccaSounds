@@ -219,6 +219,9 @@
 		DE65769529CCA5FB0074CBE5 /* ContentTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65769429CCA5FB0074CBE5 /* ContentTitleCell.swift */; };
 		DE65769729CCA6040074CBE5 /* ContentTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65769629CCA6040074CBE5 /* ContentTextCell.swift */; };
 		DE65769929CCA60D0074CBE5 /* ContentImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65769829CCA60D0074CBE5 /* ContentImageCell.swift */; };
+		DE65769C29CD59320074CBE5 /* BookmarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65769B29CD59320074CBE5 /* BookmarksView.swift */; };
+		DE65769E29CD59380074CBE5 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65769D29CD59380074CBE5 /* BookmarksViewController.swift */; };
+		DE6576A029CD593E0074CBE5 /* BookmarksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65769F29CD593E0074CBE5 /* BookmarksViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -437,6 +440,9 @@
 		DE65769429CCA5FB0074CBE5 /* ContentTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTitleCell.swift; sourceTree = "<group>"; };
 		DE65769629CCA6040074CBE5 /* ContentTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTextCell.swift; sourceTree = "<group>"; };
 		DE65769829CCA60D0074CBE5 /* ContentImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentImageCell.swift; sourceTree = "<group>"; };
+		DE65769B29CD59320074CBE5 /* BookmarksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksView.swift; sourceTree = "<group>"; };
+		DE65769D29CD59380074CBE5 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		DE65769F29CD593E0074CBE5 /* BookmarksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewModel.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1346,6 +1352,7 @@
 		DE65765C29C9E7F30074CBE5 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				DE65769A29CD59240074CBE5 /* Bookmarks */,
 				DE65768629CC9EE90074CBE5 /* Content */,
 				DE65765D29C9E7F80074CBE5 /* Explore */,
 			);
@@ -1447,6 +1454,16 @@
 				DE65769829CCA60D0074CBE5 /* ContentImageCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		DE65769A29CD59240074CBE5 /* Bookmarks */ = {
+			isa = PBXGroup;
+			children = (
+				DE65769D29CD59380074CBE5 /* BookmarksViewController.swift */,
+				DE65769F29CD593E0074CBE5 /* BookmarksViewModel.swift */,
+				DE65769B29CD59320074CBE5 /* BookmarksView.swift */,
+			);
+			path = Bookmarks;
 			sourceTree = "<group>";
 		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
@@ -1608,6 +1625,7 @@
 				DE6575D829C9BAAE0074CBE5 /* SaveSpellRequest.swift in Sources */,
 				DE65755D29C838E60074CBE5 /* NavigationController.swift in Sources */,
 				DE65755929C838E60074CBE5 /* ImagePicker.swift in Sources */,
+				DE6576A029CD593E0074CBE5 /* BookmarksViewModel.swift in Sources */,
 				DE65749A29C838DF0074CBE5 /* PaygateInfoCell.swift in Sources */,
 				DE65755229C838E60074CBE5 /* XOREncryption.swift in Sources */,
 				DE65754829C838E60074CBE5 /* UIViewRxExtension.swift in Sources */,
@@ -1758,6 +1776,7 @@
 				DE65755129C838E60074CBE5 /* ObservableRetrySingle.swift in Sources */,
 				DE6575A829C86C350074CBE5 /* OBirthdateView.swift in Sources */,
 				DE65768229CC364D0074CBE5 /* ExploreRowUnitsCell.swift in Sources */,
+				DE65769C29CD59320074CBE5 /* BookmarksView.swift in Sources */,
 				DE65765929C9DB270074CBE5 /* LunarTip.swift in Sources */,
 				DE6574F529C838E30074CBE5 /* Profile.swift in Sources */,
 				DE65754429C838E60074CBE5 /* Date+Extension.swift in Sources */,
@@ -1783,6 +1802,7 @@
 				DE65764329C9D43B0074CBE5 /* Story.swift in Sources */,
 				DE65754629C838E60074CBE5 /* ObservableAndSingle+Extension.swift in Sources */,
 				DE65760729C9C3ED0074CBE5 /* CrystalsMediator.swift in Sources */,
+				DE65769E29CD59380074CBE5 /* BookmarksViewController.swift in Sources */,
 				DE6574A029C838DF0074CBE5 /* TryAgainView.swift in Sources */,
 				DE65755829C838E60074CBE5 /* RequestReview.swift in Sources */,
 				DE65769029CCA5E50074CBE5 /* ContentTableView.swift in Sources */,

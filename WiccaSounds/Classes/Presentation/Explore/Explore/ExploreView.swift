@@ -61,8 +61,8 @@ private extension ExploreView {
     
     func makeTableView() -> ExploreTableView {
         let view = ExploreTableView (frame: .zero, style: .insetGrouped)
-        view.contentInset = UIEdgeInsets.zero
-        view.setContentOffset(CGPoint.zero, animated: false)
+        view.contentInset = UIEdgeInsets(top: 16.scale, left: 0, bottom: 12.scale, right: 0)
+        view.setContentOffset(CGPoint(x: 0, y: -16.scale), animated: false)
         view.separatorStyle = .none
         view.layoutMargins = UIEdgeInsets(top: 8.scale, left: 16.scale, bottom: 8.scale, right: 16.scale)
         if #available(iOS 15.0, *) {

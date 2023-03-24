@@ -103,3 +103,6 @@
 "Explore.Filter.Candles" = "Candles";
 "Explore.Filter.Herbs" = "Herbs";
 "Explore.Filter.Crystals" = "Crystals";
+
+// MARK: Bookmarks
+"Bookmarks.Title" = "Bookmarks";
