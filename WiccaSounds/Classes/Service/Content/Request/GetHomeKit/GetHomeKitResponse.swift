@@ -90,6 +90,8 @@ private extension GetHomeKitResponse {
             return nil
         }
         
+        let shadowOffset = -3 // TODO: получать из json
+        
         let days = daysArray.compactMap { json -> LunarDay? in
             guard
                 let date = json["date"] as? String,
@@ -123,6 +125,7 @@ private extension GetHomeKitResponse {
         }
         
         return Lunar(
+            shadowOffset: shadowOffset,
             phase: phase,
             illumination: illumination,
             days: days,

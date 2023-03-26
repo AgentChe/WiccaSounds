@@ -106,3 +106,12 @@
 
 // MARK: Bookmarks
 "Bookmarks.Title" = "Bookmarks";
+
+// MARK: Home
+"Home.Today" = "Today";
+"Home.Today.SpellName" = "Spell • %@";
+"Home.Today.MoreDetails" = "More details";
+"Home.Today.Insights" = "Insights";
+"Home.Lunar.Title" = "Lunar calendar";
+"Home.Lunar.Phase" = "Phase: ";
+"Home.Lunar.Illumination" = "Illumination: ";

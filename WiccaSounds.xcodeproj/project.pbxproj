@@ -222,6 +222,18 @@
 		DE65769C29CD59320074CBE5 /* BookmarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65769B29CD59320074CBE5 /* BookmarksView.swift */; };
 		DE65769E29CD59380074CBE5 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65769D29CD59380074CBE5 /* BookmarksViewController.swift */; };
 		DE6576A029CD593E0074CBE5 /* BookmarksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65769F29CD593E0074CBE5 /* BookmarksViewModel.swift */; };
+		DE6576A729CD9F570074CBE5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6576A629CD9F570074CBE5 /* HomeViewController.swift */; };
+		DE6576A929CD9F5E0074CBE5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6576A829CD9F5E0074CBE5 /* HomeViewModel.swift */; };
+		DE6576AB29CD9F620074CBE5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6576AA29CD9F620074CBE5 /* HomeView.swift */; };
+		DE6576AF29CDA3A70074CBE5 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6576AE29CDA3A70074CBE5 /* HomeTableView.swift */; };
+		DE6576B129CDA3B10074CBE5 /* HomeTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6576B029CDA3B10074CBE5 /* HomeTableElement.swift */; };
+		DE6576B429CDA3CA0074CBE5 /* HomeTodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6576B329CDA3CA0074CBE5 /* HomeTodayCell.swift */; };
+		DE6576B629CDA9B90074CBE5 /* HomeSpellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6576B529CDA9B90074CBE5 /* HomeSpellCell.swift */; };
+		DE6576B929CDB2020074CBE5 /* HomeStoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6576B829CDB2020074CBE5 /* HomeStoriesCell.swift */; };
+		DE6576BC29CDB2190074CBE5 /* HomeStoriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6576BB29CDB2190074CBE5 /* HomeStoriesCollectionView.swift */; };
+		DE6576BE29CDB22A0074CBE5 /* HomeStoriesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6576BD29CDB22A0074CBE5 /* HomeStoriesCollectionCell.swift */; };
+		DE6576C029CDF7EF0074CBE5 /* HomeLunarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6576BF29CDF7EF0074CBE5 /* HomeLunarCell.swift */; };
+		DE6576C429CE00B60074CBE5 /* LunarDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6576C329CE00B60074CBE5 /* LunarDayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -443,6 +455,18 @@
 		DE65769B29CD59320074CBE5 /* BookmarksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksView.swift; sourceTree = "<group>"; };
 		DE65769D29CD59380074CBE5 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		DE65769F29CD593E0074CBE5 /* BookmarksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewModel.swift; sourceTree = "<group>"; };
+		DE6576A629CD9F570074CBE5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DE6576A829CD9F5E0074CBE5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DE6576AA29CD9F620074CBE5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DE6576AE29CDA3A70074CBE5 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
+		DE6576B029CDA3B10074CBE5 /* HomeTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableElement.swift; sourceTree = "<group>"; };
+		DE6576B329CDA3CA0074CBE5 /* HomeTodayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodayCell.swift; sourceTree = "<group>"; };
+		DE6576B529CDA9B90074CBE5 /* HomeSpellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSpellCell.swift; sourceTree = "<group>"; };
+		DE6576B829CDB2020074CBE5 /* HomeStoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStoriesCell.swift; sourceTree = "<group>"; };
+		DE6576BB29CDB2190074CBE5 /* HomeStoriesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStoriesCollectionView.swift; sourceTree = "<group>"; };
+		DE6576BD29CDB22A0074CBE5 /* HomeStoriesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStoriesCollectionCell.swift; sourceTree = "<group>"; };
+		DE6576BF29CDF7EF0074CBE5 /* HomeLunarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLunarCell.swift; sourceTree = "<group>"; };
+		DE6576C329CE00B60074CBE5 /* LunarDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarDayView.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -511,6 +535,7 @@
 		DE65744A29C838DE0074CBE5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE6576A529CD9F4A0074CBE5 /* Home */,
 				DE65765C29C9E7F30074CBE5 /* Explore */,
 				DE65744B29C838DE0074CBE5 /* Splash */,
 				DE65745229C838DE0074CBE5 /* Paygate */,
@@ -1466,6 +1491,81 @@
 			path = Bookmarks;
 			sourceTree = "<group>";
 		};
+		DE6576A529CD9F4A0074CBE5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DE6576AC29CDA2D20074CBE5 /* Views */,
+				DE6576A629CD9F570074CBE5 /* HomeViewController.swift */,
+				DE6576A829CD9F5E0074CBE5 /* HomeViewModel.swift */,
+				DE6576AA29CD9F620074CBE5 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DE6576AC29CDA2D20074CBE5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE6576AD29CDA3940074CBE5 /* TableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE6576AD29CDA3940074CBE5 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DE6576B229CDA3B40074CBE5 /* Cells */,
+				DE6576AE29CDA3A70074CBE5 /* HomeTableView.swift */,
+				DE6576B029CDA3B10074CBE5 /* HomeTableElement.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DE6576B229CDA3B40074CBE5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DE6576C129CE00A50074CBE5 /* Lunar */,
+				DE6576B729CDB1E30074CBE5 /* Stories */,
+				DE6576B329CDA3CA0074CBE5 /* HomeTodayCell.swift */,
+				DE6576B529CDA9B90074CBE5 /* HomeSpellCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DE6576B729CDB1E30074CBE5 /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				DE6576BA29CDB2080074CBE5 /* Collection */,
+				DE6576B829CDB2020074CBE5 /* HomeStoriesCell.swift */,
+			);
+			path = Stories;
+			sourceTree = "<group>";
+		};
+		DE6576BA29CDB2080074CBE5 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				DE6576BB29CDB2190074CBE5 /* HomeStoriesCollectionView.swift */,
+				DE6576BD29CDB22A0074CBE5 /* HomeStoriesCollectionCell.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		DE6576C129CE00A50074CBE5 /* Lunar */ = {
+			isa = PBXGroup;
+			children = (
+				DE6576C229CE00AE0074CBE5 /* Atoms */,
+				DE6576BF29CDF7EF0074CBE5 /* HomeLunarCell.swift */,
+			);
+			path = Lunar;
+			sourceTree = "<group>";
+		};
+		DE6576C229CE00AE0074CBE5 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				DE6576C329CE00B60074CBE5 /* LunarDayView.swift */,
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1641,6 +1741,7 @@
 				DE65761E29C9C7980074CBE5 /* Tarot.swift in Sources */,
 				DE6575E529C9BD1C0074CBE5 /* Candle.swift in Sources */,
 				DE6575DC29C9BB260074CBE5 /* SpellsMediator.swift in Sources */,
+				DE6576A729CD9F570074CBE5 /* HomeViewController.swift in Sources */,
 				DE65750129C838E30074CBE5 /* IAPError.swift in Sources */,
 				DE65756629C838E60074CBE5 /* AppDelegate.swift in Sources */,
 				DE6575C729C912790074CBE5 /* OPreloaderView.swift in Sources */,
@@ -1663,11 +1764,13 @@
 				DE6574A129C838DF0074CBE5 /* TryAgainViewController.swift in Sources */,
 				DE65756529C838E60074CBE5 /* CircleProgressView.swift in Sources */,
 				DE6575ED29C9BD430074CBE5 /* SaveCandleRequest.swift in Sources */,
+				DE6576B129CDA3B10074CBE5 /* HomeTableElement.swift in Sources */,
 				DE6575FD29C9C1BC0074CBE5 /* GetHerbsResponse.swift in Sources */,
 				DE65755329C838E60074CBE5 /* Fonts.swift in Sources */,
 				DE6575F229C9C1920074CBE5 /* HerbsManager.swift in Sources */,
 				DE6574FB29C838E30074CBE5 /* ProfileMediator.swift in Sources */,
 				DE6575D229C9B5AA0074CBE5 /* GetSpellsResponse.swift in Sources */,
+				DE6576BC29CDB2190074CBE5 /* HomeStoriesCollectionView.swift in Sources */,
 				DE6575B529C8C1570074CBE5 /* OSpellsCategoriesTableView.swift in Sources */,
 				DE65765329C9D9360074CBE5 /* StoryCover.swift in Sources */,
 				DE65767D29CB66B40074CBE5 /* ExploreTableView.swift in Sources */,
@@ -1707,6 +1810,7 @@
 				DE6574FA29C838E30074CBE5 /* SetRequest.swift in Sources */,
 				DE65759829C842D30074CBE5 /* SpellsCategory.swift in Sources */,
 				DE65749829C838DF0074CBE5 /* PaygateViewController.swift in Sources */,
+				DE6576AB29CD9F620074CBE5 /* HomeView.swift in Sources */,
 				DE6574B429C838DF0074CBE5 /* OWelcomeView.swift in Sources */,
 				DE65769529CCA5FB0074CBE5 /* ContentTitleCell.swift in Sources */,
 				DE65768C29CC9F000074CBE5 /* ContentView.swift in Sources */,
@@ -1720,11 +1824,13 @@
 				DE6575BD29C8D1CF0074CBE5 /* OTarotSuitCell.swift in Sources */,
 				DE6574F929C838E30074CBE5 /* SyncTokensRequest.swift in Sources */,
 				DE65763D29C9D0520074CBE5 /* GetRuneRequest.swift in Sources */,
+				DE6576B929CDB2020074CBE5 /* HomeStoriesCell.swift in Sources */,
 				DE6574F829C838E30074CBE5 /* LoginRequest.swift in Sources */,
 				DE6575BB29C8D0250074CBE5 /* OTarotSuitView.swift in Sources */,
 				DE65760B29C9C3FD0074CBE5 /* Crystal.swift in Sources */,
 				DE65765B29C9DBA20074CBE5 /* WheelOnYear.swift in Sources */,
 				DE65749629C838DF0074CBE5 /* PaygateInteractor.swift in Sources */,
+				DE6576A929CD9F5E0074CBE5 /* HomeViewModel.swift in Sources */,
 				DE65765729C9DA750074CBE5 /* Lunar.swift in Sources */,
 				DE6574B729C838DF0074CBE5 /* OSlideView.swift in Sources */,
 				DE65754229C838E60074CBE5 /* UIDevice+Extension.swift in Sources */,
@@ -1734,6 +1840,7 @@
 				DE65769229CCA5EC0074CBE5 /* ContentTableElement.swift in Sources */,
 				DE65754329C838E60074CBE5 /* UIColor+Extension.swift in Sources */,
 				DE65749C29C838DF0074CBE5 /* MainView.swift in Sources */,
+				DE6576C029CDF7EF0074CBE5 /* HomeLunarCell.swift in Sources */,
 				DE65749B29C838DF0074CBE5 /* MainViewController.swift in Sources */,
 				DE6575EF29C9BD510074CBE5 /* UnsaveCandleRequest.swift in Sources */,
 				DE6574EE29C838E30074CBE5 /* GetPaygateRequest.swift in Sources */,
@@ -1748,6 +1855,7 @@
 				DE65756329C838E60074CBE5 /* CircleView.swift in Sources */,
 				DE65762C29C9CB620074CBE5 /* TarotMeaning.swift in Sources */,
 				DE65755529C838E60074CBE5 /* NetworkError.swift in Sources */,
+				DE6576B429CDA3CA0074CBE5 /* HomeTodayCell.swift in Sources */,
 				DE65749129C838DF0074CBE5 /* SplashView.swift in Sources */,
 				DE6574EC29C838E30074CBE5 /* Paygate.swift in Sources */,
 				DE6574FF29C838E30074CBE5 /* IAPActionResult.swift in Sources */,
@@ -1760,10 +1868,12 @@
 				DE6574FD29C838E30074CBE5 /* PurchaseValidationObserver.swift in Sources */,
 				DE65755029C838E60074CBE5 /* ScreenSize.swift in Sources */,
 				DE6575DF29C9BD000074CBE5 /* CandlesManager.swift in Sources */,
+				DE6576BE29CDB22A0074CBE5 /* HomeStoriesCollectionCell.swift in Sources */,
 				DE65756229C838E60074CBE5 /* PaddingLabel.swift in Sources */,
 				DE65748E29C838DF0074CBE5 /* SplashActivity.swift in Sources */,
 				DE65754C29C838E60074CBE5 /* RestAPITransport.swift in Sources */,
 				DE65768A29CC9EFB0074CBE5 /* ContentViewModel.swift in Sources */,
+				DE6576C429CE00B60074CBE5 /* LunarDayView.swift in Sources */,
 				DE65756C29C838E60074CBE5 /* AppsFlyerManager.swift in Sources */,
 				DE65756929C838E60074CBE5 /* PushNotificationsModel.swift in Sources */,
 				DE65760029C9C1CB0074CBE5 /* SaveHerbRequest.swift in Sources */,
@@ -1780,6 +1890,7 @@
 				DE65765929C9DB270074CBE5 /* LunarTip.swift in Sources */,
 				DE6574F529C838E30074CBE5 /* Profile.swift in Sources */,
 				DE65754429C838E60074CBE5 /* Date+Extension.swift in Sources */,
+				DE6576AF29CDA3A70074CBE5 /* HomeTableView.swift in Sources */,
 				DE65749E29C838DF0074CBE5 /* TabView.swift in Sources */,
 				DE65755F29C838E60074CBE5 /* Spinner.swift in Sources */,
 				DE6575AA29C86E6F0074CBE5 /* OWiccanElementView.swift in Sources */,
@@ -1800,6 +1911,7 @@
 				DE65768829CC9EF50074CBE5 /* ContentViewController.swift in Sources */,
 				DE65762029C9C7D90074CBE5 /* TarotContentSection.swift in Sources */,
 				DE65764329C9D43B0074CBE5 /* Story.swift in Sources */,
+				DE6576B629CDA9B90074CBE5 /* HomeSpellCell.swift in Sources */,
 				DE65754629C838E60074CBE5 /* ObservableAndSingle+Extension.swift in Sources */,
 				DE65760729C9C3ED0074CBE5 /* CrystalsMediator.swift in Sources */,
 				DE65769E29CD59380074CBE5 /* BookmarksViewController.swift in Sources */,

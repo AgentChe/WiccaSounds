@@ -6,6 +6,7 @@
 //
 
 struct Lunar: Codable, Hashable {
+    let shadowOffset: Int
     let phase: String
     let illumination: Int
     let days: [LunarDay]
