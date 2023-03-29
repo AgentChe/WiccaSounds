@@ -8,6 +8,8 @@
 import UIKit
 
 final class HomeSpellCell: UITableViewCell {
+    var didTapMoreDetails: ((Spell) -> Void)?
+    
     lazy var nameLabel = makeLabel(numberOfLines: 1)
     lazy var contentLabel = makeLabel(numberOfLines: 4)
     lazy var gradientView = makeGradientView()
@@ -24,6 +26,8 @@ final class HomeSpellCell: UITableViewCell {
         .lineHeight(24.scale)
         .textAlignment(.left)
     
+    private var spell: Spell?
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -39,6 +43,8 @@ final class HomeSpellCell: UITableViewCell {
 // MARK: Public
 extension HomeSpellCell {
     func setup(element: Spell) {
+        self.spell = element
+        
         let name = String(format: "Home.Today.SpellName".localized, element.name)
         nameLabel.attributedText = name.attributed(with: nameAttrs)
         
@@ -69,6 +75,15 @@ private extension HomeSpellCell {
         }
         
         return result
+    }
+    
+    @objc
+    func didTapButton() {
+        guard let spell = spell else {
+            return
+        }
+        
+        didTapMoreDetails?(spell)
     }
 }
 
@@ -135,6 +150,7 @@ private extension HomeSpellCell {
         view.setAttributedTitle("Home.Today.MoreDetails".localized.attributed(with: attrs), for: .normal)
         view.backgroundColor = Appearance.primary
         view.layer.cornerRadius = 23.scale
+        view.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view

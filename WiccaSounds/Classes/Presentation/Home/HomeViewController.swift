@@ -45,6 +45,7 @@ final class HomeViewController: UIViewController {
             .disposed(by: disposeBag)
         
         addSettingsButton()
+        mainView.tableView.mainDelegate = self
     }
 }
 
@@ -54,6 +55,26 @@ extension HomeViewController {
         let vc = HomeViewController()
         vc.navigationItem.backButtonTitle = " "
         return vc
+    }
+}
+
+// MARK: HomeTableDelegate
+extension HomeViewController: HomeTableDelegate {
+    func homeTableDidTap(spell: Spell) {
+        // TODO
+    }
+    
+    func homeTableDidTap(story: StoryCover) {
+        // TODO
+    }
+    
+    func homeTableDidTap(tipElement: HomeTipElement) {
+        if tipElement.locked {
+            let vc = PaygateViewController.make()
+            present(vc, animated: true)
+        } else {
+            viewModel.didTapTip.accept(tipElement.tip)
+        }
     }
 }
 

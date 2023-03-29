@@ -7,7 +7,15 @@
 
 import UIKit
 
+protocol HomeTableDelegate: AnyObject {
+    func homeTableDidTap(spell: Spell)
+    func homeTableDidTap(story: StoryCover)
+    func homeTableDidTap(tipElement: HomeTipElement)
+}
+
 final class HomeTableView: UITableView {
+    weak var mainDelegate: HomeTableDelegate?
+    
     lazy var sections = [HomeTableSection]()
     
     private lazy var headerFooterView: UIView = {
@@ -53,16 +61,29 @@ extension HomeTableView: UITableViewDataSource {
         case .spell(let element):
             let cell = dequeueReusableCell(withIdentifier: String(describing: HomeSpellCell.self), for: indexPath) as! HomeSpellCell
             cell.setup(element: element)
+            cell.didTapMoreDetails = { [weak self] spell in
+                self?.mainDelegate?.homeTableDidTap(spell: spell)
+            }
             return cell
         case .stories(let element):
             let cell = dequeueReusableCell(withIdentifier: String(describing: HomeStoriesCell.self)) as! HomeStoriesCell
             cell.collectionView.setup(elements: element) { [weak self] story in
-                
+                self?.mainDelegate?.homeTableDidTap(story: story)
             }
             return cell
         case .lunar(let element):
             let cell = dequeueReusableCell(withIdentifier: String(describing: HomeLunarCell.self)) as! HomeLunarCell
             cell.setup(element: element)
+            return cell
+        case .tips(let element):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: HomeTipsCell.self)) as! HomeTipsCell
+            cell.collectionView.setup(elements: element) { [weak self] tip in
+                self?.mainDelegate?.homeTableDidTap(tipElement: tip)
+            }
+            return cell
+        case .tipContent(let element):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: HomeTipContentCell.self)) as! HomeTipContentCell
+            cell.setup(tip: element)
             return cell
         }
     }
@@ -128,7 +149,7 @@ extension HomeTableView: UITableViewDelegate {
                            radius: cornerRadius)
             pathRef.addLine(to: CGPoint(x: bounds.maxX, y: bounds.minY))
         }
-            
+        
         layer.path = pathRef
         layer.strokeColor = Appearance.white.withAlphaComponent(0.15).cgColor
         layer.lineWidth = 1.scale
@@ -148,6 +169,8 @@ private extension HomeTableView {
         register(HomeSpellCell.self, forCellReuseIdentifier: String(describing: HomeSpellCell.self))
         register(HomeStoriesCell.self, forCellReuseIdentifier: String(describing: HomeStoriesCell.self))
         register(HomeLunarCell.self, forCellReuseIdentifier: String(describing: HomeLunarCell.self))
+        register(HomeTipsCell.self, forCellReuseIdentifier: String(describing: HomeTipsCell.self))
+        register(HomeTipContentCell.self, forCellReuseIdentifier: String(describing: HomeTipContentCell.self))
         
         dataSource = self
         delegate = self

@@ -234,6 +234,10 @@
 		DE6576BE29CDB22A0074CBE5 /* HomeStoriesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6576BD29CDB22A0074CBE5 /* HomeStoriesCollectionCell.swift */; };
 		DE6576C029CDF7EF0074CBE5 /* HomeLunarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6576BF29CDF7EF0074CBE5 /* HomeLunarCell.swift */; };
 		DE6576C429CE00B60074CBE5 /* LunarDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6576C329CE00B60074CBE5 /* LunarDayView.swift */; };
+		DE8027E329D409FD003C9993 /* HomeTipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027E229D409FD003C9993 /* HomeTipsCell.swift */; };
+		DE8027E629D40A13003C9993 /* HomeTipsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027E529D40A13003C9993 /* HomeTipsCollectionView.swift */; };
+		DE8027E829D40A26003C9993 /* HomeTipsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027E729D40A25003C9993 /* HomeTipsCollectionCell.swift */; };
+		DE8027EA29D413C5003C9993 /* HomeTipContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027E929D413C5003C9993 /* HomeTipContentCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -467,6 +471,10 @@
 		DE6576BD29CDB22A0074CBE5 /* HomeStoriesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStoriesCollectionCell.swift; sourceTree = "<group>"; };
 		DE6576BF29CDF7EF0074CBE5 /* HomeLunarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLunarCell.swift; sourceTree = "<group>"; };
 		DE6576C329CE00B60074CBE5 /* LunarDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarDayView.swift; sourceTree = "<group>"; };
+		DE8027E229D409FD003C9993 /* HomeTipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTipsCell.swift; sourceTree = "<group>"; };
+		DE8027E529D40A13003C9993 /* HomeTipsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTipsCollectionView.swift; sourceTree = "<group>"; };
+		DE8027E729D40A25003C9993 /* HomeTipsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTipsCollectionCell.swift; sourceTree = "<group>"; };
+		DE8027E929D413C5003C9993 /* HomeTipContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTipContentCell.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1523,10 +1531,12 @@
 		DE6576B229CDA3B40074CBE5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				DE8027E129D409E6003C9993 /* Tips */,
 				DE6576C129CE00A50074CBE5 /* Lunar */,
 				DE6576B729CDB1E30074CBE5 /* Stories */,
 				DE6576B329CDA3CA0074CBE5 /* HomeTodayCell.swift */,
 				DE6576B529CDA9B90074CBE5 /* HomeSpellCell.swift */,
+				DE8027E929D413C5003C9993 /* HomeTipContentCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1564,6 +1574,24 @@
 				DE6576C329CE00B60074CBE5 /* LunarDayView.swift */,
 			);
 			path = Atoms;
+			sourceTree = "<group>";
+		};
+		DE8027E129D409E6003C9993 /* Tips */ = {
+			isa = PBXGroup;
+			children = (
+				DE8027E429D40A00003C9993 /* Collection */,
+				DE8027E229D409FD003C9993 /* HomeTipsCell.swift */,
+			);
+			path = Tips;
+			sourceTree = "<group>";
+		};
+		DE8027E429D40A00003C9993 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				DE8027E529D40A13003C9993 /* HomeTipsCollectionView.swift */,
+				DE8027E729D40A25003C9993 /* HomeTipsCollectionCell.swift */,
+			);
+			path = Collection;
 			sourceTree = "<group>";
 		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
@@ -1715,8 +1743,10 @@
 				DE6575A429C8601D0074CBE5 /* WelcomeSlideCellsView.swift in Sources */,
 				DE65754529C838E60074CBE5 /* Collection+Extension.swift in Sources */,
 				DE65756D29C838E60074CBE5 /* BranchManager.swift in Sources */,
+				DE8027E329D409FD003C9993 /* HomeTipsCell.swift in Sources */,
 				DE65748F29C838DF0074CBE5 /* SplashReceiptValidationObserver.swift in Sources */,
 				DE6574FC29C838E30074CBE5 /* IAPManager.swift in Sources */,
+				DE8027E829D40A26003C9993 /* HomeTipsCollectionCell.swift in Sources */,
 				DE65749D29C838DF0074CBE5 /* TabItemView.swift in Sources */,
 				DE6574FE29C838E30074CBE5 /* ProductPrice.swift in Sources */,
 				DE65761329C9C41F0074CBE5 /* SaveCrystalRequest.swift in Sources */,
@@ -1724,6 +1754,7 @@
 				DE65757029C838E60074CBE5 /* FacebookManager.swift in Sources */,
 				DE6575D829C9BAAE0074CBE5 /* SaveSpellRequest.swift in Sources */,
 				DE65755D29C838E60074CBE5 /* NavigationController.swift in Sources */,
+				DE8027E629D40A13003C9993 /* HomeTipsCollectionView.swift in Sources */,
 				DE65755929C838E60074CBE5 /* ImagePicker.swift in Sources */,
 				DE6576A029CD593E0074CBE5 /* BookmarksViewModel.swift in Sources */,
 				DE65749A29C838DF0074CBE5 /* PaygateInfoCell.swift in Sources */,
@@ -1758,6 +1789,7 @@
 				DE6575FB29C9C1B70074CBE5 /* GetHerbsRequest.swift in Sources */,
 				DE65756A29C838E60074CBE5 /* SceneDelegate.swift in Sources */,
 				DE65754A29C838E60074CBE5 /* DefaultRequestWrapper.swift in Sources */,
+				DE8027EA29D413C5003C9993 /* HomeTipContentCell.swift in Sources */,
 				DE65750329C838E30074CBE5 /* Session.swift in Sources */,
 				DE65761029C9C4130074CBE5 /* GetCrystalsResponse.swift in Sources */,
 				DE6574BF29C838DF0074CBE5 /* OnboardingView.swift in Sources */,

@@ -15,4 +15,11 @@ enum HomeTableElement {
     case spell(Spell)
     case stories([StoryCover])
     case lunar(Lunar)
+    case tips([HomeTipElement])
+    case tipContent(LunarTip)
+}
+
+struct HomeTipElement {
+    let tip: LunarTip
+    let locked: Bool
 }

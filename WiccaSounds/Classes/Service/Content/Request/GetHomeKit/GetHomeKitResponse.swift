@@ -115,10 +115,15 @@ private extension GetHomeKitResponse {
                 return nil
             }
             
+            // TODO: получать из json
+            let imagePath = json["image"] as? String ?? "https://i.ibb.co/mhbLv7d/pngtree-workplace-line-filled-icon-png-image-324882.jpg"
+            let imageUrl = URL(string: imagePath)!
+            
             let blocks = blocksArray.compactMap { ContentBlockMapper.map(from: $0) }
             
             return LunarTip(
                 tag: tag,
+                image: imageUrl,
                 blocks: blocks,
                 paid: paid
             )
