@@ -67,6 +67,12 @@ private extension HomeViewModel {
                 )
                 sections.append(lunarSection)
                 
+                let wheelSection = HomeTableSection(
+                    elements: [.wheel(homeKit.wheel)],
+                    corner: true
+                )
+                sections.append(wheelSection)
+                
                 return sections
             }
     }

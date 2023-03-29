@@ -85,6 +85,10 @@ extension HomeTableView: UITableViewDataSource {
             let cell = dequeueReusableCell(withIdentifier: String(describing: HomeTipContentCell.self)) as! HomeTipContentCell
             cell.setup(tip: element)
             return cell
+        case .wheel(let element):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: HomeWheelCell.self)) as! HomeWheelCell
+            cell.setup(element: element)
+            return cell
         }
     }
 }
@@ -171,6 +175,7 @@ private extension HomeTableView {
         register(HomeLunarCell.self, forCellReuseIdentifier: String(describing: HomeLunarCell.self))
         register(HomeTipsCell.self, forCellReuseIdentifier: String(describing: HomeTipsCell.self))
         register(HomeTipContentCell.self, forCellReuseIdentifier: String(describing: HomeTipContentCell.self))
+        register(HomeWheelCell.self, forCellReuseIdentifier: String(describing: HomeWheelCell.self))
         
         dataSource = self
         delegate = self

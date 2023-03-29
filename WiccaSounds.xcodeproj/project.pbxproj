@@ -238,6 +238,7 @@
 		DE8027E629D40A13003C9993 /* HomeTipsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027E529D40A13003C9993 /* HomeTipsCollectionView.swift */; };
 		DE8027E829D40A26003C9993 /* HomeTipsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027E729D40A25003C9993 /* HomeTipsCollectionCell.swift */; };
 		DE8027EA29D413C5003C9993 /* HomeTipContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027E929D413C5003C9993 /* HomeTipContentCell.swift */; };
+		DE8027EC29D41D14003C9993 /* HomeWheelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027EB29D41D14003C9993 /* HomeWheelCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -475,6 +476,7 @@
 		DE8027E529D40A13003C9993 /* HomeTipsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTipsCollectionView.swift; sourceTree = "<group>"; };
 		DE8027E729D40A25003C9993 /* HomeTipsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTipsCollectionCell.swift; sourceTree = "<group>"; };
 		DE8027E929D413C5003C9993 /* HomeTipContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTipContentCell.swift; sourceTree = "<group>"; };
+		DE8027EB29D41D14003C9993 /* HomeWheelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWheelCell.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1537,6 +1539,7 @@
 				DE6576B329CDA3CA0074CBE5 /* HomeTodayCell.swift */,
 				DE6576B529CDA9B90074CBE5 /* HomeSpellCell.swift */,
 				DE8027E929D413C5003C9993 /* HomeTipContentCell.swift */,
+				DE8027EB29D41D14003C9993 /* HomeWheelCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1883,6 +1886,7 @@
 				DE65768529CC37140074CBE5 /* ExploreUnitButton.swift in Sources */,
 				DE6575C529C90C040074CBE5 /* OObjectChannelCell.swift in Sources */,
 				DE6574EF29C838E30074CBE5 /* PaygateManager.swift in Sources */,
+				DE8027EC29D41D14003C9993 /* HomeWheelCell.swift in Sources */,
 				DE65754B29C838E60074CBE5 /* APIRequestBody.swift in Sources */,
 				DE65756329C838E60074CBE5 /* CircleView.swift in Sources */,
 				DE65762C29C9CB620074CBE5 /* TarotMeaning.swift in Sources */,

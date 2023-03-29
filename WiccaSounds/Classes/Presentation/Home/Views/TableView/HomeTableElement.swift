@@ -17,6 +17,7 @@ enum HomeTableElement {
     case lunar(Lunar)
     case tips([HomeTipElement])
     case tipContent(LunarTip)
+    case wheel(WheelOnYear)
 }
 
 struct HomeTipElement {
