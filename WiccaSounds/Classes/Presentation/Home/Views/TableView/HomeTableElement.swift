@@ -17,10 +17,15 @@ enum HomeTableElement {
     case lunar(Lunar)
     case tips([HomeTipElement])
     case tipContent(LunarTip)
+    case practice(HomePracticeElement)
     case wheel(WheelOnYear)
 }
 
 struct HomeTipElement {
     let tip: LunarTip
     let locked: Bool
+}
+
+struct HomePracticeElement {
+    let tarotOnToday: TarotOnDay
 }

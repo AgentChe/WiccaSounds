@@ -9,12 +9,15 @@ import RxSwift
 
 protocol TarotManagerProtocol: Any {
     func obtainCovers(forceUpdate: Bool) -> Single<[TarotCover]>
-    func obtaitTarot(id: Int) -> Single<Tarot?>
+    func obtainTarot(id: Int) -> Single<Tarot?>
+    func obtainTarotOnToday() -> Single<TarotOnDay?>
+    func set(tarotOnToday: TarotOnDay) -> Single<Void>
 }
 
 final class TarotManager {
     enum Constants {
         static let coversKey = "tarot_manager_covers_key"
+        static let tarotOnTodayKey = "tarot_manager_tarot_on_today_key"
     }
     
     private lazy var sessionManager = SessionManager()
@@ -28,7 +31,7 @@ extension TarotManager: TarotManagerProtocol {
         forceUpdate ? loadCovers() : cachedCovers()
     }
     
-    func obtaitTarot(id: Int) -> Single<Tarot?> {
+    func obtainTarot(id: Int) -> Single<Tarot?> {
         guard let userToken = sessionManager.getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }
@@ -41,6 +44,41 @@ extension TarotManager: TarotManagerProtocol {
         return defaultWrapper
             .callServerApi(requestBody: request)
             .map { GetTarotResponse.map(from: $0) }
+    }
+    
+    func obtainTarotOnToday() -> Single<TarotOnDay?> {
+        Single<TarotOnDay?>.create { event in
+            guard
+                let data = UserDefaults.standard.data(forKey: Constants.tarotOnTodayKey),
+                let tarotOnDay = try? JSONDecoder().decode(TarotOnDay.self, from: data)
+            else {
+                event(.success(nil))
+                return Disposables.create()
+            }
+            
+            let onToday = Calendar.current.isDateInToday(tarotOnDay.onDay)
+            let tarot: TarotOnDay? = onToday ? tarotOnDay : nil
+            
+            event(.success(tarot))
+            
+            return Disposables.create()
+        }
+    }
+    
+    func set(tarotOnToday: TarotOnDay) -> Single<Void> {
+        Single<Void>.create { event in
+            guard let data = try? JSONEncoder().encode(tarotOnToday) else {
+                event(.success(Void()))
+                
+                return Disposables.create()
+            }
+            
+            UserDefaults.standard.set(data, forKey: Constants.tarotOnTodayKey)
+            
+            event(.success(Void()))
+            
+            return Disposables.create()
+        }
     }
 }
 

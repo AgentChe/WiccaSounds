@@ -76,6 +76,14 @@ extension HomeViewController: HomeTableDelegate {
             viewModel.didTapTip.accept(tipElement.tip)
         }
     }
+    
+    func homeTableDidOpen(tarot: TarotOnDay) {
+        viewModel.didOpenTarot.accept(tarot)
+    }
+    
+    func homeTableDidShow(tarotCover: TarotCover) {
+        // TODO
+    }
 }
 
 // MARK: Private

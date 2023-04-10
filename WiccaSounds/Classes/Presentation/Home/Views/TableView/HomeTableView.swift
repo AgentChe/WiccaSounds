@@ -11,6 +11,8 @@ protocol HomeTableDelegate: AnyObject {
     func homeTableDidTap(spell: Spell)
     func homeTableDidTap(story: StoryCover)
     func homeTableDidTap(tipElement: HomeTipElement)
+    func homeTableDidOpen(tarot: TarotOnDay)
+    func homeTableDidShow(tarotCover: TarotCover)
 }
 
 final class HomeTableView: UITableView {
@@ -85,6 +87,14 @@ extension HomeTableView: UITableViewDataSource {
             let cell = dequeueReusableCell(withIdentifier: String(describing: HomeTipContentCell.self)) as! HomeTipContentCell
             cell.setup(tip: element)
             return cell
+        case .practice(let element):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: HomePracticeCell.self)) as! HomePracticeCell
+            cell.setup(element: element, didOpenTarot: { [weak self] tarot in
+                self?.mainDelegate?.homeTableDidOpen(tarot: tarot)
+            }, didShowTarot: { [weak self] tarot in
+                self?.mainDelegate?.homeTableDidShow(tarotCover: tarot)
+            })
+            return cell
         case .wheel(let element):
             let cell = dequeueReusableCell(withIdentifier: String(describing: HomeWheelCell.self)) as! HomeWheelCell
             cell.setup(element: element)
@@ -96,12 +106,7 @@ extension HomeTableView: UITableViewDataSource {
 // MARK: UITableViewDelegate
 extension HomeTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch sections[indexPath.section].elements[indexPath.row] {
-        case .spell:
-            return 224.scale
-        default:
-            return UITableView.automaticDimension
-        }
+        UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -175,6 +180,7 @@ private extension HomeTableView {
         register(HomeLunarCell.self, forCellReuseIdentifier: String(describing: HomeLunarCell.self))
         register(HomeTipsCell.self, forCellReuseIdentifier: String(describing: HomeTipsCell.self))
         register(HomeTipContentCell.self, forCellReuseIdentifier: String(describing: HomeTipContentCell.self))
+        register(HomePracticeCell.self, forCellReuseIdentifier: String(describing: HomePracticeCell.self))
         register(HomeWheelCell.self, forCellReuseIdentifier: String(describing: HomeWheelCell.self))
         
         dataSource = self

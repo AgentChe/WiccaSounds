@@ -78,7 +78,7 @@ private extension HomeTipsCollectionCell {
 private extension HomeTipsCollectionCell {
     func makeImageView() -> UIImageView {
         let view = UIImageView()
-        view.backgroundColor = Appearance.white.withAlphaComponent(0.1)
+        view.backgroundColor = UIColor(integralRed: 70, green: 67, blue: 57)
         view.contentMode = .scaleAspectFill
         view.layer.cornerRadius = 24.scale
         view.layer.masksToBounds = true

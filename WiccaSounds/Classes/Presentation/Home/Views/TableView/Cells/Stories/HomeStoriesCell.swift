@@ -41,7 +41,7 @@ private extension HomeStoriesCell {
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16.scale),
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16.scale),
-            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 24.scale)
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12.scale)
         ])
         
         NSLayoutConstraint.activate([

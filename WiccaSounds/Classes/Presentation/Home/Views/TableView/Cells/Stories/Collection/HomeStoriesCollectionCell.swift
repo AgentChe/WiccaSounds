@@ -80,7 +80,7 @@ private extension HomeStoriesCollectionCell {
 private extension HomeStoriesCollectionCell {
     func makeImageView() -> UIImageView {
         let view = UIImageView()
-        view.backgroundColor = Appearance.white.withAlphaComponent(0.1)
+        view.backgroundColor = UIColor(integralRed: 70, green: 67, blue: 57)
         view.contentMode = .scaleAspectFill
         view.layer.cornerRadius = 10.scale
         view.layer.masksToBounds = true

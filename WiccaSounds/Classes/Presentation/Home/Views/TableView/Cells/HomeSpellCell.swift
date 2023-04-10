@@ -10,9 +10,8 @@ import UIKit
 final class HomeSpellCell: UITableViewCell {
     var didTapMoreDetails: ((Spell) -> Void)?
     
-    lazy var nameLabel = makeLabel(numberOfLines: 1)
-    lazy var contentLabel = makeLabel(numberOfLines: 4)
-    lazy var gradientView = makeGradientView()
+    lazy var nameLabel = makeLabel(numberOfLines: 0)
+    lazy var contentLabel = makeLabel(numberOfLines: 3)
     lazy var button = makeButton()
     
     private lazy var nameAttrs = TextAttributes()
@@ -25,6 +24,7 @@ final class HomeSpellCell: UITableViewCell {
         .font(Fonts.Inter.regular(size: 16.scale))
         .lineHeight(24.scale)
         .textAlignment(.left)
+        .lineBreakMode(.byTruncatingTail)
     
     private var spell: Spell?
     
@@ -103,17 +103,11 @@ private extension HomeSpellCell {
         ])
         
         NSLayoutConstraint.activate([
-            gradientView.leadingAnchor.constraint(equalTo: contentLabel.leadingAnchor),
-            gradientView.trailingAnchor.constraint(equalTo: contentLabel.trailingAnchor),
-            gradientView.topAnchor.constraint(equalTo: contentLabel.topAnchor),
-            gradientView.bottomAnchor.constraint(equalTo: contentLabel.bottomAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
-            button.widthAnchor.constraint(equalToConstant: 226.scale),
+            button.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 58.scale),
+            button.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -58.scale),
             button.heightAnchor.constraint(equalToConstant: 47.scale),
-            button.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            button.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            button.topAnchor.constraint(equalTo: contentLabel.bottomAnchor, constant: 16.scale),
+            button.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12.scale)
         ])
     }
 }
@@ -123,19 +117,6 @@ private extension HomeSpellCell {
     func makeLabel(numberOfLines: Int) -> UILabel {
         let view = UILabel()
         view.numberOfLines = numberOfLines
-        view.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(view)
-        return view
-    }
-    
-    func makeGradientView() -> GradientView {
-        let view = GradientView()
-        view.gradientLayer.colors = [
-            UIColor(integralRed: 40, green: 38, blue: 30, alpha: 0).cgColor,
-            UIColor(integralRed: 41, green: 39, blue: 30, alpha: 1).cgColor
-        ]
-        view.gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
-        view.gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view

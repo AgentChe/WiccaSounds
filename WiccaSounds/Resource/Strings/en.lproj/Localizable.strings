@@ -117,3 +117,8 @@
 "Home.Lunar.Illumination" = "Illumination: ";
 "Home.Tips.Title" = "Tips";
 "Home.Wheel.Title" = "Wheel of the Year";
+"Home.Practice.Title" = "Practice";
+"Home.Practice.Unit.Tarot" = "Tarot";
+"Home.Practice.Tarot.Title" = "Think about what you want to know most now and tap to find the answer";
+"Home.Practice.Tarot.Button" = "Reveal the meaning";
+"Home.Practice.Unit.Runes" = "Runes";

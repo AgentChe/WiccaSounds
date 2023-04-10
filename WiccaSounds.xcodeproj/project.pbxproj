@@ -239,6 +239,10 @@
 		DE8027E829D40A26003C9993 /* HomeTipsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027E729D40A25003C9993 /* HomeTipsCollectionCell.swift */; };
 		DE8027EA29D413C5003C9993 /* HomeTipContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027E929D413C5003C9993 /* HomeTipContentCell.swift */; };
 		DE8027EC29D41D14003C9993 /* HomeWheelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027EB29D41D14003C9993 /* HomeWheelCell.swift */; };
+		DE8027F029D43353003C9993 /* HomePracticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027EF29D43353003C9993 /* HomePracticeCell.swift */; };
+		DE8027F229D43A84003C9993 /* HomePracticeUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027F129D43A84003C9993 /* HomePracticeUnitView.swift */; };
+		DE8027F429D44072003C9993 /* HomePracticeTarotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027F329D44072003C9993 /* HomePracticeTarotView.swift */; };
+		DE8027F629D44F33003C9993 /* TarotOnDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027F529D44F33003C9993 /* TarotOnDay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -477,6 +481,10 @@
 		DE8027E729D40A25003C9993 /* HomeTipsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTipsCollectionCell.swift; sourceTree = "<group>"; };
 		DE8027E929D413C5003C9993 /* HomeTipContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTipContentCell.swift; sourceTree = "<group>"; };
 		DE8027EB29D41D14003C9993 /* HomeWheelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWheelCell.swift; sourceTree = "<group>"; };
+		DE8027EF29D43353003C9993 /* HomePracticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePracticeCell.swift; sourceTree = "<group>"; };
+		DE8027F129D43A84003C9993 /* HomePracticeUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePracticeUnitView.swift; sourceTree = "<group>"; };
+		DE8027F329D44072003C9993 /* HomePracticeTarotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePracticeTarotView.swift; sourceTree = "<group>"; };
+		DE8027F529D44F33003C9993 /* TarotOnDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotOnDay.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1289,6 +1297,7 @@
 				DE65761D29C9C7980074CBE5 /* Tarot.swift */,
 				DE65761F29C9C7D90074CBE5 /* TarotContentSection.swift */,
 				DE65762B29C9CB620074CBE5 /* TarotMeaning.swift */,
+				DE8027F529D44F33003C9993 /* TarotOnDay.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1533,6 +1542,7 @@
 		DE6576B229CDA3B40074CBE5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				DE8027ED29D4333F003C9993 /* Practice */,
 				DE8027E129D409E6003C9993 /* Tips */,
 				DE6576C129CE00A50074CBE5 /* Lunar */,
 				DE6576B729CDB1E30074CBE5 /* Stories */,
@@ -1595,6 +1605,24 @@
 				DE8027E729D40A25003C9993 /* HomeTipsCollectionCell.swift */,
 			);
 			path = Collection;
+			sourceTree = "<group>";
+		};
+		DE8027ED29D4333F003C9993 /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				DE8027EE29D43349003C9993 /* Atoms */,
+				DE8027EF29D43353003C9993 /* HomePracticeCell.swift */,
+			);
+			path = Practice;
+			sourceTree = "<group>";
+		};
+		DE8027EE29D43349003C9993 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				DE8027F129D43A84003C9993 /* HomePracticeUnitView.swift */,
+				DE8027F329D44072003C9993 /* HomePracticeTarotView.swift */,
+			);
+			path = Atoms;
 			sourceTree = "<group>";
 		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
@@ -1779,6 +1807,7 @@
 				DE65750129C838E30074CBE5 /* IAPError.swift in Sources */,
 				DE65756629C838E60074CBE5 /* AppDelegate.swift in Sources */,
 				DE6575C729C912790074CBE5 /* OPreloaderView.swift in Sources */,
+				DE8027F429D44072003C9993 /* HomePracticeTarotView.swift in Sources */,
 				DE6575B729C8C15D0074CBE5 /* OSpellsCategoriesTableCell.swift in Sources */,
 				DE6575B929C8C1660074CBE5 /* OSpellsCategoriesTableElement.swift in Sources */,
 				DE6574EA29C838E30074CBE5 /* PaygateOptionLineComponent.swift in Sources */,
@@ -1868,6 +1897,7 @@
 				DE6576A929CD9F5E0074CBE5 /* HomeViewModel.swift in Sources */,
 				DE65765729C9DA750074CBE5 /* Lunar.swift in Sources */,
 				DE6574B729C838DF0074CBE5 /* OSlideView.swift in Sources */,
+				DE8027F229D43A84003C9993 /* HomePracticeUnitView.swift in Sources */,
 				DE65754229C838E60074CBE5 /* UIDevice+Extension.swift in Sources */,
 				DE65760229C9C1D30074CBE5 /* UnsaveHerbRequest.swift in Sources */,
 				DE65756129C838E60074CBE5 /* PaddingTextField.swift in Sources */,
@@ -1901,6 +1931,7 @@
 				DE6575A029C85CEA0074CBE5 /* WelcomeSlideTextView.swift in Sources */,
 				DE65756B29C838E60074CBE5 /* Appearance.swift in Sources */,
 				DE65755429C838E60074CBE5 /* SignError.swift in Sources */,
+				DE8027F629D44F33003C9993 /* TarotOnDay.swift in Sources */,
 				DE6574FD29C838E30074CBE5 /* PurchaseValidationObserver.swift in Sources */,
 				DE65755029C838E60074CBE5 /* ScreenSize.swift in Sources */,
 				DE6575DF29C9BD000074CBE5 /* CandlesManager.swift in Sources */,
@@ -1947,6 +1978,7 @@
 				DE65768829CC9EF50074CBE5 /* ContentViewController.swift in Sources */,
 				DE65762029C9C7D90074CBE5 /* TarotContentSection.swift in Sources */,
 				DE65764329C9D43B0074CBE5 /* Story.swift in Sources */,
+				DE8027F029D43353003C9993 /* HomePracticeCell.swift in Sources */,
 				DE6576B629CDA9B90074CBE5 /* HomeSpellCell.swift in Sources */,
 				DE65754629C838E60074CBE5 /* ObservableAndSingle+Extension.swift in Sources */,
 				DE65760729C9C3ED0074CBE5 /* CrystalsMediator.swift in Sources */,
