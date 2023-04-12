@@ -33,11 +33,17 @@ extension HomePracticeCell {
     func setup(
         element: HomePracticeElement,
         didOpenTarot: @escaping ((TarotOnDay) -> Void),
-        didShowTarot: @escaping ((TarotCover) -> Void)
+        didShowTarot: @escaping ((TarotCover) -> Void),
+        didOpenRune: @escaping ((RuneOnDay) -> Void),
+        didShowRune: @escaping ((RuneCover) -> Void)
     ) {
         tarotView.setup(tarotOnToday: element.tarotOnToday)
         tarotView.didOpenTarot = didOpenTarot
         tarotView.didShowTarot = didShowTarot
+        
+        runesView.setup(runeOnToday: element.runeOnToday)
+        runesView.didOpenRune = didOpenRune
+        runesView.didShowRune = didShowRune
     }
 }
 
@@ -138,9 +144,9 @@ private extension HomePracticeCell {
         return view
     }
     
-    func makeRunesView() -> UIView {
-        let view = UIView()
-        view.backgroundColor = UIColor.red
+    func makeRunesView() -> HomePracticeRuneView {
+        let view = HomePracticeRuneView()
+        view.backgroundColor = UIColor.clear
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view

@@ -13,6 +13,8 @@ protocol HomeTableDelegate: AnyObject {
     func homeTableDidTap(tipElement: HomeTipElement)
     func homeTableDidOpen(tarot: TarotOnDay)
     func homeTableDidShow(tarotCover: TarotCover)
+    func homeTableDidOpen(rune: RuneOnDay)
+    func homeTableDidShow(runeCover: RuneCover)
 }
 
 final class HomeTableView: UITableView {
@@ -93,6 +95,10 @@ extension HomeTableView: UITableViewDataSource {
                 self?.mainDelegate?.homeTableDidOpen(tarot: tarot)
             }, didShowTarot: { [weak self] tarot in
                 self?.mainDelegate?.homeTableDidShow(tarotCover: tarot)
+            }, didOpenRune: { [weak self] rune in
+                self?.mainDelegate?.homeTableDidOpen(rune: rune)
+            }, didShowRune: { [weak self] rune in
+                self?.mainDelegate?.homeTableDidShow(runeCover: rune)
             })
             return cell
         case .wheel(let element):

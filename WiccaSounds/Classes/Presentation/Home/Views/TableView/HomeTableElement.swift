@@ -28,4 +28,5 @@ struct HomeTipElement {
 
 struct HomePracticeElement {
     let tarotOnToday: TarotOnDay
+    let runeOnToday: RuneOnDay
 }

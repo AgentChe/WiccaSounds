@@ -10,11 +10,14 @@ import RxSwift
 protocol RunesManagerProtocol: Any {
     func obtainCovers(forceUpdate: Bool) -> Single<[RuneCover]>
     func obtaitRune(id: Int) -> Single<Rune?>
+    func obtainRuneOnToday() -> Single<RuneOnDay?>
+    func set(runeOnToday: RuneOnDay) -> Single<Void>
 }
 
 final class RunesManager {
     enum Constants {
         static let coversKey = "runes_manager_covers_key"
+        static let runeOnTodayKey = "runes_manager_rune_on_today_key"
     }
     
     private lazy var sessionManager = SessionManager()
@@ -41,6 +44,41 @@ extension RunesManager: RunesManagerProtocol {
         return defaultWrapper
             .callServerApi(requestBody: request)
             .map { GetRuneResponse.map(from: $0) }
+    }
+    
+    func obtainRuneOnToday() -> Single<RuneOnDay?> {
+        Single<RuneOnDay?>.create { event in
+            guard
+                let data = UserDefaults.standard.data(forKey: Constants.runeOnTodayKey),
+                let runeOnDay = try? JSONDecoder().decode(RuneOnDay.self, from: data)
+            else {
+                event(.success(nil))
+                return Disposables.create()
+            }
+            
+            let onToday = Calendar.current.isDateInToday(runeOnDay.onDay)
+            let rune: RuneOnDay? = onToday ? runeOnDay : nil
+            
+            event(.success(rune))
+            
+            return Disposables.create()
+        }
+    }
+    
+    func set(runeOnToday: RuneOnDay) -> Single<Void> {
+        Single<Void>.create { event in
+            guard let data = try? JSONEncoder().encode(runeOnToday) else {
+                event(.success(Void()))
+                
+                return Disposables.create()
+            }
+            
+            UserDefaults.standard.set(data, forKey: Constants.runeOnTodayKey)
+            
+            event(.success(Void()))
+            
+            return Disposables.create()
+        }
     }
 }
 

@@ -234,6 +234,8 @@
 		DE6576BE29CDB22A0074CBE5 /* HomeStoriesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6576BD29CDB22A0074CBE5 /* HomeStoriesCollectionCell.swift */; };
 		DE6576C029CDF7EF0074CBE5 /* HomeLunarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6576BF29CDF7EF0074CBE5 /* HomeLunarCell.swift */; };
 		DE6576C429CE00B60074CBE5 /* LunarDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6576C329CE00B60074CBE5 /* LunarDayView.swift */; };
+		DE75D88429E44AC4003F6B42 /* RuneOnDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE75D88329E44AC4003F6B42 /* RuneOnDay.swift */; };
+		DE75D88629E44CDD003F6B42 /* HomePracticeRuneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE75D88529E44CDD003F6B42 /* HomePracticeRuneView.swift */; };
 		DE8027E329D409FD003C9993 /* HomeTipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027E229D409FD003C9993 /* HomeTipsCell.swift */; };
 		DE8027E629D40A13003C9993 /* HomeTipsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027E529D40A13003C9993 /* HomeTipsCollectionView.swift */; };
 		DE8027E829D40A26003C9993 /* HomeTipsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027E729D40A25003C9993 /* HomeTipsCollectionCell.swift */; };
@@ -476,6 +478,8 @@
 		DE6576BD29CDB22A0074CBE5 /* HomeStoriesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStoriesCollectionCell.swift; sourceTree = "<group>"; };
 		DE6576BF29CDF7EF0074CBE5 /* HomeLunarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLunarCell.swift; sourceTree = "<group>"; };
 		DE6576C329CE00B60074CBE5 /* LunarDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunarDayView.swift; sourceTree = "<group>"; };
+		DE75D88329E44AC4003F6B42 /* RuneOnDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneOnDay.swift; sourceTree = "<group>"; };
+		DE75D88529E44CDD003F6B42 /* HomePracticeRuneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePracticeRuneView.swift; sourceTree = "<group>"; };
 		DE8027E229D409FD003C9993 /* HomeTipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTipsCell.swift; sourceTree = "<group>"; };
 		DE8027E529D40A13003C9993 /* HomeTipsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTipsCollectionView.swift; sourceTree = "<group>"; };
 		DE8027E729D40A25003C9993 /* HomeTipsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTipsCollectionCell.swift; sourceTree = "<group>"; };
@@ -1344,6 +1348,7 @@
 			children = (
 				DE65763229C9D0080074CBE5 /* RuneCover.swift */,
 				DE65763429C9D00F0074CBE5 /* Rune.swift */,
+				DE75D88329E44AC4003F6B42 /* RuneOnDay.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1621,6 +1626,7 @@
 			children = (
 				DE8027F129D43A84003C9993 /* HomePracticeUnitView.swift */,
 				DE8027F329D44072003C9993 /* HomePracticeTarotView.swift */,
+				DE75D88529E44CDD003F6B42 /* HomePracticeRuneView.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -1891,8 +1897,10 @@
 				DE6576B929CDB2020074CBE5 /* HomeStoriesCell.swift in Sources */,
 				DE6574F829C838E30074CBE5 /* LoginRequest.swift in Sources */,
 				DE6575BB29C8D0250074CBE5 /* OTarotSuitView.swift in Sources */,
+				DE75D88429E44AC4003F6B42 /* RuneOnDay.swift in Sources */,
 				DE65760B29C9C3FD0074CBE5 /* Crystal.swift in Sources */,
 				DE65765B29C9DBA20074CBE5 /* WheelOnYear.swift in Sources */,
+				DE75D88629E44CDD003F6B42 /* HomePracticeRuneView.swift in Sources */,
 				DE65749629C838DF0074CBE5 /* PaygateInteractor.swift in Sources */,
 				DE6576A929CD9F5E0074CBE5 /* HomeViewModel.swift in Sources */,
 				DE65765729C9DA750074CBE5 /* Lunar.swift in Sources */,

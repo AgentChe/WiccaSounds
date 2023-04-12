@@ -13,18 +13,21 @@ final class HomeViewModel {
     
     lazy var didTapTip = PublishRelay<LunarTip>()
     lazy var didOpenTarot = PublishRelay<TarotOnDay>()
+    lazy var didOpenRune = PublishRelay<RuneOnDay>()
     
     lazy var sections = makeSections()
     lazy var activity = RxActivityIndicator()
     
     private lazy var homeKit = makeHomeKit()
     private lazy var tarotOnToday = makeTarotOnToday()
+    private lazy var runeOnToday = makeRuneOnToday()
     private lazy var selectedTip = makeSelectedTip()
     private lazy var activeSubscription = makeActiveSubscription()
     
     private lazy var contentManager = ContentManager()
     private lazy var sessionManager = SessionManager()
     private lazy var tarotManager = TarotManager()
+    private lazy var runeManager = RunesManager()
     
     private lazy var observableRetrySingle = ObservableRetrySingle()
 }
@@ -33,8 +36,8 @@ final class HomeViewModel {
 private extension HomeViewModel {
     func makeSections() -> Driver<[HomeTableSection]> {
         Driver
-            .combineLatest(homeKit, activeSubscription, selectedTip, tarotOnToday)
-            .map { homeKit, activeSubscription, selectedTip, tarotOnToday -> [HomeTableSection] in
+            .combineLatest(homeKit, activeSubscription, selectedTip, tarotOnToday, runeOnToday)
+            .map { homeKit, activeSubscription, selectedTip, tarotOnToday, runeOnToday -> [HomeTableSection] in
                 var sections = [HomeTableSection]()
                 
                 let todayTitleSection = HomeTableSection(
@@ -70,7 +73,10 @@ private extension HomeViewModel {
                 )
                 sections.append(lunarSection)
                 
-                let practice = HomePracticeElement(tarotOnToday: tarotOnToday)
+                let practice = HomePracticeElement(
+                    tarotOnToday: tarotOnToday,
+                    runeOnToday: runeOnToday
+                )
                 let practiceSection = HomeTableSection(
                     elements: [.practice(practice)],
                     corner: true
@@ -189,6 +195,66 @@ private extension HomeViewModel {
         
         return Driver
             .merge(set, tarot)
+    }
+    
+    func makeRuneOnToday() -> Driver<RuneOnDay> {
+        let runes = runeManager
+            .obtainCovers(forceUpdate: false)
+            .asDriver(onErrorJustReturn: [])
+        let runeOnToday = runeManager
+            .obtainRuneOnToday()
+            .asDriver(onErrorJustReturn: nil)
+        
+        let set = didOpenRune
+            .flatMapLatest { [weak self] runeOnToday -> Single<RuneOnDay> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                let new = RuneOnDay(
+                    rune: runeOnToday.rune,
+                    onDay: runeOnToday.onDay,
+                    isOpened: true
+                )
+                
+                return self.runeManager
+                    .set(runeOnToday: new)
+                    .map { new }
+                    .flatMap { object -> Single<RuneOnDay> in
+                        .never()
+                    }
+            }
+            .asDriver(onErrorDriveWith: .never())
+        
+        let rune = Driver
+            .combineLatest(runes, runeOnToday)
+            .flatMapLatest { [weak self] runes, runeOnToday -> Driver<RuneOnDay> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                if let runeOnToday = runeOnToday {
+                    return .just(runeOnToday)
+                }
+                
+                guard let rune = runes.randomElement() else {
+                    return .never()
+                }
+                
+                let new = RuneOnDay(
+                    rune: rune,
+                    onDay: Date(),
+                    isOpened: false
+                )
+                
+                return self.runeManager
+                    .set(runeOnToday: new)
+                    .map { new }
+                    .asDriver(onErrorJustReturn: new)
+            }
+        
+        return Driver
+            .merge(set, rune)
     }
     
     func makeActiveSubscription() -> Driver<Bool> {

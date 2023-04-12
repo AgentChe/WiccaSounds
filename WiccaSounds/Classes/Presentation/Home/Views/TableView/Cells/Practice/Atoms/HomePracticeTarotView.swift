@@ -238,7 +238,7 @@ private extension HomePracticeTarotView {
     
     func makeImageTarotView() -> UIImageView {
         let view = UIImageView()
-        view.backgroundColor = UIColor.red
+        view.backgroundColor = UIColor.clear
         view.contentMode = .scaleAspectFill
         view.clipsToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false

@@ -84,6 +84,14 @@ extension HomeViewController: HomeTableDelegate {
     func homeTableDidShow(tarotCover: TarotCover) {
         // TODO
     }
+    
+    func homeTableDidOpen(rune: RuneOnDay) {
+        viewModel.didOpenRune.accept(rune)
+    }
+    
+    func homeTableDidShow(runeCover: RuneCover) {
+        // TODO
+    }
 }
 
 // MARK: Private
