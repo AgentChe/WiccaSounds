@@ -11,6 +11,7 @@ import RxCocoa
 final class BookmarksViewModel {
     lazy var didTapFilter = PublishRelay<ExploreFilterView.Filter>()
     
+    lazy var isEmpty = makeIsEmpty()
     lazy var sections = makeSections()
     
     private lazy var spellsSections = makeSpellsSections()
@@ -36,6 +37,28 @@ private extension BookmarksViewModel {
         case initial
         case save(Int)
         case unsave(Int)
+    }
+    
+    func makeIsEmpty() -> Driver<BookmarksEmptyView.Unit?> {
+        Driver
+            .combineLatest(
+                didTapFilter.asDriver(onErrorDriveWith: .never()),
+                spellsSections,
+                candlesSections,
+                herbsSections,
+                crystalsSections
+            ).map { filter, spells, candlesSections, herbsSections, crystalsSections -> BookmarksEmptyView.Unit? in
+                switch filter {
+                case .spells:
+                    return !spells.isEmpty ? .spells : nil // TODO
+                case .candles:
+                    return candlesSections.isEmpty ? .candles : nil
+                case .herbs:
+                    return !herbsSections.isEmpty ? .herbs : nil // TODO
+                case .crystals:
+                    return crystalsSections.isEmpty ? .crystals : nil
+                }
+            }
     }
     
     func makeSections() -> Driver<[ExploreTableSection]> {

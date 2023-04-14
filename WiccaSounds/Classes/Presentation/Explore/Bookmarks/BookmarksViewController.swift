@@ -28,6 +28,19 @@ final class BookmarksViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        viewModel.isEmpty
+            .drive(Binder(self) { base, unit in
+                base.isEmpty(unit: unit)
+            })
+            .disposed(by: disposeBag)
+        
+        mainView.emptyView
+            .button.rx.tap
+            .bind(to: Binder(self) { base, void in
+                BookmarksViewControllerMediator.shared.discoverTapped()
+            })
+            .disposed(by: disposeBag)
+        
         addFilterActions()
         mainView.tableView.mainDelegate = self
     }
@@ -86,5 +99,14 @@ private extension BookmarksViewController {
                 base.mainView.filterView.filter = filter
             })
             .disposed(by: disposeBag)
+    }
+    
+    func isEmpty(unit: BookmarksEmptyView.Unit?) {
+        mainView.emptyView.isHidden = unit == nil
+        mainView.tableView.isHidden = unit != nil
+        
+        if let unit = unit {
+            mainView.emptyView.setup(unit: unit)
+        }
     }
 }

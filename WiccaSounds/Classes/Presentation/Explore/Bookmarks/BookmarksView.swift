@@ -10,6 +10,7 @@ import UIKit
 final class BookmarksView: UIView {
     lazy var filterView = makeFilterView()
     lazy var tableView = makeTableView()
+    lazy var emptyView = makeEmptyView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,6 +47,13 @@ private extension BookmarksView {
             tableView.topAnchor.constraint(equalTo: filterView.bottomAnchor, constant: 2.scale),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+        
+        NSLayoutConstraint.activate([
+            emptyView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            emptyView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            emptyView.topAnchor.constraint(equalTo: filterView.bottomAnchor),
+            emptyView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
     }
 }
 
@@ -70,6 +78,14 @@ private extension BookmarksView {
         }
         view.showsVerticalScrollIndicator = false
         view.contentInsetAdjustmentBehavior = .never
+        view.backgroundColor = UIColor.clear
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeEmptyView() -> BookmarksEmptyView {
+        let view = BookmarksEmptyView()
         view.backgroundColor = UIColor.clear
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

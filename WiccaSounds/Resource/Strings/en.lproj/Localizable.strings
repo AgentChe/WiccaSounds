@@ -124,3 +124,24 @@
 "Home.Practice.Unit.Runes" = "Runes";
 "Home.Practice.Rune.Title" = "Tap on the stone to find your Rune of the day";
 "Home.Practice.Rune.Button" = "Reveal the meaning";
+
+// MARK: Settings
+"Settings.Title" = "Settings";
+"Settings.FavoriteSpells" = "Favorite Spells";
+"Settings.ContactUs" = "Contact Us";
+"Settings.PrivacyPolicy" = "Privacy Policy";
+"Settings.TermsOfUse" = "Terms of Use";
+
+// MARK: Bookmarks
+"Bookmarks.Empty.Spells.Title" = "No saved spells";
+"Bookmarks.Empty.Spells.SubTitle" = "Here will be spells that you\nsaved";
+"Bookmarks.Empty.Spells.Button" = "Discover spells";
+"Bookmarks.Empty.Candles.Title" = "No saved candles";
+"Bookmarks.Empty.Candles.SubTitle" = "Here will be candles that you\nsaved";
+"Bookmarks.Empty.Candles.Button" = "Discover candles";
+"Bookmarks.Empty.Herbs.Title" = "No saved herbs";
+"Bookmarks.Empty.Herbs.SubTitle" = "Here will be herbs that you\nsaved";
+"Bookmarks.Empty.Herbs.Button" = "Discover herbs";
+"Bookmarks.Empty.Crystals.Title" = "No saved crystals";
+"Bookmarks.Empty.Crystals.SubTitle" = "Here will be crystals that you\nsaved";
+"Bookmarks.Empty.Crystals.Button" = "Discover crystals";

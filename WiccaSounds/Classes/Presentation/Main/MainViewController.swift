@@ -41,6 +41,13 @@ final class MainViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        BookmarksViewControllerMediator.shared
+            .didTapDiscover
+            .emit(to: Binder(self) { base, void in
+                base.update(selectedTab: .home)
+            })
+            .disposed(by: disposeBag)
+        
         requestReviewIfNeeded()
         addActionsToTabs()
     }

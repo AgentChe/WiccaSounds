@@ -44,6 +44,13 @@ final class HomeViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        settingsButton.rx.tap
+            .bind(to: Binder(self) { base, void in
+                let vc = SettingsViewController.make()
+                base.navigationController?.pushViewController(vc, animated: true)
+            })
+            .disposed(by: disposeBag)
+        
         addSettingsButton()
         mainView.tableView.mainDelegate = self
     }
