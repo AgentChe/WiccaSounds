@@ -256,6 +256,15 @@
 		DE995BD029E9920E00B08290 /* SelectSpellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BCF29E9920E00B08290 /* SelectSpellsView.swift */; };
 		DE995BD429E99F9600B08290 /* BookmarksEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BD329E99F9600B08290 /* BookmarksEmptyView.swift */; };
 		DE995BD629E9A7E000B08290 /* BookmarksViewControllerMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BD529E9A7E000B08290 /* BookmarksViewControllerMediator.swift */; };
+		DE995BE529E9ABC200B08290 /* StoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BD829E9ABC200B08290 /* StoryCardView.swift */; };
+		DE995BE629E9ABC200B08290 /* StoryCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BD929E9ABC200B08290 /* StoryCardViewModel.swift */; };
+		DE995BE729E9ABC200B08290 /* StoryCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BDA29E9ABC200B08290 /* StoryCardViewController.swift */; };
+		DE995BE829E9ABC200B08290 /* StoryCardImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BDE29E9ABC200B08290 /* StoryCardImageCell.swift */; };
+		DE995BE929E9ABC200B08290 /* StoryCardTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BDF29E9ABC200B08290 /* StoryCardTextCell.swift */; };
+		DE995BEA29E9ABC200B08290 /* StoryCardNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BE029E9ABC200B08290 /* StoryCardNameCell.swift */; };
+		DE995BEC29E9ABC200B08290 /* StoryCardTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BE229E9ABC200B08290 /* StoryCardTableElement.swift */; };
+		DE995BED29E9ABC200B08290 /* StoryCardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BE329E9ABC200B08290 /* StoryCardTableView.swift */; };
+		DE995BEE29E9ABC200B08290 /* StoryCardStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BE429E9ABC200B08290 /* StoryCardStepsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -511,6 +520,15 @@
 		DE995BCF29E9920E00B08290 /* SelectSpellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSpellsView.swift; sourceTree = "<group>"; };
 		DE995BD329E99F9600B08290 /* BookmarksEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksEmptyView.swift; sourceTree = "<group>"; };
 		DE995BD529E9A7E000B08290 /* BookmarksViewControllerMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewControllerMediator.swift; sourceTree = "<group>"; };
+		DE995BD829E9ABC200B08290 /* StoryCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCardView.swift; sourceTree = "<group>"; };
+		DE995BD929E9ABC200B08290 /* StoryCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCardViewModel.swift; sourceTree = "<group>"; };
+		DE995BDA29E9ABC200B08290 /* StoryCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCardViewController.swift; sourceTree = "<group>"; };
+		DE995BDE29E9ABC200B08290 /* StoryCardImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCardImageCell.swift; sourceTree = "<group>"; };
+		DE995BDF29E9ABC200B08290 /* StoryCardTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCardTextCell.swift; sourceTree = "<group>"; };
+		DE995BE029E9ABC200B08290 /* StoryCardNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCardNameCell.swift; sourceTree = "<group>"; };
+		DE995BE229E9ABC200B08290 /* StoryCardTableElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCardTableElement.swift; sourceTree = "<group>"; };
+		DE995BE329E9ABC200B08290 /* StoryCardTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCardTableView.swift; sourceTree = "<group>"; };
+		DE995BE429E9ABC200B08290 /* StoryCardStepsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCardStepsView.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1542,6 +1560,7 @@
 		DE6576A529CD9F4A0074CBE5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DE995BD729E9ABC200B08290 /* StoryCard */,
 				DE995BCA29E991E000B08290 /* SelectSpells */,
 				DE995BBA29E9896000B08290 /* Settings */,
 				DE995BB929E9894B00B08290 /* Home */,
@@ -1720,6 +1739,46 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DE995BD729E9ABC200B08290 /* StoryCard */ = {
+			isa = PBXGroup;
+			children = (
+				DE995BDB29E9ABC200B08290 /* Views */,
+				DE995BDA29E9ABC200B08290 /* StoryCardViewController.swift */,
+				DE995BD929E9ABC200B08290 /* StoryCardViewModel.swift */,
+				DE995BD829E9ABC200B08290 /* StoryCardView.swift */,
+			);
+			path = StoryCard;
+			sourceTree = "<group>";
+		};
+		DE995BDB29E9ABC200B08290 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE995BDC29E9ABC200B08290 /* TableView */,
+				DE995BE429E9ABC200B08290 /* StoryCardStepsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE995BDC29E9ABC200B08290 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DE995BDD29E9ABC200B08290 /* Cells */,
+				DE995BE229E9ABC200B08290 /* StoryCardTableElement.swift */,
+				DE995BE329E9ABC200B08290 /* StoryCardTableView.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DE995BDD29E9ABC200B08290 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DE995BDE29E9ABC200B08290 /* StoryCardImageCell.swift */,
+				DE995BDF29E9ABC200B08290 /* StoryCardTextCell.swift */,
+				DE995BE029E9ABC200B08290 /* StoryCardNameCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1874,12 +1933,14 @@
 				DE995BD429E99F9600B08290 /* BookmarksEmptyView.swift in Sources */,
 				DE6574FC29C838E30074CBE5 /* IAPManager.swift in Sources */,
 				DE8027E829D40A26003C9993 /* HomeTipsCollectionCell.swift in Sources */,
+				DE995BED29E9ABC200B08290 /* StoryCardTableView.swift in Sources */,
 				DE65749D29C838DF0074CBE5 /* TabItemView.swift in Sources */,
 				DE6574FE29C838E30074CBE5 /* ProductPrice.swift in Sources */,
 				DE65761329C9C41F0074CBE5 /* SaveCrystalRequest.swift in Sources */,
 				DE65749F29C838DF0074CBE5 /* MainViewCoordinator.swift in Sources */,
 				DE65757029C838E60074CBE5 /* FacebookManager.swift in Sources */,
 				DE6575D829C9BAAE0074CBE5 /* SaveSpellRequest.swift in Sources */,
+				DE995BE929E9ABC200B08290 /* StoryCardTextCell.swift in Sources */,
 				DE65755D29C838E60074CBE5 /* NavigationController.swift in Sources */,
 				DE8027E629D40A13003C9993 /* HomeTipsCollectionView.swift in Sources */,
 				DE65755929C838E60074CBE5 /* ImagePicker.swift in Sources */,
@@ -1939,6 +2000,7 @@
 				DE6575CB29C9B47E0074CBE5 /* ContentBlock.swift in Sources */,
 				DE65749929C838DF0074CBE5 /* PaygateProductButton.swift in Sources */,
 				DE6575C129C8D7AD0074CBE5 /* OMoonSacredCell.swift in Sources */,
+				DE995BE529E9ABC200B08290 /* StoryCardView.swift in Sources */,
 				DE65760E29C9C40B0074CBE5 /* GetCrystalsRequest.swift in Sources */,
 				DE65762329C9C8130074CBE5 /* GetTarotCoversRequest.swift in Sources */,
 				DE65761C29C9C7710074CBE5 /* TarotCover.swift in Sources */,
@@ -1967,11 +2029,13 @@
 				DE65759D29C843880074CBE5 /* GetSpellsCategoriesResponse.swift in Sources */,
 				DE65764129C9D42D0074CBE5 /* StoryCard.swift in Sources */,
 				DE65764629C9D4FF0074CBE5 /* GetStoryRequest.swift in Sources */,
+				DE995BE729E9ABC200B08290 /* StoryCardViewController.swift in Sources */,
 				DE65766629C9EA260074CBE5 /* ExploreFilterView.swift in Sources */,
 				DE6574A229C838DF0074CBE5 /* OCombineData.swift in Sources */,
 				DE6574FA29C838E30074CBE5 /* SetRequest.swift in Sources */,
 				DE65759829C842D30074CBE5 /* SpellsCategory.swift in Sources */,
 				DE65749829C838DF0074CBE5 /* PaygateViewController.swift in Sources */,
+				DE995BEC29E9ABC200B08290 /* StoryCardTableElement.swift in Sources */,
 				DE6576AB29CD9F620074CBE5 /* HomeView.swift in Sources */,
 				DE6574B429C838DF0074CBE5 /* OWelcomeView.swift in Sources */,
 				DE65769529CCA5FB0074CBE5 /* ContentTitleCell.swift in Sources */,
@@ -2005,6 +2069,7 @@
 				DE65760229C9C1D30074CBE5 /* UnsaveHerbRequest.swift in Sources */,
 				DE65756129C838E60074CBE5 /* PaddingTextField.swift in Sources */,
 				DE995BBC29E9896B00B08290 /* SettingsViewController.swift in Sources */,
+				DE995BEE29E9ABC200B08290 /* StoryCardStepsView.swift in Sources */,
 				DE65749329C838DF0074CBE5 /* DefaultPaygate.swift in Sources */,
 				DE65769229CCA5EC0074CBE5 /* ContentTableElement.swift in Sources */,
 				DE65754329C838E60074CBE5 /* UIColor+Extension.swift in Sources */,
@@ -2018,6 +2083,7 @@
 				DE6574F629C838E30074CBE5 /* GetProfileRequest.swift in Sources */,
 				DE65755C29C838E60074CBE5 /* NavigationControllerSettings.swift in Sources */,
 				DE65768529CC37140074CBE5 /* ExploreUnitButton.swift in Sources */,
+				DE995BEA29E9ABC200B08290 /* StoryCardNameCell.swift in Sources */,
 				DE6575C529C90C040074CBE5 /* OObjectChannelCell.swift in Sources */,
 				DE6574EF29C838E30074CBE5 /* PaygateManager.swift in Sources */,
 				DE8027EC29D41D14003C9993 /* HomeWheelCell.swift in Sources */,
@@ -2052,6 +2118,7 @@
 				DE995BC929E989AD00B08290 /* SettingsActionCell.swift in Sources */,
 				DE65763329C9D0080074CBE5 /* RuneCover.swift in Sources */,
 				DE6575F829C9C1A90074CBE5 /* Herb.swift in Sources */,
+				DE995BE629E9ABC200B08290 /* StoryCardViewModel.swift in Sources */,
 				DE65769929CCA60D0074CBE5 /* ContentImageCell.swift in Sources */,
 				DE65763829C9D03D0074CBE5 /* GetRunesCoversRequest.swift in Sources */,
 				DE65749029C838DF0074CBE5 /* SplashViewModel.swift in Sources */,
@@ -2073,6 +2140,7 @@
 				DE65765F29C9E8040074CBE5 /* ExploreViewController.swift in Sources */,
 				DE65767829C9FEDC0074CBE5 /* ExploreSpellCell.swift in Sources */,
 				DE65764A29C9D6380074CBE5 /* ContentManager.swift in Sources */,
+				DE995BE829E9ABC200B08290 /* StoryCardImageCell.swift in Sources */,
 				DE65756E29C838E60074CBE5 /* AmplitudeManager.swift in Sources */,
 				DE65762A29C9C8F50074CBE5 /* GetTarotResponse.swift in Sources */,
 				DE65761829C9C75B0074CBE5 /* TarotManager.swift in Sources */,

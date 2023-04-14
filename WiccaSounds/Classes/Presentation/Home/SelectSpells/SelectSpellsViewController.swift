@@ -22,6 +22,14 @@ final class SelectSpellsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.tryAgain = { [weak self] error -> Observable<Void> in
+            guard let self = self else {
+                return .never()
+            }
+            
+            return self.open(error: error)
+        }
+        
         viewModel.elements
             .drive(Binder(self) { base, elements in
                 base.mainView.tableView.setup(elements: elements)
@@ -69,6 +77,22 @@ extension SelectSpellsViewController: OSpellsCategoriesTableDelegate {
 
 // MARK: Private
 private extension SelectSpellsViewController {
+    func open(error: Error) -> Observable<Void> {
+        Observable<Void>
+            .create { [weak self] observe in
+                guard let self = self else {
+                    return Disposables.create()
+                }
+                
+                let vc = TryAgainViewController.make(error: error) {
+                    observe.onNext(())
+                }
+                self.present(vc, animated: true)
+                
+                return Disposables.create()
+            }
+    }
+    
     func buttonSelection() {
         let hasMarked = mainView.tableView.elements.contains(where: { $0.marked })
         

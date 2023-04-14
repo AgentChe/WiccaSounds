@@ -72,7 +72,8 @@ extension HomeViewController: HomeTableDelegate {
     }
     
     func homeTableDidTap(story: StoryCover) {
-        // TODO
+        let vc = StoryCardViewController.make(storyCover: story)
+        present(vc, animated: true)
     }
     
     func homeTableDidTap(tipElement: HomeTipElement) {
