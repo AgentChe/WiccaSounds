@@ -22,9 +22,8 @@ final class GlobalDefinitions {
     static let privacyPolicyUrl = "https://wiccaspells.org/policy"
     static let contactUsUrl = "https://wiccaspells.org/contact"
     
-    // TODO: заменить
     enum Paygate {
-        static let defaultLifetime = "mobile.manga.4ever"
-        static let defaultMonthly = "mobile.manga.month"
+        static let defaultLifetime = "wicca.life"
+        static let defaultMonthly = "wicca.month"
     }
 }

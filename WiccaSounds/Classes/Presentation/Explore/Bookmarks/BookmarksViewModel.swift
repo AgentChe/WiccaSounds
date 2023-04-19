@@ -50,11 +50,11 @@ private extension BookmarksViewModel {
             ).map { filter, spells, candlesSections, herbsSections, crystalsSections -> BookmarksEmptyView.Unit? in
                 switch filter {
                 case .spells:
-                    return !spells.isEmpty ? .spells : nil // TODO
+                    return spells.isEmpty ? .spells : nil
                 case .candles:
                     return candlesSections.isEmpty ? .candles : nil
                 case .herbs:
-                    return !herbsSections.isEmpty ? .herbs : nil // TODO
+                    return herbsSections.isEmpty ? .herbs : nil 
                 case .crystals:
                     return crystalsSections.isEmpty ? .crystals : nil
                 }
