@@ -54,8 +54,8 @@ private extension TryAgainView {
 private extension TryAgainView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: 154.scale),
-            imageView.heightAnchor.constraint(equalToConstant: 161.scale),
+            imageView.widthAnchor.constraint(equalToConstant: 135.scale),
+            imageView.heightAnchor.constraint(equalToConstant: 173.scale),
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             imageView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 120.scale : 50.scale)
         ])
@@ -74,7 +74,7 @@ private extension TryAgainView {
         
         NSLayoutConstraint.activate([
             tryAgainButton.widthAnchor.constraint(equalToConstant: 343.scale),
-            tryAgainButton.heightAnchor.constraint(equalToConstant: 54.scale),
+            tryAgainButton.heightAnchor.constraint(equalToConstant: 56.scale),
             tryAgainButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             tryAgainButton.bottomAnchor.constraint(equalTo: contactButton.topAnchor, constant: -16.scale)
         ])
@@ -138,7 +138,7 @@ private extension TryAgainView {
         
         let view = UIButton()
         view.setAttributedTitle("TryAgain.Button".localized.attributed(with: attrs), for: .normal)
-        view.layer.cornerRadius = 8.scale
+        view.layer.cornerRadius = 28.scale
         view.backgroundColor = Appearance.primary
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
@@ -153,7 +153,7 @@ private extension TryAgainView {
         let view = UIButton()
         view.setAttributedTitle("TryAgain.Contact".localized.attributed(with: attrs), for: .normal)
         view.layer.cornerRadius = 8.scale
-        view.backgroundColor = UIColor(integralRed: 51, green: 51, blue: 51)
+        view.backgroundColor = UIColor.clear
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
