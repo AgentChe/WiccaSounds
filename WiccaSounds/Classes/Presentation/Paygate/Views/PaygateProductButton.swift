@@ -10,29 +10,55 @@ import UIKit
 final class PaygateProductButton: UIButton {
     var isChecked: Bool = false {
         didSet {
-            update()
+            configure()
         }
     }
     
     var info: PaygateOptionInfo? {
         didSet {
-            update()
+            configure()
         }
     }
     
+    lazy var headerLabel = makeLabel()
+    lazy var captionLabel = makeLabel()
+    lazy var saveLabel = makeSaveLabel()
     lazy var checkedView = makeCheckedView()
-    lazy var line1Label = makeLabel()
-    lazy var line2Label = makeLabel()
-    lazy var line3Label = makeLabel()
-    lazy var discountPlaceholderView = makeDiscountPlaceholderView()
-    lazy var discountLabel = makeLabel()
-    lazy var line5Label = makeLabel()
+    
+    private lazy var headerSelectedAttrs = TextAttributes()
+        .textColor(Appearance.background)
+        .font(Fonts.Inter.regular(size: 17.scale))
+        .lineHeight(21.scale)
+        .lineBreakMode(.byTruncatingTail)
+    private lazy var headerNormalAttrs = TextAttributes()
+        .textColor(Appearance.white.withAlphaComponent(0.8))
+        .font(Fonts.Inter.regular(size: 17.scale))
+        .lineHeight(21.scale)
+        .lineBreakMode(.byTruncatingTail)
+    private lazy var captionSelectedAttrs = TextAttributes()
+        .textColor(Appearance.background)
+        .font(Fonts.Inter.bold(size: 17.scale))
+        .lineHeight(23.8.scale)
+        .letterSpacing(0.17.scale)
+        .lineBreakMode(.byTruncatingTail)
+    private lazy var captionNormalAttrs = TextAttributes()
+        .textColor(Appearance.white)
+        .font(Fonts.Inter.bold(size: 17.scale))
+        .lineHeight(23.8.scale)
+        .letterSpacing(0.17.scale)
+        .lineBreakMode(.byTruncatingTail)
+    private lazy var saveAttrs = TextAttributes()
+        .textColor(Appearance.custom31)
+        .font(Fonts.Inter.bold(size: 12.scale))
+        .lineHeight(14.52.scale)
+        .letterSpacing(-0.08.scale)
+        .lineBreakMode(.byTruncatingTail)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         makeConstraints()
-        update()
+        configure()
     }
     
     required init?(coder: NSCoder) {
@@ -42,38 +68,24 @@ final class PaygateProductButton: UIButton {
 
 // MARK: Private
 private extension PaygateProductButton {
-    func update() {
-        changeSelection()
-        configure()
-    }
-    
-    func changeSelection() {
-        layer.borderWidth = 2.scale
-        layer.borderColor = isChecked ? Appearance.primary.cgColor : Appearance.white.withAlphaComponent(0.4).cgColor
-        
-        checkedView.isHidden = !isChecked
-    }
-    
     func configure() {
         guard let info = info else {
             return
         }
         
-        line1Label.attributedText = info.line1
-        line1Label.isHidden = info.line1 == nil
+        backgroundColor = isChecked ? Appearance.second : Appearance.white.withAlphaComponent(0.1)
         
-        line2Label.attributedText = info.line2
-        line2Label.isHidden = info.line2 == nil
+        let headerAttrs = isChecked ? headerSelectedAttrs : headerNormalAttrs
+        headerLabel.attributedText = info.title.attributed(with: headerAttrs)
         
-        line3Label.attributedText = info.line3
-        line3Label.isHidden = info.line3 == nil
+        let captionAttrs = isChecked ? captionSelectedAttrs : captionNormalAttrs
+        captionLabel.attributedText = info.caption.attributed(with: captionAttrs)
         
-        discountLabel.attributedText = info.line4
-        discountLabel.isHidden = info.line4 == nil
-        discountPlaceholderView.isHidden = info.line4 == nil
+        saveLabel.isHidden = info.save == nil
+        saveLabel.attributedText = info.save?.attributed(with: saveAttrs)
         
-        line5Label.attributedText = info.line5
-        line5Label.isHidden = info.line5 == nil
+        let imageName = isChecked ? "Paygate.Checked" : "Paygate.Unchecked"
+        checkedView.image = UIImage(named: imageName)
     }
 }
 
@@ -81,58 +93,33 @@ private extension PaygateProductButton {
 private extension PaygateProductButton {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            checkedView.widthAnchor.constraint(equalToConstant: 24.scale),
-            checkedView.heightAnchor.constraint(equalToConstant: 24.scale),
-            checkedView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12.scale),
-            checkedView.topAnchor.constraint(equalTo: topAnchor, constant: 13.scale)
+            headerLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
+            headerLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -56.scale),
+            headerLabel.topAnchor.constraint(equalTo: topAnchor, constant: 12.scale)
         ])
         
         NSLayoutConstraint.activate([
-            line1Label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12.scale),
-            line1Label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -127.scale)
+            captionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
+            captionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -56.scale),
+            captionLabel.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 7.scale)
         ])
         
         NSLayoutConstraint.activate([
-            line2Label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12.scale),
-            line2Label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -91.scale)
+            saveLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
+            saveLabel.centerYAnchor.constraint(equalTo: topAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            line3Label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12.scale),
-            line3Label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -74.scale)
-        ])
-        
-        NSLayoutConstraint.activate([
-            discountPlaceholderView.heightAnchor.constraint(equalToConstant: 23.scale),
-            discountPlaceholderView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12.scale),
-            discountPlaceholderView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -47.scale)
-        ])
-        
-        NSLayoutConstraint.activate([
-            discountLabel.leadingAnchor.constraint(equalTo: discountPlaceholderView.leadingAnchor, constant: 2.scale),
-            discountLabel.trailingAnchor.constraint(equalTo: discountPlaceholderView.trailingAnchor, constant: -2.scale),
-            discountLabel.topAnchor.constraint(equalTo: discountPlaceholderView.topAnchor, constant: 3.scale),
-            discountLabel.bottomAnchor.constraint(equalTo: discountPlaceholderView.bottomAnchor, constant: -3.scale)
-        ])
-        
-        NSLayoutConstraint.activate([
-            line5Label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12.scale),
-            line5Label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -12.scale)
+            checkedView.widthAnchor.constraint(equalToConstant: 25.scale),
+            checkedView.heightAnchor.constraint(equalToConstant: 25.scale),
+            checkedView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            checkedView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale)
         ])
     }
 }
 
 // MARK: Lazy initialization
 private extension PaygateProductButton {
-    func makeCheckedView() -> UIImageView {
-        let view = UIImageView()
-        view.contentMode = .scaleAspectFit
-        view.image = UIImage(named: "Paygate.Checked")
-        view.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(view)
-        return view
-    }
-    
     func makeLabel() -> UILabel {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -140,10 +127,20 @@ private extension PaygateProductButton {
         return view
     }
     
-    func makeDiscountPlaceholderView() -> UIView {
-        let view = UIView()
-        view.backgroundColor = Appearance.third
+    func makeSaveLabel() -> PaddingLabel {
+        let view = PaddingLabel()
+        view.insets = UIEdgeInsets(top: 2.scale, left: 4.scale, bottom: 2.scale, right: 4.scale)
+        view.backgroundColor = Appearance.white
         view.layer.cornerRadius = 4.scale
+        view.layer.masksToBounds = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeCheckedView() -> UIImageView {
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFit
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

@@ -28,25 +28,29 @@
 "Splash.Preloader3" = "Setting up your account...";
 
 // MARK: Paygate
-"Paygate.Title" = "Unlock Premium Status";
-"Paygate.Cell1" = "Complete collection of spells";
-"Paygate.Cell2" = "Lunar calendar";
-"Paygate.Cell3" = "Magical Herbs & Glossary";
-"Paygate.Cell4" = "Podcasts & Books";
-"Paygate.Info" = "Secured by the App Store. Cancel anytime.";
-"Paygate.TermsOfUse" = "Terms of Use";
+"Paygate.RestorePurchases" = "Restore purchases";
+"Paygate.Title" = "Unlock it all!";
+"Paygate.Review.1.Text" = "This app is the ultimate guide to Wicca spells, herbs, oils, and candles";
+"Paygate.Review.2.Text" = "great moon insights 🌘";
+"Paygate.Review.3.Text" = "This app is a must have tool for baby witches";
+"Paygate.Review.4.Text" = "This app has everything! The spells are great and the herb uses are amazing";
+"Paygate.Review.5.Text" = "I LOVE LOVE this Wicca app. Thank you for the moon calendar and crystal guide💖";
+"Paygate.Review.6.Text" = "I was pleasantly surprised! This app is actually spiritually engaging";
+"Paygate.Review.7.Text" = "One of the best guides to witchcraft, especially if you are a Wiccan";
+"Paygate.Review.8.Text" = "Its intuitive interface and extensive content will make you a craft master";
+"Paygate.Review.9.Text" = "These numerous Wicca spells make it a useful tool for practitioners like me";
+"Paygate.Review.10.Text" = "I use the app's spells often and can confidently say they're the real deal";
+"Paygate.Cell1.Text" = "Daily insights based on your personal traits";
+"Paygate.Cell2.Text" = "Meditations, natal chart, compatibility reports and much more";
+"Paygate.Secured" = "Secured with iTunes. Cancel anytime.";
+"Paygate.Subscribe" = "Subscribe";
+"Paygate.TermsOfUse" = "Terms of use";
+"Paygate.And" = "and";
 "Paygate.PrivacyPolicy" = "Privacy Policy";
-"Paygate.RestorePurchases" = "Restore Purchase";
-"Paygate.Failed" = "Failed to make purchase";
-"Paygate.Monthly.Name1" = "7 days for free";
-"Paygate.Monthly.Name2" = "Quick prep";
-"Paygate.Monthly.Bottom1" = "After 7-day trial";
-"Paygate.Monthly.Bottom2" = "Trial is over";
-"Paygate.Lifetime.Name" = "Lifetime";
-"Paygate.Lifetime.PriceDescription" = "\nIn terms of  1  year";
-"Paygate.Lifetime.BottomDescription" = "once";
-"Paygate.Discount" = "SAVE %i%%";
-"Paygate.Price.Period" = "month";
+"Paygate.Default.Lifetime.Title" = "@price once and Forever";
+"Paygate.Default.Lifetime.Caption" = "@price_div/week in terms of 1 year";
+"Paygate.Default.Monthly.Title" = "@price per month";
+"Paygate.Default.Monthly.Caption" = "3 DAYS FOR FREE";
 
 // MARK: Onboarding
 "Onboarding.GotIt" = "Got it";

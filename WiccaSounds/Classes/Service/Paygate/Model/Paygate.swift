@@ -6,6 +6,6 @@
 //
 
 struct Paygate: Codable, Hashable {
-    let leftOptionConfig: PaygateOptionConfig
-    let rightOptionConfig: PaygateOptionConfig
+    let topOptionConfig: PaygateOptionConfig
+    let bottomOptionConfig: PaygateOptionConfig
 }

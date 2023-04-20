@@ -31,8 +31,19 @@ final class PaygateViewController: UIViewController {
         
         viewModel.products
             .drive(Binder(self) { base, products in
-                base.mainView.leftOptionButton.info = products.first
-                base.mainView.rightOptionButton.info = products.last
+                base.mainView.topOptionButton.info = products.first
+                base.mainView.bottomOptionButton.info = products.last
+            })
+            .disposed(by: disposeBag)
+        
+        Observable
+            .merge(
+                mainView.topOptionButton.rx.tap.map { (true, false) },
+                mainView.bottomOptionButton.rx.tap.map { (false, true) }
+            )
+            .bind(to: Binder(mainView) { base, marked in
+                base.topOptionButton.isChecked = marked.0
+                base.bottomOptionButton.isChecked = marked.1
             })
             .disposed(by: disposeBag)
         
@@ -93,8 +104,8 @@ final class PaygateViewController: UIViewController {
         mainView.continueButton.rx.tap
             .bind(to: Binder(self) { base, void in
                 let id = [
-                    base.mainView.leftOptionButton,
-                    base.mainView.rightOptionButton
+                    base.mainView.topOptionButton,
+                    base.mainView.bottomOptionButton
                 ].first(where: { $0.isChecked })?.info?.productId
                 
                 guard let id = id else {
@@ -105,7 +116,8 @@ final class PaygateViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        mainView.leftOptionButton.isChecked = true
+        mainView.topOptionButton.isChecked = true
+        mainView.animateScrollReviews()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -137,8 +149,8 @@ private extension PaygateViewController {
     func activityIndicator(active: Bool) {
         active ? mainView.preloader.startAnimating() : mainView.preloader.stopAnimating()
         
-        mainView.leftOptionButton.isHidden = active
-        mainView.rightOptionButton.isHidden = active
+        mainView.topOptionButton.isHidden = active
+        mainView.bottomOptionButton.isHidden = active
         mainView.continueButton.isHidden = active
         mainView.restoreButton.isHidden = active
     }

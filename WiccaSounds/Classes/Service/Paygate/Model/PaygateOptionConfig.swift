@@ -7,9 +7,8 @@
 
 struct PaygateOptionConfig: Codable, Hashable {
     let productId: String
-    let line1: [PaygateOptionLineComponent]?
-    let line2: [PaygateOptionLineComponent]?
-    let line3: [PaygateOptionLineComponent]?
-    let line4: [PaygateOptionLineComponent]?
-    let line5: [PaygateOptionLineComponent]?
+    let title: String
+    let caption: String
+    let div: Int?
+    let save: String?
 }

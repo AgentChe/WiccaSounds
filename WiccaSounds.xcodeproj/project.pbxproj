@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4783CB222356AF484FD10483 /* Pods_WiccaSounds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F52B9E7215BD19390B0AAC /* Pods_WiccaSounds.framework */; };
+		DE20A97329F02BF0007DC75F /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A97229F02BF0007DC75F /* ReviewsView.swift */; };
+		DE20A97529F02BFC007DC75F /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A97429F02BFC007DC75F /* ReviewCell.swift */; };
+		DE20A97729F02C04007DC75F /* ReviewElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A97629F02C04007DC75F /* ReviewElement.swift */; };
 		DE65748D29C838DF0074CBE5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65744C29C838DE0074CBE5 /* SplashViewController.swift */; };
 		DE65748E29C838DF0074CBE5 /* SplashActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65744E29C838DE0074CBE5 /* SplashActivity.swift */; };
 		DE65748F29C838DF0074CBE5 /* SplashReceiptValidationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65744F29C838DE0074CBE5 /* SplashReceiptValidationObserver.swift */; };
@@ -35,7 +38,6 @@
 		DE6574B729C838DF0074CBE5 /* OSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65748329C838DF0074CBE5 /* OSlideView.swift */; };
 		DE6574BF29C838DF0074CBE5 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65748B29C838DF0074CBE5 /* OnboardingView.swift */; };
 		DE6574C029C838DF0074CBE5 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65748C29C838DF0074CBE5 /* OnboardingViewModel.swift */; };
-		DE6574EA29C838E30074CBE5 /* PaygateOptionLineComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6574C429C838E20074CBE5 /* PaygateOptionLineComponent.swift */; };
 		DE6574EB29C838E30074CBE5 /* PaygateOptionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6574C529C838E20074CBE5 /* PaygateOptionConfig.swift */; };
 		DE6574EC29C838E30074CBE5 /* Paygate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6574C629C838E20074CBE5 /* Paygate.swift */; };
 		DE6574ED29C838E30074CBE5 /* GetPaygateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6574C929C838E20074CBE5 /* GetPaygateResponse.swift */; };
@@ -270,6 +272,9 @@
 /* Begin PBXFileReference section */
 		54F52B9E7215BD19390B0AAC /* Pods_WiccaSounds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiccaSounds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BF3C17B50E62DC3E178AB6 /* Pods-WiccaSounds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.release.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.release.xcconfig"; sourceTree = "<group>"; };
+		DE20A97229F02BF0007DC75F /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
+		DE20A97429F02BFC007DC75F /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		DE20A97629F02C04007DC75F /* ReviewElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewElement.swift; sourceTree = "<group>"; };
 		DE65743129C836CE0074CBE5 /* WiccaSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiccaSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE65744229C836D00074CBE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE65744C29C838DE0074CBE5 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -299,7 +304,6 @@
 		DE65748329C838DF0074CBE5 /* OSlideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlideView.swift; sourceTree = "<group>"; };
 		DE65748B29C838DF0074CBE5 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		DE65748C29C838DF0074CBE5 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
-		DE6574C429C838E20074CBE5 /* PaygateOptionLineComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaygateOptionLineComponent.swift; sourceTree = "<group>"; };
 		DE6574C529C838E20074CBE5 /* PaygateOptionConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaygateOptionConfig.swift; sourceTree = "<group>"; };
 		DE6574C629C838E20074CBE5 /* Paygate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paygate.swift; sourceTree = "<group>"; };
 		DE6574C929C838E20074CBE5 /* GetPaygateResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPaygateResponse.swift; sourceTree = "<group>"; };
@@ -544,6 +548,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE20A97129F02BE6007DC75F /* Reviews */ = {
+			isa = PBXGroup;
+			children = (
+				DE20A97229F02BF0007DC75F /* ReviewsView.swift */,
+				DE20A97429F02BFC007DC75F /* ReviewCell.swift */,
+				DE20A97629F02C04007DC75F /* ReviewElement.swift */,
+			);
+			path = Reviews;
+			sourceTree = "<group>";
+		};
 		DE65742829C836CE0074CBE5 = {
 			isa = PBXGroup;
 			children = (
@@ -633,11 +647,11 @@
 			children = (
 				DE65745429C838DF0074CBE5 /* Models */,
 				DE65745B29C838DF0074CBE5 /* Views */,
-				DE65745329C838DF0074CBE5 /* PaygateViewModel.swift */,
 				DE65745729C838DF0074CBE5 /* PaygateViewControllerDelegate.swift */,
 				DE65745829C838DF0074CBE5 /* PaygateInteractor.swift */,
-				DE65745929C838DF0074CBE5 /* PaygateView.swift */,
 				DE65745A29C838DF0074CBE5 /* PaygateViewController.swift */,
+				DE65745329C838DF0074CBE5 /* PaygateViewModel.swift */,
+				DE65745929C838DF0074CBE5 /* PaygateView.swift */,
 			);
 			path = Paygate;
 			sourceTree = "<group>";
@@ -654,6 +668,7 @@
 		DE65745B29C838DF0074CBE5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DE20A97129F02BE6007DC75F /* Reviews */,
 				DE65745C29C838DF0074CBE5 /* PaygateProductButton.swift */,
 				DE65745D29C838DF0074CBE5 /* PaygateInfoCell.swift */,
 			);
@@ -779,7 +794,6 @@
 		DE6574C329C838E20074CBE5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DE6574C429C838E20074CBE5 /* PaygateOptionLineComponent.swift */,
 				DE6574C529C838E20074CBE5 /* PaygateOptionConfig.swift */,
 				DE6574C629C838E20074CBE5 /* Paygate.swift */,
 			);
@@ -1943,12 +1957,14 @@
 				DE995BE929E9ABC200B08290 /* StoryCardTextCell.swift in Sources */,
 				DE65755D29C838E60074CBE5 /* NavigationController.swift in Sources */,
 				DE8027E629D40A13003C9993 /* HomeTipsCollectionView.swift in Sources */,
+				DE20A97529F02BFC007DC75F /* ReviewCell.swift in Sources */,
 				DE65755929C838E60074CBE5 /* ImagePicker.swift in Sources */,
 				DE6576A029CD593E0074CBE5 /* BookmarksViewModel.swift in Sources */,
 				DE65749A29C838DF0074CBE5 /* PaygateInfoCell.swift in Sources */,
 				DE65755229C838E60074CBE5 /* XOREncryption.swift in Sources */,
 				DE65754829C838E60074CBE5 /* UIViewRxExtension.swift in Sources */,
 				DE6575CD29C9B52D0074CBE5 /* Spell.swift in Sources */,
+				DE20A97729F02C04007DC75F /* ReviewElement.swift in Sources */,
 				DE65759429C842B50074CBE5 /* SpellsManager.swift in Sources */,
 				DE65767F29CB66BD0074CBE5 /* ExploreTableElement.swift in Sources */,
 				DE6575C329C9090D0074CBE5 /* OObjectsChannelView.swift in Sources */,
@@ -1969,7 +1985,6 @@
 				DE8027F429D44072003C9993 /* HomePracticeTarotView.swift in Sources */,
 				DE6575B729C8C15D0074CBE5 /* OSpellsCategoriesTableCell.swift in Sources */,
 				DE6575B929C8C1660074CBE5 /* OSpellsCategoriesTableElement.swift in Sources */,
-				DE6574EA29C838E30074CBE5 /* PaygateOptionLineComponent.swift in Sources */,
 				DE65762F29C9CFF60074CBE5 /* RunesManager.swift in Sources */,
 				DE65766829C9EA670074CBE5 /* ExploreFilterItem.swift in Sources */,
 				DE6574A329C838DF0074CBE5 /* OnboardingViewController.swift in Sources */,
@@ -2148,6 +2163,7 @@
 				DE6575B229C8C0DA0074CBE5 /* OSpellsCategoriesView.swift in Sources */,
 				DE65755729C838E60074CBE5 /* Weak.swift in Sources */,
 				DE65749729C838DF0074CBE5 /* PaygateView.swift in Sources */,
+				DE20A97329F02BF0007DC75F /* ReviewsView.swift in Sources */,
 				DE6574EB29C838E30074CBE5 /* PaygateOptionConfig.swift in Sources */,
 				DE65760529C9C3E70074CBE5 /* CrystalsManager.swift in Sources */,
 				DE65768829CC9EF50074CBE5 /* ContentViewController.swift in Sources */,
@@ -2302,9 +2318,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M73NH26C3Q;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WiccaSounds/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Wicca;
@@ -2318,8 +2334,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = wed.WiccaSounds;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bigideaapps.Wikka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;

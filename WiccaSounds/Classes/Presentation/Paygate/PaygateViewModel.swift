@@ -42,8 +42,8 @@ private extension PaygateViewModel {
                         }
                         
                         return [
-                            self.info(config: paygate.leftOptionConfig, prices: prices),
-                            self.info(config: paygate.rightOptionConfig, prices: prices)
+                            self.info(config: paygate.topOptionConfig, prices: prices),
+                            self.info(config: paygate.bottomOptionConfig, prices: prices)
                         ].compactMap { $0 }
                     }
                     .trackActivity(self.activityIndicator)
@@ -63,8 +63,8 @@ private extension PaygateViewModel {
                 
                 if let paygate = paygate {
                     productIds = [
-                        paygate.leftOptionConfig.productId,
-                        paygate.rightOptionConfig.productId
+                        paygate.topOptionConfig.productId,
+                        paygate.bottomOptionConfig.productId
                     ]
                 }
                 
