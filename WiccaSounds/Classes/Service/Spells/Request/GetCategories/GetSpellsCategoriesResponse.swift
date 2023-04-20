@@ -20,17 +20,14 @@ enum GetSpellsCategoriesResponse {
         return array.compactMap { categoryJSON -> SpellsCategory? in
             guard
                 let id = categoryJSON["category_id"] as? Int,
-                let name = categoryJSON["name"] as? String,
-                let imagePath = categoryJSON["image"] as? String,
-                let imageUrl = URL(string: imagePath)
+                let name = categoryJSON["name"] as? String
             else {
                 return nil
             }
             
             return SpellsCategory(
                 id: id,
-                name: name,
-                image: imageUrl
+                name: name
             )
         }
     }

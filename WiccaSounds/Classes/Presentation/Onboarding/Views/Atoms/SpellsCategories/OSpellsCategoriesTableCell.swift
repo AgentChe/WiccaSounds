@@ -6,12 +6,10 @@
 //
 
 import UIKit
-import Kingfisher
 
 final class OSpellsCategoriesTableCell: UITableViewCell {
     lazy var container = makeContainer()
     lazy var titleLabel = makeTitleLabel()
-    lazy var iconView = makeIconView()
     
     private lazy var attrs = TextAttributes()
         .textColor(Appearance.white)
@@ -33,21 +31,12 @@ final class OSpellsCategoriesTableCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        
-        iconView.kf.cancelDownloadTask()
-        iconView.image = nil
-    }
 }
 
 // MARK: Public
 extension OSpellsCategoriesTableCell {
     func setup(element: OSpellsCategoriesTableElement) {
         titleLabel.attributedText = element.spellsCategory.name.attributed(with: attrs)
-        
-        iconView.kf.setImage(with: element.spellsCategory.image)
         
         container.layer.borderWidth = element.marked ? 2.scale : 1.scale
         container.layer.borderColor = element.marked ? selectedColor : unselectedColor
@@ -76,16 +65,9 @@ private extension OSpellsCategoriesTableCell {
         
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 16.scale),
-            titleLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -80.scale),
+            titleLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -16.scale),
             titleLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 25.scale),
             titleLabel.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -25.scale)
-        ])
-        
-        NSLayoutConstraint.activate([
-            iconView.widthAnchor.constraint(equalToConstant: 52.scale),
-            iconView.heightAnchor.constraint(equalToConstant: 52.scale),
-            iconView.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -20.scale),
-            iconView.centerYAnchor.constraint(equalTo: container.centerYAnchor)
         ])
     }
 }
@@ -104,14 +86,6 @@ private extension OSpellsCategoriesTableCell {
     func makeTitleLabel() -> UILabel {
         let view = UILabel()
         view.numberOfLines = 0
-        view.translatesAutoresizingMaskIntoConstraints = false
-        container.addSubview(view)
-        return view
-    }
-    
-    func makeIconView() -> UIImageView {
-        let view = UIImageView()
-        view.contentMode = .scaleAspectFit
         view.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(view)
         return view

@@ -10,5 +10,4 @@ import Foundation
 struct SpellsCategory: Codable, Hashable {
     let id: Int
     let name: String
-    let image: URL
 }
