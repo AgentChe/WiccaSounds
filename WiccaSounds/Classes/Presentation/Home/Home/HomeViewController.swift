@@ -90,7 +90,8 @@ extension HomeViewController: HomeTableDelegate {
     }
     
     func homeTableDidShow(tarotCover: TarotCover) {
-        // TODO
+        let vc = TarotViewController.make(id: tarotCover.id)
+        present(vc, animated: true)
     }
     
     func homeTableDidOpen(rune: RuneOnDay) {

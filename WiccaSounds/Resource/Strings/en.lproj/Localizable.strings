@@ -149,3 +149,8 @@
 "Bookmarks.Empty.Crystals.Title" = "No saved crystals";
 "Bookmarks.Empty.Crystals.SubTitle" = "Here will be crystals that you\nsaved";
 "Bookmarks.Empty.Crystals.Button" = "Discover crystals";
+
+// MARK: Tarot
+"Tarot.Upright" = "Upright";
+"Tarot.Reversed" = "Reversed";
+"Tarot.Keywords" = "Keywords";
