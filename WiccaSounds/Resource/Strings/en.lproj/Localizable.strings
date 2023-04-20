@@ -157,3 +157,7 @@
 
 // MARK: Rune
 "Rune.StandsFor" = "Stands for";
+
+// MARK: Practice
+"Practice.Tarot" = "Tarot";
+"Practice.Runes" = "Runes";

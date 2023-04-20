@@ -31,6 +31,14 @@
 		DE20A9A729F18195007DC75F /* RuneTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A9A629F18195007DC75F /* RuneTableView.swift */; };
 		DE20A9A929F1819B007DC75F /* RuneTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A9A829F1819B007DC75F /* RuneTableElement.swift */; };
 		DE20A9AC29F181B5007DC75F /* RuneImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A9AB29F181B5007DC75F /* RuneImageCell.swift */; };
+		DE20A9AF29F18977007DC75F /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A9AE29F18977007DC75F /* PracticeViewController.swift */; };
+		DE20A9B129F1897C007DC75F /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A9B029F1897C007DC75F /* PracticeViewModel.swift */; };
+		DE20A9B329F18981007DC75F /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A9B229F18981007DC75F /* PracticeView.swift */; };
+		DE20A9B829F189A8007DC75F /* PracticeUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A9B729F189A8007DC75F /* PracticeUnitView.swift */; };
+		DE20A9BA29F189B8007DC75F /* PracticeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A9B929F189B8007DC75F /* PracticeCollectionView.swift */; };
+		DE20A9BC29F189C0007DC75F /* PracticeCollectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A9BB29F189C0007DC75F /* PracticeCollectionElement.swift */; };
+		DE20A9BF29F189CE007DC75F /* PracticeTarotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A9BE29F189CE007DC75F /* PracticeTarotCell.swift */; };
+		DE20A9C129F189D5007DC75F /* PracticeRuneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A9C029F189D5007DC75F /* PracticeRuneCell.swift */; };
 		DE65748D29C838DF0074CBE5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65744C29C838DE0074CBE5 /* SplashViewController.swift */; };
 		DE65748E29C838DF0074CBE5 /* SplashActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65744E29C838DE0074CBE5 /* SplashActivity.swift */; };
 		DE65748F29C838DF0074CBE5 /* SplashReceiptValidationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65744F29C838DE0074CBE5 /* SplashReceiptValidationObserver.swift */; };
@@ -315,6 +323,14 @@
 		DE20A9A629F18195007DC75F /* RuneTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneTableView.swift; sourceTree = "<group>"; };
 		DE20A9A829F1819B007DC75F /* RuneTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneTableElement.swift; sourceTree = "<group>"; };
 		DE20A9AB29F181B5007DC75F /* RuneImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneImageCell.swift; sourceTree = "<group>"; };
+		DE20A9AE29F18977007DC75F /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
+		DE20A9B029F1897C007DC75F /* PracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewModel.swift; sourceTree = "<group>"; };
+		DE20A9B229F18981007DC75F /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
+		DE20A9B729F189A8007DC75F /* PracticeUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeUnitView.swift; sourceTree = "<group>"; };
+		DE20A9B929F189B8007DC75F /* PracticeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeCollectionView.swift; sourceTree = "<group>"; };
+		DE20A9BB29F189C0007DC75F /* PracticeCollectionElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeCollectionElement.swift; sourceTree = "<group>"; };
+		DE20A9BE29F189CE007DC75F /* PracticeTarotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTarotCell.swift; sourceTree = "<group>"; };
+		DE20A9C029F189D5007DC75F /* PracticeRuneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeRuneCell.swift; sourceTree = "<group>"; };
 		DE65743129C836CE0074CBE5 /* WiccaSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiccaSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE65744229C836D00074CBE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE65744C29C838DE0074CBE5 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -601,6 +617,7 @@
 		DE20A97829F13E61007DC75F /* Practice */ = {
 			isa = PBXGroup;
 			children = (
+				DE20A9AD29F1896B007DC75F /* Practice */,
 				DE20A99D29F18152007DC75F /* Rune */,
 				DE20A97929F13E78007DC75F /* Tarot */,
 			);
@@ -701,6 +718,45 @@
 			isa = PBXGroup;
 			children = (
 				DE20A9AB29F181B5007DC75F /* RuneImageCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DE20A9AD29F1896B007DC75F /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				DE20A9B429F18984007DC75F /* Views */,
+				DE20A9AE29F18977007DC75F /* PracticeViewController.swift */,
+				DE20A9B029F1897C007DC75F /* PracticeViewModel.swift */,
+				DE20A9B229F18981007DC75F /* PracticeView.swift */,
+			);
+			path = Practice;
+			sourceTree = "<group>";
+		};
+		DE20A9B429F18984007DC75F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE20A9B529F18988007DC75F /* CollectionView */,
+				DE20A9B729F189A8007DC75F /* PracticeUnitView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE20A9B529F18988007DC75F /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				DE20A9BD29F189C4007DC75F /* Cells */,
+				DE20A9B929F189B8007DC75F /* PracticeCollectionView.swift */,
+				DE20A9BB29F189C0007DC75F /* PracticeCollectionElement.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		DE20A9BD29F189C4007DC75F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DE20A9BE29F189CE007DC75F /* PracticeTarotCell.swift */,
+				DE20A9C029F189D5007DC75F /* PracticeRuneCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -2147,6 +2203,7 @@
 				DE8027EA29D413C5003C9993 /* HomeTipContentCell.swift in Sources */,
 				DE65750329C838E30074CBE5 /* Session.swift in Sources */,
 				DE65761029C9C4130074CBE5 /* GetCrystalsResponse.swift in Sources */,
+				DE20A9B829F189A8007DC75F /* PracticeUnitView.swift in Sources */,
 				DE6574BF29C838DF0074CBE5 /* OnboardingView.swift in Sources */,
 				DE6574A129C838DF0074CBE5 /* TryAgainViewController.swift in Sources */,
 				DE65756529C838E60074CBE5 /* CircleProgressView.swift in Sources */,
@@ -2154,8 +2211,10 @@
 				DE6575ED29C9BD430074CBE5 /* SaveCandleRequest.swift in Sources */,
 				DE6576B129CDA3B10074CBE5 /* HomeTableElement.swift in Sources */,
 				DE6575FD29C9C1BC0074CBE5 /* GetHerbsResponse.swift in Sources */,
+				DE20A9C129F189D5007DC75F /* PracticeRuneCell.swift in Sources */,
 				DE20A98329F144CA007DC75F /* TarotTableView.swift in Sources */,
 				DE65755329C838E60074CBE5 /* Fonts.swift in Sources */,
+				DE20A9BA29F189B8007DC75F /* PracticeCollectionView.swift in Sources */,
 				DE6575F229C9C1920074CBE5 /* HerbsManager.swift in Sources */,
 				DE6574FB29C838E30074CBE5 /* ProfileMediator.swift in Sources */,
 				DE6575D229C9B5AA0074CBE5 /* GetSpellsResponse.swift in Sources */,
@@ -2185,6 +2244,7 @@
 				DE65754D29C838E60074CBE5 /* Scalable.swift in Sources */,
 				DE6575A229C85E410074CBE5 /* WelcomeCellView.swift in Sources */,
 				DE65766329C9E80F0074CBE5 /* ExploreView.swift in Sources */,
+				DE20A9BF29F189CE007DC75F /* PracticeTarotCell.swift in Sources */,
 				DE65759B29C843800074CBE5 /* GetSpellsCategoriesRequest.swift in Sources */,
 				DE65756429C838E60074CBE5 /* GradientView.swift in Sources */,
 				DE65748D29C838DF0074CBE5 /* SplashViewController.swift in Sources */,
@@ -2217,6 +2277,7 @@
 				DE65764F29C9D7640074CBE5 /* GetHomeKitRequest.swift in Sources */,
 				DE65766129C9E80A0074CBE5 /* ExploreViewModel.swift in Sources */,
 				DE6575E829C9BD2C0074CBE5 /* GetCandlesRequest.swift in Sources */,
+				DE20A9B129F1897C007DC75F /* PracticeViewModel.swift in Sources */,
 				DE6575BD29C8D1CF0074CBE5 /* OTarotSuitCell.swift in Sources */,
 				DE6574F929C838E30074CBE5 /* SyncTokensRequest.swift in Sources */,
 				DE65763D29C9D0520074CBE5 /* GetRuneRequest.swift in Sources */,
@@ -2250,6 +2311,7 @@
 				DE65749B29C838DF0074CBE5 /* MainViewController.swift in Sources */,
 				DE6575EF29C9BD510074CBE5 /* UnsaveCandleRequest.swift in Sources */,
 				DE6574EE29C838E30074CBE5 /* GetPaygateRequest.swift in Sources */,
+				DE20A9B329F18981007DC75F /* PracticeView.swift in Sources */,
 				DE20A97F29F13E8E007DC75F /* TarotView.swift in Sources */,
 				DE20A98829F144E2007DC75F /* TarotNameCell.swift in Sources */,
 				DE6575BF29C8D7150074CBE5 /* OMoonSacredView.swift in Sources */,
@@ -2269,6 +2331,7 @@
 				DE65755529C838E60074CBE5 /* NetworkError.swift in Sources */,
 				DE6576B429CDA3CA0074CBE5 /* HomeTodayCell.swift in Sources */,
 				DE65749129C838DF0074CBE5 /* SplashView.swift in Sources */,
+				DE20A9AF29F18977007DC75F /* PracticeViewController.swift in Sources */,
 				DE6574EC29C838E30074CBE5 /* Paygate.swift in Sources */,
 				DE6574FF29C838E30074CBE5 /* IAPActionResult.swift in Sources */,
 				DE65756729C838E60074CBE5 /* PushNotificationsManager.swift in Sources */,
@@ -2309,6 +2372,7 @@
 				DE20A9A929F1819B007DC75F /* RuneTableElement.swift in Sources */,
 				DE65765929C9DB270074CBE5 /* LunarTip.swift in Sources */,
 				DE6574F529C838E30074CBE5 /* Profile.swift in Sources */,
+				DE20A9BC29F189C0007DC75F /* PracticeCollectionElement.swift in Sources */,
 				DE65754429C838E60074CBE5 /* Date+Extension.swift in Sources */,
 				DE6576AF29CDA3A70074CBE5 /* HomeTableView.swift in Sources */,
 				DE65749E29C838DF0074CBE5 /* TabView.swift in Sources */,
