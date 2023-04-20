@@ -12,4 +12,5 @@ struct Rune: Codable, Hashable {
     let name: String
     let image: URL
     let blocks: [ContentBlock]
+    let tags: [String]
 }

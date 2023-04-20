@@ -9,7 +9,7 @@ import RxSwift
 
 protocol RunesManagerProtocol: Any {
     func obtainCovers(forceUpdate: Bool) -> Single<[RuneCover]>
-    func obtaitRune(id: Int) -> Single<Rune?>
+    func obtainRune(id: Int) -> Single<Rune?>
     func obtainRuneOnToday() -> Single<RuneOnDay?>
     func set(runeOnToday: RuneOnDay) -> Single<Void>
 }
@@ -31,7 +31,7 @@ extension RunesManager: RunesManagerProtocol {
         forceUpdate ? loadCovers() : cachedCovers()
     }
     
-    func obtaitRune(id: Int) -> Single<Rune?> {
+    func obtainRune(id: Int) -> Single<Rune?> {
         guard let userToken = sessionManager.getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }

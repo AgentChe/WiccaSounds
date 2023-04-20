@@ -99,7 +99,8 @@ extension HomeViewController: HomeTableDelegate {
     }
     
     func homeTableDidShow(runeCover: RuneCover) {
-        // TODO
+        let vc = RuneViewController.make(id: runeCover.id)
+        present(vc, animated: true)
     }
 }
 

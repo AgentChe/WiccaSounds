@@ -154,3 +154,6 @@
 "Tarot.Upright" = "Upright";
 "Tarot.Reversed" = "Reversed";
 "Tarot.Keywords" = "Keywords";
+
+// MARK: Rune
+"Rune.StandsFor" = "Stands for";

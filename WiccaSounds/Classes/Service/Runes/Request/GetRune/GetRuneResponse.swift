@@ -27,7 +27,8 @@ enum GetRuneResponse {
             id: id,
             name: name,
             image: imageUrl,
-            blocks: blocks
+            blocks: blocks,
+            tags: data["tags"] as? [String] ?? []
         )
     }
 }
