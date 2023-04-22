@@ -68,7 +68,8 @@ extension HomeViewController {
 // MARK: HomeTableDelegate
 extension HomeViewController: HomeTableDelegate {
     func homeTableDidTap(spell: Spell) {
-        // TODO
+        let vc = ContentViewController.make(unit: ContentViewModel.Unit.spell(spell))
+        present(vc, animated: true)
     }
     
     func homeTableDidTap(story: StoryCover) {

@@ -40,14 +40,13 @@ private extension GetHomeKitResponse {
         guard
             let id = json["spell_id"] as? Int,
             let name = json["name"] as? String,
+            let categoryId = json["category_id"] as? Int,
             let blocksArray = json["blocks"] as? [[String: Any]],
             let saved = json["saved"] as? Bool,
             let paid = json["paid"] as? Bool
         else {
             return nil
         }
-        
-        let categoryId = 1 // TODO: получать из json
         
         let blocks = blocksArray.compactMap { ContentBlockMapper.map(from: $0) }
         
@@ -84,13 +83,12 @@ private extension GetHomeKitResponse {
         guard
             let phase = json["phase"] as? String,
             let illumination = json["illumination"] as? Int,
+            let shadowOffset = json["shadow_offset"] as? Int,
             let daysArray = json["calendar"] as? [[String: Any]],
             let tipsArray = json["tips"] as? [[String: Any]]
         else {
             return nil
         }
-        
-        let shadowOffset = -3 // TODO: получать из json
         
         let days = daysArray.compactMap { json -> LunarDay? in
             guard
@@ -110,14 +108,12 @@ private extension GetHomeKitResponse {
             guard
                 let tag = json["tag"] as? String,
                 let blocksArray = json["blocks"] as? [[String: Any]],
+                let imagePath = json["image_url"] as? String,
+                let imageUrl = URL(string: imagePath),
                 let paid = json["paid"] as? Bool
             else {
                 return nil
             }
-            
-            // TODO: получать из json
-            let imagePath = json["image"] as? String ?? "https://i.ibb.co/mhbLv7d/pngtree-workplace-line-filled-icon-png-image-324882.jpg"
-            let imageUrl = URL(string: imagePath)!
             
             let blocks = blocksArray.compactMap { ContentBlockMapper.map(from: $0) }
             
