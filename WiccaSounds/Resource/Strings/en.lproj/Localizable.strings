@@ -157,6 +157,10 @@
 
 // MARK: Rune
 "Rune.StandsFor" = "Stands for";
+"Rune.Meaning" = "Meaning";
+"Rune.Sound" = "Sound";
+"Rune.Elements" = "Elements";
+"Rune.Color" = "Color";
 
 // MARK: Practice
 "Practice.Tarot" = "Tarot";

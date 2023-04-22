@@ -7,11 +7,13 @@
 
 import Foundation
 
-// TODO: изменена структура
 struct Rune: Codable, Hashable {
     let id: Int
     let name: String
     let image: URL
     let blocks: [ContentBlock]
     let tags: [String]
+    let sound: String?
+    let elements: String?
+    let color: String?
 }

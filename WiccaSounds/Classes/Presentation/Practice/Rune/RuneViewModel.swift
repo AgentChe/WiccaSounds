@@ -43,13 +43,38 @@ private extension RuneViewModel {
                     ])
                 }
                 
-                rune.blocks.forEach { block in
-                    switch block.content {
-                    case .text(let text):
-                        elements.append(.text(text))
-                    case .image(let image):
-                        elements.append(.contentImage(image))
+                if !rune.blocks.isEmpty {
+                    elements.append(.title("Rune.Meaning".localized))
+                    
+                    rune.blocks.forEach { block in
+                        switch block.content {
+                        case .text(let text):
+                            elements.append(.text(text))
+                        case .image(let image):
+                            elements.append(.contentImage(image))
+                        }
                     }
+                }
+                
+                if let sound = rune.sound {
+                    elements.append(contentsOf: [
+                        .title("Rune.Sound".localized),
+                        .text(sound)
+                    ])
+                }
+                
+                if let element = rune.elements {
+                    elements.append(contentsOf: [
+                        .title("Rune.Elements".localized),
+                        .text(element)
+                    ])
+                }
+                
+                if let color = rune.color {
+                    elements.append(contentsOf: [
+                        .title("Rune.Color".localized),
+                        .text(color)
+                    ])
                 }
                 
                 return elements

@@ -39,6 +39,7 @@
 		DE20A9BC29F189C0007DC75F /* PracticeCollectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A9BB29F189C0007DC75F /* PracticeCollectionElement.swift */; };
 		DE20A9BF29F189CE007DC75F /* PracticeTarotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A9BE29F189CE007DC75F /* PracticeTarotCell.swift */; };
 		DE20A9C129F189D5007DC75F /* PracticeRuneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A9C029F189D5007DC75F /* PracticeRuneCell.swift */; };
+		DE21CF5429F3E23A009FBCDF /* RuneContentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE21CF5329F3E23A009FBCDF /* RuneContentSection.swift */; };
 		DE65748D29C838DF0074CBE5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65744C29C838DE0074CBE5 /* SplashViewController.swift */; };
 		DE65748E29C838DF0074CBE5 /* SplashActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65744E29C838DE0074CBE5 /* SplashActivity.swift */; };
 		DE65748F29C838DF0074CBE5 /* SplashReceiptValidationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65744F29C838DE0074CBE5 /* SplashReceiptValidationObserver.swift */; };
@@ -331,6 +332,7 @@
 		DE20A9BB29F189C0007DC75F /* PracticeCollectionElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeCollectionElement.swift; sourceTree = "<group>"; };
 		DE20A9BE29F189CE007DC75F /* PracticeTarotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTarotCell.swift; sourceTree = "<group>"; };
 		DE20A9C029F189D5007DC75F /* PracticeRuneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeRuneCell.swift; sourceTree = "<group>"; };
+		DE21CF5329F3E23A009FBCDF /* RuneContentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneContentSection.swift; sourceTree = "<group>"; };
 		DE65743129C836CE0074CBE5 /* WiccaSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiccaSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE65744229C836D00074CBE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE65744C29C838DE0074CBE5 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -1607,6 +1609,7 @@
 				DE65763229C9D0080074CBE5 /* RuneCover.swift */,
 				DE65763429C9D00F0074CBE5 /* Rune.swift */,
 				DE75D88329E44AC4003F6B42 /* RuneOnDay.swift */,
+				DE21CF5329F3E23A009FBCDF /* RuneContentSection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2181,6 +2184,7 @@
 				DE6575E529C9BD1C0074CBE5 /* Candle.swift in Sources */,
 				DE6575DC29C9BB260074CBE5 /* SpellsMediator.swift in Sources */,
 				DE995BBE29E9897000B08290 /* SettingsViewModel.swift in Sources */,
+				DE21CF5429F3E23A009FBCDF /* RuneContentSection.swift in Sources */,
 				DE6576A729CD9F570074CBE5 /* HomeViewController.swift in Sources */,
 				DE65750129C838E30074CBE5 /* IAPError.swift in Sources */,
 				DE65756629C838E60074CBE5 /* AppDelegate.swift in Sources */,

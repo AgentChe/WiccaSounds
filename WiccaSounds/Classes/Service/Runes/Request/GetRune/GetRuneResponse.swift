@@ -16,7 +16,7 @@ enum GetRuneResponse {
             let name = data["name"] as? String,
             let imagePath = data["image"] as? String,
             let imageUrl = URL(string: imagePath),
-            let blocksArray = data["blocks"] as? [[String: Any]]
+            let blocksArray = data["meaning"] as? [[String: Any]]
         else {
             return nil
         }
@@ -28,7 +28,10 @@ enum GetRuneResponse {
             name: name,
             image: imageUrl,
             blocks: blocks,
-            tags: data["tags"] as? [String] ?? []
+            tags: data["stands_for"] as? [String] ?? [],
+            sound: data["sound"] as? String,
+            elements: data["elements"] as? String,
+            color: data["color"] as? String
         )
     }
 }
