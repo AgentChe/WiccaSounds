@@ -296,6 +296,12 @@
 		DE995BEC29E9ABC200B08290 /* StoryCardTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BE229E9ABC200B08290 /* StoryCardTableElement.swift */; };
 		DE995BED29E9ABC200B08290 /* StoryCardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BE329E9ABC200B08290 /* StoryCardTableView.swift */; };
 		DE995BEE29E9ABC200B08290 /* StoryCardStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BE429E9ABC200B08290 /* StoryCardStepsView.swift */; };
+		DEC3046D29F6915D00C6AAF1 /* NoiseSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3046C29F6915D00C6AAF1 /* NoiseSound.swift */; };
+		DEC3046F29F6916500C6AAF1 /* Noise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3046E29F6916500C6AAF1 /* Noise.swift */; };
+		DEC3047129F6916D00C6AAF1 /* NoiseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3047029F6916D00C6AAF1 /* NoiseCategory.swift */; };
+		DEC3047529F691E400C6AAF1 /* GetNoiseCategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3047429F691E400C6AAF1 /* GetNoiseCategoriesRequest.swift */; };
+		DEC3047729F691EA00C6AAF1 /* GetNoiseCategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3047629F691EA00C6AAF1 /* GetNoiseCategoriesResponse.swift */; };
+		DEC3047929F6943900C6AAF1 /* NoiseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3047829F6943900C6AAF1 /* NoiseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -591,6 +597,12 @@
 		DE995BE229E9ABC200B08290 /* StoryCardTableElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCardTableElement.swift; sourceTree = "<group>"; };
 		DE995BE329E9ABC200B08290 /* StoryCardTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCardTableView.swift; sourceTree = "<group>"; };
 		DE995BE429E9ABC200B08290 /* StoryCardStepsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCardStepsView.swift; sourceTree = "<group>"; };
+		DEC3046C29F6915D00C6AAF1 /* NoiseSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseSound.swift; sourceTree = "<group>"; };
+		DEC3046E29F6916500C6AAF1 /* Noise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noise.swift; sourceTree = "<group>"; };
+		DEC3047029F6916D00C6AAF1 /* NoiseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseCategory.swift; sourceTree = "<group>"; };
+		DEC3047429F691E400C6AAF1 /* GetNoiseCategoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNoiseCategoriesRequest.swift; sourceTree = "<group>"; };
+		DEC3047629F691EA00C6AAF1 /* GetNoiseCategoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNoiseCategoriesResponse.swift; sourceTree = "<group>"; };
+		DEC3047829F6943900C6AAF1 /* NoiseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseManager.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -972,6 +984,7 @@
 		DE6574C129C838E20074CBE5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DEC3046A29F6915000C6AAF1 /* Noise */,
 				DE65762D29C9CFC10074CBE5 /* Runes */,
 				DE65761629C9C7460074CBE5 /* Tarot */,
 				DE65760329C9C3DA0074CBE5 /* Crystals */,
@@ -2000,6 +2013,43 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		DEC3046A29F6915000C6AAF1 /* Noise */ = {
+			isa = PBXGroup;
+			children = (
+				DEC3047229F691CD00C6AAF1 /* Request */,
+				DEC3046B29F6915500C6AAF1 /* Model */,
+				DEC3047829F6943900C6AAF1 /* NoiseManager.swift */,
+			);
+			path = Noise;
+			sourceTree = "<group>";
+		};
+		DEC3046B29F6915500C6AAF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DEC3046C29F6915D00C6AAF1 /* NoiseSound.swift */,
+				DEC3046E29F6916500C6AAF1 /* Noise.swift */,
+				DEC3047029F6916D00C6AAF1 /* NoiseCategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DEC3047229F691CD00C6AAF1 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DEC3047329F691D700C6AAF1 /* GetNoiseCategories */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		DEC3047329F691D700C6AAF1 /* GetNoiseCategories */ = {
+			isa = PBXGroup;
+			children = (
+				DEC3047429F691E400C6AAF1 /* GetNoiseCategoriesRequest.swift */,
+				DEC3047629F691EA00C6AAF1 /* GetNoiseCategoriesResponse.swift */,
+			);
+			path = GetNoiseCategories;
+			sourceTree = "<group>";
+		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2181,6 +2231,7 @@
 				DE6575AE29C8BB180074CBE5 /* OInfoView.swift in Sources */,
 				DE65763529C9D00F0074CBE5 /* Rune.swift in Sources */,
 				DE65761E29C9C7980074CBE5 /* Tarot.swift in Sources */,
+				DEC3047929F6943900C6AAF1 /* NoiseManager.swift in Sources */,
 				DE6575E529C9BD1C0074CBE5 /* Candle.swift in Sources */,
 				DE6575DC29C9BB260074CBE5 /* SpellsMediator.swift in Sources */,
 				DE995BBE29E9897000B08290 /* SettingsViewModel.swift in Sources */,
@@ -2214,6 +2265,7 @@
 				DE20A9A329F18170007DC75F /* RuneViewModel.swift in Sources */,
 				DE6575ED29C9BD430074CBE5 /* SaveCandleRequest.swift in Sources */,
 				DE6576B129CDA3B10074CBE5 /* HomeTableElement.swift in Sources */,
+				DEC3047529F691E400C6AAF1 /* GetNoiseCategoriesRequest.swift in Sources */,
 				DE6575FD29C9C1BC0074CBE5 /* GetHerbsResponse.swift in Sources */,
 				DE20A9C129F189D5007DC75F /* PracticeRuneCell.swift in Sources */,
 				DE20A98329F144CA007DC75F /* TarotTableView.swift in Sources */,
@@ -2260,6 +2312,7 @@
 				DE65765129C9D76A0074CBE5 /* GetHomeKitResponse.swift in Sources */,
 				DE65759D29C843880074CBE5 /* GetSpellsCategoriesResponse.swift in Sources */,
 				DE65764129C9D42D0074CBE5 /* StoryCard.swift in Sources */,
+				DEC3047729F691EA00C6AAF1 /* GetNoiseCategoriesResponse.swift in Sources */,
 				DE65764629C9D4FF0074CBE5 /* GetStoryRequest.swift in Sources */,
 				DE995BE729E9ABC200B08290 /* StoryCardViewController.swift in Sources */,
 				DE65766629C9EA260074CBE5 /* ExploreFilterView.swift in Sources */,
@@ -2278,6 +2331,7 @@
 				DE65754729C838E60074CBE5 /* String+Extension.swift in Sources */,
 				DE6575EA29C9BD320074CBE5 /* GetCandlesResponse.swift in Sources */,
 				DE65764829C9D5040074CBE5 /* GetStoryResponse.swift in Sources */,
+				DEC3046D29F6915D00C6AAF1 /* NoiseSound.swift in Sources */,
 				DE65764F29C9D7640074CBE5 /* GetHomeKitRequest.swift in Sources */,
 				DE65766129C9E80A0074CBE5 /* ExploreViewModel.swift in Sources */,
 				DE6575E829C9BD2C0074CBE5 /* GetCandlesRequest.swift in Sources */,
@@ -2346,6 +2400,7 @@
 				DE65755429C838E60074CBE5 /* SignError.swift in Sources */,
 				DE8027F629D44F33003C9993 /* TarotOnDay.swift in Sources */,
 				DE6574FD29C838E30074CBE5 /* PurchaseValidationObserver.swift in Sources */,
+				DEC3047129F6916D00C6AAF1 /* NoiseCategory.swift in Sources */,
 				DE20A99429F1561A007DC75F /* TarotContentImageCell.swift in Sources */,
 				DE65755029C838E60074CBE5 /* ScreenSize.swift in Sources */,
 				DE6575DF29C9BD000074CBE5 /* CandlesManager.swift in Sources */,
@@ -2410,6 +2465,7 @@
 				DE65754629C838E60074CBE5 /* ObservableAndSingle+Extension.swift in Sources */,
 				DE65760729C9C3ED0074CBE5 /* CrystalsMediator.swift in Sources */,
 				DE65769E29CD59380074CBE5 /* BookmarksViewController.swift in Sources */,
+				DEC3046F29F6916500C6AAF1 /* Noise.swift in Sources */,
 				DE6574A029C838DF0074CBE5 /* TryAgainView.swift in Sources */,
 				DE65755829C838E60074CBE5 /* RequestReview.swift in Sources */,
 				DE65769029CCA5E50074CBE5 /* ContentTableView.swift in Sources */,
