@@ -13,7 +13,7 @@ final class MainViewCoordinator {
     lazy var homeVC = NavigationController(rootViewController: HomeViewController.make())
     lazy var exploreVC = NavigationController(rootViewController: ExploreViewController.make())
     lazy var practiceVC = NavigationController(rootViewController: PracticeViewController.make())
-    lazy var ambienceVC = NavigationController(rootViewController: UIViewController())
+    lazy var ambienceVC = NavigationController(rootViewController: SoundsViewController.make())
     
     private var previousVC: UIViewController?
     

@@ -302,6 +302,32 @@
 		DEC3047529F691E400C6AAF1 /* GetNoiseCategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3047429F691E400C6AAF1 /* GetNoiseCategoriesRequest.swift */; };
 		DEC3047729F691EA00C6AAF1 /* GetNoiseCategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3047629F691EA00C6AAF1 /* GetNoiseCategoriesResponse.swift */; };
 		DEC3047929F6943900C6AAF1 /* NoiseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3047829F6943900C6AAF1 /* NoiseManager.swift */; };
+		DEC3047C29F69A7000C6AAF1 /* SoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3047B29F69A7000C6AAF1 /* SoundsViewController.swift */; };
+		DEC3047E29F69A7A00C6AAF1 /* SoundsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3047D29F69A7A00C6AAF1 /* SoundsViewModel.swift */; };
+		DEC3048029F69AB600C6AAF1 /* SoundsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC3047F29F69AB600C6AAF1 /* SoundsScreen.storyboard */; };
+		DEC3049B29F69AD900C6AAF1 /* SoundGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3048329F69AD900C6AAF1 /* SoundGroupCell.swift */; };
+		DEC3049C29F69AD900C6AAF1 /* SoundGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC3048429F69AD900C6AAF1 /* SoundGroupCell.xib */; };
+		DEC3049D29F69AD900C6AAF1 /* SoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC3048529F69AD900C6AAF1 /* SoundCell.xib */; };
+		DEC3049E29F69AD900C6AAF1 /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3048629F69AD900C6AAF1 /* SoundCell.swift */; };
+		DEC3049F29F69AD900C6AAF1 /* SoundCellElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3048829F69AD900C6AAF1 /* SoundCellElement.swift */; };
+		DEC304A029F69AD900C6AAF1 /* SoundsMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC3048A29F69AD900C6AAF1 /* SoundsMenuView.xib */; };
+		DEC304A129F69AD900C6AAF1 /* SoundsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3048B29F69AD900C6AAF1 /* SoundsMenuView.swift */; };
+		DEC304A229F69AD900C6AAF1 /* SoundGroupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC3048D29F69AD900C6AAF1 /* SoundGroupView.xib */; };
+		DEC304A329F69AD900C6AAF1 /* SoundGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3048E29F69AD900C6AAF1 /* SoundGroupView.swift */; };
+		DEC304A429F69AD900C6AAF1 /* LoadingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3049229F69AD900C6AAF1 /* LoadingLayer.swift */; };
+		DEC304A529F69AD900C6AAF1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3049329F69AD900C6AAF1 /* LoadingView.swift */; };
+		DEC304A629F69AD900C6AAF1 /* NoiseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC3049429F69AD900C6AAF1 /* NoiseView.xib */; };
+		DEC304A729F69AD900C6AAF1 /* NoiseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3049529F69AD900C6AAF1 /* NoiseView.swift */; };
+		DEC304A829F69AD900C6AAF1 /* ViewportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3049629F69AD900C6AAF1 /* ViewportView.swift */; };
+		DEC304A929F69AD900C6AAF1 /* ViewportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC3049729F69AD900C6AAF1 /* ViewportView.xib */; };
+		DEC304AA29F69AD900C6AAF1 /* SoundsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC3049929F69AD900C6AAF1 /* SoundsListView.xib */; };
+		DEC304AB29F69AD900C6AAF1 /* SoundsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3049A29F69AD900C6AAF1 /* SoundsListView.swift */; };
+		DEC304AE29F69EAB00C6AAF1 /* MediaCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC304AD29F69EAB00C6AAF1 /* MediaCacheService.swift */; };
+		DEC304B029F69EC600C6AAF1 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC304AF29F69EC600C6AAF1 /* URL+Extension.swift */; };
+		DEC304BA29F6A22B00C6AAF1 /* AudioPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC304B229F6A22B00C6AAF1 /* AudioPlayerService.swift */; };
+		DEC304BC29F6A22B00C6AAF1 /* LoadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC304B529F6A22B00C6AAF1 /* LoadState.swift */; };
+		DEC304BF29F6A22B00C6AAF1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC304B829F6A22B00C6AAF1 /* Player.swift */; };
+		DEC304C029F6A22B00C6AAF1 /* NoiseAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC304B929F6A22B00C6AAF1 /* NoiseAudio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -603,6 +629,32 @@
 		DEC3047429F691E400C6AAF1 /* GetNoiseCategoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNoiseCategoriesRequest.swift; sourceTree = "<group>"; };
 		DEC3047629F691EA00C6AAF1 /* GetNoiseCategoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNoiseCategoriesResponse.swift; sourceTree = "<group>"; };
 		DEC3047829F6943900C6AAF1 /* NoiseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseManager.swift; sourceTree = "<group>"; };
+		DEC3047B29F69A7000C6AAF1 /* SoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsViewController.swift; sourceTree = "<group>"; };
+		DEC3047D29F69A7A00C6AAF1 /* SoundsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsViewModel.swift; sourceTree = "<group>"; };
+		DEC3047F29F69AB600C6AAF1 /* SoundsScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SoundsScreen.storyboard; sourceTree = "<group>"; };
+		DEC3048329F69AD900C6AAF1 /* SoundGroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundGroupCell.swift; sourceTree = "<group>"; };
+		DEC3048429F69AD900C6AAF1 /* SoundGroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoundGroupCell.xib; sourceTree = "<group>"; };
+		DEC3048529F69AD900C6AAF1 /* SoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoundCell.xib; sourceTree = "<group>"; };
+		DEC3048629F69AD900C6AAF1 /* SoundCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
+		DEC3048829F69AD900C6AAF1 /* SoundCellElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundCellElement.swift; sourceTree = "<group>"; };
+		DEC3048A29F69AD900C6AAF1 /* SoundsMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoundsMenuView.xib; sourceTree = "<group>"; };
+		DEC3048B29F69AD900C6AAF1 /* SoundsMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsMenuView.swift; sourceTree = "<group>"; };
+		DEC3048D29F69AD900C6AAF1 /* SoundGroupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoundGroupView.xib; sourceTree = "<group>"; };
+		DEC3048E29F69AD900C6AAF1 /* SoundGroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundGroupView.swift; sourceTree = "<group>"; };
+		DEC3049229F69AD900C6AAF1 /* LoadingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingLayer.swift; sourceTree = "<group>"; };
+		DEC3049329F69AD900C6AAF1 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		DEC3049429F69AD900C6AAF1 /* NoiseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoiseView.xib; sourceTree = "<group>"; };
+		DEC3049529F69AD900C6AAF1 /* NoiseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoiseView.swift; sourceTree = "<group>"; };
+		DEC3049629F69AD900C6AAF1 /* ViewportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewportView.swift; sourceTree = "<group>"; };
+		DEC3049729F69AD900C6AAF1 /* ViewportView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewportView.xib; sourceTree = "<group>"; };
+		DEC3049929F69AD900C6AAF1 /* SoundsListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoundsListView.xib; sourceTree = "<group>"; };
+		DEC3049A29F69AD900C6AAF1 /* SoundsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsListView.swift; sourceTree = "<group>"; };
+		DEC304AD29F69EAB00C6AAF1 /* MediaCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCacheService.swift; sourceTree = "<group>"; };
+		DEC304AF29F69EC600C6AAF1 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		DEC304B229F6A22B00C6AAF1 /* AudioPlayerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerService.swift; sourceTree = "<group>"; };
+		DEC304B529F6A22B00C6AAF1 /* LoadState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadState.swift; sourceTree = "<group>"; };
+		DEC304B829F6A22B00C6AAF1 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		DEC304B929F6A22B00C6AAF1 /* NoiseAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoiseAudio.swift; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -828,6 +880,7 @@
 		DE65744A29C838DE0074CBE5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DEC3047A29F69A6300C6AAF1 /* Sounds */,
 				DE20A97829F13E61007DC75F /* Practice */,
 				DE6576A529CD9F4A0074CBE5 /* Home */,
 				DE65765C29C9E7F30074CBE5 /* Explore */,
@@ -2050,6 +2103,135 @@
 			path = GetNoiseCategories;
 			sourceTree = "<group>";
 		};
+		DEC3047A29F69A6300C6AAF1 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DEC304AC29F69EA500C6AAF1 /* Utils */,
+				DEC3048129F69AD900C6AAF1 /* View */,
+				DEC3047F29F69AB600C6AAF1 /* SoundsScreen.storyboard */,
+				DEC3047B29F69A7000C6AAF1 /* SoundsViewController.swift */,
+				DEC3047D29F69A7A00C6AAF1 /* SoundsViewModel.swift */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		DEC3048129F69AD900C6AAF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEC3048229F69AD900C6AAF1 /* Cell */,
+				DEC3048929F69AD900C6AAF1 /* Menu */,
+				DEC3048C29F69AD900C6AAF1 /* SoundGroupView */,
+				DEC3048F29F69AD900C6AAF1 /* ViewportView */,
+				DEC3049829F69AD900C6AAF1 /* SoundsListView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DEC3048229F69AD900C6AAF1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DEC3048329F69AD900C6AAF1 /* SoundGroupCell.swift */,
+				DEC3048429F69AD900C6AAF1 /* SoundGroupCell.xib */,
+				DEC3048529F69AD900C6AAF1 /* SoundCell.xib */,
+				DEC3048629F69AD900C6AAF1 /* SoundCell.swift */,
+				DEC3048729F69AD900C6AAF1 /* Model */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DEC3048729F69AD900C6AAF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DEC3048829F69AD900C6AAF1 /* SoundCellElement.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DEC3048929F69AD900C6AAF1 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				DEC3048A29F69AD900C6AAF1 /* SoundsMenuView.xib */,
+				DEC3048B29F69AD900C6AAF1 /* SoundsMenuView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		DEC3048C29F69AD900C6AAF1 /* SoundGroupView */ = {
+			isa = PBXGroup;
+			children = (
+				DEC3048D29F69AD900C6AAF1 /* SoundGroupView.xib */,
+				DEC3048E29F69AD900C6AAF1 /* SoundGroupView.swift */,
+			);
+			path = SoundGroupView;
+			sourceTree = "<group>";
+		};
+		DEC3048F29F69AD900C6AAF1 /* ViewportView */ = {
+			isa = PBXGroup;
+			children = (
+				DEC3049029F69AD900C6AAF1 /* NoiseView */,
+				DEC3049629F69AD900C6AAF1 /* ViewportView.swift */,
+				DEC3049729F69AD900C6AAF1 /* ViewportView.xib */,
+			);
+			path = ViewportView;
+			sourceTree = "<group>";
+		};
+		DEC3049029F69AD900C6AAF1 /* NoiseView */ = {
+			isa = PBXGroup;
+			children = (
+				DEC3049129F69AD900C6AAF1 /* LoadingView */,
+				DEC3049429F69AD900C6AAF1 /* NoiseView.xib */,
+				DEC3049529F69AD900C6AAF1 /* NoiseView.swift */,
+			);
+			path = NoiseView;
+			sourceTree = "<group>";
+		};
+		DEC3049129F69AD900C6AAF1 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				DEC3049229F69AD900C6AAF1 /* LoadingLayer.swift */,
+				DEC3049329F69AD900C6AAF1 /* LoadingView.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		DEC3049829F69AD900C6AAF1 /* SoundsListView */ = {
+			isa = PBXGroup;
+			children = (
+				DEC3049929F69AD900C6AAF1 /* SoundsListView.xib */,
+				DEC3049A29F69AD900C6AAF1 /* SoundsListView.swift */,
+			);
+			path = SoundsListView;
+			sourceTree = "<group>";
+		};
+		DEC304AC29F69EA500C6AAF1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DEC304B129F6A22B00C6AAF1 /* AudioPlayerService */,
+				DEC304AD29F69EAB00C6AAF1 /* MediaCacheService.swift */,
+				DEC304AF29F69EC600C6AAF1 /* URL+Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DEC304B129F6A22B00C6AAF1 /* AudioPlayerService */ = {
+			isa = PBXGroup;
+			children = (
+				DEC304B329F6A22B00C6AAF1 /* Model */,
+				DEC304B229F6A22B00C6AAF1 /* AudioPlayerService.swift */,
+			);
+			path = AudioPlayerService;
+			sourceTree = "<group>";
+		};
+		DEC304B329F6A22B00C6AAF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DEC304B529F6A22B00C6AAF1 /* LoadState.swift */,
+				DEC304B829F6A22B00C6AAF1 /* Player.swift */,
+				DEC304B929F6A22B00C6AAF1 /* NoiseAudio.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EBE09BF5C1AF607E3456EE36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2127,20 +2309,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEC304A929F69AD900C6AAF1 /* ViewportView.xib in Resources */,
 				DE65758429C838F30074CBE5 /* Inter-SemiBold.ttf in Resources */,
+				DEC304A029F69AD900C6AAF1 /* SoundsMenuView.xib in Resources */,
 				DE65758829C838F30074CBE5 /* PlusJakartaSans-Bold.ttf in Resources */,
 				DE65758929C838F30074CBE5 /* PlusJakartaSans-ExtraBold.ttf in Resources */,
 				DE65758329C838F30074CBE5 /* Inter-Italic.otf in Resources */,
 				DE65758129C838F30074CBE5 /* Inter-Bold.ttf in Resources */,
+				DEC3049D29F69AD900C6AAF1 /* SoundCell.xib in Resources */,
 				DE65758629C838F30074CBE5 /* PlusJakartaSans-SemiBold.ttf in Resources */,
+				DEC3048029F69AB600C6AAF1 /* SoundsScreen.storyboard in Resources */,
 				DE65758529C838F30074CBE5 /* PlusJakartaSans-Medium.ttf in Resources */,
 				DE65758029C838F30074CBE5 /* Inter-Medium.ttf in Resources */,
+				DEC3049C29F69AD900C6AAF1 /* SoundGroupCell.xib in Resources */,
 				DE65758F29C838FB0074CBE5 /* Localizable.strings in Resources */,
 				DE65758229C838F30074CBE5 /* Inter-Regular.ttf in Resources */,
 				DE65759129C83FB00074CBE5 /* LaunchScreen.storyboard in Resources */,
+				DEC304A629F69AD900C6AAF1 /* NoiseView.xib in Resources */,
 				DE65758729C838F30074CBE5 /* PlusJakartaSans-Regular.ttf in Resources */,
 				DE65757229C838EF0074CBE5 /* Assets.xcassets in Resources */,
 				DE6575B029C8C02C0074CBE5 /* GoogleService-Info.plist in Resources */,
+				DEC304AA29F69AD900C6AAF1 /* SoundsListView.xib in Resources */,
+				DEC304A229F69AD900C6AAF1 /* SoundGroupView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2204,6 +2394,7 @@
 				DE995BD429E99F9600B08290 /* BookmarksEmptyView.swift in Sources */,
 				DE6574FC29C838E30074CBE5 /* IAPManager.swift in Sources */,
 				DE8027E829D40A26003C9993 /* HomeTipsCollectionCell.swift in Sources */,
+				DEC304A129F69AD900C6AAF1 /* SoundsMenuView.swift in Sources */,
 				DE995BED29E9ABC200B08290 /* StoryCardTableView.swift in Sources */,
 				DE65749D29C838DF0074CBE5 /* TabItemView.swift in Sources */,
 				DE6574FE29C838E30074CBE5 /* ProductPrice.swift in Sources */,
@@ -2213,6 +2404,7 @@
 				DE6575D829C9BAAE0074CBE5 /* SaveSpellRequest.swift in Sources */,
 				DE995BE929E9ABC200B08290 /* StoryCardTextCell.swift in Sources */,
 				DE65755D29C838E60074CBE5 /* NavigationController.swift in Sources */,
+				DEC3049B29F69AD900C6AAF1 /* SoundGroupCell.swift in Sources */,
 				DE8027E629D40A13003C9993 /* HomeTipsCollectionView.swift in Sources */,
 				DE20A97529F02BFC007DC75F /* ReviewCell.swift in Sources */,
 				DE65755929C838E60074CBE5 /* ImagePicker.swift in Sources */,
@@ -2226,6 +2418,7 @@
 				DE65767F29CB66BD0074CBE5 /* ExploreTableElement.swift in Sources */,
 				DE6575C329C9090D0074CBE5 /* OObjectsChannelView.swift in Sources */,
 				DE65755B29C838E60074CBE5 /* Toast.swift in Sources */,
+				DEC304BA29F6A22B00C6AAF1 /* AudioPlayerService.swift in Sources */,
 				DE65756829C838E60074CBE5 /* PushNotificationsAuthorizationStatus.swift in Sources */,
 				DE65762829C9C8E70074CBE5 /* GetTarotRequest.swift in Sources */,
 				DE6575AE29C8BB180074CBE5 /* OInfoView.swift in Sources */,
@@ -2246,11 +2439,13 @@
 				DE6575B929C8C1660074CBE5 /* OSpellsCategoriesTableElement.swift in Sources */,
 				DE65762F29C9CFF60074CBE5 /* RunesManager.swift in Sources */,
 				DE65766829C9EA670074CBE5 /* ExploreFilterItem.swift in Sources */,
+				DEC304A529F69AD900C6AAF1 /* LoadingView.swift in Sources */,
 				DE6574A329C838DF0074CBE5 /* OnboardingViewController.swift in Sources */,
 				DE65755629C838E60074CBE5 /* ContentError.swift in Sources */,
 				DE6575D529C9B8A20074CBE5 /* ContentBlockMapper.swift in Sources */,
 				DE65754129C838E60074CBE5 /* UIApplication+Extension.swift in Sources */,
 				DE20A97B29F13E84007DC75F /* TarotViewController.swift in Sources */,
+				DEC3049E29F69AD900C6AAF1 /* SoundCell.swift in Sources */,
 				DE65756F29C838E60074CBE5 /* FirebaseManager.swift in Sources */,
 				DE6575FB29C9C1B70074CBE5 /* GetHerbsRequest.swift in Sources */,
 				DE65756A29C838E60074CBE5 /* SceneDelegate.swift in Sources */,
@@ -2262,6 +2457,7 @@
 				DE6574BF29C838DF0074CBE5 /* OnboardingView.swift in Sources */,
 				DE6574A129C838DF0074CBE5 /* TryAgainViewController.swift in Sources */,
 				DE65756529C838E60074CBE5 /* CircleProgressView.swift in Sources */,
+				DEC304A429F69AD900C6AAF1 /* LoadingLayer.swift in Sources */,
 				DE20A9A329F18170007DC75F /* RuneViewModel.swift in Sources */,
 				DE6575ED29C9BD430074CBE5 /* SaveCandleRequest.swift in Sources */,
 				DE6576B129CDA3B10074CBE5 /* HomeTableElement.swift in Sources */,
@@ -2295,6 +2491,7 @@
 				DE65767129C9F2F00074CBE5 /* ExploreSpellCategoryCell.swift in Sources */,
 				DE65755E29C838E60074CBE5 /* TapAreaButton.swift in Sources */,
 				DE6575DA29C9BB030074CBE5 /* UnsaveSpellRequest.swift in Sources */,
+				DEC304C029F6A22B00C6AAF1 /* NoiseAudio.swift in Sources */,
 				DE65765529C9DA490074CBE5 /* LunarDay.swift in Sources */,
 				DE65754E29C838E60074CBE5 /* NumberLaunches.swift in Sources */,
 				DE65754D29C838E60074CBE5 /* Scalable.swift in Sources */,
@@ -2306,11 +2503,13 @@
 				DE65748D29C838DF0074CBE5 /* SplashViewController.swift in Sources */,
 				DE65749429C838DF0074CBE5 /* PaygateOptionInfo.swift in Sources */,
 				DE65749229C838DF0074CBE5 /* PaygateViewModel.swift in Sources */,
+				DEC304AE29F69EAB00C6AAF1 /* MediaCacheService.swift in Sources */,
 				DE65755A29C838E60074CBE5 /* RxActivityIndicator.swift in Sources */,
 				DE6575D029C9B5A50074CBE5 /* GetSpellsRequest.swift in Sources */,
 				DE65763F29C9D0590074CBE5 /* GetRuneResponse.swift in Sources */,
 				DE65765129C9D76A0074CBE5 /* GetHomeKitResponse.swift in Sources */,
 				DE65759D29C843880074CBE5 /* GetSpellsCategoriesResponse.swift in Sources */,
+				DEC304A329F69AD900C6AAF1 /* SoundGroupView.swift in Sources */,
 				DE65764129C9D42D0074CBE5 /* StoryCard.swift in Sources */,
 				DEC3047729F691EA00C6AAF1 /* GetNoiseCategoriesResponse.swift in Sources */,
 				DE65764629C9D4FF0074CBE5 /* GetStoryRequest.swift in Sources */,
@@ -2359,6 +2558,7 @@
 				DE65760229C9C1D30074CBE5 /* UnsaveHerbRequest.swift in Sources */,
 				DE65756129C838E60074CBE5 /* PaddingTextField.swift in Sources */,
 				DE995BBC29E9896B00B08290 /* SettingsViewController.swift in Sources */,
+				DEC304B029F69EC600C6AAF1 /* URL+Extension.swift in Sources */,
 				DE995BEE29E9ABC200B08290 /* StoryCardStepsView.swift in Sources */,
 				DE65749329C838DF0074CBE5 /* DefaultPaygate.swift in Sources */,
 				DE65769229CCA5EC0074CBE5 /* ContentTableElement.swift in Sources */,
@@ -2389,6 +2589,7 @@
 				DE65755529C838E60074CBE5 /* NetworkError.swift in Sources */,
 				DE6576B429CDA3CA0074CBE5 /* HomeTodayCell.swift in Sources */,
 				DE65749129C838DF0074CBE5 /* SplashView.swift in Sources */,
+				DEC304A829F69AD900C6AAF1 /* ViewportView.swift in Sources */,
 				DE20A9AF29F18977007DC75F /* PracticeViewController.swift in Sources */,
 				DE6574EC29C838E30074CBE5 /* Paygate.swift in Sources */,
 				DE6574FF29C838E30074CBE5 /* IAPActionResult.swift in Sources */,
@@ -2417,6 +2618,7 @@
 				DE65763329C9D0080074CBE5 /* RuneCover.swift in Sources */,
 				DE6575F829C9C1A90074CBE5 /* Herb.swift in Sources */,
 				DE995BE629E9ABC200B08290 /* StoryCardViewModel.swift in Sources */,
+				DEC3047E29F69A7A00C6AAF1 /* SoundsViewModel.swift in Sources */,
 				DE20A9AC29F181B5007DC75F /* RuneImageCell.swift in Sources */,
 				DE65769929CCA60D0074CBE5 /* ContentImageCell.swift in Sources */,
 				DE65763829C9D03D0074CBE5 /* GetRunesCoversRequest.swift in Sources */,
@@ -2426,6 +2628,7 @@
 				DE995BC629E9899700B08290 /* SettingsTableElement.swift in Sources */,
 				DE65755129C838E60074CBE5 /* ObservableRetrySingle.swift in Sources */,
 				DE6575A829C86C350074CBE5 /* OBirthdateView.swift in Sources */,
+				DEC3047C29F69A7000C6AAF1 /* SoundsViewController.swift in Sources */,
 				DE65768229CC364D0074CBE5 /* ExploreRowUnitsCell.swift in Sources */,
 				DE65769C29CD59320074CBE5 /* BookmarksView.swift in Sources */,
 				DE20A9A929F1819B007DC75F /* RuneTableElement.swift in Sources */,
@@ -2442,13 +2645,17 @@
 				DE65765F29C9E8040074CBE5 /* ExploreViewController.swift in Sources */,
 				DE65767829C9FEDC0074CBE5 /* ExploreSpellCell.swift in Sources */,
 				DE20A99A29F17F61007DC75F /* TagView.swift in Sources */,
+				DEC3049F29F69AD900C6AAF1 /* SoundCellElement.swift in Sources */,
 				DE65764A29C9D6380074CBE5 /* ContentManager.swift in Sources */,
 				DE995BE829E9ABC200B08290 /* StoryCardImageCell.swift in Sources */,
 				DE20A98529F144D3007DC75F /* TarotTableElement.swift in Sources */,
+				DEC304BF29F6A22B00C6AAF1 /* Player.swift in Sources */,
 				DE65756E29C838E60074CBE5 /* AmplitudeManager.swift in Sources */,
+				DEC304BC29F6A22B00C6AAF1 /* LoadState.swift in Sources */,
 				DE65762A29C9C8F50074CBE5 /* GetTarotResponse.swift in Sources */,
 				DE65761829C9C75B0074CBE5 /* TarotManager.swift in Sources */,
 				DE65754F29C838E60074CBE5 /* TextAttributes.swift in Sources */,
+				DEC304A729F69AD900C6AAF1 /* NoiseView.swift in Sources */,
 				DE6575B229C8C0DA0074CBE5 /* OSpellsCategoriesView.swift in Sources */,
 				DE65755729C838E60074CBE5 /* Weak.swift in Sources */,
 				DE65749729C838DF0074CBE5 /* PaygateView.swift in Sources */,
@@ -2464,6 +2671,7 @@
 				DE6576B629CDA9B90074CBE5 /* HomeSpellCell.swift in Sources */,
 				DE65754629C838E60074CBE5 /* ObservableAndSingle+Extension.swift in Sources */,
 				DE65760729C9C3ED0074CBE5 /* CrystalsMediator.swift in Sources */,
+				DEC304AB29F69AD900C6AAF1 /* SoundsListView.swift in Sources */,
 				DE65769E29CD59380074CBE5 /* BookmarksViewController.swift in Sources */,
 				DEC3046F29F6916500C6AAF1 /* Noise.swift in Sources */,
 				DE6574A029C838DF0074CBE5 /* TryAgainView.swift in Sources */,
