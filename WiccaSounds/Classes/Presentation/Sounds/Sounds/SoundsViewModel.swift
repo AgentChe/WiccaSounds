@@ -9,16 +9,8 @@ import RxSwift
 import RxCocoa
 
 final class SoundsViewModel {
-    private lazy var noiseManager = NoiseManager()
     private lazy var mediaCacheService = MediaCacheService()
     private lazy var audioPlayerService = AudioPlayerService.shared
-    
-    func sounds() -> Driver<[NoiseCategory]> {
-        noiseManager
-            .obtainNoiseCategories(forceUpdate: false)
-            .map { $0.sorted(by: { $0.sort < $1.sort }) }
-            .asDriver(onErrorJustReturn: [])
-    }
     
     func add(noises: Set<NoiseSound>) -> Completable {
         audioPlayerService.add(noises: noises)

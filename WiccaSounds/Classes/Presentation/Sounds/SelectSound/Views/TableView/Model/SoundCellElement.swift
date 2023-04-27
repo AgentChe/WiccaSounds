@@ -10,11 +10,11 @@ import Foundation.NSURL
 
 struct SoundCellElement {
     let noise: Noise 
-    let paid: Bool
+    let isActiveSubscription: Bool
     
     static func map(noises: [Noise], isActiveSubscription: Bool) -> [SoundCellElement] {
-        return noises.map {
-            SoundCellElement(noise: $0, paid: isActiveSubscription ? true : !$0.paid)
+        noises.map {
+            SoundCellElement(noise: $0, isActiveSubscription: isActiveSubscription ? true : !$0.paid)
         }
     }
 }

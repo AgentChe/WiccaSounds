@@ -20,8 +20,9 @@ final class SoundsViewController: UIViewController {
     private let sounds = BehaviorRelay<Set<Noise>>(value: [])
     private let disposeBag = DisposeBag()
     
-    private let soundsListView = SoundsListView()
     private let closeButton = UIButton()
+    
+    private lazy var didSelectSoundItemTrigger = PublishRelay<SoundCellElement>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,18 +31,22 @@ final class SoundsViewController: UIViewController {
         
         closeButton.setImage(UIImage(named: "close_sounds"), for: .normal)
         
-        let elements = viewModel.sounds()
-        
-        let selectedCellModel = soundsListView
-            .selectedItem
+        let selectedCellModel = didSelectSoundItemTrigger
         
         let selectedNoise = selectedCellModel
-            .filter { $0.paid }
+            .filter { $0.isActiveSubscription }
             .map { $0.noise }
         
-        elements
-            .drive(onNext: { [weak self] noiseCategories in
-                self?.soundsListView.setup(noiseCategories: noiseCategories, isActiveSubscription: true)
+        Observable
+            .merge(
+                addSoundButton.rx.tap.asObservable(),
+                viewportView.didTapAdd.asObservable()
+            )
+            .bind(to: Binder(self) { base, void in
+                let vc = SelectSoundViewController.make { [weak self] element in
+                    self?.didSelectSoundItemTrigger.accept(element)
+                }
+                base.present(vc, animated: true)
             })
             .disposed(by: disposeBag)
         
@@ -66,21 +71,6 @@ final class SoundsViewController: UIViewController {
 
         selectedNoise
             .bind(to: viewportView.item)
-            .disposed(by: disposeBag)
-        
-        let userAction = Observable<UserAction>
-            .merge(
-                viewportView.didTapAdd.asObservable().map { _ in .add },
-                addSoundButton.rx.tap.map { _ in .add },
-                closeButton.rx.tap.map { _ in .close },
-                selectedNoise.map { _ in .close }
-            )
-        
-        userAction
-            .withLatestFrom(sounds) { ($0, $1) }
-            .bind(to: Binder(self) { base, elements in
-                base.showSoundsList(action: elements.0, isEmpty: elements.1.isEmpty)
-            })
             .disposed(by: disposeBag)
         
         let noiseSounds = sounds
@@ -181,57 +171,9 @@ extension SoundsViewController {
 }
 
 private extension SoundsViewController {
-    enum UserAction {
-        case add
-        case close
-    }
-    
     enum NoiseAction {
         case add(Noise)
         case delete(Int)
-    }
-    
-    func showSoundsList(action: UserAction, isEmpty: Bool) {
-        viewportView.isHidden = isEmpty
-        emptyView.isHidden = !isEmpty
-        switch action {
-        case .add:
-            soundsListView.frame = view.frame
-            closeButton.frame = CGRect(origin: CGPoint(x: view.frame.width - 50.18, y: 50), size: CGSize(width: 32, height: 32))
-            closeButton.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-            view.addSubview(soundsListView)
-            view.addSubview(closeButton)
-            let originY = view.frame.origin.y + 88
-            soundsListView.frame.size.height -= 88
-            soundsListView.frame.origin.y += view.frame.height
-
-            UIView.animate(withDuration: 0.5) {
-                self.soundsListView.frame.origin.y = originY
-                self.closeButton.transform = .identity
-                if isEmpty {
-                    self.emptyView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
-                    self.addSoundButton.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-                } else {
-                    self.viewportView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
-                }
-            }
-            
-        case .close:
-            UIView.animate(withDuration: 0.5, animations: {
-                self.closeButton.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-                self.soundsListView.frame.origin.y += self.view.frame.height
-                if isEmpty {
-                    self.emptyView.transform = .identity
-                    self.addSoundButton.transform = .identity
-                } else {
-                    self.viewportView.transform = .identity
-                }
-            }) { _ in
-                self.closeButton.transform = .identity
-                self.closeButton.removeFromSuperview()
-                self.soundsListView.removeFromSuperview()
-            }
-        }
     }
 }
 
