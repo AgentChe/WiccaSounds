@@ -10,8 +10,9 @@ import RxSwift
 import RxCocoa
 
 final class SoundsViewController: UIViewController {
+    lazy var viewportView = makeViewportView()
+    
     @IBOutlet private var addSoundButton: UIButton!
-    @IBOutlet private var soundsView: ViewportView!
     @IBOutlet private var emptyView: UIView!
     
     private lazy var viewModel = SoundsViewModel()
@@ -24,6 +25,8 @@ final class SoundsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        makeConstraints()
         
         closeButton.setImage(UIImage(named: "close_sounds"), for: .normal)
         
@@ -43,7 +46,7 @@ final class SoundsViewController: UIViewController {
             .disposed(by: disposeBag)
         
         let addSound = selectedNoise.map { NoiseAction.add($0) }
-        let deleteSound = soundsView.deletedSound.map { NoiseAction.delete($0) }
+        let deleteSound = viewportView.deletedSound.map { NoiseAction.delete($0) }
         
         Observable<NoiseAction>
             .merge(addSound, deleteSound)
@@ -62,12 +65,12 @@ final class SoundsViewController: UIViewController {
             .disposed(by: disposeBag)
 
         selectedNoise
-            .bind(to: soundsView.item)
+            .bind(to: viewportView.item)
             .disposed(by: disposeBag)
         
         let userAction = Observable<UserAction>
             .merge(
-                soundsView.didTapAdd.asObservable().map { _ in .add },
+                viewportView.didTapAdd.asObservable().map { _ in .add },
                 addSoundButton.rx.tap.map { _ in .add },
                 closeButton.rx.tap.map { _ in .close },
                 selectedNoise.map { _ in .close }
@@ -94,7 +97,7 @@ final class SoundsViewController: UIViewController {
             .drive(viewModel.playNoise)
             .disposed(by: disposeBag)
         
-        soundsView.changeVolume
+        viewportView.changeVolume
             .emit(to: viewModel.noiseVolume)
             .disposed(by: disposeBag)
         
@@ -108,7 +111,7 @@ final class SoundsViewController: UIViewController {
                 loadableSounds.asDriver()
             ) { Array($0.intersection($1)) }
             .distinctUntilChanged()
-            .drive(soundsView.loadingSounds)
+            .drive(viewportView.loadingSounds)
             .disposed(by: disposeBag)
         
         noiseSounds
@@ -159,7 +162,7 @@ final class SoundsViewController: UIViewController {
             .drive()
             .disposed(by: disposeBag)
         
-        soundsView
+        viewportView
             .didTapSleepTimer
             .emit(onNext: { [weak self] in
                 self?.viewModel.showSleepTimerScreen()
@@ -189,7 +192,7 @@ private extension SoundsViewController {
     }
     
     func showSoundsList(action: UserAction, isEmpty: Bool) {
-        soundsView.isHidden = isEmpty
+        viewportView.isHidden = isEmpty
         emptyView.isHidden = !isEmpty
         switch action {
         case .add:
@@ -209,7 +212,7 @@ private extension SoundsViewController {
                     self.emptyView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
                     self.addSoundButton.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
                 } else {
-                    self.soundsView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
+                    self.viewportView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
                 }
             }
             
@@ -221,7 +224,7 @@ private extension SoundsViewController {
                     self.emptyView.transform = .identity
                     self.addSoundButton.transform = .identity
                 } else {
-                    self.soundsView.transform = .identity
+                    self.viewportView.transform = .identity
                 }
             }) { _ in
                 self.closeButton.transform = .identity
@@ -229,5 +232,28 @@ private extension SoundsViewController {
                 self.soundsListView.removeFromSuperview()
             }
         }
+    }
+}
+
+// MARK: Make constraints
+private extension SoundsViewController {
+    func makeConstraints() {
+        NSLayoutConstraint.activate([
+            viewportView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            viewportView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            viewportView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            viewportView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+    }
+}
+
+// MARK: Lazy initialization
+private extension SoundsViewController {
+    func makeViewportView() -> ViewportView {
+        let view = ViewportView()
+        view.backgroundColor = Appearance.background
+        view.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(view)
+        return view
     }
 }

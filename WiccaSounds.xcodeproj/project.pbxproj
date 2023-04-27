@@ -40,6 +40,8 @@
 		DE20A9BF29F189CE007DC75F /* PracticeTarotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A9BE29F189CE007DC75F /* PracticeTarotCell.swift */; };
 		DE20A9C129F189D5007DC75F /* PracticeRuneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A9C029F189D5007DC75F /* PracticeRuneCell.swift */; };
 		DE21CF5429F3E23A009FBCDF /* RuneContentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE21CF5329F3E23A009FBCDF /* RuneContentSection.swift */; };
+		DE2DA26D29FA8B83000B3F62 /* SoundsMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DA26C29FA8B83000B3F62 /* SoundsMenuButton.swift */; };
+		DE2DA26F29FA978F000B3F62 /* ViewportTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DA26E29FA978F000B3F62 /* ViewportTitleView.swift */; };
 		DE65748D29C838DF0074CBE5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65744C29C838DE0074CBE5 /* SplashViewController.swift */; };
 		DE65748E29C838DF0074CBE5 /* SplashActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65744E29C838DE0074CBE5 /* SplashActivity.swift */; };
 		DE65748F29C838DF0074CBE5 /* SplashReceiptValidationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65744F29C838DE0074CBE5 /* SplashReceiptValidationObserver.swift */; };
@@ -310,7 +312,6 @@
 		DEC3049D29F69AD900C6AAF1 /* SoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC3048529F69AD900C6AAF1 /* SoundCell.xib */; };
 		DEC3049E29F69AD900C6AAF1 /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3048629F69AD900C6AAF1 /* SoundCell.swift */; };
 		DEC3049F29F69AD900C6AAF1 /* SoundCellElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3048829F69AD900C6AAF1 /* SoundCellElement.swift */; };
-		DEC304A029F69AD900C6AAF1 /* SoundsMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC3048A29F69AD900C6AAF1 /* SoundsMenuView.xib */; };
 		DEC304A129F69AD900C6AAF1 /* SoundsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3048B29F69AD900C6AAF1 /* SoundsMenuView.swift */; };
 		DEC304A229F69AD900C6AAF1 /* SoundGroupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC3048D29F69AD900C6AAF1 /* SoundGroupView.xib */; };
 		DEC304A329F69AD900C6AAF1 /* SoundGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3048E29F69AD900C6AAF1 /* SoundGroupView.swift */; };
@@ -319,7 +320,6 @@
 		DEC304A629F69AD900C6AAF1 /* NoiseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC3049429F69AD900C6AAF1 /* NoiseView.xib */; };
 		DEC304A729F69AD900C6AAF1 /* NoiseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3049529F69AD900C6AAF1 /* NoiseView.swift */; };
 		DEC304A829F69AD900C6AAF1 /* ViewportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3049629F69AD900C6AAF1 /* ViewportView.swift */; };
-		DEC304A929F69AD900C6AAF1 /* ViewportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC3049729F69AD900C6AAF1 /* ViewportView.xib */; };
 		DEC304AA29F69AD900C6AAF1 /* SoundsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC3049929F69AD900C6AAF1 /* SoundsListView.xib */; };
 		DEC304AB29F69AD900C6AAF1 /* SoundsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3049A29F69AD900C6AAF1 /* SoundsListView.swift */; };
 		DEC304AE29F69EAB00C6AAF1 /* MediaCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC304AD29F69EAB00C6AAF1 /* MediaCacheService.swift */; };
@@ -365,6 +365,8 @@
 		DE20A9BE29F189CE007DC75F /* PracticeTarotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTarotCell.swift; sourceTree = "<group>"; };
 		DE20A9C029F189D5007DC75F /* PracticeRuneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeRuneCell.swift; sourceTree = "<group>"; };
 		DE21CF5329F3E23A009FBCDF /* RuneContentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneContentSection.swift; sourceTree = "<group>"; };
+		DE2DA26C29FA8B83000B3F62 /* SoundsMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsMenuButton.swift; sourceTree = "<group>"; };
+		DE2DA26E29FA978F000B3F62 /* ViewportTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewportTitleView.swift; sourceTree = "<group>"; };
 		DE65743129C836CE0074CBE5 /* WiccaSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiccaSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE65744229C836D00074CBE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE65744C29C838DE0074CBE5 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -637,7 +639,6 @@
 		DEC3048529F69AD900C6AAF1 /* SoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoundCell.xib; sourceTree = "<group>"; };
 		DEC3048629F69AD900C6AAF1 /* SoundCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
 		DEC3048829F69AD900C6AAF1 /* SoundCellElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundCellElement.swift; sourceTree = "<group>"; };
-		DEC3048A29F69AD900C6AAF1 /* SoundsMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoundsMenuView.xib; sourceTree = "<group>"; };
 		DEC3048B29F69AD900C6AAF1 /* SoundsMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsMenuView.swift; sourceTree = "<group>"; };
 		DEC3048D29F69AD900C6AAF1 /* SoundGroupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoundGroupView.xib; sourceTree = "<group>"; };
 		DEC3048E29F69AD900C6AAF1 /* SoundGroupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundGroupView.swift; sourceTree = "<group>"; };
@@ -646,7 +647,6 @@
 		DEC3049429F69AD900C6AAF1 /* NoiseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoiseView.xib; sourceTree = "<group>"; };
 		DEC3049529F69AD900C6AAF1 /* NoiseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoiseView.swift; sourceTree = "<group>"; };
 		DEC3049629F69AD900C6AAF1 /* ViewportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewportView.swift; sourceTree = "<group>"; };
-		DEC3049729F69AD900C6AAF1 /* ViewportView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewportView.xib; sourceTree = "<group>"; };
 		DEC3049929F69AD900C6AAF1 /* SoundsListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoundsListView.xib; sourceTree = "<group>"; };
 		DEC3049A29F69AD900C6AAF1 /* SoundsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsListView.swift; sourceTree = "<group>"; };
 		DEC304AD29F69EAB00C6AAF1 /* MediaCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCacheService.swift; sourceTree = "<group>"; };
@@ -2150,8 +2150,8 @@
 		DEC3048929F69AD900C6AAF1 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				DEC3048A29F69AD900C6AAF1 /* SoundsMenuView.xib */,
 				DEC3048B29F69AD900C6AAF1 /* SoundsMenuView.swift */,
+				DE2DA26C29FA8B83000B3F62 /* SoundsMenuButton.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -2170,7 +2170,7 @@
 			children = (
 				DEC3049029F69AD900C6AAF1 /* NoiseView */,
 				DEC3049629F69AD900C6AAF1 /* ViewportView.swift */,
-				DEC3049729F69AD900C6AAF1 /* ViewportView.xib */,
+				DE2DA26E29FA978F000B3F62 /* ViewportTitleView.swift */,
 			);
 			path = ViewportView;
 			sourceTree = "<group>";
@@ -2309,9 +2309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEC304A929F69AD900C6AAF1 /* ViewportView.xib in Resources */,
 				DE65758429C838F30074CBE5 /* Inter-SemiBold.ttf in Resources */,
-				DEC304A029F69AD900C6AAF1 /* SoundsMenuView.xib in Resources */,
 				DE65758829C838F30074CBE5 /* PlusJakartaSans-Bold.ttf in Resources */,
 				DE65758929C838F30074CBE5 /* PlusJakartaSans-ExtraBold.ttf in Resources */,
 				DE65758329C838F30074CBE5 /* Inter-Italic.otf in Resources */,
@@ -2478,6 +2476,7 @@
 				DE6575CB29C9B47E0074CBE5 /* ContentBlock.swift in Sources */,
 				DE65749929C838DF0074CBE5 /* PaygateProductButton.swift in Sources */,
 				DE6575C129C8D7AD0074CBE5 /* OMoonSacredCell.swift in Sources */,
+				DE2DA26F29FA978F000B3F62 /* ViewportTitleView.swift in Sources */,
 				DE995BE529E9ABC200B08290 /* StoryCardView.swift in Sources */,
 				DE65760E29C9C40B0074CBE5 /* GetCrystalsRequest.swift in Sources */,
 				DE65762329C9C8130074CBE5 /* GetTarotCoversRequest.swift in Sources */,
@@ -2549,6 +2548,7 @@
 				DE995BCC29E9920500B08290 /* SelectSpellsViewController.swift in Sources */,
 				DE75D88629E44CDD003F6B42 /* HomePracticeRuneView.swift in Sources */,
 				DE20A99C29F17F76007DC75F /* TagsView.swift in Sources */,
+				DE2DA26D29FA8B83000B3F62 /* SoundsMenuButton.swift in Sources */,
 				DE65749629C838DF0074CBE5 /* PaygateInteractor.swift in Sources */,
 				DE6576A929CD9F5E0074CBE5 /* HomeViewModel.swift in Sources */,
 				DE65765729C9DA750074CBE5 /* Lunar.swift in Sources */,

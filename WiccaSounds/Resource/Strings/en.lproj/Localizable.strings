@@ -165,3 +165,12 @@
 // MARK: Practice
 "Practice.Tarot" = "Tarot";
 "Practice.Runes" = "Runes";
+
+// MARK: Sounds
+"Sounds.MenuTitle" = "My New Scene";
+"Sounds.SleepTimer" = "Sleep Timer";
+"Sounds.ClearAll" = "Clear All";
+"Sounds.Weaker" = "Weaker";
+"Sounds.Stronger" = "Stronger";
+"Sounds.Hush" = "Hush";
+"Sounds.Louder" = "Louder";

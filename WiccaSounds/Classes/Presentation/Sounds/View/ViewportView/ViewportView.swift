@@ -10,28 +10,28 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ViewportView: UIView {
-    
+final class ViewportView: UIView {
     typealias Volume = (to: Int, volume: Float)
-
-    @IBOutlet private var louderLabel: UILabel!
-    @IBOutlet private var hushLabel: UILabel!
-    @IBOutlet private var weakerLabel: UILabel!
-    @IBOutlet private var strongerLabel: UILabel!
-    @IBOutlet private var containerView: UIView!
-    @IBOutlet private var addButton: UIButton!
-    @IBOutlet private var deleteArea: UIImageView!
-    @IBOutlet private var menuTitleView: UIView!
-    @IBOutlet private var menuView: SoundsMenuView!
+    
+    lazy var titleView = makeTitleView()
+    lazy var menuView = makeMenuView()
+    lazy var weakerLabel = makeVolumeLabel(title: "Sounds.Weaker".localized)
+    lazy var strongerLabel = makeVolumeLabel(title: "Sounds.Stronger".localized)
+    lazy var hushLabel = makeVolumeLabel(title: "Sounds.Hush".localized)
+    lazy var louderLabel = makeVolumeLabel(title: "Sounds.Louder".localized)
+    lazy var deleteAreaView = makeDeleteAreaView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        makeConstraints()
         initialize()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        initialize()
+        
+        fatalError("Use init(frame:)")
     }
     
     private func initialize() {
@@ -40,10 +40,6 @@ class ViewportView: UIView {
     }
     
     private func setupUI() {
-        UINib(nibName: "ViewportView", bundle: nil).instantiate(withOwner: self, options: nil)
-        containerView.frame = bounds
-        addSubview(containerView)
-        
         addGestureRecognizer(tapGesture)
         
         [
@@ -55,7 +51,7 @@ class ViewportView: UIView {
             $0?.alpha = 0
         }
         
-        deleteArea.alpha = 0
+        deleteAreaView.alpha = 0
         
         trashContainerPath = scalePath
         
@@ -74,11 +70,11 @@ class ViewportView: UIView {
             }
         
         menuView
-            .didTapClearAll
+            .clearAllButton.rx.tap
             .withLatestFrom(sounds.asSignal(onErrorSignalWith: .never()))
-            .emit(onNext: { [weak self] sounds in
+            .bind(to: Binder(self) { base, sounds in
                 for sound in sounds {
-                    self?.deletedRelay.accept(.delete(id: sound.id))
+                    base.deletedRelay.accept(.delete(id: sound.id))
                 }
             })
             .disposed(by: disposeBag)
@@ -176,8 +172,8 @@ class ViewportView: UIView {
                
             else { return nil }
 
-            let imageCenter = view.convert(view.imageCenter, to: self.containerView)
-            let deleteFrame = self.deleteArea.frame
+            let imageCenter = view.convert(view.imageCenter, to: self)
+            let deleteFrame = self.deleteAreaView.frame
             guard deleteFrame.contains(imageCenter) else { return nil }
             
             return .delete(id: id)
@@ -209,15 +205,12 @@ class ViewportView: UIView {
             .bind(to: changeVolumeRelay)
             .disposed(by: disposeBag)
         
-        let menuTitleTapGesture = UITapGestureRecognizer()
-        menuTitleView.addGestureRecognizer(menuTitleTapGesture)
-        
         Observable
-            .merge(menuTitleTapGesture.rx.event.map { _ in 1 },
+            .merge(titleView.menuButton.rx.tap.map { _ in 1 },
                    didTap.asObservable().map { _ in 0 },
                    viewsTranslation.map { _ in 0 },
                    didTapSleepTimer.asObservable().map { _ in 0 },
-                   menuView.didTapClearAll.asObservable().map { _ in 0 })
+                   menuView.clearAllButton.rx.tap.asObservable().map { _ in 0 })
             .subscribe(onNext: { [weak self] alpha in
                 UIView.animate(withDuration: 0.3, animations: {
                     self?.menuView.alpha = alpha
@@ -261,8 +254,8 @@ class ViewportView: UIView {
         guard let self = self else { return .empty() }
         switch action {
         case let .changed(center, width):
-            let posY = floor(center.y > self.containerView.center.y ? center.y + width / 2 : center.y - width / 2)
-            let posX = floor(center.x > self.containerView.center.x ? center.x + width / 2 : center.x - width / 2)
+            let posY = floor(center.y > self.center.y ? center.y + width / 2 : center.y - width / 2)
+            let posX = floor(center.x > self.center.x ? center.x + width / 2 : center.x - width / 2)
             let volume = Float(round((1 - posY / 100 / self.volumeValue) * 100) / 100)
             let factor = Float(round((1 - posX / 100 / self.volumeFactor) * 100) / 100)
             let ids = sounds.first(where: { $0.id == id })?.sounds.map { $0.id } ?? []
@@ -298,7 +291,7 @@ class ViewportView: UIView {
 extension ViewportView {
     
     var didTapSleepTimer: Signal<Void> {
-        return menuView.didTapSleep
+        menuView.sleepTimerButton.rx.tap.asSignal()
     }
     
     var didTap: Signal<Void> {
@@ -322,7 +315,7 @@ extension ViewportView {
     }
     
     var didTapAdd: Signal<Void> {
-        return addButton.rx.tap.asSignal()
+        titleView.addButton.rx.tap.asSignal()
     }
     
     var deletedSound: Observable<Int> {
@@ -372,11 +365,10 @@ private extension ViewportView {
             
             UIView.animate(withDuration: 0.2) {
                 views.forEach {
-                    $0?.alpha = isHidden ? 0 : 1
+                    $0.alpha = isHidden ? 0 : 1
                 }
                 
-                base.addButton.alpha = !isHidden ? 0 : 1
-                base.menuTitleView.alpha = !isHidden ? 0 : 1
+                base.titleView.alpha = !isHidden ? 0 : 1
             }
         }
     }
@@ -384,10 +376,10 @@ private extension ViewportView {
     var trashAndScaleAnimate: Binder<(NoiseView.Action, NoiseView)> {
         return Binder(self) { base, tuple in
             let (action, view) = tuple
-            let imageCenter = view.convert(view.imageCenter, to: base.containerView)
+            let imageCenter = view.convert(view.imageCenter, to: base)
             
             
-            let minimumScale = base.deleteArea.bounds.size.width / view.imageSize.width
+            let minimumScale = base.deleteAreaView.bounds.size.width / view.imageSize.width
             
             let scale = base.animateNoiseScale(center: imageCenter, minimumScale: minimumScale, posY: imageCenter.y)
             
@@ -400,10 +392,10 @@ private extension ViewportView {
             case .ended, .touchCancelled:
                 UIView.animate(withDuration: 0.2) {
                     view.transform = CGAffineTransform(scaleX: scale, y: scale)
-                    base.deleteArea.alpha = 0
+                    base.deleteAreaView.alpha = 0
                 }
             default:
-                base.deleteArea.alpha = base.animateTrashAlpha(posY: imageCenter.y)
+                base.deleteAreaView.alpha = base.animateTrashAlpha(posY: imageCenter.y)
                 let newScale = scale * 1.2
                 view.transform = CGAffineTransform(scaleX: newScale, y: newScale)
             }
@@ -427,8 +419,8 @@ private extension ViewportView {
             
             return scale
         } else {
-            let scaleFactor = 1 - (maxScale - minScale) / (containerView.bounds.height)
-            let scale = maxScale - (posY - trashScaleRadius) / (containerView.bounds.height) * scaleFactor
+            let scaleFactor = 1 - (maxScale - minScale) / (bounds.height)
+            let scale = maxScale - (posY - trashScaleRadius) / (bounds.height) * scaleFactor
             
             guard scale >= minScale else {
                 return minScale
@@ -443,14 +435,14 @@ private extension ViewportView {
     }
     
     func animateTrashAlpha(posY: CGFloat) -> CGFloat {
-        let thirdOfScreen = containerView.bounds.height / 3
-        let areaY = containerView.bounds.height - thirdOfScreen
+        let thirdOfScreen = bounds.height / 3
+        let areaY = bounds.height - thirdOfScreen
         guard posY > areaY else {
             return 0
         }
         
         let alphaFactor = 1 / thirdOfScreen
-        let alpha = 1 - (containerView.bounds.height - posY) * alphaFactor
+        let alpha = 1 - (bounds.height - posY) * alphaFactor
         return alpha
     }
 }
@@ -458,15 +450,15 @@ private extension ViewportView {
 private extension ViewportView {
     
     private var volumeValue: CGFloat {
-        containerView.bounds.height / 100
+        bounds.height / 100
     }
     
     private var volumeFactor: CGFloat {
-        containerView.bounds.width / 100
+        bounds.width / 100
     }
     
     private var trashCenter: CGPoint {
-        deleteArea.center
+        deleteAreaView.center
     }
     
     private var trashScaleRadius: CGFloat {
@@ -475,10 +467,100 @@ private extension ViewportView {
     
     private var scalePath: UIBezierPath {
         return UIBezierPath(
-            arcCenter: deleteArea.center,
+            arcCenter: deleteAreaView.center,
             radius: trashScaleRadius,
             startAngle: 0,
             endAngle: 2 * CGFloat.pi,
             clockwise: true)
+    }
+}
+
+// MARK: Make constraints
+private extension ViewportView {
+    func makeConstraints() {
+        NSLayoutConstraint.activate([
+            titleView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            titleView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            titleView.topAnchor.constraint(equalTo: topAnchor),
+            titleView.heightAnchor.constraint(equalToConstant: 24.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
+            menuView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 63.scale),
+            menuView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -63.scale),
+            menuView.topAnchor.constraint(equalTo: titleView.bottomAnchor, constant: 17.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
+            weakerLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            weakerLabel.leadingAnchor.constraint(equalTo: leadingAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            strongerLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            strongerLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            louderLabel.topAnchor.constraint(equalTo: topAnchor, constant: 18.scale),
+            louderLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            hushLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -12.scale),
+            hushLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            deleteAreaView.widthAnchor.constraint(equalToConstant: 36.scale),
+            deleteAreaView.heightAnchor.constraint(equalToConstant: 36.scale),
+            deleteAreaView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20.scale),
+            deleteAreaView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20.scale)
+        ])
+    }
+}
+
+// MARK: Lazy initialization
+private extension ViewportView {
+    func makeTitleView() -> ViewportTitleView {
+        let view = ViewportTitleView()
+        view.backgroundColor = UIColor.clear
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeMenuView() -> SoundsMenuView {
+        let view = SoundsMenuView()
+        view.alpha = 0
+        view.backgroundColor = Appearance.white.withAlphaComponent(0.5)
+        view.layer.cornerRadius = 13.scale
+        view.layer.masksToBounds = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeVolumeLabel(title: String) -> UILabel {
+        let attrs = TextAttributes()
+            .textColor(UIColor(integralRed: 142, green: 142, blue: 147))
+            .font(Fonts.Inter.bold(size: 18.scale))
+            .lineHeight(21.6.scale)
+            .textAlignment(.center)
+        
+        let view = UILabel()
+        view.attributedText = title.attributed(with: attrs)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeDeleteAreaView() -> UIImageView {
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFit
+        view.image = UIImage(named: "Sounds.Delete")
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
     }
 }

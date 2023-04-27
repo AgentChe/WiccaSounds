@@ -1,5 +1,5 @@
 //
-//  SoundsMenu.swift
+//  SoundsMenuView.swift
 //  SleepWell
 //
 //  Created by Andrey Chernyshev on 28/01/2020.
@@ -7,44 +7,64 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 
 final class SoundsMenuView: UIView {
-    @IBOutlet private var containerView: UIView!
-    @IBOutlet private var sleepItemView: UIView!
-    @IBOutlet private var clearAllItemView: UIView!
+    lazy var sleepTimerButton = makeSleepTimerButton()
+    lazy var clearAllButton = makeClearAllButton()
     
-    private let sleepTapGesture = UITapGestureRecognizer()
-    private let clearAllTapGesture = UITapGestureRecognizer()
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
-        configure()
+        makeConstraints()
     }
     
-    private func configure() {
-        Bundle.main.loadNibNamed("SoundsMenuView", owner: self)
-        containerView.frame = bounds
-        containerView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        addSubview(containerView)
-        
-        sleepItemView.addGestureRecognizer(sleepTapGesture)
-        clearAllItemView.addGestureRecognizer(clearAllTapGesture)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
-extension SoundsMenuView {
-    var didTapSleep: Signal<Void> {
-        return sleepTapGesture.rx.event
-            .map { _ in Void() }
-            .asSignal(onErrorSignalWith: .never())
+// MARK: Make constraints
+private extension SoundsMenuView {
+    func makeConstraints() {
+        NSLayoutConstraint.activate([
+            sleepTimerButton.leadingAnchor.constraint(equalTo: leadingAnchor),
+            sleepTimerButton.trailingAnchor.constraint(equalTo: trailingAnchor),
+            sleepTimerButton.topAnchor.constraint(equalTo: topAnchor),
+            sleepTimerButton.heightAnchor.constraint(equalToConstant: 62.5.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
+            clearAllButton.leadingAnchor.constraint(equalTo: leadingAnchor),
+            clearAllButton.trailingAnchor.constraint(equalTo: trailingAnchor),
+            clearAllButton.topAnchor.constraint(equalTo: sleepTimerButton.bottomAnchor),
+            clearAllButton.bottomAnchor.constraint(equalTo: bottomAnchor),
+            clearAllButton.heightAnchor.constraint(equalToConstant: 62.5.scale)
+        ])
+    }
+}
+
+// MARK: Lazy initialization
+private extension SoundsMenuView {
+    func makeSleepTimerButton() -> SoundsMenuButton {
+        let view = SoundsMenuButton(
+            iconName: "Sounds.SleepTimer",
+            title: "Sounds.SleepTimer".localized
+        )
+        view.backgroundColor = UIColor.clear
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
     }
     
-    var didTapClearAll: Signal<Void> {
-        return clearAllTapGesture.rx.event
-            .map { _ in Void() }
-            .asSignal(onErrorSignalWith: .never())
+    func makeClearAllButton() -> SoundsMenuButton {
+        let view = SoundsMenuButton(
+            iconName: "Sounds.ClearAll",
+            title: "Sounds.ClearAll".localized
+        )
+        view.separator.isHidden = true
+        view.backgroundColor = UIColor.clear
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
     }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="woJ-BK-SnQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="woJ-BK-SnQ">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,21 +16,16 @@
         <!--Sounds View Controller-->
         <scene sceneID="YKC-9D-fGX">
             <objects>
-                <viewController storyboardIdentifier="SoundsViewController" automaticallyAdjustsScrollViewInsets="NO" id="woJ-BK-SnQ" customClass="SoundsViewController" customModule="SleepWell" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SoundsViewController" automaticallyAdjustsScrollViewInsets="NO" id="woJ-BK-SnQ" customClass="SoundsViewController" customModule="WiccaSounds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kKr-70-3MS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4m1-WQ-ajJ" customClass="ViewportView" customModule="SleepWell" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <gestureRecognizers/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLL-qb-JHp">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sounds_title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Snq-Wj-8sP">
-                                        <rect key="frame" x="50" y="244" width="275" height="31"/>
+                                        <rect key="frame" x="50" y="246.5" width="275" height="26"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="22"/>
                                         <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -39,7 +34,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Onq-BA-zMT">
-                                        <rect key="frame" x="136.5" y="355" width="102" height="102"/>
+                                        <rect key="frame" x="136.5" y="352.5" width="102" height="102"/>
                                         <color key="backgroundColor" red="0.29411764705882354" green="0.29411764705882354" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="102" id="5rh-qV-zXM"/>
@@ -63,24 +58,19 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="IPU-ZT-f8S"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="IPU-ZT-f8S" firstAttribute="bottom" secondItem="4m1-WQ-ajJ" secondAttribute="bottom" id="3EE-74-taN"/>
-                            <constraint firstItem="4m1-WQ-ajJ" firstAttribute="leading" secondItem="kKr-70-3MS" secondAttribute="leading" id="5ub-A8-Z1B"/>
                             <constraint firstItem="ZLL-qb-JHp" firstAttribute="leading" secondItem="IPU-ZT-f8S" secondAttribute="leading" id="JJQ-vB-LCI"/>
-                            <constraint firstItem="4m1-WQ-ajJ" firstAttribute="top" secondItem="IPU-ZT-f8S" secondAttribute="top" id="KTr-ID-5Pc"/>
-                            <constraint firstAttribute="trailing" secondItem="4m1-WQ-ajJ" secondAttribute="trailing" id="ZUY-Yj-5th"/>
                             <constraint firstAttribute="bottom" secondItem="ZLL-qb-JHp" secondAttribute="bottom" id="fBF-Jf-XIl"/>
                             <constraint firstItem="IPU-ZT-f8S" firstAttribute="trailing" secondItem="ZLL-qb-JHp" secondAttribute="trailing" id="pLO-Kd-Xtz"/>
                             <constraint firstItem="ZLL-qb-JHp" firstAttribute="top" secondItem="kKr-70-3MS" secondAttribute="top" id="sz5-eZ-ZD7"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="IPU-ZT-f8S"/>
                     </view>
                     <connections>
                         <outlet property="addSoundButton" destination="Onq-BA-zMT" id="wTg-OV-ynl"/>
                         <outlet property="emptyView" destination="ZLL-qb-JHp" id="1dZ-tx-dqd"/>
-                        <outlet property="soundsView" destination="4m1-WQ-ajJ" id="BLg-nH-DcE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJM-GT-hGU" userLabel="First Responder" sceneMemberID="firstResponder"/>
