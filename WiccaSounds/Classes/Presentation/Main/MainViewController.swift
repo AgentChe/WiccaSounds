@@ -48,6 +48,36 @@ final class MainViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        let isEmptyNoisePlaying = AudioPlayerService.shared
+            .isEmptyNoisePlaying
+            .asDriver(onErrorDriveWith: .never())
+        
+        isEmptyNoisePlaying
+            .drive(Binder(mainView.tabView) { base, isEmptyNoisePlaying in
+                base.draw(with: !isEmptyNoisePlaying)
+            })
+            .disposed(by: disposeBag)
+        
+        let isNoisePlaying = AudioPlayerService.shared
+            .isNoisePlaying
+        
+        isNoisePlaying
+            .drive(Binder(mainView.tabView) { base, isPlaying in
+                base.updatePlauPauseButton(isPlaying: isPlaying)
+            })
+            .disposed(by: disposeBag)
+        
+        mainView.tabView
+            .playPauseView.playPauseButton.rx.tap
+            .withLatestFrom(isEmptyNoisePlaying)
+            .filter { !$0 }
+            .withLatestFrom(isNoisePlaying)
+            .asDriver(onErrorDriveWith: .never())
+            .drive(Binder(AudioPlayerService.shared) { base, isPlaying in
+                isPlaying ? base.forcePauseNoise() : base.forcePlayNoise()
+            })
+            .disposed(by: disposeBag)
+        
         requestReviewIfNeeded()
         addActionsToTabs()
     }

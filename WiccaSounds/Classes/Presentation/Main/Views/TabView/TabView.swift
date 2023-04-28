@@ -12,10 +12,12 @@ final class TabView: UIView {
         case home, explore, practice, ambience
     }
     
+    lazy var stackView = makeStackView()
     lazy var homeItem = makeItem(code: "Main.Tab.Home")
     lazy var exploreItem = makeItem(code: "Main.Tab.Explore")
     lazy var practiceItem = makeItem(code: "Main.Tab.Practice")
     lazy var ambienceItem = makeItem(code: "Main.Tab.Ambience")
+    lazy var playPauseView = makePlayPauseView()
     
     var selectedTab = Tab.home {
         didSet {
@@ -27,10 +29,33 @@ final class TabView: UIView {
         super.init(frame: frame)
         
         makeConstraints()
+        draw(with: false)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+// MARK: Public
+extension TabView {
+    func draw(with playPause: Bool) {
+        stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        
+        stackView.addArrangedSubview(homeItem)
+        stackView.addArrangedSubview(exploreItem)
+        stackView.addArrangedSubview(practiceItem)
+        stackView.addArrangedSubview(ambienceItem)
+        
+        playPauseView.isHidden = !playPause
+        if playPause {
+            stackView.addArrangedSubview(playPauseView)
+        }
+    }
+    
+    func updatePlauPauseButton(isPlaying: Bool) {
+        let image = UIImage(named: isPlaying ? "Main.Tab.Pause" : "Main.Tab.Play")
+        playPauseView.playPauseButton.setImage(image, for: .normal)
     }
 }
 
@@ -48,39 +73,37 @@ private extension TabView {
 private extension TabView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            homeItem.leadingAnchor.constraint(equalTo: leadingAnchor),
-            homeItem.bottomAnchor.constraint(equalTo: bottomAnchor),
-            homeItem.topAnchor.constraint(equalTo: topAnchor),
-            homeItem.widthAnchor.constraint(equalTo: exploreItem.widthAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
-            exploreItem.leadingAnchor.constraint(equalTo: homeItem.trailingAnchor),
-            exploreItem.bottomAnchor.constraint(equalTo: bottomAnchor),
-            exploreItem.topAnchor.constraint(equalTo: topAnchor),
-            exploreItem.widthAnchor.constraint(equalTo: practiceItem.widthAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
-            practiceItem.leadingAnchor.constraint(equalTo: exploreItem.trailingAnchor),
-            practiceItem.bottomAnchor.constraint(equalTo: bottomAnchor),
-            practiceItem.topAnchor.constraint(equalTo: topAnchor),
-            practiceItem.widthAnchor.constraint(equalTo: ambienceItem.widthAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
-            ambienceItem.leadingAnchor.constraint(equalTo: practiceItem.trailingAnchor),
-            ambienceItem.bottomAnchor.constraint(equalTo: bottomAnchor),
-            ambienceItem.topAnchor.constraint(equalTo: topAnchor),
-            ambienceItem.trailingAnchor.constraint(equalTo: trailingAnchor)
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            stackView.topAnchor.constraint(equalTo: topAnchor)
         ])
     }
 }
 
 // MARK: Lazy initialization
 private extension TabView {
+    func makeStackView() -> UIStackView {
+        let view = UIStackView()
+        view.axis = .horizontal
+        view.distribution = .fillEqually
+        view.spacing = 0
+        view.backgroundColor = UIColor.clear
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
     func makeItem(code: String) -> TabItemView {
         let view = TabItemView(code: code)
+        view.backgroundColor = UIColor.clear
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makePlayPauseView() -> TabPlayPauseView {
+        let view = TabPlayPauseView()
         view.backgroundColor = UIColor.clear
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

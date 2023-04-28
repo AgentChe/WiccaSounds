@@ -20,6 +20,12 @@ final class AudioPlayerService: ReactiveCompatible {
     
     static let shared = AudioPlayerService()
     
+    var isEmptyNoisePlaying: Signal<Bool> {
+        noiseRelay
+            .asSignal(onErrorSignalWith: .never())
+            .map { $0?.audioPlayers.isEmpty ?? true }
+    }
+    
     func add(noises: Set<NoiseSound>) -> Completable {
         let currentIds = Set(noiseRelay.value?.audioPlayers.map { $0.id } ?? [])
         let addedIds = Set(noises.map { $0.id })
@@ -53,8 +59,15 @@ final class AudioPlayerService: ReactiveCompatible {
         noiseRelay.value?.pause() ?? .just(())
     }
     
+    func forcePauseNoise() {
+        noiseRelay.value?.forcePause()
+    }
+    
+    func forcePlayNoise() {
+        noiseRelay.value?.play()
+    }
+    
     var isNoisePlaying: Driver<Bool> {
-        
         noiseRelay.asDriver()
             .flatMapLatest {
                 $0?.isPlaying ?? .just(false)

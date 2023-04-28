@@ -48,6 +48,7 @@
 		DE2DA27C29FB0F14000B3F62 /* SelectSoundTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DA27B29FB0F14000B3F62 /* SelectSoundTableView.swift */; };
 		DE2DA27F29FBD358000B3F62 /* SoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DA27E29FBD358000B3F62 /* SoundsView.swift */; };
 		DE2DA28129FBD496000B3F62 /* SoundsEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DA28029FBD496000B3F62 /* SoundsEmptyView.swift */; };
+		DE2DA28329FC02F3000B3F62 /* TabPlayPauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DA28229FC02F3000B3F62 /* TabPlayPauseView.swift */; };
 		DE65748D29C838DF0074CBE5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65744C29C838DE0074CBE5 /* SplashViewController.swift */; };
 		DE65748E29C838DF0074CBE5 /* SplashActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65744E29C838DE0074CBE5 /* SplashActivity.swift */; };
 		DE65748F29C838DF0074CBE5 /* SplashReceiptValidationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65744F29C838DE0074CBE5 /* SplashReceiptValidationObserver.swift */; };
@@ -372,6 +373,7 @@
 		DE2DA27B29FB0F14000B3F62 /* SelectSoundTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSoundTableView.swift; sourceTree = "<group>"; };
 		DE2DA27E29FBD358000B3F62 /* SoundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsView.swift; sourceTree = "<group>"; };
 		DE2DA28029FBD496000B3F62 /* SoundsEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsEmptyView.swift; sourceTree = "<group>"; };
+		DE2DA28229FC02F3000B3F62 /* TabPlayPauseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPlayPauseView.swift; sourceTree = "<group>"; };
 		DE65743129C836CE0074CBE5 /* WiccaSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiccaSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE65744229C836D00074CBE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE65744C29C838DE0074CBE5 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -1018,6 +1020,7 @@
 			children = (
 				DE65746329C838DF0074CBE5 /* TabItemView.swift */,
 				DE65746429C838DF0074CBE5 /* TabView.swift */,
+				DE2DA28229FC02F3000B3F62 /* TabPlayPauseView.swift */,
 			);
 			path = TabView;
 			sourceTree = "<group>";
@@ -2574,6 +2577,7 @@
 				DE65769229CCA5EC0074CBE5 /* ContentTableElement.swift in Sources */,
 				DE20A97D29F13E89007DC75F /* TarotViewModel.swift in Sources */,
 				DE65754329C838E60074CBE5 /* UIColor+Extension.swift in Sources */,
+				DE2DA28329FC02F3000B3F62 /* TabPlayPauseView.swift in Sources */,
 				DE65749C29C838DF0074CBE5 /* MainView.swift in Sources */,
 				DE6576C029CDF7EF0074CBE5 /* HomeLunarCell.swift in Sources */,
 				DE65749B29C838DF0074CBE5 /* MainViewController.swift in Sources */,
