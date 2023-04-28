@@ -9,7 +9,6 @@
 import UIKit
 
 final class SoundsMenuView: UIView {
-    lazy var sleepTimerButton = makeSleepTimerButton()
     lazy var clearAllButton = makeClearAllButton()
     
     override init(frame: CGRect) {
@@ -27,16 +26,9 @@ final class SoundsMenuView: UIView {
 private extension SoundsMenuView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            sleepTimerButton.leadingAnchor.constraint(equalTo: leadingAnchor),
-            sleepTimerButton.trailingAnchor.constraint(equalTo: trailingAnchor),
-            sleepTimerButton.topAnchor.constraint(equalTo: topAnchor),
-            sleepTimerButton.heightAnchor.constraint(equalToConstant: 62.5.scale)
-        ])
-        
-        NSLayoutConstraint.activate([
             clearAllButton.leadingAnchor.constraint(equalTo: leadingAnchor),
             clearAllButton.trailingAnchor.constraint(equalTo: trailingAnchor),
-            clearAllButton.topAnchor.constraint(equalTo: sleepTimerButton.bottomAnchor),
+            clearAllButton.topAnchor.constraint(equalTo: topAnchor),
             clearAllButton.bottomAnchor.constraint(equalTo: bottomAnchor),
             clearAllButton.heightAnchor.constraint(equalToConstant: 62.5.scale)
         ])
@@ -45,17 +37,6 @@ private extension SoundsMenuView {
 
 // MARK: Lazy initialization
 private extension SoundsMenuView {
-    func makeSleepTimerButton() -> SoundsMenuButton {
-        let view = SoundsMenuButton(
-            iconName: "Sounds.SleepTimer",
-            title: "Sounds.SleepTimer".localized
-        )
-        view.backgroundColor = UIColor.clear
-        view.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(view)
-        return view
-    }
-    
     func makeClearAllButton() -> SoundsMenuButton {
         let view = SoundsMenuButton(
             iconName: "Sounds.ClearAll",

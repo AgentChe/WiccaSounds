@@ -209,7 +209,6 @@ final class ViewportView: UIView {
             .merge(titleView.menuButton.rx.tap.map { _ in 1 },
                    didTap.asObservable().map { _ in 0 },
                    viewsTranslation.map { _ in 0 },
-                   didTapSleepTimer.asObservable().map { _ in 0 },
                    menuView.clearAllButton.rx.tap.asObservable().map { _ in 0 })
             .subscribe(onNext: { [weak self] alpha in
                 UIView.animate(withDuration: 0.3, animations: {
@@ -289,11 +288,6 @@ final class ViewportView: UIView {
 }
 
 extension ViewportView {
-    
-    var didTapSleepTimer: Signal<Void> {
-        menuView.sleepTimerButton.rx.tap.asSignal()
-    }
-    
     var didTap: Signal<Void> {
         return tapGesture.rx.event
             .map { _ in Void() }
