@@ -46,6 +46,8 @@
 		DE2DA27629FB0EE9000B3F62 /* SelectSoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DA27529FB0EE9000B3F62 /* SelectSoundViewModel.swift */; };
 		DE2DA27829FB0EED000B3F62 /* SelectSoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DA27729FB0EED000B3F62 /* SelectSoundView.swift */; };
 		DE2DA27C29FB0F14000B3F62 /* SelectSoundTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DA27B29FB0F14000B3F62 /* SelectSoundTableView.swift */; };
+		DE2DA27F29FBD358000B3F62 /* SoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DA27E29FBD358000B3F62 /* SoundsView.swift */; };
+		DE2DA28129FBD496000B3F62 /* SoundsEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DA28029FBD496000B3F62 /* SoundsEmptyView.swift */; };
 		DE65748D29C838DF0074CBE5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65744C29C838DE0074CBE5 /* SplashViewController.swift */; };
 		DE65748E29C838DF0074CBE5 /* SplashActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65744E29C838DE0074CBE5 /* SplashActivity.swift */; };
 		DE65748F29C838DF0074CBE5 /* SplashReceiptValidationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65744F29C838DE0074CBE5 /* SplashReceiptValidationObserver.swift */; };
@@ -310,7 +312,6 @@
 		DEC3047929F6943900C6AAF1 /* NoiseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3047829F6943900C6AAF1 /* NoiseManager.swift */; };
 		DEC3047C29F69A7000C6AAF1 /* SoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3047B29F69A7000C6AAF1 /* SoundsViewController.swift */; };
 		DEC3047E29F69A7A00C6AAF1 /* SoundsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3047D29F69A7A00C6AAF1 /* SoundsViewModel.swift */; };
-		DEC3048029F69AB600C6AAF1 /* SoundsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC3047F29F69AB600C6AAF1 /* SoundsScreen.storyboard */; };
 		DEC3049B29F69AD900C6AAF1 /* SoundGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3048329F69AD900C6AAF1 /* SoundGroupCell.swift */; };
 		DEC3049E29F69AD900C6AAF1 /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3048629F69AD900C6AAF1 /* SoundCell.swift */; };
 		DEC3049F29F69AD900C6AAF1 /* SoundCellElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3048829F69AD900C6AAF1 /* SoundCellElement.swift */; };
@@ -369,6 +370,8 @@
 		DE2DA27529FB0EE9000B3F62 /* SelectSoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSoundViewModel.swift; sourceTree = "<group>"; };
 		DE2DA27729FB0EED000B3F62 /* SelectSoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSoundView.swift; sourceTree = "<group>"; };
 		DE2DA27B29FB0F14000B3F62 /* SelectSoundTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSoundTableView.swift; sourceTree = "<group>"; };
+		DE2DA27E29FBD358000B3F62 /* SoundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsView.swift; sourceTree = "<group>"; };
+		DE2DA28029FBD496000B3F62 /* SoundsEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsEmptyView.swift; sourceTree = "<group>"; };
 		DE65743129C836CE0074CBE5 /* WiccaSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiccaSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE65744229C836D00074CBE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE65744C29C838DE0074CBE5 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -635,7 +638,6 @@
 		DEC3047829F6943900C6AAF1 /* NoiseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseManager.swift; sourceTree = "<group>"; };
 		DEC3047B29F69A7000C6AAF1 /* SoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsViewController.swift; sourceTree = "<group>"; };
 		DEC3047D29F69A7A00C6AAF1 /* SoundsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsViewModel.swift; sourceTree = "<group>"; };
-		DEC3047F29F69AB600C6AAF1 /* SoundsScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SoundsScreen.storyboard; sourceTree = "<group>"; };
 		DEC3048329F69AD900C6AAF1 /* SoundGroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundGroupCell.swift; sourceTree = "<group>"; };
 		DEC3048629F69AD900C6AAF1 /* SoundCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
 		DEC3048829F69AD900C6AAF1 /* SoundCellElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundCellElement.swift; sourceTree = "<group>"; };
@@ -828,9 +830,9 @@
 			children = (
 				DEC304AC29F69EA500C6AAF1 /* Utils */,
 				DEC3048129F69AD900C6AAF1 /* View */,
-				DEC3047F29F69AB600C6AAF1 /* SoundsScreen.storyboard */,
 				DEC3047B29F69A7000C6AAF1 /* SoundsViewController.swift */,
 				DEC3047D29F69A7A00C6AAF1 /* SoundsViewModel.swift */,
+				DE2DA27E29FBD358000B3F62 /* SoundsView.swift */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -2163,6 +2165,7 @@
 			children = (
 				DEC3048929F69AD900C6AAF1 /* Menu */,
 				DEC3048F29F69AD900C6AAF1 /* ViewportView */,
+				DE2DA28029FBD496000B3F62 /* SoundsEmptyView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2325,7 +2328,6 @@
 				DE65758329C838F30074CBE5 /* Inter-Italic.otf in Resources */,
 				DE65758129C838F30074CBE5 /* Inter-Bold.ttf in Resources */,
 				DE65758629C838F30074CBE5 /* PlusJakartaSans-SemiBold.ttf in Resources */,
-				DEC3048029F69AB600C6AAF1 /* SoundsScreen.storyboard in Resources */,
 				DE65758529C838F30074CBE5 /* PlusJakartaSans-Medium.ttf in Resources */,
 				DE65758029C838F30074CBE5 /* Inter-Medium.ttf in Resources */,
 				DE65758F29C838FB0074CBE5 /* Localizable.strings in Resources */,
@@ -2394,6 +2396,7 @@
 				DE65754529C838E60074CBE5 /* Collection+Extension.swift in Sources */,
 				DE65756D29C838E60074CBE5 /* BranchManager.swift in Sources */,
 				DE8027E329D409FD003C9993 /* HomeTipsCell.swift in Sources */,
+				DE2DA27F29FBD358000B3F62 /* SoundsView.swift in Sources */,
 				DE65748F29C838DF0074CBE5 /* SplashReceiptValidationObserver.swift in Sources */,
 				DE995BD429E99F9600B08290 /* BookmarksEmptyView.swift in Sources */,
 				DE6574FC29C838E30074CBE5 /* IAPManager.swift in Sources */,
@@ -2664,6 +2667,7 @@
 				DE65761829C9C75B0074CBE5 /* TarotManager.swift in Sources */,
 				DE65754F29C838E60074CBE5 /* TextAttributes.swift in Sources */,
 				DEC304A729F69AD900C6AAF1 /* NoiseView.swift in Sources */,
+				DE2DA28129FBD496000B3F62 /* SoundsEmptyView.swift in Sources */,
 				DE6575B229C8C0DA0074CBE5 /* OSpellsCategoriesView.swift in Sources */,
 				DE65755729C838E60074CBE5 /* Weak.swift in Sources */,
 				DE65749729C838DF0074CBE5 /* PaygateView.swift in Sources */,

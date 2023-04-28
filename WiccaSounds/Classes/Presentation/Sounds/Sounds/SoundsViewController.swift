@@ -10,26 +10,26 @@ import RxSwift
 import RxCocoa
 
 final class SoundsViewController: UIViewController {
-    lazy var viewportView = makeViewportView()
+    lazy var mainView = SoundsView()
     
-    @IBOutlet private var addSoundButton: UIButton!
-    @IBOutlet private var emptyView: UIView!
+    private enum NoiseAction {
+        case add(Noise)
+        case delete(Int)
+    }
     
     private lazy var viewModel = SoundsViewModel()
     
     private let sounds = BehaviorRelay<Set<Noise>>(value: [])
     private let disposeBag = DisposeBag()
     
-    private let closeButton = UIButton()
-    
     private lazy var didSelectSoundItemTrigger = PublishRelay<SoundCellElement>()
+    
+    override func loadView() {
+        view = mainView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        makeConstraints()
-        
-        closeButton.setImage(UIImage(named: "close_sounds"), for: .normal)
         
         let selectedCellModel = didSelectSoundItemTrigger
         
@@ -39,8 +39,8 @@ final class SoundsViewController: UIViewController {
         
         Observable
             .merge(
-                addSoundButton.rx.tap.asObservable(),
-                viewportView.didTapAdd.asObservable()
+                mainView.emptyView.addButton.rx.tap.asObservable(),
+                mainView.viewportView.didTapAdd.asObservable()
             )
             .bind(to: Binder(self) { base, void in
                 let vc = SelectSoundViewController.make { [weak self] element in
@@ -51,7 +51,7 @@ final class SoundsViewController: UIViewController {
             .disposed(by: disposeBag)
         
         let addSound = selectedNoise.map { NoiseAction.add($0) }
-        let deleteSound = viewportView.deletedSound.map { NoiseAction.delete($0) }
+        let deleteSound = mainView.viewportView.deletedSound.map { NoiseAction.delete($0) }
         
         Observable<NoiseAction>
             .merge(addSound, deleteSound)
@@ -70,7 +70,7 @@ final class SoundsViewController: UIViewController {
             .disposed(by: disposeBag)
 
         selectedNoise
-            .bind(to: viewportView.item)
+            .bind(to: mainView.viewportView.item)
             .disposed(by: disposeBag)
         
         let noiseSounds = sounds
@@ -87,7 +87,16 @@ final class SoundsViewController: UIViewController {
             .drive(viewModel.playNoise)
             .disposed(by: disposeBag)
         
-        viewportView.changeVolume
+        noiseSounds
+            .asDriver(onErrorJustReturn: [])
+            .drive(Binder(mainView) { base, sounds in
+                let isEmpty = sounds.isEmpty
+                base.emptyView.isHidden = !isEmpty
+                base.viewportView.isHidden = isEmpty
+            })
+            .disposed(by: disposeBag)
+        
+        mainView.viewportView.changeVolume
             .emit(to: viewModel.noiseVolume)
             .disposed(by: disposeBag)
         
@@ -101,14 +110,13 @@ final class SoundsViewController: UIViewController {
                 loadableSounds.asDriver()
             ) { Array($0.intersection($1)) }
             .distinctUntilChanged()
-            .drive(viewportView.loadingSounds)
+            .drive(mainView.viewportView.loadingSounds)
             .disposed(by: disposeBag)
         
         noiseSounds
             .withLatestFrom(loadableSounds.asDriver()) { ($0, $1) }
             .withLatestFrom(loadedSounds.asDriver()) { ($0.0, $0.1, $1) }
             .map { noises, loadable, loaded -> ([NoiseSound], Set<Int>)  in
-                
                 let ids = Set(noises.map { $0.id }).subtracting(loadable)
                     .subtracting(loaded)
                 return (noises.filter { ids.contains($0.id) }, loadable)
@@ -151,51 +159,14 @@ final class SoundsViewController: UIViewController {
             }
             .drive()
             .disposed(by: disposeBag)
-        
-        viewportView
-            .didTapSleepTimer
-            .emit(onNext: { [weak self] in
-                self?.viewModel.showSleepTimerScreen()
-                
-            })
-            .disposed(by: disposeBag)
     }
 }
 
 // MARK: Make
 extension SoundsViewController {
     static func make() -> SoundsViewController {
-        let storyboard = UIStoryboard(name: "SoundsScreen", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "SoundsViewController") as! SoundsViewController
-    }
-}
-
-private extension SoundsViewController {
-    enum NoiseAction {
-        case add(Noise)
-        case delete(Int)
-    }
-}
-
-// MARK: Make constraints
-private extension SoundsViewController {
-    func makeConstraints() {
-        NSLayoutConstraint.activate([
-            viewportView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            viewportView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            viewportView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            viewportView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-        ])
-    }
-}
-
-// MARK: Lazy initialization
-private extension SoundsViewController {
-    func makeViewportView() -> ViewportView {
-        let view = ViewportView()
-        view.backgroundColor = Appearance.background
-        view.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(view)
-        return view
+        let vc = SoundsViewController()
+        vc.navigationItem.backButtonTitle = " "
+        return vc
     }
 }

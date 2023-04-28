@@ -30,11 +30,6 @@ final class SoundsViewModel {
     var playNoise: Binder<Void> {
         audioPlayerService.rx.playNoise
     }
-    
-    func showSleepTimerScreen() {
-//        router.showSleepTimerScreen()
-        // TODO
-    }
 }
 
 extension Observable {
