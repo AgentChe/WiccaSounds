@@ -12,8 +12,8 @@ final class ContentTextCell: UITableViewCell {
     
     private lazy var attrs = TextAttributes()
         .textColor(Appearance.white.withAlphaComponent(0.8))
-        .font(Fonts.Inter.regular(size: 16.scale))
-        .lineHeight(24.scale)
+        .font(Fonts.Inter.regular(size: 17.scale))
+        .lineHeight(25.5.scale)
         .textAlignment(.left)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

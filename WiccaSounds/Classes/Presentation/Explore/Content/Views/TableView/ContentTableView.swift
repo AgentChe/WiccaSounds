@@ -39,9 +39,16 @@ extension ContentTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch elements[indexPath.row] {
         case .title(let element):
-            let cell = dequeueReusableCell(withIdentifier: String(describing: ContentTitleCell.self)) as! ContentTitleCell
-            cell.setup(element: element)
-            return cell
+            switch element {
+            case .other(let title):
+                let cell = dequeueReusableCell(withIdentifier: String(describing: ContentTitleCell.self)) as! ContentTitleCell
+                cell.setup(element: title)
+                return cell
+            case .spell(let title):
+                let cell = dequeueReusableCell(withIdentifier: String(describing: ContentSpellTitleCell.self)) as! ContentSpellTitleCell
+                cell.setup(element: title)
+                return cell
+            }
         case .text(let element):
             let cell = dequeueReusableCell(withIdentifier: String(describing: ContentTextCell.self)) as! ContentTextCell
             cell.setup(element: element)
@@ -64,6 +71,7 @@ extension ContentTableView: UITableViewDelegate {
 // MARK: Private
 private extension ContentTableView {
     func initialize() {
+        register(ContentSpellTitleCell.self, forCellReuseIdentifier: String(describing: ContentSpellTitleCell.self))
         register(ContentTitleCell.self, forCellReuseIdentifier: String(describing: ContentTitleCell.self))
         register(ContentTextCell.self, forCellReuseIdentifier: String(describing: ContentTextCell.self))
         register(ContentImageCell.self, forCellReuseIdentifier: String(describing: ContentImageCell.self))

@@ -91,7 +91,7 @@ private extension ContentViewModel {
                 let blocksElements = source.blocks.map { block -> ContentTableElement in
                     switch block.content {
                     case .image(let url):
-                        return .image(url)
+                        return .image(ContentTableImage(url: url, withGradient: source.isCandle))
                     case .text(let text):
                         return .text(text)
                     }
@@ -104,16 +104,16 @@ private extension ContentViewModel {
 
 // MARK: Private (Additional)
 private extension ContentViewModel.Unit {
-    var title: String {
+    var title: ContentTableTitle {
         switch self {
         case .spell(let spell):
-            return spell.name
+            return ContentTableTitle.spell(spell.name)
         case .candle(let candle):
-            return candle.name
+            return ContentTableTitle.other(candle.name)
         case .herb(let herb):
-            return herb.name
+            return ContentTableTitle.other(herb.name)
         case .crystal(let crystal):
-            return crystal.name
+            return ContentTableTitle.other(crystal.name)
         }
     }
     
@@ -140,6 +140,15 @@ private extension ContentViewModel.Unit {
             return herb.saved
         case .crystal(let crystal):
             return crystal.saved
+        }
+    }
+    
+    var isCandle: Bool {
+        switch self {
+        case .candle:
+            return true
+        default:
+            return false
         }
     }
 }

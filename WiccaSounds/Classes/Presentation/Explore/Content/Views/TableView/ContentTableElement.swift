@@ -8,7 +8,22 @@
 import Foundation
 
 enum ContentTableElement {
-    case title(String)
+    case title(ContentTableTitle)
     case text(String)
-    case image(URL)
+    case image(ContentTableImage)
+}
+
+enum ContentTableTitle {
+    case spell(String)
+    case other(String)
+}
+
+struct ContentTableImage {
+    let url: URL
+    let withGradient: Bool
+    
+    init(url: URL, withGradient: Bool = false) {
+        self.url = url
+        self.withGradient = withGradient
+    }
 }

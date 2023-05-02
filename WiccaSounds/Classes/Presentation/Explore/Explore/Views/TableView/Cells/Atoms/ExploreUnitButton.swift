@@ -9,6 +9,7 @@ import UIKit
 import Kingfisher
 
 final class ExploreUnitButton: UIView {
+    lazy var gradientView = makeGradientView()
     lazy var pictureView = makeImageView()
     lazy var nameLabel = makeLabel()
     lazy var lockView = makeLockView()
@@ -43,6 +44,10 @@ extension ExploreUnitButton {
         guard let element = element else {
             return
         }
+        
+        let withGradient = withGradient(at: element)
+        gradientView.isHidden = !withGradient
+        pictureView.backgroundColor = withGradient ? UIColor.clear : Appearance.white.withAlphaComponent(0.1)
         
         pictureView.kf.cancelDownloadTask()
         pictureView.image = nil
@@ -89,11 +94,27 @@ private extension ExploreUnitButton {
             return locked
         }
     }
+    
+    func withGradient(at unit: ExploreUnitElement.Unit) -> Bool {
+        switch unit {
+        case .candle:
+            return true
+        default:
+            return false
+        }
+    }
 }
 
 // MARK: Make constraints
 private extension ExploreUnitButton {
     func makeConstraints() {
+        NSLayoutConstraint.activate([
+            gradientView.leadingAnchor.constraint(equalTo: pictureView.leadingAnchor),
+            gradientView.trailingAnchor.constraint(equalTo: pictureView.trailingAnchor),
+            gradientView.topAnchor.constraint(equalTo: pictureView.topAnchor),
+            gradientView.bottomAnchor.constraint(equalTo: pictureView.bottomAnchor)
+        ])
+        
         NSLayoutConstraint.activate([
             pictureView.leadingAnchor.constraint(equalTo: leadingAnchor),
             pictureView.trailingAnchor.constraint(equalTo: trailingAnchor),
@@ -118,6 +139,21 @@ private extension ExploreUnitButton {
 
 // MARK: Lazy initialization
 private extension ExploreUnitButton {
+    func makeGradientView() -> GradientView {
+        let view = GradientView()
+        view.gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
+        view.gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
+        view.gradientLayer.colors = [
+            UIColor(integralRed: 63, green: 61, blue: 101).cgColor,
+            UIColor(integralRed: 29, green: 28, blue: 25).cgColor
+        ]
+        view.layer.cornerRadius = 10.scale
+        view.layer.masksToBounds = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
     func makeImageView() -> UIImageView {
         let view = UIImageView()
         view.contentMode = .scaleAspectFill
@@ -125,7 +161,6 @@ private extension ExploreUnitButton {
         view.layer.masksToBounds = true
         view.layer.borderWidth = 1.scale
         view.layer.borderColor = Appearance.white.withAlphaComponent(0.15).cgColor
-        view.backgroundColor = Appearance.white.withAlphaComponent(0.1)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
