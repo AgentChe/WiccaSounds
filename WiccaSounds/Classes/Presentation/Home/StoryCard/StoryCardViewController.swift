@@ -32,6 +32,8 @@ final class StoryCardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        AmplitudeManager.shared.logEvent(name: "Insight Screen")
+        
         viewModel.tryAgain = { [weak self] error -> Observable<Void> in
             guard let self = self else {
                 return .never()
@@ -42,6 +44,8 @@ final class StoryCardViewController: UIViewController {
         
         mainView.closeButton.rx.tap
             .bind(to: Binder(self) { base, void in
+                AmplitudeManager.shared.logEvent(name: "Insight Tap", parameters: ["what": "close"])
+                
                 base.dismiss(animated: true)
             })
             .disposed(by: disposeBag)
@@ -53,10 +57,16 @@ final class StoryCardViewController: UIViewController {
             .disposed(by: disposeBag)
         
         mainView.previousButton.rx.tap
+            .do(onNext: {
+                AmplitudeManager.shared.logEvent(name: "Insight Tap", parameters: ["what": "back"])
+            })
             .bind(to: viewModel.didTappedPrevious)
             .disposed(by: disposeBag)
         
         mainView.nextButton.rx.tap
+            .do(onNext: {
+                AmplitudeManager.shared.logEvent(name: "Insight Tap", parameters: ["what": "next"])
+            })
             .bind(to: viewModel.didTappedNext)
             .disposed(by: disposeBag)
         

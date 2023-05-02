@@ -56,6 +56,8 @@ extension SelectSoundViewController: SelectSoundTableDelegate {
     func selectSoundTable(element: SoundCellElement) {
         if element.isActiveSubscription {
             dismiss(animated: true) { [weak self] in
+                AmplitudeManager.shared.logEvent(name: "Ambience Tap", parameters: ["what": "set up"])
+                
                 self?.didSelect(element)
             }
         } else {

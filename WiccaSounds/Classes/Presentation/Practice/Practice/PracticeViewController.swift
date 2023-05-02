@@ -22,6 +22,8 @@ final class PracticeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        AmplitudeManager.shared.logEvent(name: "Practice Screen")
+        
         viewModel.elements
             .drive(Binder(mainView.collectionView) { base, elements in
                 base.setup(elements: elements)
@@ -81,7 +83,20 @@ private extension PracticeViewController {
             .bind(to: Binder(self) { base, unit in
                 base.mainView.unitView.setup(unit: unit)
                 base.viewModel.didSelectUnit.accept(unit)
+                base.log(tap: unit)
             })
             .disposed(by: disposeBag)
+    }
+    
+    func log(tap unit: PracticeUnitView.Unit) {
+        let what: String
+        switch unit {
+        case .tarot:
+            what = "tarot"
+        case .runes:
+            what = "runes"
+        }
+        
+        AmplitudeManager.shared.logEvent(name: "Practice Tap", parameters: ["what": what])
     }
 }

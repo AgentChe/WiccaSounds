@@ -33,6 +33,7 @@ final class OWelcomeView: OSlideView {
         makeConstraints()
         initialize()
         updateIndicators()
+        log()
     }
     
     required init?(coder: NSCoder) {
@@ -65,6 +66,7 @@ private extension OWelcomeView {
         
         updateIndicators()
         updatePositions()
+        log()
     }
     
     func updateIndicators() {
@@ -119,6 +121,20 @@ private extension OWelcomeView {
         case .cells:
             return (-686.scale, -295.scale, 32.scale)
         }
+    }
+    
+    func log() {
+        let step: Int
+        switch currentSlide {
+        case .text1:
+            step = 1
+        case .text2:
+            step = 2
+        case .cells:
+            step = 3
+        }
+        
+        AmplitudeManager.shared.logEvent(name: "Welcome Screen", parameters: ["step": step])
     }
 }
 

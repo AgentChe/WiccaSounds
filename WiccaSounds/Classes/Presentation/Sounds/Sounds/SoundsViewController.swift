@@ -31,6 +31,8 @@ final class SoundsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        AmplitudeManager.shared.logEvent(name: "Ambience Screen")
+        
         let selectedCellModel = didSelectSoundItemTrigger
         
         let selectedNoise = selectedCellModel

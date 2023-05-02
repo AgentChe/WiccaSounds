@@ -16,17 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash.Image" translatesAutoresizingMaskIntoConstraints="NO" id="fqt-uQ-RZL">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash.Image" translatesAutoresizingMaskIntoConstraints="NO" id="fqt-uQ-RZL">
+                                <rect key="frame" x="136.66666666666666" y="366" width="119.99999999999997" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="2XF-wa-qzd"/>
+                                    <constraint firstAttribute="height" constant="120" id="z37-cI-6oj"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.035294117647058823" green="0.035294117647058823" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fqt-uQ-RZL" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="2RB-3e-fMa"/>
-                            <constraint firstItem="fqt-uQ-RZL" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Cqr-JE-dF5"/>
-                            <constraint firstAttribute="bottom" secondItem="fqt-uQ-RZL" secondAttribute="bottom" id="gIn-FW-L6M"/>
-                            <constraint firstAttribute="trailing" secondItem="fqt-uQ-RZL" secondAttribute="trailing" id="gt5-Br-pfK"/>
+                            <constraint firstItem="fqt-uQ-RZL" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="0Gm-pq-Tip"/>
+                            <constraint firstItem="fqt-uQ-RZL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="vGF-Ar-cKF"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Splash.Image" width="1125" height="2436"/>
+        <image name="Splash.Image" width="360" height="360"/>
     </resources>
 </document>

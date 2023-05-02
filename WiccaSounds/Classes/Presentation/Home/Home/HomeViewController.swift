@@ -24,6 +24,8 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        AmplitudeManager.shared.logEvent(name: "Home Screen")
+        
         viewModel.tryAgain = { [weak self] error -> Observable<Void> in
             guard let self = self else {
                 return .never()
@@ -46,6 +48,8 @@ final class HomeViewController: UIViewController {
         
         settingsButton.rx.tap
             .bind(to: Binder(self) { base, void in
+                AmplitudeManager.shared.logEvent(name: "Home Tap", parameters: ["what": "settings"])
+                
                 let vc = SettingsViewController.make()
                 base.navigationController?.pushViewController(vc, animated: true)
             })
@@ -68,6 +72,8 @@ extension HomeViewController {
 // MARK: HomeTableDelegate
 extension HomeViewController: HomeTableDelegate {
     func homeTableDidTap(spell: Spell) {
+        AmplitudeManager.shared.logEvent(name: "Home Tap", parameters: ["what": "more"])
+        
         let vc = ContentViewController.make(unit: ContentViewModel.Unit.spell(spell))
         present(vc, animated: true)
     }
@@ -91,6 +97,8 @@ extension HomeViewController: HomeTableDelegate {
     }
     
     func homeTableDidShow(tarotCover: TarotCover) {
+        AmplitudeManager.shared.logEvent(name: "Home Tap", parameters: ["what": "tarot"])
+        
         let vc = TarotViewController.make(id: tarotCover.id)
         present(vc, animated: true)
     }
@@ -100,6 +108,8 @@ extension HomeViewController: HomeTableDelegate {
     }
     
     func homeTableDidShow(runeCover: RuneCover) {
+        AmplitudeManager.shared.logEvent(name: "Home Tap", parameters: ["what": "runes"])
+        
         let vc = RuneViewController.make(id: runeCover.id)
         present(vc, animated: true)
     }
