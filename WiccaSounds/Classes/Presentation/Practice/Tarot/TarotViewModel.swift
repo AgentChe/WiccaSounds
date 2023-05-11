@@ -50,7 +50,7 @@ private extension TarotViewModel {
                 var elements: [TarotTableElement] = [
                     .name(tarot.name),
                     .mode(mode),
-                    .image(tarot.image)
+                    .image(TarotImageElement(image: tarot.image, mode: mode))
                 ]
                 
                 if !meaning.tags.isEmpty {

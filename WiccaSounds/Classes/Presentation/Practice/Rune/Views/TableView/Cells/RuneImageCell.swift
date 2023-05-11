@@ -64,7 +64,7 @@ private extension RuneImageCell {
 private extension RuneImageCell {
     func makeImageView() -> UIImageView {
         let view = UIImageView()
-        view.contentMode = .scaleAspectFill
+        view.contentMode = .scaleAspectFit
         view.clipsToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)

@@ -32,8 +32,15 @@ final class TarotImageCell: UITableViewCell {
 
 // MARK: Public
 extension TarotImageCell {
-    func setup(element: URL) {
-        pictureView.kf.setImage(with: element)
+    func setup(element: TarotImageElement) {
+        pictureView.kf.setImage(with: element.image)
+        
+        switch element.mode {
+        case .upright:
+            pictureView.transform =  CGAffineTransform.identity
+        case .reversed:
+            pictureView.transform =  CGAffineTransform(rotationAngle: .pi)
+        }
     }
 }
 

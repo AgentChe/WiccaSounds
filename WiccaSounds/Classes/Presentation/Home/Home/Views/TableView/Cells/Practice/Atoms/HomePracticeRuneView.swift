@@ -242,7 +242,7 @@ private extension HomePracticeRuneView {
     func makeImageView() -> UIImageView {
         let view = UIImageView()
         view.backgroundColor = UIColor.clear
-        view.contentMode = .scaleAspectFill
+        view.contentMode = .scaleAspectFit
         view.clipsToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

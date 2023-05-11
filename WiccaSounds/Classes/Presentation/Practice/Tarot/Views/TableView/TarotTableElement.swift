@@ -10,9 +10,14 @@ import Foundation
 enum TarotTableElement {
     case name(String)
     case mode(TarotModeCell.Mode)
-    case image(URL)
+    case image(TarotImageElement)
     case title(String)
     case text(String)
     case contentImage(URL)
     case tags([String])
+}
+
+struct TarotImageElement {
+    let image: URL
+    let mode: TarotModeCell.Mode
 }
