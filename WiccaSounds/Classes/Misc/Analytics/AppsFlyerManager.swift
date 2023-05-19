@@ -36,7 +36,7 @@ extension AppsFlyerManager {
         AppsFlyerLib.shared().appsFlyerDevKey = GlobalDefinitions.appsFlyerApiKey
         AppsFlyerLib.shared().appleAppID = GlobalDefinitions.appleAppID
         
-        OtterScale.shared.add(delegate: self)
+        OtterScale.shared.addReceiptValidation(delegate: self)
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {

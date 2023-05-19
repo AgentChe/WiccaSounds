@@ -36,7 +36,7 @@ extension AmplitudeManager {
     func initialize() {
         Amplitude.instance().initializeApiKey(GlobalDefinitions.amplitudeApiKey)
         
-        OtterScale.shared.add(delegate: self)
+        OtterScale.shared.addReceiptValidation(delegate: self)
         
         installFirstLaunchIfNeeded()
     }

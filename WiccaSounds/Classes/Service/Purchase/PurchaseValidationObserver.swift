@@ -17,7 +17,7 @@ final class PurchaseValidationObserver {
     private init() {}
     
     func startObserve() {
-        OtterScale.shared.add(delegate: self)
+        OtterScale.shared.addReceiptValidation(delegate: self)
     }
 }
 

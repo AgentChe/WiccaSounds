@@ -58,11 +58,11 @@ private final class DefaultValidationObserver: OtterScaleReceiptValidationDelega
     }
     
     func observe() {
-        OtterScale.shared.add(delegate: self)
+        OtterScale.shared.addReceiptValidation(delegate: self)
     }
     
     func otterScaleDidValidatedReceipt(with result: AppStoreValidateResult?) {
-        OtterScale.shared.remove(delegate: self)
+        OtterScale.shared.removeReceiptValidation(delegate: self)
         
         completion()
     }
@@ -93,7 +93,7 @@ private final class ExtractInternalUserID: OtterScaleReceiptValidationDelegate {
                 return
             }
             
-            OtterScale.shared.add(delegate: self)
+            OtterScale.shared.addReceiptValidation(delegate: self)
             
             OtterScale.shared.set(internalUserID: userID)
             
@@ -102,7 +102,7 @@ private final class ExtractInternalUserID: OtterScaleReceiptValidationDelegate {
     }
     
     func otterScaleDidValidatedReceipt(with result: AppStoreValidateResult?) {
-        OtterScale.shared.remove(delegate: self)
+        OtterScale.shared.removeReceiptValidation(delegate: self)
         
         completion()
     }

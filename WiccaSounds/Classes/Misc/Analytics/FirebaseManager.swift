@@ -57,7 +57,7 @@ extension FirebaseManager {
     func initialize() {
         FirebaseApp.configure()
         
-        OtterScale.shared.add(delegate: self)
+        OtterScale.shared.addReceiptValidation(delegate: self)
         SKPaymentQueue.default().add(self)
         
         installFirstLaunchIfNeeded()

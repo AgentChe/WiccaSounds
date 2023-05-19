@@ -30,7 +30,7 @@ final class PaygateInteractor {
     private lazy var callback = PublishRelay<PurchaseActionResult>()
     
     deinit {
-        OtterScale.shared.remove(delegate: self)
+        OtterScale.shared.removeReceiptValidation(delegate: self)
         
         disposables.forEach { $0.dispose() }
     }
@@ -39,8 +39,8 @@ final class PaygateInteractor {
 // MARK: Public
 extension PaygateInteractor {
     func makeActiveSubscription(by action: Action) -> Single<PurchaseActionResult> {
-        OtterScale.shared.remove(delegate: self)
-        OtterScale.shared.add(delegate: self)
+        OtterScale.shared.removeReceiptValidation(delegate: self)
+        OtterScale.shared.addReceiptValidation(delegate: self)
         
         disposables.forEach { $0.dispose() }
         
@@ -73,7 +73,7 @@ extension PaygateInteractor {
 // MARK: OtterScaleReceiptValidationDelegate
 extension PaygateInteractor: OtterScaleReceiptValidationDelegate {
     func otterScaleDidValidatedReceipt(with result: AppStoreValidateResult?) {
-        OtterScale.shared.remove(delegate: self)
+        OtterScale.shared.removeReceiptValidation(delegate: self)
         
         let otterScaleID = OtterScale.shared.getInternalID()
         

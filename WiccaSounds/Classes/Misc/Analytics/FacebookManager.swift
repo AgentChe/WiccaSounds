@@ -76,7 +76,7 @@ extension FacebookManager {
         
         AppEvents.shared.activateApp()
         
-        OtterScale.shared.add(delegate: self)
+        OtterScale.shared.addReceiptValidation(delegate: self)
         SKPaymentQueue.default().add(self)
     }
     
