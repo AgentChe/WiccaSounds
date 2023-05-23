@@ -63,6 +63,8 @@ final class OPreloaderView: OSlideView {
         request()
         
         AmplitudeManager.shared.logEvent(name: "Loading Screen")
+        
+        RequestReview.request()
     }
 }
 
