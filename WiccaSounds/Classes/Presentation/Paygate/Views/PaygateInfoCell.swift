@@ -13,8 +13,13 @@ final class PaygateInfoCell: UIView {
     
     private lazy var attrs = TextAttributes()
         .textColor(Appearance.white)
-        .font(Fonts.Inter.regular(size: 17.scale))
-        .lineHeight(23.8.scale)
+        .font(Fonts.PlayfairDisplay.regular(size: ScreenSize.isIphoneXFamily ? 17.scale : 15.scale))
+        .lineHeight(ScreenSize.isIphoneXFamily ? 23.8.scale : 21.scale)
+        .letterSpacing(0.17.scale)
+    private lazy var smallAttrs = TextAttributes()
+        .textColor(Appearance.white)
+        .font(Fonts.PlayfairDisplay.regular(size: ScreenSize.isIphoneXFamily ? 15.scale : 13.scale))
+        .lineHeight(ScreenSize.isIphoneXFamily ? 21.scale : 18.2.scale)
         .letterSpacing(0.17.scale)
     
     override init(frame: CGRect) {
@@ -30,8 +35,8 @@ final class PaygateInfoCell: UIView {
 
 // MARK: Public
 extension PaygateInfoCell {
-    func setup(text: String) {
-        label.attributedText = text.attributed(with: attrs)
+    func setup(text: String, isSmall: Bool = false) {
+        label.attributedText = text.attributed(with: isSmall ? smallAttrs : attrs)
     }
 }
 
@@ -39,15 +44,15 @@ extension PaygateInfoCell {
 private extension PaygateInfoCell {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: 18.scale),
-            imageView.heightAnchor.constraint(equalToConstant: 24.scale),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20.scale),
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 1.scale)
+            imageView.widthAnchor.constraint(equalToConstant: 20.scale),
+            imageView.heightAnchor.constraint(equalToConstant: 19.scale),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32.scale),
+            imageView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 46.scale),
-            label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -22.scale),
+            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60.scale),
+            label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12.scale),
             label.topAnchor.constraint(equalTo: topAnchor),
             label.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
@@ -59,7 +64,7 @@ private extension PaygateInfoCell {
     func makeImageView() -> UIImageView {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
-        view.image = UIImage(named: "Paygate.Star")
+        view.image = UIImage(named: "Paygate.Checked")
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

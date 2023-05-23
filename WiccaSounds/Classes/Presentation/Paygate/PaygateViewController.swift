@@ -29,22 +29,24 @@ final class PaygateViewController: UIViewController {
         FirebaseManager.shared
             .logEvent(name: "client_paygate_screen")
         
-        viewModel.products
-            .drive(Binder(self) { base, products in
-                base.mainView.topOptionButton.info = products.first
-                base.mainView.bottomOptionButton.info = products.last
+        viewModel.prices
+            .drive(Binder(self) { base, prices in
+                base.mainView.topOptionButton.price = prices.first(where: { $0.id == GlobalDefinitions.Paygate.defaultLifetime })
+                base.mainView.bottomOptionButton.price = prices.first(where: { $0.id == GlobalDefinitions.Paygate.defaultMonthly })
+                base.setupPriceForCell(prices: prices)
             })
             .disposed(by: disposeBag)
         
         Observable
             .merge(
-                mainView.topOptionButton.rx.tap.map { (true, false) },
-                mainView.bottomOptionButton.rx.tap.map { (false, true) }
+                mainView.topOptionButton.rx.tap
+                    .compactMap { [weak self] in self?.mainView.topOptionButton.price?.id }
+                    .asObservable(),
+                mainView.bottomOptionButton.rx.tap
+                    .compactMap { [weak self] in self?.mainView.bottomOptionButton.price?.id }
+                    .asObservable()
             )
-            .bind(to: Binder(mainView) { base, marked in
-                base.topOptionButton.isChecked = marked.0
-                base.bottomOptionButton.isChecked = marked.1
-            })
+            .bind(to: viewModel.buy)
             .disposed(by: disposeBag)
         
         Observable
@@ -100,24 +102,6 @@ final class PaygateViewController: UIViewController {
                 base.activityIndicator(active: active)
             })
             .disposed(by: disposeBag)
-        
-        mainView.continueButton.rx.tap
-            .bind(to: Binder(self) { base, void in
-                let id = [
-                    base.mainView.topOptionButton,
-                    base.mainView.bottomOptionButton
-                ].first(where: { $0.isChecked })?.info?.productId
-                
-                guard let id = id else {
-                    return
-                }
-                
-                base.viewModel.buy.accept(id)
-            })
-            .disposed(by: disposeBag)
-        
-        mainView.topOptionButton.isChecked = true
-        mainView.animateScrollReviews()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -151,7 +135,18 @@ private extension PaygateViewController {
         
         mainView.topOptionButton.isHidden = active
         mainView.bottomOptionButton.isHidden = active
-        mainView.continueButton.isHidden = active
         mainView.restoreButton.isHidden = active
+    }
+    
+    func setupPriceForCell(prices: [ProductPrice]) {
+        guard
+            let lifetime = prices.first(where: { GlobalDefinitions.Paygate.defaultLifetime == $0.id })?.priceLocalized,
+            let monthly = prices.first(where: { GlobalDefinitions.Paygate.defaultMonthly == $0.id })?.priceLocalized
+        else {
+            return
+        }
+        
+        let string = String(format: "Paygate.Cell5".localized, lifetime, monthly)
+        mainView.cell5.setup(text: string, isSmall: true)
     }
 }

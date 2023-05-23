@@ -53,4 +53,11 @@ struct Fonts {
             UIFont(name: "PlusJakartaSans-Regular", size: size)!
         }
     }
+    
+    // MARK: PlayfairDisplay
+    struct PlayfairDisplay {
+        static func regular(size: CGFloat) -> UIFont {
+            UIFont(name: "PlayfairDisplay-Regular", size: size)!
+        }
+    }
 }
