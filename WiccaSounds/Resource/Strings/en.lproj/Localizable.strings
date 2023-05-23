@@ -24,7 +24,7 @@
 
 // MARK: Splash
 "Splash.Preloader1" = "Checking your account...";
-"Splash.Preloader2" = "Syncing the soccer library";
+"Splash.Preloader2" = "Loading spells, runes and more";
 "Splash.Preloader3" = "Setting up your account...";
 
 // MARK: Paygate
