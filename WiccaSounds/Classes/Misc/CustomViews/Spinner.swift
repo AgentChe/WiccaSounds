@@ -9,7 +9,7 @@ import UIKit
 
 final class Spinner: UIView {
     enum Color {
-        case main
+        case main, circle
     }
     
     private let animationKey = "spinner_rotation_key"
@@ -93,6 +93,8 @@ private extension Spinner {
         switch color {
         case .main:
             return "Spinner.Main"
+        case .circle:
+            return "Spinner.Circle"
         }
     }
 }
