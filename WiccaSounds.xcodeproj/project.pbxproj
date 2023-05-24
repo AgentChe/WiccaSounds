@@ -37,7 +37,6 @@
 		DE20A9BF29F189CE007DC75F /* PracticeTarotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A9BE29F189CE007DC75F /* PracticeTarotCell.swift */; };
 		DE20A9C129F189D5007DC75F /* PracticeRuneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20A9C029F189D5007DC75F /* PracticeRuneCell.swift */; };
 		DE21CF5429F3E23A009FBCDF /* RuneContentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE21CF5329F3E23A009FBCDF /* RuneContentSection.swift */; };
-		DE2DA26D29FA8B83000B3F62 /* SoundsMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DA26C29FA8B83000B3F62 /* SoundsMenuButton.swift */; };
 		DE2DA26F29FA978F000B3F62 /* ViewportTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DA26E29FA978F000B3F62 /* ViewportTitleView.swift */; };
 		DE2DA27429FB0EE2000B3F62 /* SelectSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DA27329FB0EE2000B3F62 /* SelectSoundViewController.swift */; };
 		DE2DA27629FB0EE9000B3F62 /* SelectSoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2DA27529FB0EE9000B3F62 /* SelectSoundViewModel.swift */; };
@@ -307,7 +306,6 @@
 		DEC3049B29F69AD900C6AAF1 /* SoundGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3048329F69AD900C6AAF1 /* SoundGroupCell.swift */; };
 		DEC3049E29F69AD900C6AAF1 /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3048629F69AD900C6AAF1 /* SoundCell.swift */; };
 		DEC3049F29F69AD900C6AAF1 /* SoundCellElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3048829F69AD900C6AAF1 /* SoundCellElement.swift */; };
-		DEC304A129F69AD900C6AAF1 /* SoundsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3048B29F69AD900C6AAF1 /* SoundsMenuView.swift */; };
 		DEC304A429F69AD900C6AAF1 /* LoadingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3049229F69AD900C6AAF1 /* LoadingLayer.swift */; };
 		DEC304A529F69AD900C6AAF1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3049329F69AD900C6AAF1 /* LoadingView.swift */; };
 		DEC304A629F69AD900C6AAF1 /* NoiseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC3049429F69AD900C6AAF1 /* NoiseView.xib */; };
@@ -354,7 +352,6 @@
 		DE20A9BE29F189CE007DC75F /* PracticeTarotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTarotCell.swift; sourceTree = "<group>"; };
 		DE20A9C029F189D5007DC75F /* PracticeRuneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeRuneCell.swift; sourceTree = "<group>"; };
 		DE21CF5329F3E23A009FBCDF /* RuneContentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneContentSection.swift; sourceTree = "<group>"; };
-		DE2DA26C29FA8B83000B3F62 /* SoundsMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsMenuButton.swift; sourceTree = "<group>"; };
 		DE2DA26E29FA978F000B3F62 /* ViewportTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewportTitleView.swift; sourceTree = "<group>"; };
 		DE2DA27329FB0EE2000B3F62 /* SelectSoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSoundViewController.swift; sourceTree = "<group>"; };
 		DE2DA27529FB0EE9000B3F62 /* SelectSoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSoundViewModel.swift; sourceTree = "<group>"; };
@@ -626,7 +623,6 @@
 		DEC3048329F69AD900C6AAF1 /* SoundGroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundGroupCell.swift; sourceTree = "<group>"; };
 		DEC3048629F69AD900C6AAF1 /* SoundCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
 		DEC3048829F69AD900C6AAF1 /* SoundCellElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundCellElement.swift; sourceTree = "<group>"; };
-		DEC3048B29F69AD900C6AAF1 /* SoundsMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsMenuView.swift; sourceTree = "<group>"; };
 		DEC3049229F69AD900C6AAF1 /* LoadingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingLayer.swift; sourceTree = "<group>"; };
 		DEC3049329F69AD900C6AAF1 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		DEC3049429F69AD900C6AAF1 /* NoiseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoiseView.xib; sourceTree = "<group>"; };
@@ -2094,7 +2090,6 @@
 		DEC3048129F69AD900C6AAF1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DEC3048929F69AD900C6AAF1 /* Menu */,
 				DEC3048F29F69AD900C6AAF1 /* ViewportView */,
 				DE2DA28029FBD496000B3F62 /* SoundsEmptyView.swift */,
 			);
@@ -2107,15 +2102,6 @@
 				DEC3048829F69AD900C6AAF1 /* SoundCellElement.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		DEC3048929F69AD900C6AAF1 /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-				DEC3048B29F69AD900C6AAF1 /* SoundsMenuView.swift */,
-				DE2DA26C29FA8B83000B3F62 /* SoundsMenuButton.swift */,
-			);
-			path = Menu;
 			sourceTree = "<group>";
 		};
 		DEC3048F29F69AD900C6AAF1 /* ViewportView */ = {
@@ -2341,7 +2327,6 @@
 				DE995BD429E99F9600B08290 /* BookmarksEmptyView.swift in Sources */,
 				DE6574FC29C838E30074CBE5 /* IAPManager.swift in Sources */,
 				DE8027E829D40A26003C9993 /* HomeTipsCollectionCell.swift in Sources */,
-				DEC304A129F69AD900C6AAF1 /* SoundsMenuView.swift in Sources */,
 				DE2DA27629FB0EE9000B3F62 /* SelectSoundViewModel.swift in Sources */,
 				DE995BED29E9ABC200B08290 /* StoryCardTableView.swift in Sources */,
 				DE65749D29C838DF0074CBE5 /* TabItemView.swift in Sources */,
@@ -2495,7 +2480,6 @@
 				DE995BCC29E9920500B08290 /* SelectSpellsViewController.swift in Sources */,
 				DE75D88629E44CDD003F6B42 /* HomePracticeRuneView.swift in Sources */,
 				DE20A99C29F17F76007DC75F /* TagsView.swift in Sources */,
-				DE2DA26D29FA8B83000B3F62 /* SoundsMenuButton.swift in Sources */,
 				DE65749629C838DF0074CBE5 /* PaygateInteractor.swift in Sources */,
 				DE6576A929CD9F5E0074CBE5 /* HomeViewModel.swift in Sources */,
 				DE65765729C9DA750074CBE5 /* Lunar.swift in Sources */,

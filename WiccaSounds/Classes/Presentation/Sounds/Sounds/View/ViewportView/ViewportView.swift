@@ -14,7 +14,6 @@ final class ViewportView: UIView {
     typealias Volume = (to: Int, volume: Float)
     
     lazy var titleView = makeTitleView()
-    lazy var menuView = makeMenuView()
     lazy var weakerLabel = makeVolumeLabel(title: "Sounds.Weaker".localized)
     lazy var strongerLabel = makeVolumeLabel(title: "Sounds.Stronger".localized)
     lazy var hushLabel = makeVolumeLabel(title: "Sounds.Hush".localized)
@@ -68,16 +67,6 @@ final class ViewportView: UIView {
                 result.append(new)
                 return result
             }
-        
-        menuView
-            .clearAllButton.rx.tap
-            .withLatestFrom(sounds.asSignal(onErrorSignalWith: .never()))
-            .bind(to: Binder(self) { base, sounds in
-                for sound in sounds {
-                    base.deletedRelay.accept(.delete(id: sound.id))
-                }
-            })
-            .disposed(by: disposeBag)
         
         let addNoiseView = noiseSounds
             .delay(.milliseconds(550), scheduler: MainScheduler.instance)
@@ -203,18 +192,6 @@ final class ViewportView: UIView {
                 ($0.0 == $1.0) && ($0.1 == $1.1)
             }
             .bind(to: changeVolumeRelay)
-            .disposed(by: disposeBag)
-        
-        Observable
-            .merge(titleView.menuButton.rx.tap.map { _ in 1 },
-                   didTap.asObservable().map { _ in 0 },
-                   viewsTranslation.map { _ in 0 },
-                   menuView.clearAllButton.rx.tap.asObservable().map { _ in 0 })
-            .subscribe(onNext: { [weak self] alpha in
-                UIView.animate(withDuration: 0.3, animations: {
-                    self?.menuView.alpha = alpha
-                })
-            })
             .disposed(by: disposeBag)
     }
     
@@ -480,12 +457,6 @@ private extension ViewportView {
         ])
         
         NSLayoutConstraint.activate([
-            menuView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 63.scale),
-            menuView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -63.scale),
-            menuView.topAnchor.constraint(equalTo: titleView.bottomAnchor, constant: 17.scale)
-        ])
-        
-        NSLayoutConstraint.activate([
             weakerLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             weakerLabel.leadingAnchor.constraint(equalTo: leadingAnchor)
         ])
@@ -519,17 +490,6 @@ private extension ViewportView {
     func makeTitleView() -> ViewportTitleView {
         let view = ViewportTitleView()
         view.backgroundColor = UIColor.clear
-        view.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(view)
-        return view
-    }
-    
-    func makeMenuView() -> SoundsMenuView {
-        let view = SoundsMenuView()
-        view.alpha = 0
-        view.backgroundColor = Appearance.white.withAlphaComponent(0.5)
-        view.layer.cornerRadius = 13.scale
-        view.layer.masksToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
