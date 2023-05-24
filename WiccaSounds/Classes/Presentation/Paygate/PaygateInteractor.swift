@@ -123,6 +123,8 @@ private extension PaygateInteractor {
     func restore() -> Disposable {
         iapManager
             .restorePurchases()
-            .subscribe()
+            .subscribe(onFailure: { [weak self] error in
+                self?.callback.accept(.completed(false))
+            })
     }
 }
