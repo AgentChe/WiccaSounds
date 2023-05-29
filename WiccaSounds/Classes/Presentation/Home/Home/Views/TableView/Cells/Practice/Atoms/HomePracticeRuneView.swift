@@ -14,8 +14,10 @@ final class HomePracticeRuneView: UIView {
     
     lazy var label = makeLabel()
     lazy var button = makeButton()
+    lazy var runeBackgroundView = makeImageView()
     lazy var runeView = makeImageView()
     
+    private lazy var runeBackgroundTopConstraint = NSLayoutConstraint()
     private lazy var runeTopConstraint = NSLayoutConstraint()
     
     private lazy var isOpened = false
@@ -126,6 +128,9 @@ private extension HomePracticeRuneView {
     }
     
     func setupUI() {
+        runeBackgroundView.image = UIImage(named: "Home.Rune.Empty")
+        runeBackgroundView.isHidden = !isOpened
+        
         if isOpened {
             runeView.kf.setImage(with: runeOnToday.rune.image)
         } else {
@@ -148,11 +153,9 @@ private extension HomePracticeRuneView {
     }
     
     func moveRune(animate: Bool) {
-        runeTopConstraint.isActive = false
-        
-        runeTopConstraint.constant = isOpened ? 72.scale : 109.scale
-        
-        runeTopConstraint.isActive = true
+        [runeBackgroundTopConstraint, runeTopConstraint].forEach { $0.isActive = false }
+        [runeBackgroundTopConstraint, runeTopConstraint].forEach { $0.constant = isOpened ? 72.scale : 109.scale }
+        [runeBackgroundTopConstraint, runeTopConstraint].forEach { $0.isActive = true }
         
         if animate {
             UIView.animate(withDuration: 0.3, animations: { [weak self] in
@@ -185,6 +188,7 @@ private extension HomePracticeRuneView {
         }
         
         runeView.image = image
+        runeBackgroundView.isHidden = false
     }
 }
 
@@ -202,6 +206,14 @@ private extension HomePracticeRuneView {
             button.heightAnchor.constraint(equalToConstant: 47.scale),
             button.centerXAnchor.constraint(equalTo: centerXAnchor),
             button.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+        
+        runeBackgroundTopConstraint = runeBackgroundView.topAnchor.constraint(equalTo: topAnchor, constant: 109.scale)
+        NSLayoutConstraint.activate([
+            runeBackgroundView.widthAnchor.constraint(equalToConstant: 199.scale),
+            runeBackgroundView.heightAnchor.constraint(equalToConstant: 293.scale),
+            runeBackgroundView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            runeBackgroundTopConstraint
         ])
         
         runeTopConstraint = runeView.topAnchor.constraint(equalTo: topAnchor, constant: 109.scale)
