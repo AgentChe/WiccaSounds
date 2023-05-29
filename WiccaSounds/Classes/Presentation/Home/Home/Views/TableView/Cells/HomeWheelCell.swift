@@ -45,6 +45,7 @@ extension HomeWheelCell {
         
         nameLabel.attributedText = element.name.attributed(with: nameAttrs)
         
+        stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         element.blocks.forEach { block in
             blockToView(block)
         }
