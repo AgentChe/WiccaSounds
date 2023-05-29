@@ -295,6 +295,7 @@
 		DE995BEC29E9ABC200B08290 /* StoryCardTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BE229E9ABC200B08290 /* StoryCardTableElement.swift */; };
 		DE995BED29E9ABC200B08290 /* StoryCardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BE329E9ABC200B08290 /* StoryCardTableView.swift */; };
 		DE995BEE29E9ABC200B08290 /* StoryCardStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BE429E9ABC200B08290 /* StoryCardStepsView.swift */; };
+		DEB2B2892A24DFCD00C26FC5 /* Onboarding.Preloader.json in Resources */ = {isa = PBXBuildFile; fileRef = DEB2B2882A24DFCD00C26FC5 /* Onboarding.Preloader.json */; };
 		DEC3046D29F6915D00C6AAF1 /* NoiseSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3046C29F6915D00C6AAF1 /* NoiseSound.swift */; };
 		DEC3046F29F6916500C6AAF1 /* Noise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3046E29F6916500C6AAF1 /* Noise.swift */; };
 		DEC3047129F6916D00C6AAF1 /* NoiseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC3047029F6916D00C6AAF1 /* NoiseCategory.swift */; };
@@ -612,6 +613,7 @@
 		DE995BE229E9ABC200B08290 /* StoryCardTableElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCardTableElement.swift; sourceTree = "<group>"; };
 		DE995BE329E9ABC200B08290 /* StoryCardTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCardTableView.swift; sourceTree = "<group>"; };
 		DE995BE429E9ABC200B08290 /* StoryCardStepsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCardStepsView.swift; sourceTree = "<group>"; };
+		DEB2B2882A24DFCD00C26FC5 /* Onboarding.Preloader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding.Preloader.json; sourceTree = "<group>"; };
 		DEC3046C29F6915D00C6AAF1 /* NoiseSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseSound.swift; sourceTree = "<group>"; };
 		DEC3046E29F6916500C6AAF1 /* Noise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noise.swift; sourceTree = "<group>"; };
 		DEC3047029F6916D00C6AAF1 /* NoiseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseCategory.swift; sourceTree = "<group>"; };
@@ -996,6 +998,7 @@
 		DE65746929C838DF0074CBE5 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				DEB2B2872A24DFBB00C26FC5 /* Source */,
 				DE65746A29C838DF0074CBE5 /* Utils */,
 				DE65746D29C838DF0074CBE5 /* Views */,
 				DE65746C29C838DF0074CBE5 /* OnboardingViewController.swift */,
@@ -2041,6 +2044,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		DEB2B2872A24DFBB00C26FC5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DEB2B2882A24DFCD00C26FC5 /* Onboarding.Preloader.json */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		DEC3046A29F6915000C6AAF1 /* Noise */ = {
 			isa = PBXGroup;
 			children = (
@@ -2254,6 +2265,7 @@
 				DE65758329C838F30074CBE5 /* Inter-Italic.otf in Resources */,
 				DE65758129C838F30074CBE5 /* Inter-Bold.ttf in Resources */,
 				DE65758629C838F30074CBE5 /* PlusJakartaSans-SemiBold.ttf in Resources */,
+				DEB2B2892A24DFCD00C26FC5 /* Onboarding.Preloader.json in Resources */,
 				DE65758529C838F30074CBE5 /* PlusJakartaSans-Medium.ttf in Resources */,
 				DE65758029C838F30074CBE5 /* Inter-Medium.ttf in Resources */,
 				DE65758F29C838FB0074CBE5 /* Localizable.strings in Resources */,

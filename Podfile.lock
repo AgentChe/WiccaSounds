@@ -103,6 +103,7 @@ PODS:
   - GoogleUtilities/UserDefaults (7.11.1):
     - GoogleUtilities/Logger
   - Kingfisher (7.6.2)
+  - lottie-ios (4.2.0)
   - MarqueeLabel (4.3.0)
   - nanopb (2.30909.0):
     - nanopb/decode (= 2.30909.0)
@@ -132,6 +133,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Messaging
   - Kingfisher
+  - lottie-ios
   - NotificationBannerSwift
   - OtterScaleiOS (from `https://github.com/AgentChe/OtterScaleiOS.git`)
   - RxCocoa
@@ -157,6 +159,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleUtilities
     - Kingfisher
+    - lottie-ios
     - MarqueeLabel
     - nanopb
     - NotificationBannerSwift
@@ -194,6 +197,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: f0308f5905a745f94fb91fea9c6cbaf3831cb1bd
   GoogleUtilities: 9aa0ad5a7bc171f8bae016300bfcfa3fb8425749
   Kingfisher: 6c5449c6450c5239166510ba04afe374a98afc4f
+  lottie-ios: 809ecf2d460ed650a6aed7aa88b2ec45fab4779c
   MarqueeLabel: 02f5ac8fd6877c94564556cb93fa86c70c08baeb
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   NotificationBannerSwift: dce54ded532b26e30cd8e7f4d80e124a0f2ba7d1
@@ -205,6 +209,6 @@ SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
 
-PODFILE CHECKSUM: 52c2da0c7e30e13a30804371a759062e143097a4
+PODFILE CHECKSUM: 2eb1466e8a9048ff21bd371b570448f7b5d8edd4
 
 COCOAPODS: 1.11.2

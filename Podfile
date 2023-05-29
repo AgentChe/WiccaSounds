@@ -7,6 +7,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'WiccaSounds' do
   pod 'NotificationBannerSwift'
   pod 'Kingfisher'
+  pod 'lottie-ios'
   
   pod 'RxSwift'
   pod 'RxCocoa'

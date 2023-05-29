@@ -7,13 +7,14 @@
 
 import UIKit
 import RxSwift
+import Lottie
 
 final class OPreloaderView: OSlideView {
     weak var vc: UIViewController?
     
     lazy var titleLabel = makeTitleLabel()
     lazy var subTitleLabel = makeSubTitleLabel()
-    lazy var imageView = makeImageView()
+    lazy var animationView = makeAnimationView()
     lazy var loadingLabel = makeLabel()
     lazy var progressView = makeProgresView()
     lazy var progressLabel = makeLabel()
@@ -59,6 +60,7 @@ final class OPreloaderView: OSlideView {
     override func moveToThis() {
         super.moveToThis()
         
+        play()
         calculatePercent()
         request()
         
@@ -72,6 +74,11 @@ final class OPreloaderView: OSlideView {
 private extension OPreloaderView {
     func initialize() {
         backgroundColor = UIColor.clear
+    }
+    
+    func play() {
+        animationView.animation = LottieAnimation.named("Onboarding.Preloader")
+        animationView.play()
     }
     
     func request() {
@@ -182,8 +189,8 @@ private extension OPreloaderView {
 private extension OPreloaderView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32.scale),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32.scale),
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 120.scale : 50.scale)
         ])
         
@@ -194,10 +201,10 @@ private extension OPreloaderView {
         ])
         
         NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 339.scale),
-            imageView.topAnchor.constraint(equalTo: subTitleLabel.bottomAnchor, constant: 18.scale)
+            animationView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            animationView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            animationView.heightAnchor.constraint(equalToConstant: 339.scale),
+            animationView.topAnchor.constraint(equalTo: subTitleLabel.bottomAnchor, constant: 18.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -261,10 +268,10 @@ private extension OPreloaderView {
         return view
     }
     
-    func makeImageView() -> UIImageView {
-        let view = UIImageView()
+    func makeAnimationView() -> LottieAnimationView {
+        let view = LottieAnimationView()
         view.contentMode = .scaleAspectFit
-        view.image = UIImage(named: "Onboarding.Preloader")
+        view.loopMode = .playOnce
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
