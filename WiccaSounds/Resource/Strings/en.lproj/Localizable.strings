@@ -78,7 +78,7 @@
 "Onboarding.ObjectsChannel.Oils" = "Oils";
 "Onboarding.ObjectsChannel.Candles" = "Candles";
 "Onboarding.Preloader.Title" = "80,000 users successfully begin practicing Wicca with our spellbook in the United States and we can’t wait to help you too!";
-"Onboarding.Preloader.SubTitle" = "as for May 2022";
+"Onboarding.Preloader.SubTitle" = "as for %@";
 "Onboarding.Preloader.Label1" = "Connecting to database...";
 "Onboarding.Preloader.Label2" = "Cross-checking with user database...";
 "Onboarding.Preloader.Label3" = "Identifying spell preferences...";

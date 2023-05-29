@@ -239,6 +239,14 @@ private extension OPreloaderView {
     }
     
     func makeSubTitleLabel() -> UILabel {
+        let formatter = DateFormatter()
+        formatter.locale = Locale.current
+        formatter.dateFormat = "MMM yyyy"
+        
+        let date = formatter.string(from: Date())
+        
+        let string = String(format: "Onboarding.Preloader.SubTitle".localized, date)
+        
         let attrs = TextAttributes()
             .textColor(Appearance.white.withAlphaComponent(0.8))
             .font(Fonts.Inter.regular(size: 16.scale))
@@ -247,7 +255,7 @@ private extension OPreloaderView {
             .letterSpacing(0.14.scale)
         
         let view = UILabel()
-        view.attributedText = "Onboarding.Preloader.SubTitle".localized.attributed(with: attrs)
+        view.attributedText = string.attributed(with: attrs)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

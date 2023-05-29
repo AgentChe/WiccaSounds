@@ -17,6 +17,7 @@ final class OSpellsCategoriesView: OSlideView {
     
     lazy var titleLabel = makeTitleLabel()
     lazy var tableView = makeTableView()
+    lazy var gradientView = makeGradientView()
     lazy var continueButton = makeContinueButton()
     
     private lazy var spellsManager = SpellsManager()
@@ -68,7 +69,8 @@ private extension OSpellsCategoriesView {
         let hasMarked = tableView.elements.contains(where: { $0.marked })
         
         continueButton.isEnabled = hasMarked
-        continueButton.alpha = hasMarked ? 1 : 0.4
+        continueButton.backgroundColor = hasMarked ? Appearance.primary : UIColor(integralRed: 54, green: 71, blue: 63)
+        continueButton.titleLabel?.alpha = hasMarked ? 1 : 0.4
     }
     
     @objc
@@ -95,7 +97,14 @@ private extension OSpellsCategoriesView {
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
             tableView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2.scale),
-            tableView.bottomAnchor.constraint(equalTo: continueButton.topAnchor)
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            gradientView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            gradientView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            gradientView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            gradientView.topAnchor.constraint(equalTo: continueButton.topAnchor, constant: -12.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -126,7 +135,7 @@ private extension OSpellsCategoriesView {
     
     func makeTableView() -> OSpellsCategoriesTableView {
         let view = OSpellsCategoriesTableView ()
-        view.contentInset = UIEdgeInsets(top: 20.scale, left: 0, bottom: 20.scale, right: 0)
+        view.contentInset = UIEdgeInsets(top: 20.scale, left: 0, bottom: ScreenSize.isIphoneXFamily ? 128.scale : 98.scale, right: 0)
         view.setContentOffset(CGPoint(x: 0, y: -20.scale), animated: false)
         view.separatorStyle = .none
         view.layoutMargins = UIEdgeInsets.zero
@@ -137,6 +146,20 @@ private extension OSpellsCategoriesView {
         view.showsVerticalScrollIndicator = false
         view.contentInsetAdjustmentBehavior = .never
         view.backgroundColor = UIColor.clear
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeGradientView() -> GradientView {
+        let view = GradientView()
+        view.gradientLayer.colors = [
+            UIColor(integralRed: 13, green: 16, blue: 15, alpha: 0).cgColor,
+            UIColor(integralRed: 14, green: 16, blue: 15, alpha: 1).cgColor
+        ]
+        view.gradientLayer.locations = [0, 0.4, 1]
+        view.gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
+        view.gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

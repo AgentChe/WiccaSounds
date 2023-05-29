@@ -68,7 +68,8 @@ private extension OTarotSuitView {
         let hasMarked = cells.contains(where: { $0.marked })
         
         continueButton.isEnabled = hasMarked
-        continueButton.alpha = hasMarked ? 1 : 0.4
+        continueButton.backgroundColor = hasMarked ? Appearance.primary : UIColor(integralRed: 54, green: 71, blue: 63)
+        continueButton.titleLabel?.alpha = hasMarked ? 1 : 0.4
     }
 }
 
