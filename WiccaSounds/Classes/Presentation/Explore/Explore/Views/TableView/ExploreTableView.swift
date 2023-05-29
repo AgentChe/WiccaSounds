@@ -55,6 +55,12 @@ extension ExploreTableView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch sections[indexPath.section].elements[indexPath.row] {
+        case .empty:
+            let cell = dequeueReusableCell(withIdentifier: String(describing: UITableViewCell.self), for: indexPath)
+            cell.backgroundColor = UIColor.clear
+            cell.contentView.backgroundColor = UIColor.clear
+            cell.selectionStyle = .none
+            return cell
         case .spellsCategory(let element):
             let cell = dequeueReusableCell(withIdentifier: String(describing: ExploreSpellCategoryCell.self)) as! ExploreSpellCategoryCell
             cell.setup(element: element)
@@ -87,6 +93,8 @@ extension ExploreTableView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch sections[indexPath.section].elements[indexPath.row] {
+        case .empty:
+            return 16.scale
         case .unit:
             return 233.scale
         default:
@@ -159,6 +167,7 @@ extension ExploreTableView: UITableViewDelegate {
 // MARK: Private
 private extension ExploreTableView {
     func initialize() {
+        register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
         register(ExploreSpellCategoryCell.self, forCellReuseIdentifier: String(describing: ExploreSpellCategoryCell.self))
         register(ExploreSpellCell.self, forCellReuseIdentifier: String(describing: ExploreSpellCell.self))
         register(ExploreRowUnitsCell.self, forCellReuseIdentifier: String(describing: ExploreRowUnitsCell.self))

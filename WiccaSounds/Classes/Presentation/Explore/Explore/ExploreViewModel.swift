@@ -89,7 +89,7 @@ private extension ExploreViewModel {
                         return .spell(element)
                     }
                     
-                    let elements: [ExploreTableElement] = [.spellsCategory(category)] + spellsElements
+                    let elements: [ExploreTableElement] = [.spellsCategory(category)] + spellsElements + [.empty]
                     return ExploreTableSection(
                         elements: elements,
                         corner: true

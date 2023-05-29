@@ -42,7 +42,7 @@ private extension TabItemView {
         
         let attrs = TextAttributes()
             .font(Fonts.PlusJakartaSans.semiBold(size: 11.scale))
-            .textColor(marked ? Appearance.primary : Appearance.white)
+            .textColor(marked ? UIColor(integralRed: 84, green: 151, blue: 116) : Appearance.white)
             .lineHeight(13.scale)
             .textAlignment(.center)
         label.attributedText = code.localized.attributed(with: attrs)

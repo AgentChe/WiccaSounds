@@ -14,6 +14,7 @@ enum ExploreTableElement {
     case spellsCategory(SpellsCategory)
     case spell(ExploreSpellElement)
     case unit(ExploreUnitElement)
+    case empty 
 }
 
 struct ExploreSpellElement {
