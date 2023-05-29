@@ -279,6 +279,10 @@ private extension BookmarksViewModel {
 // MARK: Private (Additional)
 private extension BookmarksViewModel {
     func unitsSections<T>(array: [T], createUnit: (T) -> ExploreUnitElement.Unit) -> [ExploreTableSection] {
+        guard !array.isEmpty else {
+            return []
+        }
+        
         var elements: [ExploreTableElement] = []
         
         var previousUnit: ExploreUnitElement.Unit?
