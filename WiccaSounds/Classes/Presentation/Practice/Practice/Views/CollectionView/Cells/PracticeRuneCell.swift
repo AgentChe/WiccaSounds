@@ -9,6 +9,7 @@ import UIKit
 import Kingfisher
 
 final class PracticeRuneCell: UICollectionViewCell {
+    lazy var runeBackView = makeImageView()
     lazy var imageView = makeImageView()
     lazy var titleLabel = makeLabel()
     lazy var paidView = makePaidView()
@@ -56,12 +57,21 @@ private extension PracticeRuneCell {
         let selectedView = UIView()
         selectedView.backgroundColor = UIColor.clear
         selectedBackgroundView = selectedView
+        
+        runeBackView.image = UIImage(named: "Practice.Rune.Background")
     }
 }
 
 // MARK: Make constraints
 private extension PracticeRuneCell {
     func makeConstraints() {
+        NSLayoutConstraint.activate([
+            runeBackView.widthAnchor.constraint(equalToConstant: 103.scale),
+            runeBackView.heightAnchor.constraint(equalToConstant: 141.scale),
+            runeBackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            runeBackView.topAnchor.constraint(equalTo: contentView.topAnchor)
+        ])
+        
         NSLayoutConstraint.activate([
             imageView.widthAnchor.constraint(equalToConstant: 103.scale),
             imageView.heightAnchor.constraint(equalToConstant: 141.scale),

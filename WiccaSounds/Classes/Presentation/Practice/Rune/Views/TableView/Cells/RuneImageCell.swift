@@ -9,6 +9,7 @@ import UIKit
 import Kingfisher
 
 final class RuneImageCell: UITableViewCell {
+    lazy var runeBackView = makeImageView()
     lazy var pictureView = makeImageView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -44,12 +45,22 @@ private extension RuneImageCell {
         contentView.backgroundColor = UIColor.clear
         
         selectionStyle = .none
+        
+        runeBackView.image = UIImage(named: "Rune.Background")
     }
 }
 
 // MARK: Make constraints
 private extension RuneImageCell {
     func makeConstraints() {
+        NSLayoutConstraint.activate([
+            runeBackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 88.scale),
+            runeBackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -88.scale),
+            runeBackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 13.scale),
+            runeBackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12.scale),
+            runeBackView.heightAnchor.constraint(equalToConstant: 293.scale)
+        ])
+        
         NSLayoutConstraint.activate([
             pictureView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 88.scale),
             pictureView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -88.scale),
