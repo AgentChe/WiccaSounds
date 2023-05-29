@@ -45,6 +45,10 @@ final class ExploreViewController: UIViewController {
         addFilterActions()
         mainView.tableView.mainDelegate = self
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
 }
 
 // MARK: Public

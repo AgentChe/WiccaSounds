@@ -63,6 +63,10 @@ final class TryAgainViewController: UIViewController {
             })
             .disposed(by: disposeBag)
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
 }
 
 // MARK: Make

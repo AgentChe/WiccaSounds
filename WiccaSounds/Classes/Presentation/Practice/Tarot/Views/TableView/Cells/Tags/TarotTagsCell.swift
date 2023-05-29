@@ -56,17 +56,7 @@ private extension TarotTagsCell {
 private extension TarotTagsCell {
     func makeTagsView() -> TagsView {
         let view = TagsView()
-        view.alignment = .left
-        view.radius = 12.scale
-        view.borderlineColor = Appearance.white.withAlphaComponent(0.15)
-        view.borderlineWidth = 1.scale
-        view.tagBackgroundColor = Appearance.white.withAlphaComponent(0.1)
-        view.paddingX = 12.scale
-        view.paddingY = 6.scale
-        view.marginX = 8.scale
-        view.marginY = 16.scale
-        view.textColor = Appearance.white.withAlphaComponent(0.7)
-        view.textFont = Fonts.Inter.regular(size: 14.scale)
+        view.backgroundColor = UIColor.clear
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view

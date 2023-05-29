@@ -162,6 +162,10 @@ final class SoundsViewController: UIViewController {
             .drive()
             .disposed(by: disposeBag)
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
 }
 
 // MARK: Make

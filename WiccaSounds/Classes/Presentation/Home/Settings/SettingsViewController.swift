@@ -40,6 +40,10 @@ final class SettingsViewController: UIViewController {
             AmplitudeManager.shared.logEvent(name: "Settings Tap", parameters: ["what": "back"])
         }
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
 }
 
 // MARK: Make

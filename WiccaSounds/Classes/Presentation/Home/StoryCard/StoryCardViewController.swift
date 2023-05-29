@@ -90,6 +90,10 @@ final class StoryCardViewController: UIViewController {
                 
         addTableCenterTapAction()
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
 }
 
 // MARK: Make

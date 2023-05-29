@@ -54,6 +54,10 @@ final class BookmarksViewController: UIViewController {
             AmplitudeManager.shared.logEvent(name: "Bookmarks Tap", parameters: ["what": "back"])
         }
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
 }
 
 // MARK: Make

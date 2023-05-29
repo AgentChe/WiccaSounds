@@ -33,6 +33,10 @@ final class PracticeViewController: UIViewController {
         addSelectUnitActions()
         mainView.collectionView.mainDelegate = self
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
 }
 
 // MARK: Make

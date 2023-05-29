@@ -58,6 +58,10 @@ final class HomeViewController: UIViewController {
         addSettingsButton()
         mainView.tableView.mainDelegate = self
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
 }
 
 // MARK: Make

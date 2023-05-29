@@ -42,6 +42,10 @@ final class SelectSoundViewController: UIViewController {
         
         mainView.tableView.mainDelegate = self
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
 }
 
 // MARK: Make

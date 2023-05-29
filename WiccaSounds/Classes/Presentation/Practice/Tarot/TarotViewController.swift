@@ -64,6 +64,10 @@ final class TarotViewController: UIViewController {
         
         mainView.tableView.mainDelegate = self
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
 }
 
 // MARK: Make

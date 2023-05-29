@@ -79,11 +79,11 @@ private extension TarotModeCell {
         
         switch mode {
         case .upright:
-            selectorLeadingConstraint = selector.leadingAnchor.constraint(equalTo: container.leadingAnchor)
-            selectorTrailingConstraint = selector.trailingAnchor.constraint(equalTo: container.centerXAnchor)
+            selectorLeadingConstraint = selector.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 2.scale)
+            selectorTrailingConstraint = selector.trailingAnchor.constraint(equalTo: container.centerXAnchor, constant: -2.scale)
         case .reversed:
-            selectorLeadingConstraint = selector.leadingAnchor.constraint(equalTo: container.centerXAnchor)
-            selectorTrailingConstraint = selector.trailingAnchor.constraint(equalTo: container.trailingAnchor)
+            selectorLeadingConstraint = selector.leadingAnchor.constraint(equalTo: container.centerXAnchor, constant: 2.scale)
+            selectorTrailingConstraint = selector.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -2.scale)
         }
         
         NSLayoutConstraint.activate([
@@ -116,8 +116,8 @@ private extension TarotModeCell {
         ])
         
         NSLayoutConstraint.activate([
-            selector.topAnchor.constraint(equalTo: container.topAnchor),
-            selector.bottomAnchor.constraint(equalTo: container.bottomAnchor)
+            selector.topAnchor.constraint(equalTo: container.topAnchor, constant: 2.scale),
+            selector.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -2.scale)
         ])
         
         NSLayoutConstraint.activate([
