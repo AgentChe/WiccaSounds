@@ -285,7 +285,6 @@
 		DE995BCE29E9920A00B08290 /* SelectSpellsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BCD29E9920A00B08290 /* SelectSpellsViewModel.swift */; };
 		DE995BD029E9920E00B08290 /* SelectSpellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BCF29E9920E00B08290 /* SelectSpellsView.swift */; };
 		DE995BD429E99F9600B08290 /* BookmarksEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BD329E99F9600B08290 /* BookmarksEmptyView.swift */; };
-		DE995BD629E9A7E000B08290 /* BookmarksViewControllerMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BD529E9A7E000B08290 /* BookmarksViewControllerMediator.swift */; };
 		DE995BE529E9ABC200B08290 /* StoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BD829E9ABC200B08290 /* StoryCardView.swift */; };
 		DE995BE629E9ABC200B08290 /* StoryCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BD929E9ABC200B08290 /* StoryCardViewModel.swift */; };
 		DE995BE729E9ABC200B08290 /* StoryCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE995BDA29E9ABC200B08290 /* StoryCardViewController.swift */; };
@@ -603,7 +602,6 @@
 		DE995BCD29E9920A00B08290 /* SelectSpellsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSpellsViewModel.swift; sourceTree = "<group>"; };
 		DE995BCF29E9920E00B08290 /* SelectSpellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSpellsView.swift; sourceTree = "<group>"; };
 		DE995BD329E99F9600B08290 /* BookmarksEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksEmptyView.swift; sourceTree = "<group>"; };
-		DE995BD529E9A7E000B08290 /* BookmarksViewControllerMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewControllerMediator.swift; sourceTree = "<group>"; };
 		DE995BD829E9ABC200B08290 /* StoryCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCardView.swift; sourceTree = "<group>"; };
 		DE995BD929E9ABC200B08290 /* StoryCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCardViewModel.swift; sourceTree = "<group>"; };
 		DE995BDA29E9ABC200B08290 /* StoryCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCardViewController.swift; sourceTree = "<group>"; };
@@ -1817,7 +1815,6 @@
 				DE65769D29CD59380074CBE5 /* BookmarksViewController.swift */,
 				DE65769F29CD593E0074CBE5 /* BookmarksViewModel.swift */,
 				DE65769B29CD59320074CBE5 /* BookmarksView.swift */,
-				DE995BD529E9A7E000B08290 /* BookmarksViewControllerMediator.swift */,
 			);
 			path = Bookmarks;
 			sourceTree = "<group>";
@@ -2620,7 +2617,6 @@
 				DE6574F729C838E30074CBE5 /* GetProfileResponse.swift in Sources */,
 				DE65761529C9C4270074CBE5 /* UnsaveCrystalRequest.swift in Sources */,
 				DE65754929C838E60074CBE5 /* GlobalDefinitions.swift in Sources */,
-				DE995BD629E9A7E000B08290 /* BookmarksViewControllerMediator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

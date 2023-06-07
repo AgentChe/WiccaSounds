@@ -15,6 +15,18 @@ final class BookmarksViewController: UIViewController {
     
     private lazy var disposeBag = DisposeBag()
     
+    private let didTapDiscover: (ExploreFilterView.Filter) -> Void
+    
+    private init(didTapDiscover: @escaping (ExploreFilterView.Filter) -> Void) {
+        self.didTapDiscover = didTapDiscover
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func loadView() {
         view = mainView
     }
@@ -38,8 +50,10 @@ final class BookmarksViewController: UIViewController {
         
         mainView.emptyView
             .button.rx.tap
-            .bind(to: Binder(self) { base, void in
-                BookmarksViewControllerMediator.shared.discoverTapped()
+            .withLatestFrom(viewModel.didTapFilter)
+            .bind(to: Binder(self) { base, filter in
+                base.navigationController?.popViewController(animated: true)
+                base.didTapDiscover(filter)
             })
             .disposed(by: disposeBag)
         
@@ -62,8 +76,8 @@ final class BookmarksViewController: UIViewController {
 
 // MARK: Make
 extension BookmarksViewController {
-    static func make() -> BookmarksViewController {
-        let vc = BookmarksViewController()
+    static func make(didTapDiscover: @escaping (ExploreFilterView.Filter) -> Void) -> BookmarksViewController {
+        let vc = BookmarksViewController(didTapDiscover: didTapDiscover)
         vc.navigationItem.backButtonTitle = " "
         vc.navigationItem.title = "Bookmarks.Title".localized
         return vc

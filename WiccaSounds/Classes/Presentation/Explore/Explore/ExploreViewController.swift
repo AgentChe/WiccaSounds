@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 final class ExploreViewController: UIViewController {
     lazy var mainView = ExploreView()
@@ -16,6 +17,8 @@ final class ExploreViewController: UIViewController {
     private lazy var disposeBag = DisposeBag()
     
     private lazy var bookmarksButton = UIButton(type: .system)
+    
+    private lazy var didTapDiscoverTrigger = PublishRelay<ExploreFilterView.Filter>()
     
     override func loadView() {
         view = mainView
@@ -30,7 +33,9 @@ final class ExploreViewController: UIViewController {
             .subscribe(Binder(self) { base, void in
                 AmplitudeManager.shared.logEvent(name: "Explore Tap", parameters: ["what": "bookmarks"])
                 
-                let vc = BookmarksViewController.make()
+                let vc = BookmarksViewController.make { unit in
+                    base.didTapDiscoverTrigger.accept(unit)
+                }
                 base.navigationController?.pushViewController(vc, animated: true)
             })
             .disposed(by: disposeBag)
@@ -107,7 +112,8 @@ private extension ExploreViewController {
                 mainView.filterView.herbsItem.rx.tap
                     .map { ExploreFilterView.Filter.herbs },
                 mainView.filterView.crystalsItem.rx.tap
-                    .map { ExploreFilterView.Filter.crystals }
+                    .map { ExploreFilterView.Filter.crystals },
+                didTapDiscoverTrigger.asObservable()
             )
             .startWith(.spells)
             .bind(to: Binder(self) { base, filter in
