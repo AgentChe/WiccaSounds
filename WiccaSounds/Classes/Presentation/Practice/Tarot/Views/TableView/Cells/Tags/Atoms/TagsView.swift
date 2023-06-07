@@ -8,28 +8,27 @@
 import UIKit
 
 final class TagsView: UIView {
-    let width = 343.scale
+    enum Constants {
+        static let width = 343.scale
+        static let paddingX = 12.scale
+        static let paddingY = 6.scale
+        static let marginX = 8.scale
+        static let marginY = 16.scale
+    }
+    
+    let width = Constants.width
     
     private var tagViews: [TagView] = []
-    private var rowViews: [UIView] = []
-    private var tagViewHeight: CGFloat = 0
-    private var rows = 0 {
-        didSet {
-            invalidateIntrinsicContentSize()
-        }
-    }
+    private var height = CGFloat(0)
     
     override func layoutSubviews() {
         defer { rearrangeViews() }
+        
         super.layoutSubviews()
     }
     
     override var intrinsicContentSize: CGSize {
-        var height = CGFloat(rows) * (tagViewHeight + 16.scale)
-        if rows > 0 {
-            height -= 16.scale
-        }
-        return CGSize(width: width, height: height)
+        CGSize(width: width, height: height)
     }
 }
 
@@ -70,51 +69,37 @@ private extension TagsView {
         view.layer.masksToBounds = true
         view.layer.borderColor = Appearance.white.withAlphaComponent(0.1).cgColor
         view.layer.borderWidth = 1.scale
-        view.titleEdgeInsets = UIEdgeInsets(top: 6.scale, left: 12.scale, bottom: 8.scale, right: 12.scale)
         view.backgroundColor = Appearance.white.withAlphaComponent(0.15)
         view.frame.size = view.intrinsicContentSize
         return view
     }
     
     func rearrangeViews() {
-        let views = tagViews as [UIView] + rowViews
-        views.forEach {
+        tagViews.forEach {
             $0.removeFromSuperview()
         }
-        rowViews.removeAll(keepingCapacity: true)
         
-        var currentRow = 0
-        var currentRowView: UIView!
-        var currentRowTagCount = 0
-        var currentRowWidth: CGFloat = 0
+        var x = CGFloat(0)
+        var y = CGFloat(0)
+        var lastHeight = CGFloat(0)
         
-        for tagView in tagViews {
-            tagView.frame.size = tagView.intrinsicContentSize
-            tagViewHeight = tagView.frame.height
-            
-            if currentRowTagCount == 0 || currentRowWidth + tagView.frame.width > width {
-                currentRow += 1
-                currentRowWidth = 0
-                currentRowTagCount = 0
-                currentRowView = UIView()
-                currentRowView.frame.origin.y = CGFloat(currentRow - 1) * (tagViewHeight + 16.scale)
-                
-                rowViews.append(currentRowView)
-                addSubview(currentRowView)
-
-                tagView.frame.size.width = min(tagView.frame.size.width, width)
+        tagViews.forEach { tagView in
+            if (x + tagView.frame.width) > width {
+                x = 0
+                y += lastHeight + Constants.marginY
+                lastHeight = 0
             }
             
-            tagView.frame.origin = CGPoint(x: currentRowWidth, y: 0)
-            currentRowView.addSubview(tagView)
+            tagView.frame.size = tagView.intrinsicContentSize
+            tagView.frame.origin = CGPoint(x: x, y: y)
             
-            currentRowTagCount += 1
-            currentRowWidth += tagView.frame.width + 8.scale
-            currentRowView.frame.origin.x = 0
-            currentRowView.frame.size.width = currentRowWidth
-            currentRowView.frame.size.height = max(tagViewHeight, currentRowView.frame.height)
+            x += tagView.frame.width + Constants.marginX
+            lastHeight = max(lastHeight, tagView.frame.height)
+            
+            addSubview(tagView)
         }
-        rows = currentRow
+        
+        height = y + lastHeight
         
         invalidateIntrinsicContentSize()
     }
