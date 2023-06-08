@@ -106,7 +106,6 @@ private extension PracticeTarotCell {
     func makePaidView() -> UIImageView {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
-        view.clipsToBounds = true
         view.image = UIImage(named: "Practice.Lock")
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
