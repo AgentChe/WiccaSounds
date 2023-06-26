@@ -78,7 +78,7 @@ private extension OBirthdateView {
     }
     
     func makeDatePickerView() -> UIDatePicker {
-        let minimumDate = Calendar.current.date(byAdding: .year, value: -60, to: Date()) ?? Date()
+        let minimumDate = Calendar.current.date(byAdding: .year, value: -100, to: Date()) ?? Date()
         let startDate = Calendar.current.date(byAdding: .year, value: -20, to: Date()) ?? Date()
         
         let view = UIDatePicker()
