@@ -23,7 +23,7 @@ final class GlobalDefinitions {
     static let contactUsUrl = "https://wiccaspells.org/contact"
     
     enum Paygate {
-        static let defaultLifetime = "com.bigideaapps.Wikka.inapp.lifeline"
+        static let defaultLifetime = "wicca.life2"
         static let defaultMonthly = "com.bigideaapps.Wikka.inapp.subscription.monthly"
     }
 }
