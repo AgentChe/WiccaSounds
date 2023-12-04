@@ -51,8 +51,8 @@ private extension ContentTextCell {
         NSLayoutConstraint.activate([
             label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16.scale),
             label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16.scale),
-            label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8.scale),
-            label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8.scale)
+            label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4.scale),
+            label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12.scale)
         ])
     }
 }
