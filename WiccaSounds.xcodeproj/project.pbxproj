@@ -129,7 +129,6 @@
 		DE65756929C838E60074CBE5 /* PushNotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65753829C838E60074CBE5 /* PushNotificationsModel.swift */; };
 		DE65756A29C838E60074CBE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65753929C838E60074CBE5 /* SceneDelegate.swift */; };
 		DE65756B29C838E60074CBE5 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65753A29C838E60074CBE5 /* Appearance.swift */; };
-		DE65756C29C838E60074CBE5 /* AppsFlyerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65753C29C838E60074CBE5 /* AppsFlyerManager.swift */; };
 		DE65756D29C838E60074CBE5 /* BranchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65753D29C838E60074CBE5 /* BranchManager.swift */; };
 		DE65756E29C838E60074CBE5 /* AmplitudeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65753E29C838E60074CBE5 /* AmplitudeManager.swift */; };
 		DE65756F29C838E60074CBE5 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65753F29C838E60074CBE5 /* FirebaseManager.swift */; };
@@ -446,7 +445,6 @@
 		DE65753829C838E60074CBE5 /* PushNotificationsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationsModel.swift; sourceTree = "<group>"; };
 		DE65753929C838E60074CBE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DE65753A29C838E60074CBE5 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
-		DE65753C29C838E60074CBE5 /* AppsFlyerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsFlyerManager.swift; sourceTree = "<group>"; };
 		DE65753D29C838E60074CBE5 /* BranchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchManager.swift; sourceTree = "<group>"; };
 		DE65753E29C838E60074CBE5 /* AmplitudeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmplitudeManager.swift; sourceTree = "<group>"; };
 		DE65753F29C838E60074CBE5 /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
@@ -1282,7 +1280,6 @@
 		DE65753B29C838E60074CBE5 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
-				DE65753C29C838E60074CBE5 /* AppsFlyerManager.swift */,
 				DE65753D29C838E60074CBE5 /* BranchManager.swift */,
 				DE65753E29C838E60074CBE5 /* AmplitudeManager.swift */,
 				DE65753F29C838E60074CBE5 /* FirebaseManager.swift */,
@@ -2549,7 +2546,6 @@
 				DE65754C29C838E60074CBE5 /* RestAPITransport.swift in Sources */,
 				DE65768A29CC9EFB0074CBE5 /* ContentViewModel.swift in Sources */,
 				DE6576C429CE00B60074CBE5 /* LunarDayView.swift in Sources */,
-				DE65756C29C838E60074CBE5 /* AppsFlyerManager.swift in Sources */,
 				DE65756929C838E60074CBE5 /* PushNotificationsModel.swift in Sources */,
 				DE65760029C9C1CB0074CBE5 /* SaveHerbRequest.swift in Sources */,
 				DE995BC929E989AD00B08290 /* SettingsActionCell.swift in Sources */,

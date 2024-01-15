@@ -116,7 +116,5 @@ private final class ExtractInternalUserID: OtterScaleReceiptValidationDelegate {
         
         FacebookManager.shared.set(userID: userID)
         FacebookManager.shared.logEvent(name: "client_user_id_set")
-        
-        AppsFlyerManager.shared.set(userId: userID)
     }
 }
