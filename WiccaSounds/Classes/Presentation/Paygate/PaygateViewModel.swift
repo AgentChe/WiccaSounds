@@ -1,47 +1,114 @@
 //
 //  PaygateViewModel.swift
-//  Soccer
+//  CodeChallenge
 //
-//  Created by Андрей Чернышев on 02.09.2022.
+//  Created by Андрей Чернышев on 20.02.2024.
 //
 
 import RxSwift
 import RxCocoa
 
 final class PaygateViewModel {
-    let buy = PublishRelay<String>()
-    let restore = PublishRelay<Void>()
+    typealias Products = (yearly: ProductPrice, weekly: ProductPrice)
     
-    lazy var prices = makePrices()
-    lazy var buyed = makeBuyed()
-    lazy var restored = makeRestored()
+    enum Route {
+        case dismiss
+        case error
+        case open(URL)
+    }
     
-    let activityIndicator = RxActivityIndicator()
+    private lazy var activity = RxActivityIndicator()
     
     private lazy var iapManager = IAPManager()
-    private lazy var purchaseInteractor = PaygateInteractor()
+    private lazy var paygateInteractor = PaygateInteractor()
+}
+
+// MARK: Public
+extension PaygateViewModel {
+    struct Input {
+        let didTapClose: Signal<Void>
+        let didTapBuy: Signal<String>
+        let didTapRestore: Signal<Void>
+        let didTapTermsOfUse: Signal<Void>
+        let didTapPrivacyPolicy: Signal<Void>
+    }
+    
+    struct Output {
+        let activity: Driver<Bool>
+        let route: Driver<Route>
+        let products: Driver<Products>
+    }
+    
+    func configure(input: Input) -> Output {
+        Output(
+            activity: activity.asDriver(),
+            route: makeRoute(
+                didTapClose: input.didTapClose,
+                didTapBuy: input.didTapBuy,
+                didTapRestore: input.didTapRestore,
+                didTapTermsOfUse: input.didTapTermsOfUse,
+                didTapPrivacyPolicy: input.didTapPrivacyPolicy
+            ),
+            products: makeProducts()
+        )
+    }
 }
 
 // MARK: Private
 private extension PaygateViewModel {
-    func makePrices() -> Driver<[ProductPrice]> {
+    func makeProducts() -> Driver<Products> {
         iapManager
             .obtainPrices(for: [
-                GlobalDefinitions.Paygate.defaultLifetime,
-                GlobalDefinitions.Paygate.defaultMonthly
+                GlobalDefinitions.Paygate.yearly,
+                GlobalDefinitions.Paygate.weekly
             ])
-            .trackActivity(activityIndicator)
-            .asDriver(onErrorJustReturn: [])
+            .compactMap { prices -> Products? in
+                guard
+                    let yearly = prices.first(where: { $0.id == GlobalDefinitions.Paygate.yearly }),
+                    let weekly = prices.first(where: { $0.id == GlobalDefinitions.Paygate.weekly })
+                else {
+                    return nil
+                }
+
+                return (yearly: yearly, weekly: weekly)
+            }
+            .trackActivity(activity)
+            .asDriver(onErrorDriveWith: .never())
     }
     
-    func makeBuyed() -> Signal<Bool> {
-        let purchase = buy
-            .flatMapLatest { [weak self] productId -> Observable<Bool> in
+    func makeRoute(
+        didTapClose: Signal<Void>,
+        didTapBuy: Signal<String>,
+        didTapRestore: Signal<Void>,
+        didTapTermsOfUse: Signal<Void>,
+        didTapPrivacyPolicy: Signal<Void>
+    ) -> Driver<Route> {
+        let dismiss = didTapClose
+            .map { Route.dismiss }
+            .asDriver(onErrorDriveWith: .never())
+        let buy = makeBuyed(didTapBuy: didTapBuy)
+            .map { $0 ? Route.dismiss : Route.error }
+        let restore = makeRestored(didTapRestore: didTapRestore)
+            .map { $0 ? Route.dismiss : Route.error }
+        let termsOfUse = didTapTermsOfUse
+            .map { Route.open(GlobalDefinitions.termsOfServiceUrl) }
+            .asDriver(onErrorDriveWith: .never())
+        let privacyPolicy = didTapPrivacyPolicy
+            .map { Route.open(GlobalDefinitions.privacyPolicyUrl) }
+            .asDriver(onErrorDriveWith: .never())
+        
+        return Driver
+            .merge(dismiss, buy, restore, termsOfUse, privacyPolicy)
+    }
+    
+    func makeBuyed(didTapBuy: Signal<String>) -> Driver<Bool> {
+        didTapBuy
+            .flatMapLatest { [weak self] productId -> Driver<Bool> in
                 guard let self = self else {
                     return .never()
                 }
                 
-                return self.purchaseInteractor
+                return self.paygateInteractor
                     .makeActiveSubscription(by: .buy(productId))
                     .map { result -> Bool in
                         switch result {
@@ -51,22 +118,19 @@ private extension PaygateViewModel {
                             return false
                         }
                     }
-                    .trackActivity(self.activityIndicator)
-                    .catchAndReturn(false)
+                    .trackActivity(self.activity)
+                    .asDriver(onErrorJustReturn: false)
             }
-        
-        return purchase
-            .asSignal(onErrorJustReturn: false)
     }
     
-    func makeRestored() -> Signal<Bool> {
-        let purchase = restore
-            .flatMapLatest { [weak self] _ -> Observable<Bool> in
+    func makeRestored(didTapRestore: Signal<Void>) -> Driver<Bool> {
+        didTapRestore
+            .flatMapLatest { [weak self] _ -> Driver<Bool> in
                 guard let self = self else {
                     return .never()
                 }
                 
-                return self.purchaseInteractor
+                return self.paygateInteractor
                     .makeActiveSubscription(by: .restore)
                     .map { result -> Bool in
                         switch result {
@@ -76,11 +140,8 @@ private extension PaygateViewModel {
                             return false
                         }
                     }
-                    .trackActivity(self.activityIndicator)
-                    .catchAndReturn(false)
+                    .trackActivity(self.activity)
+                    .asDriver(onErrorJustReturn: false)
             }
-        
-        return purchase
-            .asSignal(onErrorJustReturn: false)
     }
 }

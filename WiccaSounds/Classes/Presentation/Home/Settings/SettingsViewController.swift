@@ -67,24 +67,13 @@ extension SettingsViewController: SettingsTableDelegate {
             present(vc, animated: true)
         case .contactUs:
             AmplitudeManager.shared.logEvent(name: "Settings Tap", parameters: ["what": "contact us"])
-            open(path: GlobalDefinitions.contactUsUrl)
+            UIApplication.shared.open(GlobalDefinitions.contactUsUrl)
         case .privacyPolice:
             AmplitudeManager.shared.logEvent(name: "Settings Tap", parameters: ["what": "privacy policy"])
-            open(path: GlobalDefinitions.privacyPolicyUrl)
+            UIApplication.shared.open(GlobalDefinitions.privacyPolicyUrl)
         case .termsOfUse:
             AmplitudeManager.shared.logEvent(name: "Settings Tap", parameters: ["what": "terms of use"])
-            open(path: GlobalDefinitions.termsOfServiceUrl)
+            UIApplication.shared.open(GlobalDefinitions.termsOfServiceUrl)
         }
-    }
-}
-
-// MARK: Private
-private extension SettingsViewController {
-    func open(path: String) {
-        guard let url = URL(string: path) else {
-            return
-        }
-        
-        UIApplication.shared.open(url)
     }
 }

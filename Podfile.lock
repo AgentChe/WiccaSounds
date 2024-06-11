@@ -1,9 +1,6 @@
 PODS:
   - Alamofire (5.7.1)
   - Amplitude-iOS (4.10.0)
-  - AppsFlyerFramework (6.11.0):
-    - AppsFlyerFramework/Main (= 6.11.0)
-  - AppsFlyerFramework/Main (6.11.0)
   - Branch (1.45.2)
   - FBAEMKit (16.1.0):
     - FBSDKCoreKit_Basics (= 16.1.0)
@@ -127,7 +124,6 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Amplitude-iOS
-  - AppsFlyerFramework
   - Branch
   - FBSDKCoreKit
   - Firebase/Analytics
@@ -144,7 +140,6 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Amplitude-iOS
-    - AppsFlyerFramework
     - Branch
     - FBAEMKit
     - FBSDKCoreKit
@@ -182,7 +177,6 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
   Amplitude-iOS: 7d8cdc3408ba35c2e68368fc7c692cd104606b94
-  AppsFlyerFramework: c7b32b66c75f6e4313295c19944ee0ee59380ecf
   Branch: c1a7fa1811ef9203c01bc6c2588a229eb3ee1a84
   FBAEMKit: c7efe06720a8b15b1d25b68921ba46dee20996e0
   FBSDKCoreKit: ca77d40d46786157b7b31ad3516f5ad9c2315339
@@ -209,6 +203,6 @@ SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
 
-PODFILE CHECKSUM: 2eb1466e8a9048ff21bd371b570448f7b5d8edd4
+PODFILE CHECKSUM: 8a0414c5628b691353cb3a4c0ed03012ed6a59e4
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.15.2

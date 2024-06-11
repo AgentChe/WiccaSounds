@@ -28,18 +28,27 @@
 "Splash.Preloader3" = "Setting up your account...";
 
 // MARK: Paygate
-"Paygate.Cell1" = "Get complete access to all Spells,\nHerbs and Crystals";
-"Paygate.Cell2" = "Get complete access to Runes and\nTarot cards";
-"Paygate.Cell3" = "Get complete access to all Candle\nColors";
-"Paygate.Cell4" = "Get access to the complete Lunar\nCalendar";
-"Paygate.Cell5" = "%@ one-time purchase for Lifetime access or 3 days free and %@ per month";
-"Paygate.Cell6" = "Cancel anytime from your iCloud account";
-"Paygate.Lifetime" = "%@/once. Lifetime Access.\nBest Value";
-"Paygate.Monthly" = "3 days free then %@/month";
-"Paygate.Restore" = "Already member?";
-"Paygate.TermsAndCondition" = "Terms and Condition";
+"Paygate.Error.Title" = "Error";
+"Paygate.Error.Text" = "An error occurred during execution. Try later.";
+"Paygate.Error.Button" = "OK";
+"Paygate.Title" = "Upgrade Premium";
+"Paygate.Info1" = "Daily insights based on your personal traits";
+"Paygate.Info2" = "Meditations, natal chart, compatibility reports and much more";
+"Paygate.EnableFreeTrial" = "Enable Free Trial";
+"Paygate.FreeTrialEnabled" = "Free Trial Enabled";
+"Paygate.Yearly" = "Yearly";
+"Paygate.Yearly.Bottom" = "Just %@/year";
+"Paygate.PerWeek" = "per week";
+"Paygate.FreeTrialDays" = "3-day free trial";
+"Paygate.Then" = "then %@\n";
+"Paygate.Continue" = "Continue";
+"Paygate.TryFreeSubscribe" = "Try Free & Subscribe";
+"Paygate.CancelAnytime" = "Cancel Anytime";
+"Paygate.NoPaymentNow" = "No payment now";
+"Paygate.TermsOfUse" = "Terms of Use";
 "Paygate.PrivacyPolicy" = "Privacy Policy";
-"Paygate.Failed" = "Failed to make purchase";
+"Paygate.RestorePurchases" = "Restore Purchases";
+"Paygate.BestOffer" = "⭐ Best Offer";
 
 // MARK: Onboarding
 "Onboarding.GotIt" = "Got it";

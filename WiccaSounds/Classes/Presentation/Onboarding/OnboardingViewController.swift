@@ -50,13 +50,6 @@ extension OnboardingViewController {
     }
 }
 
-// MARK: PaygateViewControllerDelegate
-extension OnboardingViewController: PaygateViewControllerDelegate {
-    func paygateDidClosed(with result: PaygateViewControllerResult) {
-        goToNext(at: .main)
-    }
-}
-
 // MARK: Public
 extension OnboardingViewController {
     static func wasViewed() -> Bool {
@@ -75,8 +68,9 @@ private extension OnboardingViewController {
         case .main:
             UIApplication.shared.windows.filter { $0.isKeyWindow }.first?.rootViewController = MainViewController.make(requestReview: false)
         case .paygate:
-            let vc = PaygateViewController.make()
-            vc.delegate = self
+            let vc = PaygateViewController.make { [weak self] in
+                self?.goToNext(at: .main)
+            }
             present(vc, animated: true)
         }
     }

@@ -5,6 +5,8 @@
 //  Created by Andrey Chernyshev on 16.01.2021.
 //
 
+import Foundation
+
 final class GlobalDefinitions {
     static let domain = "https://wiccaspells.org"
     static let apiKey = "7zEi2GUGqzdV74yCU2bl"
@@ -18,12 +20,12 @@ final class GlobalDefinitions {
     static let amplitudeApiKey = "0d810afcbd45c0b58a5ed6cd272acfa"
     static let appsFlyerApiKey = "DCciCfYXjMQ8QnkdCg8qzk"
     
-    static let termsOfServiceUrl = "https://wiccaspells.org/terms"
-    static let privacyPolicyUrl = "https://wiccaspells.org/policy"
-    static let contactUsUrl = "https://wiccaspells.org/contact"
+    static let termsOfServiceUrl = URL(string: "https://wiccaspells.org/terms")!
+    static let privacyPolicyUrl = URL(string: "https://wiccaspells.org/policy")!
+    static let contactUsUrl = URL(string: "https://wiccaspells.org/contact")!
     
     enum Paygate {
-        static let defaultLifetime = "wicca.life2"
-        static let defaultMonthly = "com.bigideaapps.Wikka.inapp.subscription.monthly"
+        static let yearly = "wicca.annually"
+        static let weekly = "wicca.weekly"
     }
 }

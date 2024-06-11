@@ -1,8 +1,8 @@
 //
 //  PaygateInteractor.swift
-//  Soccer
+//  CodeChallenge
 //
-//  Created by Андрей Чернышев on 02.09.2022.
+//  Created by Андрей Чернышев on 20.02.2024.
 //
 
 import RxSwift
@@ -123,8 +123,6 @@ private extension PaygateInteractor {
     func restore() -> Disposable {
         iapManager
             .restorePurchases()
-            .subscribe(onFailure: { [weak self] error in
-                self?.callback.accept(.completed(false))
-            })
+            .subscribe()
     }
 }

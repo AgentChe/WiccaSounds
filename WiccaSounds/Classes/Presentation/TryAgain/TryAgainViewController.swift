@@ -54,12 +54,8 @@ final class TryAgainViewController: UIViewController {
             .disposed(by: disposeBag)
         
         mainView.contactButton.rx.tap
-            .subscribe(onNext: {
-                guard let url = URL(string: GlobalDefinitions.contactUsUrl) else {
-                    return
-                }
-                
-                UIApplication.shared.open(url, options: [:])
+            .bind(to: Binder(self) { base, void in
+                UIApplication.shared.open( GlobalDefinitions.contactUsUrl)
             })
             .disposed(by: disposeBag)
     }
