@@ -14,11 +14,8 @@ final class GlobalDefinitions {
     static let otterScaleHost = "https://api.korrekted.com"
     static let otterScaleApiKey = "vO76dtB8hszMliN5"
     
-    static let appleAppID = "1516097125"
-    
     static let applicationTag = "WICCA 2"
-    static let amplitudeApiKey = "0d810afcbd45c0b58a5ed6cd272acfa"
-    static let appsFlyerApiKey = "DCciCfYXjMQ8QnkdCg8qzk"
+    static let amplitudeApiKey = "e2f97fdca00fd18f23fee9ae1520225b"
     
     static let termsOfServiceUrl = URL(string: "https://wiccaspells.org/terms")!
     static let privacyPolicyUrl = URL(string: "https://wiccaspells.org/policy")!
