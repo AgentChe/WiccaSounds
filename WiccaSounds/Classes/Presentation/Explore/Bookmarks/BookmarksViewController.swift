@@ -34,8 +34,6 @@ final class BookmarksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AmplitudeManager.shared.logEvent(name: "Bookmarks Screen")
-        
         viewModel.sections
             .drive(Binder(mainView.tableView) { base, sections in
                 base.setup(sections: sections)
@@ -59,14 +57,6 @@ final class BookmarksViewController: UIViewController {
         
         addFilterActions()
         mainView.tableView.mainDelegate = self
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        if isMovingToParent {
-            AmplitudeManager.shared.logEvent(name: "Bookmarks Tap", parameters: ["what": "back"])
-        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -125,7 +115,6 @@ private extension BookmarksViewController {
             .bind(to: Binder(self) { base, filter in
                 base.viewModel.didTapFilter.accept(filter)
                 base.mainView.filterView.filter = filter
-                base.log(filter: filter)
             })
             .disposed(by: disposeBag)
     }
@@ -136,19 +125,6 @@ private extension BookmarksViewController {
         
         if let unit = unit {
             mainView.emptyView.setup(unit: unit)
-        }
-    }
-    
-    func log(filter: ExploreFilterView.Filter) {
-        switch filter {
-        case .spells:
-            AmplitudeManager.shared.logEvent(name: "Bookmarks Tap", parameters: ["what": "spells"])
-        case .candles:
-            AmplitudeManager.shared.logEvent(name: "Bookmarks Tap", parameters: ["what": "candles"])
-        case .crystals:
-            AmplitudeManager.shared.logEvent(name: "Bookmarks Tap", parameters: ["what": "crystals"])
-        case .herbs:
-            AmplitudeManager.shared.logEvent(name: "Bookmarks Tap", parameters: ["what": "herbs"])
         }
     }
 }

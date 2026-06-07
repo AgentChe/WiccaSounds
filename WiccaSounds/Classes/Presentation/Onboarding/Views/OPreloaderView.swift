@@ -63,8 +63,6 @@ final class OPreloaderView: OSlideView {
         play()
         calculatePercent()
         request()
-        
-        AmplitudeManager.shared.logEvent(name: "Loading Screen")
     }
 }
 

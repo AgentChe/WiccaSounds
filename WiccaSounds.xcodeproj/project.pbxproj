@@ -133,7 +133,6 @@
 		DE65756929C838E60074CBE5 /* PushNotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65753829C838E60074CBE5 /* PushNotificationsModel.swift */; };
 		DE65756A29C838E60074CBE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65753929C838E60074CBE5 /* SceneDelegate.swift */; };
 		DE65756B29C838E60074CBE5 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65753A29C838E60074CBE5 /* Appearance.swift */; };
-		DE65756E29C838E60074CBE5 /* AmplitudeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65753E29C838E60074CBE5 /* AmplitudeManager.swift */; };
 		DE65756F29C838E60074CBE5 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65753F29C838E60074CBE5 /* FirebaseManager.swift */; };
 		DE65757029C838E60074CBE5 /* FacebookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE65754029C838E60074CBE5 /* FacebookManager.swift */; };
 		DE65757229C838EF0074CBE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE65757129C838EE0074CBE5 /* Assets.xcassets */; };
@@ -452,7 +451,6 @@
 		DE65753829C838E60074CBE5 /* PushNotificationsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationsModel.swift; sourceTree = "<group>"; };
 		DE65753929C838E60074CBE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DE65753A29C838E60074CBE5 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
-		DE65753E29C838E60074CBE5 /* AmplitudeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmplitudeManager.swift; sourceTree = "<group>"; };
 		DE65753F29C838E60074CBE5 /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		DE65754029C838E60074CBE5 /* FacebookManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookManager.swift; sourceTree = "<group>"; };
 		DE65757129C838EE0074CBE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1298,7 +1296,6 @@
 		DE65753B29C838E60074CBE5 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
-				DE65753E29C838E60074CBE5 /* AmplitudeManager.swift */,
 				DE65753F29C838E60074CBE5 /* FirebaseManager.swift */,
 				DE65754029C838E60074CBE5 /* FacebookManager.swift */,
 			);
@@ -2300,9 +2297,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2603,7 +2604,6 @@
 				DE995BE829E9ABC200B08290 /* StoryCardImageCell.swift in Sources */,
 				DE20A98529F144D3007DC75F /* TarotTableElement.swift in Sources */,
 				DEC304BF29F6A22B00C6AAF1 /* Player.swift in Sources */,
-				DE65756E29C838E60074CBE5 /* AmplitudeManager.swift in Sources */,
 				DEC304BC29F6A22B00C6AAF1 /* LoadState.swift in Sources */,
 				DE65762A29C9C8F50074CBE5 /* GetTarotResponse.swift in Sources */,
 				DE65761829C9C75B0074CBE5 /* TarotManager.swift in Sources */,
@@ -2772,7 +2772,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 38;
+				CURRENT_PROJECT_VERSION = 39;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2MYAP2M337;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2787,7 +2787,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3.3;
+				MARKETING_VERSION = 2.3.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bigideaapps.Wikka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2809,7 +2809,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 38;
+				CURRENT_PROJECT_VERSION = 39;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2MYAP2M337;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2824,7 +2824,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3.3;
+				MARKETING_VERSION = 2.3.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bigideaapps.Wikka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

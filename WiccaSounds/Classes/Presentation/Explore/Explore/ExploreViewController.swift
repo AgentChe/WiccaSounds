@@ -27,12 +27,8 @@ final class ExploreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AmplitudeManager.shared.logEvent(name: "Explore Screen")
-        
         bookmarksButton.rx.tap
             .subscribe(Binder(self) { base, void in
-                AmplitudeManager.shared.logEvent(name: "Explore Tap", parameters: ["what": "bookmarks"])
-                
                 let vc = BookmarksViewController.make { unit in
                     base.didTapDiscoverTrigger.accept(unit)
                 }
@@ -119,21 +115,7 @@ private extension ExploreViewController {
             .bind(to: Binder(self) { base, filter in
                 base.viewModel.didTapFilter.accept(filter)
                 base.mainView.filterView.filter = filter
-                base.log(filter: filter)
             })
             .disposed(by: disposeBag)
-    }
-    
-    func log(filter: ExploreFilterView.Filter) {
-        switch filter {
-        case .spells:
-            AmplitudeManager.shared.logEvent(name: "Explore Tap", parameters: ["what": "spells"])
-        case .candles:
-            AmplitudeManager.shared.logEvent(name: "Explore Tap", parameters: ["what": "candles"])
-        case .crystals:
-            AmplitudeManager.shared.logEvent(name: "Explore Tap", parameters: ["what": "crystals"])
-        case .herbs:
-            AmplitudeManager.shared.logEvent(name: "Explore Tap", parameters: ["what": "herbs"])
-        }
     }
 }

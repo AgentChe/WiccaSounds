@@ -43,7 +43,6 @@ final class ContentViewController: UIViewController {
         
         mainView.closeButton.rx.tap
             .bind(to: Binder(self) { base, void in
-                base.logAction("close")
                 base.dismiss(animated: true)
             })
             .disposed(by: disposeBag)
@@ -62,19 +61,11 @@ final class ContentViewController: UIViewController {
             .bind(to: viewModel.didTapBookmark)
             .disposed(by: disposeBag)
         
-        didTapBookmark
-            .bind(to: Binder(self) { base, isSaved in
-                base.logAction(isSaved ? "unsaved" : "save")
-            })
-            .disposed(by: disposeBag)
-        
         viewModel.isSaved
             .drive(Binder(self) { base, saved in
                 base.update(bookmark: saved)
             })
             .disposed(by: disposeBag)
-        
-        logDisplay()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -112,26 +103,5 @@ private extension ContentViewController {
                 
                 return Disposables.create()
             }
-    }
-    
-    func logDisplay() {
-        AmplitudeManager.shared.logEvent(name: "Content Screen", parameters: ["type": logTypeName()])
-    }
-    
-    func logAction(_ what: String) {
-        AmplitudeManager.shared.logEvent(name: "Content Tap", parameters: ["type": logTypeName(), "what": what])
-    }
-    
-    func logTypeName() -> String {
-        switch unit {
-        case .spell:
-            return "spells"
-        case .candle:
-            return "candles"
-        case .herb:
-            return "herbs"
-        case .crystal:
-            return "crystals"
-        }
     }
 }

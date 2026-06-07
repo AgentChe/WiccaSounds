@@ -22,8 +22,6 @@ final class PracticeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AmplitudeManager.shared.logEvent(name: "Practice Screen")
-        
         viewModel.elements
             .drive(Binder(mainView.collectionView) { base, elements in
                 base.setup(elements: elements)
@@ -100,7 +98,5 @@ private extension PracticeViewController {
         case .runes:
             what = "runes"
         }
-        
-        AmplitudeManager.shared.logEvent(name: "Practice Tap", parameters: ["what": what])
     }
 }

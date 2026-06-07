@@ -37,12 +37,6 @@ final class OTarotSuitView: OSlideView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    override func moveToThis() {
-        super.moveToThis()
-        
-        AmplitudeManager.shared.logEvent(name: "Onboarding Question Screen", parameters: ["step": 3])
-    }
 }
 
 // MARK: Private

@@ -32,8 +32,6 @@ final class TarotViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AmplitudeManager.shared.logEvent(name: "Content Screen", parameters: ["type": "tarot"])
-        
         viewModel.tryAgain = { [weak self] error -> Observable<Void> in
             guard let self = self else {
                 return .never()
@@ -44,8 +42,6 @@ final class TarotViewController: UIViewController {
         
         mainView.closeButton.rx.tap
             .bind(to: Binder(self) { base, void in
-                AmplitudeManager.shared.logEvent(name: "Content Tap", parameters: ["type": "tarot", "what": "close"])
-                
                 base.dismiss(animated: true)
             })
             .disposed(by: disposeBag)
