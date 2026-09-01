@@ -68,7 +68,11 @@ extension PostHogManager {
     }
 
     func logEvent(name: String, parameters: [String: Any] = [:]) {
-        PostHogSDK.shared.capture(name, properties: parameters)
+        var dictionary = parameters
+        dictionary["anonymous_id"] = OtterScale.shared.getAnonymousID()
+        dictionary["app"] = GlobalDefinitions.applicationTag
+
+        PostHogSDK.shared.capture(name, properties: dictionary)
     }
 }
 
@@ -92,6 +96,6 @@ private extension PostHogManager {
             return
         }
 
-        logEvent(name: "client_first_launch")
+        logEvent(name: "First Launch")
     }
 }
