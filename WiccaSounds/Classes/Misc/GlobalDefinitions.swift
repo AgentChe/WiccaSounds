@@ -13,6 +13,9 @@ final class GlobalDefinitions {
     
     static let otterScaleHost = "https://api.korrekted.com"
     static let otterScaleApiKey = "vO76dtB8hszMliN5"
+
+    static let postHogHost = "https://posthog.korrekted.com"
+    static let postHogApiKey = "phc_a29Kj3MGr3nLv9NN4WLZiRyHF5mluQZaPbVgcCbIqPa"
     
     static let termsOfServiceUrl = URL(string: "https://thinkaboutapps.com/terms")!
     static let privacyPolicyUrl = URL(string: "https://thinkaboutapps.com/policy")!

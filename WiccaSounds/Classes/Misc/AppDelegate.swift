@@ -16,6 +16,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         FacebookManager.shared.initialize(app: application, launchOptions: launchOptions)
         FirebaseManager.shared.initialize()
         OtterScale.shared.initialize(host: GlobalDefinitions.otterScaleHost, apiKey: GlobalDefinitions.otterScaleApiKey)
+        PostHogManager.shared.initialize()
         
         PurchaseValidationObserver.shared.startObserve()
         

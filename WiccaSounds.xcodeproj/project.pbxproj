@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4783CB222356AF484FD10483 /* Pods_WiccaSounds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F52B9E7215BD19390B0AAC /* Pods_WiccaSounds.framework */; };
+		5C83ACF063105A01C5945ED9 /* PostHogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F60166ECF1DCCB29CEB33F /* PostHogManager.swift */; };
 		DE0F2D8B2C174E8600AE4806 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F2D7D2C174E8600AE4806 /* Currency.swift */; };
 		DE0F2D8C2C174E8600AE4806 /* PaygateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F2D7E2C174E8600AE4806 /* PaygateInteractor.swift */; };
 		DE0F2D8D2C174E8600AE4806 /* PaygateActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F2D802C174E8600AE4806 /* PaygateActionsView.swift */; };
@@ -638,6 +639,7 @@
 		DEC304B929F6A22B00C6AAF1 /* NoiseAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoiseAudio.swift; sourceTree = "<group>"; };
 		DEE1016A2A1CE292000ED6AE /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		EF55C937ABEFE4AF211296D0 /* Pods-WiccaSounds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiccaSounds.debug.xcconfig"; path = "Target Support Files/Pods-WiccaSounds/Pods-WiccaSounds.debug.xcconfig"; sourceTree = "<group>"; };
+		F1F60166ECF1DCCB29CEB33F /* PostHogManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PostHogManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1298,6 +1300,7 @@
 			children = (
 				DE65753F29C838E60074CBE5 /* FirebaseManager.swift */,
 				DE65754029C838E60074CBE5 /* FacebookManager.swift */,
+				F1F60166ECF1DCCB29CEB33F /* PostHogManager.swift */,
 			);
 			path = Analytics;
 			sourceTree = "<group>";
@@ -2633,6 +2636,7 @@
 				DE65761529C9C4270074CBE5 /* UnsaveCrystalRequest.swift in Sources */,
 				DE65754929C838E60074CBE5 /* GlobalDefinitions.swift in Sources */,
 				DE0F2D902C174E8600AE4806 /* PaygateInfoCell.swift in Sources */,
+				5C83ACF063105A01C5945ED9 /* PostHogManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2772,7 +2776,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 39;
+				CURRENT_PROJECT_VERSION = 40;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2MYAP2M337;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2787,7 +2791,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3.4;
+				MARKETING_VERSION = 2.3.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bigideaapps.Wikka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2809,7 +2813,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 39;
+				CURRENT_PROJECT_VERSION = 40;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2MYAP2M337;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2824,7 +2828,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.3.4;
+				MARKETING_VERSION = 2.3.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bigideaapps.Wikka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
